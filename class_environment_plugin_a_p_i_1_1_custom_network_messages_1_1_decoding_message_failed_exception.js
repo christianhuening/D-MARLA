@@ -1,0 +1,4 @@
+var class_environment_plugin_a_p_i_1_1_custom_network_messages_1_1_decoding_message_failed_exception =
+[
+    [ "DecodingMessageFailedException", "class_environment_plugin_a_p_i_1_1_custom_network_messages_1_1_decoding_message_failed_exception.html#a000a82bb0c638f515a7a32a4dba29f49", null ]
+];

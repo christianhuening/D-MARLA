@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$interface_remote_interface_1_1_i_game_statistics.html" title="RemoteInterface.IGameStatistics" alt="" coords="5,88,219,115"/>
+<area shape="rect" id="node6" href="$interface_environment_plugin_a_p_i_1_1_service_1_1_i_save_game_statistics.html" title="EnvironmentPluginAPI.Service.\lISaveGameStatistics" alt="" coords="243,81,443,122"/>
+</map>

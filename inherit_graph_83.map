@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$interface_plugin_a_p_i_1_1_services_1_1_i_plugin_service_provider.html" title="PluginAPI.Services.IPlugin\lServiceProvider" alt="" coords="6,34,181,75"/>
+<area shape="rect" id="node3" href="$class_agent_system_management_1_1_services_1_1_agent_system_service_provider.html" title="AgentSystemManagement.Services.\lAgentSystemServiceProvider" alt="" coords="230,5,463,46"/>
+<area shape="rect" id="node5" href="$class_dummy_plugin_provider.html" title="DummyPluginProvider" alt="" coords="272,71,421,97"/>
+</map>

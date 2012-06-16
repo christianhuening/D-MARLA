@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node4" href="$interface_remote_interface_1_1_i_game_statistics.html" title="RemoteInterface.IGameStatistics" alt="" coords="123,177,336,204"/>
+<area shape="rect" id="node26" href="$class_game_statistics_1_1_implementation_1_1_game_statistics_component.html" title="GameStatistics.Implementation.\lGameStatisticsComponent" alt="" coords="399,134,607,175"/>
+<area shape="rect" id="node12" href="$class_game_statistics_1_1_implementation_1_1_game_replay_description_dao.html" title="GameStatistics.Implementation.\lGameReplayDescriptionDao" alt="" coords="399,365,607,406"/>
+<area shape="rect" id="node16" href="$class_game_statistics_1_1_implementation_1_1_game_replay_description_saver_helper.html" title="GameStatistics.Implementation.\lGameReplayDescriptionSaverHelper" alt="" coords="387,430,618,471"/>
+<area shape="rect" id="node20" href="$interface_environment_plugin_a_p_i_1_1_service_1_1_i_save_game_statistics.html" title="EnvironmentPluginAPI.Service.\lISaveGameStatistics" alt="" coords="129,77,329,118"/>
+<area shape="rect" id="node22" href="$class_game_statistics_1_1_implementation_1_1_player_name_dao.html" title="GameStatistics.Implementation.\lPlayerNameDao" alt="" coords="399,547,607,589"/>
+</map>
