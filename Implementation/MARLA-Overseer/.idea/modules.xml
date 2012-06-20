@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/AgentSystemPluginAPI.iml" filepath="$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/AgentSystemPluginAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" filepath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/NetworkAdapter.iml" filepath="$PROJECT_DIR$/../R_Components/NetworkAdapter/NetworkAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OverseerGUI/OverseerGUI.iml" filepath="$PROJECT_DIR$/OverseerGUI/OverseerGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../R_Components/PluginLoader/PluginLoader.iml" filepath="$PROJECT_DIR$/../R_Components/PluginLoader/PluginLoader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ZeroTypes/ZeroTypes.iml" filepath="$PROJECT_DIR$/../ZeroTypes/ZeroTypes.iml" />
+    </modules>
+  </component>
+</project>
+

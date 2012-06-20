@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$interface_remote_interface_1_1_i_game_statistics.html" title="RemoteInterface.IGameStatistics" alt="" coords="5,172,219,199"/>
+<area shape="rect" id="node3" href="$interface_game_server_facade_1_1_interface_1_1_i_game_server_facade.html" title="GameServerFacade.Interface.\lIGameServerFacade" alt="" coords="274,239,467,281"/>
+<area shape="rect" id="node7" href="$class_game_statistics_1_1_implementation_1_1_game_statistics_component.html" title="GameStatistics.Implementation.\lGameStatisticsComponent" alt="" coords="267,122,475,163"/>
+<area shape="rect" id="node9" href="$class_game_statistics_1_1_implementation_1_1_game_statistics_use_case.html" title="GameStatistics.Implementation.\lGameStatisticsUseCase" alt="" coords="267,57,475,98"/>
+<area shape="rect" id="node11" href="$class_r_m_i_service_connector.html" title="RMIServiceConnector" alt="" coords="297,188,444,215"/>
+<area shape="rect" id="node5" href="$class_game_server_facade_1_1_implementation_1_1_game_server_facade.html" title="GameServerFacade.Implementation.\lGameServerFacade" alt="" coords="523,239,755,281"/>
+<area shape="rect" id="node12" href="$interface_environment_plugin_a_p_i_1_1_service_1_1_i_save_game_statistics.html" title="EnvironmentPluginAPI.Service.\lISaveGameStatistics" alt="" coords="12,74,212,115"/>
+<area shape="rect" id="node14" href="$class_dummy_statistics.html" title="DummyStatistics" alt="" coords="309,5,432,32"/>
+<area shape="rect" id="node18" href="$interface_server_runner_1_1_interface_1_1_i_server_runner.html" title="ServerRunner.Interface.IServer\lRunner" alt="" coords="15,305,209,346"/>
+<area shape="rect" id="node21" href="$class_server_runner_1_1_implementation_1_1_server_runner_component.html" title="ServerRunner.Implementation.\lServerRunnerComponent" alt="" coords="273,370,468,411"/>
+<area shape="rect" id="node23" href="$class_server_runner_1_1_implementation_1_1_server_runner_use_case.html" title="ServerRunner.Implementation.\lServerRunnerUseCase" alt="" coords="273,305,468,346"/>
+</map>

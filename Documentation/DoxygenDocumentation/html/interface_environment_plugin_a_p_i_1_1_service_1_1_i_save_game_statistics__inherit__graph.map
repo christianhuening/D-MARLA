@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_dummy_statistics.html" title="DummyStatistics" alt="" coords="296,5,419,32"/>
+<area shape="rect" id="node5" href="$interface_game_server_facade_1_1_interface_1_1_i_game_server_facade.html" title="GameServerFacade.Interface.\lIGameServerFacade" alt="" coords="261,57,454,98"/>
+<area shape="rect" id="node9" href="$class_game_statistics_1_1_implementation_1_1_game_statistics_component.html" title="GameStatistics.Implementation.\lGameStatisticsComponent" alt="" coords="253,122,461,163"/>
+<area shape="rect" id="node11" href="$class_game_statistics_1_1_implementation_1_1_game_statistics_use_case.html" title="GameStatistics.Implementation.\lGameStatisticsUseCase" alt="" coords="253,187,461,229"/>
+<area shape="rect" id="node7" href="$class_game_server_facade_1_1_implementation_1_1_game_server_facade.html" title="GameServerFacade.Implementation.\lGameServerFacade" alt="" coords="509,57,741,98"/>
+</map>

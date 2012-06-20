@@ -1,0 +1,6 @@
+symmetry = 1
+seed = 32455
+edgeLength = 12
+factoryFactor = 30
+factorySizeFactor = 70
+maximumFactorySizeFactor = 45

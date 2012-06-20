@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="usertype.core-3.0.0.CR1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../T_Components/usertype/usertype.core-3.0.0.CR1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

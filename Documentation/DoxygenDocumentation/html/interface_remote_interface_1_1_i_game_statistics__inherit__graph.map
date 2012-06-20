@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$interface_game_server_facade_1_1_interface_1_1_i_game_server_facade.html" title="GameServerFacade.Interface.\lIGameServerFacade" alt="" coords="389,6,582,47"/>
+<area shape="rect" id="node9" href="$class_game_statistics_1_1_implementation_1_1_game_statistics_component.html" title="GameStatistics.Implementation.\lGameStatisticsComponent" alt="" coords="381,71,589,113"/>
+<area shape="rect" id="node11" href="$class_game_statistics_1_1_implementation_1_1_game_statistics_use_case.html" title="GameStatistics.Implementation.\lGameStatisticsUseCase" alt="" coords="381,137,589,178"/>
+<area shape="rect" id="node13" href="$class_r_m_i_service_connector.html" title="RMIServiceConnector" alt="" coords="412,203,559,229"/>
+<area shape="rect" id="node7" href="$class_game_server_facade_1_1_implementation_1_1_game_server_facade.html" title="GameServerFacade.Implementation.\lGameServerFacade" alt="" coords="637,6,869,47"/>
+</map>

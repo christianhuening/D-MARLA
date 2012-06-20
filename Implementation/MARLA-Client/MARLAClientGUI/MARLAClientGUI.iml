@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="ZeroTypes" exported="" />
+    <orderEntry type="module" module-name="AIClientFacade" exported="" />
+    <orderEntry type="module" module-name="NetworkAdapter" exported="" />
+    <orderEntry type="library" exported="" name="seaglasslookandfeel-0.1.7.3" level="project" />
+    <orderEntry type="module" module-name="EnvironmentPluginAPI" exported="" />
+    <orderEntry type="module" module-name="PluginLoader" exported="" />
+    <orderEntry type="module" module-name="AgentSystemPluginAPI" exported="" />
+  </component>
+</module>
+

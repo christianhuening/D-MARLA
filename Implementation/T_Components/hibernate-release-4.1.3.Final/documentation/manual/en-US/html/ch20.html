@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Chapter 20. XML Mapping</title><link rel="stylesheet" type="text/css" href="css/hibernate.css"/><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/><link rel="home" href="index.html" title="HIBERNATE - Relational Persistence for Idiomatic Java"/><link rel="up" href="index.html" title="HIBERNATE - Relational Persistence for Idiomatic Java"/><link rel="prev" href="ch19.html" title="Chapter 19. Filtering data"/><link rel="next" href="ch21.html" title="Chapter 21. Improving performance"/><link rel="copyright" href="ln-d5e19.html" title="Legal Notice"/><meta xmlns:d="http://docbook.org/ns/docbook" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" http-equiv="Content-Type" content="text/html; charset=UTF-8"/></head><body><p xmlns:d="http://docbook.org/ns/docbook" id="title"><a href="http://www.hibernate.org" class="site_href"><strong>Hibernate.org</strong></a><a href="http://hibernate.org/Documentation/DocumentationOverview" class="doc_href"><strong>Community Documentation</strong></a></p><ul xmlns:d="http://docbook.org/ns/docbook" class="docnav"><li class="previous"><a accesskey="p" href="ch19.html"><strong>Prev</strong></a></li><li class="next"><a accesskey="n" href="ch21.html"><strong>Next</strong></a></li></ul><div class="chapter" title="Chapter 20. XML Mapping"><div class="titlepage"><div><div><h2 class="title"><a id="xml"/>Chapter 20. XML Mapping</h2></div></div></div><div class="toc"><p><strong>Table of Contents</strong></p><dl><dt><span class="section"><a href="ch20.html#xml-intro">20.1. Working with XML data</a></span></dt><dd><dl><dt><span class="section"><a href="ch20.html#xml-intro-mapping">20.1.1. Specifying XML and class mapping together</a></span></dt><dt><span class="section"><a href="ch20.html#xml-onlyxml">20.1.2. Specifying only an XML mapping</a></span></dt></dl></dd><dt><span class="section"><a href="ch20.html#xml-mapping">20.2. XML mapping metadata</a></span></dt><dt><span class="section"><a href="ch20.html#xml-manipulation">20.3. Manipulating XML data</a></span></dt></dl></div>
+    
+
+    <p><span class="emphasis"><em>
+        XML Mapping is an experimental feature in Hibernate 3.0 and is currently under
+        active development.
+    </em></span></p>
+
+    <div class="section" title="20.1. Working with XML data"><div class="titlepage"><div><div><h2 class="title"><a id="xml-intro"/>20.1. Working with XML data</h2></div></div></div>
+        
+
+        <p>
+            Hibernate allows you to work with persistent XML data in much the same way
+            you work with persistent POJOs. A parsed XML tree can be thought of
+            as another way of representing the relational data at the object level,
+            instead of POJOs.
+        </p>
+
+        <p>
+            Hibernate supports dom4j as API for manipulating XML trees. You can write 
+            queries that retrieve dom4j trees from the database and have any 
+            modification you make to the tree automatically synchronized to the 
+            database. You can even take an XML document, parse it using dom4j, and
+            write it to the database with any of Hibernate's basic operations: 
+            <code class="literal">persist(), saveOrUpdate(), merge(), delete(), replicate()</code> 
+            (merging is not yet supported).
+        </p>
+
+        <p>
+            This feature has many applications including data import/export, 
+            externalization of entity data via JMS or SOAP and XSLT-based reporting.
+        </p>
+        
+        <p>
+            A single mapping can be used to simultaneously map properties of a class
+            and nodes of an XML document to the database, or, if there is no class to map, 
+            it can be used to map just the XML.
+        </p>
+        
+        <div class="section" title="20.1.1. Specifying XML and class mapping together"><div class="titlepage"><div><div><h3 class="title"><a id="xml-intro-mapping"/>20.1.1. Specifying XML and class mapping together</h3></div></div></div>
+            
+
+            <p>
+                Here is an example of mapping a POJO and XML simultaneously:
+            </p>
+            
+            <pre xmlns="" xmlns:d="http://docbook.org/ns/docbook" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">&lt;class name="Account"
+        table="ACCOUNTS" 
+        node="account"&gt;
+        
+    &lt;id name="accountId" 
+            column="ACCOUNT_ID" 
+            node="@id"/&gt;
+            
+    &lt;many-to-one name="customer" 
+            column="CUSTOMER_ID" 
+            node="customer/@id" 
+            embed-xml="false"/&gt;
+            
+    &lt;property name="balance" 
+            column="BALANCE" 
+            node="balance"/&gt;
+            
+    ...
+    
+&lt;/class&gt;</pre>
+        </div>
+        
+        <div class="section" title="20.1.2. Specifying only an XML mapping"><div class="titlepage"><div><div><h3 class="title"><a id="xml-onlyxml"/>20.1.2. Specifying only an XML mapping</h3></div></div></div>
+            
+
+            <p>
+                Here is an example where there is no POJO class:
+            </p>
+            
+            <pre xmlns="" xmlns:d="http://docbook.org/ns/docbook" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">&lt;class entity-name="Account"
+        table="ACCOUNTS" 
+        node="account"&gt;
+        
+    &lt;id name="id" 
+            column="ACCOUNT_ID" 
+            node="@id" 
+            type="string"/&gt;
+            
+    &lt;many-to-one name="customerId" 
+            column="CUSTOMER_ID" 
+            node="customer/@id" 
+            embed-xml="false" 
+            entity-name="Customer"/&gt;
+            
+    &lt;property name="balance" 
+            column="BALANCE" 
+            node="balance" 
+            type="big_decimal"/&gt;
+            
+    ...
+    
+&lt;/class&gt;</pre>
+        
+            <p>
+                This mapping allows you to access the data as a dom4j tree, or as a graph of
+                property name/value pairs or java <code class="literal">Map</code>s. The property names
+                are purely logical constructs that can be referred to in HQL queries.
+            </p>
+
+        </div>
+        
+     </div>
+     
+    <div class="section" title="20.2. XML mapping metadata"><div class="titlepage"><div><div><h2 class="title"><a id="xml-mapping"/>20.2. XML mapping metadata</h2></div></div></div>
+        
+
+        <p>
+            A range of Hibernate mapping elements accept the <code class="literal">node</code> attribute.
+            This lets you specify the name of an XML attribute or element that holds the
+            property or entity data. The format of the <code class="literal">node</code> attribute
+            must be one of the following:
+        </p>
+        
+        <div class="itemizedlist"><ul class="itemizedlist" compact="compact"><li class="listitem">
+            <p><code class="literal">"element-name"</code>: map to the named XML element</p>
+        </li><li class="listitem">
+            <p><code class="literal">"@attribute-name"</code>: map to the named XML attribute</p>
+        </li><li class="listitem">
+            <p><code class="literal">"."</code>: map to the parent element</p>
+        </li><li class="listitem">
+            <p>
+                <code class="literal">"element-name/@attribute-name"</code>:
+                map to the named attribute of the named element
+            </p>
+        </li></ul></div>
+        
+        <p>
+            For collections and single valued associations, there is an additional 
+            <code class="literal">embed-xml</code> attribute. If <code class="literal">embed-xml="true"</code>,
+            the default, the XML tree for the associated entity (or collection of value type) 
+            will be embedded directly in the XML tree for the entity that owns the association.
+            Otherwise, if <code class="literal">embed-xml="false"</code>, then only the referenced 
+            identifier value will appear in the XML for single point associations and 
+            collections will not appear at all.
+        </p>
+        
+        <p>
+            Do not leave <code class="literal">embed-xml="true"</code> for
+            too many associations, since XML does not deal well with circularity.
+        </p>
+        
+        <pre xmlns="" xmlns:d="http://docbook.org/ns/docbook" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">&lt;class name="Customer"
+        table="CUSTOMER" 
+        node="customer"&gt;
+        
+    &lt;id name="id" 
+            column="CUST_ID" 
+            node="@id"/&gt;
+            
+    &lt;map name="accounts" 
+            node="." 
+            embed-xml="true"&gt;
+        &lt;key column="CUSTOMER_ID" 
+                not-null="true"/&gt;
+        &lt;map-key column="SHORT_DESC" 
+                node="@short-desc" 
+                type="string"/&gt;
+        &lt;one-to-many entity-name="Account"
+                embed-xml="false" 
+                node="account"/&gt;
+    &lt;/map&gt;
+    
+    &lt;component name="name" 
+            node="name"&gt;
+        &lt;property name="firstName" 
+                node="first-name"/&gt;
+        &lt;property name="initial" 
+                node="initial"/&gt;
+        &lt;property name="lastName" 
+                node="last-name"/&gt;
+    &lt;/component&gt;
+    
+    ...
+    
+&lt;/class&gt;</pre>
+
+        <p>
+            In this case, the collection of account ids is embedded, but not
+            the actual account data. The following HQL query:
+        </p>
+        
+        <pre xmlns="" xmlns:d="http://docbook.org/ns/docbook" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">from Customer c left join fetch c.accounts where c.lastName like :lastName</pre>
+        
+        <p>
+            would return datasets such as this:
+        </p>
+        
+        <pre xmlns="" xmlns:d="http://docbook.org/ns/docbook" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">&lt;customer xml:id="123456789"&gt;
+    &lt;account short-desc="Savings"&gt;987632567&lt;/account&gt;
+    &lt;account short-desc="Credit Card"&gt;985612323&lt;/account&gt;
+    &lt;name&gt;
+        &lt;first-name&gt;Gavin&lt;/first-name&gt;
+        &lt;initial&gt;A&lt;/initial&gt;
+        &lt;last-name&gt;King&lt;/last-name&gt;
+    &lt;/name&gt;
+    ...
+&lt;/customer&gt;</pre>
+
+        <p>
+            If you set <code class="literal">embed-xml="true"</code> on the <code class="literal">&lt;one-to-many&gt;</code>
+            mapping, the data might look more like this:
+        </p>
+        
+        <pre xmlns="" xmlns:d="http://docbook.org/ns/docbook" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">&lt;customer xml:id="123456789"&gt;
+    &lt;account xml:id="987632567" short-desc="Savings"&gt;
+        &lt;customer xml:id="123456789"/&gt;
+        &lt;balance&gt;100.29&lt;/balance&gt;
+    &lt;/account&gt;
+    &lt;account xml:id="985612323" short-desc="Credit Card"&gt;
+        &lt;customer xml:id="123456789"/&gt;
+        &lt;balance&gt;-2370.34&lt;/balance&gt;
+    &lt;/account&gt;
+    &lt;name&gt;
+        &lt;first-name&gt;Gavin&lt;/first-name&gt;
+        &lt;initial&gt;A&lt;/initial&gt;
+        &lt;last-name&gt;King&lt;/last-name&gt;
+    &lt;/name&gt;
+    ...
+&lt;/customer&gt;</pre>
+       
+    </div>
+    
+    
+    <div class="section" title="20.3. Manipulating XML data"><div class="titlepage"><div><div><h2 class="title"><a id="xml-manipulation"/>20.3. Manipulating XML data</h2></div></div></div>
+        
+        
+        <p>
+            You can also re-read and update XML documents in the application. You can do this by
+            obtaining a dom4j session:
+        </p>
+        
+       <pre xmlns="" xmlns:d="http://docbook.org/ns/docbook" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">Document doc = ....;
+       
+Session session = factory.openSession();
+Session dom4jSession = session.getSession(EntityMode.DOM4J);
+Transaction tx = session.beginTransaction();
+
+List results = dom4jSession
+    .createQuery("from Customer c left join fetch c.accounts where c.lastName like :lastName")
+    .list();
+for ( int i=0; i&lt;results.size(); i++ ) {
+    //add the customer data to the XML document
+    Element customer = (Element) results.get(i);
+    doc.add(customer);
+}
+
+tx.commit();
+session.close();</pre>
+       
+       <pre xmlns="" xmlns:d="http://docbook.org/ns/docbook" xmlns:rf="java:org.jboss.highlight.XhtmlRendererFactory" class="">Session session = factory.openSession();
+Session dom4jSession = session.getSession(EntityMode.DOM4J);
+Transaction tx = session.beginTransaction();
+
+Element cust = (Element) dom4jSession.get("Customer", customerId);
+for ( int i=0; i&lt;results.size(); i++ ) {
+    Element customer = (Element) results.get(i);
+    //change the customer name in the XML and database
+    Element name = customer.element("name");
+    name.element("first-name").setText(firstName);
+    name.element("initial").setText(initial);
+    name.element("last-name").setText(lastName);
+}
+
+tx.commit();
+session.close();</pre>
+
+        <p>
+            When implementing XML-based data import/export, it is useful to combine this feature with Hibernate's <code class="literal">replicate()</code>
+            operation.
+        </p>
+       
+    </div>
+     
+</div><hr xmlns="" xmlns:d="http://docbook.org/ns/docbook"/><a xmlns="" xmlns:d="http://docbook.org/ns/docbook" href="legalnotice.html"/><ul xmlns:d="http://docbook.org/ns/docbook" class="docnav"><li class="previous"><a accesskey="p" href="ch19.html"><strong>Prev</strong>Chapter 19. Filtering data</a></li><li class="up"><a accesskey="u" href="#"><strong>Up</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Home</strong></a></li><li class="next"><a accesskey="n" href="ch21.html"><strong>Next</strong>Chapter 21. Improving performance</a></li></ul></body></html>

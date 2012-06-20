@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="RandomAgentV1:jar">
+    <output-path>$PROJECT_DIR$/../../MARLA-Client/agentPlugins/RandomAgentV1</output-path>
+    <root id="archive" name="RandomAgentV1.jar">
+      <element id="module-output" name="RandomAgentV1" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../../AIClient/agentPlugins/RandomAgentv1/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../Deployment/MARLA-Server/EnvironmentPlugins/Factory.jar" path-in-jar="/" />
+      <element id="library" level="project" name="AgentSystemPluginAPI" />
+    </root>
+  </artifact>
+</component>

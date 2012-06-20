@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node11" href="$class_game_server_facade_1_1_implementation_1_1_game_server_facade.html" title="GameServerFacade.Implementation.\lGameServerFacade" alt="" coords="624,57,856,98"/>
+<area shape="rect" id="node2" href="$interface_remote_interface_1_1_i_game_statistics.html" title="RemoteInterface.IGameStatistics" alt="" coords="120,5,333,32"/>
+<area shape="rect" id="node6" href="$interface_environment_plugin_a_p_i_1_1_service_1_1_i_save_game_statistics.html" title="EnvironmentPluginAPI.Service.\lISaveGameStatistics" alt="" coords="127,57,327,98"/>
+<area shape="rect" id="node8" href="$interface_server_runner_1_1_interface_1_1_i_server_runner.html" title="ServerRunner.Interface.IServer\lRunner" alt="" coords="129,122,324,163"/>
+</map>

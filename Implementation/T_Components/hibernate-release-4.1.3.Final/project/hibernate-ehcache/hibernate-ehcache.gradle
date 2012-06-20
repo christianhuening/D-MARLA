@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+dependencies {
+    compile project( ':hibernate-core' )
+    compile "net.sf.ehcache:ehcache-core:2.4.3"
+
+    testCompile project( ':hibernate-testing' )
+    testCompile libraries.h2
+}
