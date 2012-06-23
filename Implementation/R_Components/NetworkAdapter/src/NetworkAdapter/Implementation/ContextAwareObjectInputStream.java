@@ -17,49 +17,32 @@ import java.util.regex.Pattern;
 /**
  * An ObjectInputStream implementation that takes into account the context classloader when loading classes.
  */
-public class ThreadContextClassLoaderFriendlyObjectInputStream extends ObjectInputStream {
+public class ContextAwareObjectInputStream extends ObjectInputStream {
 
     private static Pattern arrayBracketsFinderOfDoom = Pattern.compile("(.+?)([\\[]]+)");
+    private ClassLoader currentTccl;
+
+    public ContextAwareObjectInputStream(InputStream in) throws IOException {
+        super(in);
+        currentTccl = Thread.currentThread().getContextClassLoader();
+    }
 
     @Override
     public Class resolveClass(ObjectStreamClass desc) throws IOException,
             ClassNotFoundException {
-        ClassLoader currentTccl = null;
         try {
-            currentTccl = Thread.currentThread().getContextClassLoader();
-
-            return Class.forName(desc.getName(), false, currentTccl);
-            //return currentTccl.loadClass(desc.getName());
+            return super.resolveClass(desc);
         } catch (ClassNotFoundException e) {
-            /*String cleanedUpName = toClassName(desc.getName());
-
-            Matcher cleanedUpNameMatcher = arrayBracketsFinderOfDoom.matcher(cleanedUpName);
-
-            if(cleanedUpNameMatcher.matches()) {
-                cleanedUpName = cleanedUpNameMatcher.group(1);
-                return Array.newInstance(currentTccl.loadClass(cleanedUpName), cleanedUpNameMatcher.group(2).length()/2).getClass();
-            }
-
-            return currentTccl.loadClass(cleanedUpName);*/
-
-            e.printStackTrace();
-        }catch(Exception e){
-            e.printStackTrace();
+            return Class.forName(desc.getName(), true, currentTccl);
         }
-
-        return super.resolveClass(desc);
     }
 
-
-    public ThreadContextClassLoaderFriendlyObjectInputStream(InputStream in) throws IOException {
-        super(in);
-    }
 
     /**
      * Converts to a Java class name from a descriptor.
      * Taken from: http://www.docjar.com/html/api/javassist/bytecode/Descriptor.java.html
-     * @param descriptor        type descriptor.
      *
+     * @param descriptor type descriptor.
      */
 
     public static String toClassName(String descriptor) {

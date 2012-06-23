@@ -9,10 +9,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ZeroTypes" exported="" />
     <orderEntry type="library" exported="" name="joda-time-2.1" level="project" />
-    <orderEntry type="library" exported="" name="seaglasslookandfeel-0.1.7.3" level="project" />
     <orderEntry type="module" module-name="EnvironmentPluginAPI" />
     <orderEntry type="module" module-name="ServerFacade" />
     <orderEntry type="module" module-name="PluginLoader" />
+    <orderEntry type="library" name="seaglasslookandfeel-0.1.7.3" level="project" />
   </component>
 </module>
 

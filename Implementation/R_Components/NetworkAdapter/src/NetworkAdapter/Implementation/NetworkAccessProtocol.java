@@ -1,6 +1,5 @@
 package NetworkAdapter.Implementation;
 
-import EnvironmentPluginAPI.CustomNetworkMessages.IEnvironmentStateMessage;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import Exceptions.TypeIsNotSerializableException;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
@@ -29,7 +28,7 @@ class NetworkAccessProtocol {
     NetworkAccessProtocol(Socket socket) throws IOException {
         this.socket = socket;
         objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
-        objectInputStream = new ThreadContextClassLoaderFriendlyObjectInputStream(socket.getInputStream());
+        objectInputStream = new ContextAwareObjectInputStream(socket.getInputStream());
     }
 
     /**
@@ -41,18 +40,10 @@ class NetworkAccessProtocol {
     public void writeMessage(NetworkMessage message) throws ConnectionLostException {
 
         try {
-
-            if(message instanceof IEnvironmentStateMessage) {
-                ByteArrayOutputStream data= new ByteArrayOutputStream();
-                ObjectOutput out = new ObjectOutputStream(data);
-                ((IEnvironmentStateMessage) message).writeExternal(out);
-
-                System.err.println("outStream: " + data.toString());
-                System.err.println("objectOut: " + out);
-            }
             objectOutputStream.writeObject(message);
             objectOutputStream.flush();
-            System.err.println("writing: " + message);
+            System.err.println("sending: " + message);
+            System.err.println(message.getClass().getClassLoader());
 
         } catch (NotSerializableException ne) {
             throw new TypeIsNotSerializableException(ne);
@@ -77,7 +68,8 @@ class NetworkAccessProtocol {
         try {
 
             message = (NetworkMessage)objectInputStream.readObject();
-
+            System.err.println("receiving : " + message);
+            System.err.println(message.getClass().getClassLoader());
         } catch (IOException ex) {
             ex.printStackTrace();
             throw new ConnectionLostException(clientId);

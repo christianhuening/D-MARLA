@@ -26,6 +26,10 @@ public class RandomAgentImplementation implements IAgentSystem<TGameState, TActi
 
     private Faction ownFaction;
 
+    public RandomAgentImplementation() {
+        System.err.println("TGameState classloader im Plugin" + TGameState.class.getClassLoader());
+    }
+
     @Override
     public void start(Object faction) {
         ownFaction = (Faction)faction;

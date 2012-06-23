@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Factory">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../Deployment/MARLA-Server/EnvironmentPlugins/Factory.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Deployment/MARLA-Overseer/EnvironmentPlugins/Factory.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

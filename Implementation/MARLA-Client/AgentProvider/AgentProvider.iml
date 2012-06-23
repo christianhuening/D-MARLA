@@ -10,11 +10,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="picocontainer-2.14.1" level="project" />
     <orderEntry type="module" module-name="ZeroTypes" exported="" />
-    <orderEntry type="library" exported="" name="h2-1.3.167" level="project" />
     <orderEntry type="library" exported="" name="junit-4.10" level="project" />
-    <orderEntry type="library" exported="" name="derby" level="project" />
     <orderEntry type="module" module-name="EnvironmentPluginAPI" exported="" />
     <orderEntry type="module" module-name="AgentSystemPluginAPI" exported="" />
+    <orderEntry type="library" name="h2-1.3.167" level="project" />
   </component>
 </module>
 

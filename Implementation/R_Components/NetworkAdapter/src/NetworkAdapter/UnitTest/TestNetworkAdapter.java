@@ -53,22 +53,22 @@ public class TestNetworkAdapter //implements INetworkMessageReceivedEventHandler
 //            public void onNetworkEvent(NetworkEventType type, int clientId) {
 //
 //            }
-//        }, GameStartsMessage.class);
+//        }, CycleStartsMessage.class);
 //
 //        client.connectToServer("localhost", 20000, "TestServerHosting");
 //
 //        Assert.assertTrue("Client should have been connected, but it wasn't.", server.getConnectedClients().size() > 0);
 //
-//        client.sendNetworkMessage(new GameStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
-//        server.sendNetworkMessage(new GameStartsMessage(0, Faction.BLUE), MessageChannel.CONTROL);
-//        client.sendNetworkMessage(new GameStartsMessage(0, Faction.BLUE), MessageChannel.CONTROL);
-//        server.sendNetworkMessage(new GameStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
-//        client.sendNetworkMessage(new GameStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
-//        server.sendNetworkMessage(new GameStartsMessage(0, Faction.BLUE), MessageChannel.CONTROL);
-//        client.sendNetworkMessage(new GameStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
-//        server.sendNetworkMessage(new GameStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
-//        client.sendNetworkMessage(new GameStartsMessage(0, Faction.BLUE), MessageChannel.CONTROL);
-//        server.sendNetworkMessage(new GameStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
+//        client.sendNetworkMessage(new CycleStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
+//        server.sendNetworkMessage(new CycleStartsMessage(0, Faction.BLUE), MessageChannel.CONTROL);
+//        client.sendNetworkMessage(new CycleStartsMessage(0, Faction.BLUE), MessageChannel.CONTROL);
+//        server.sendNetworkMessage(new CycleStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
+//        client.sendNetworkMessage(new CycleStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
+//        server.sendNetworkMessage(new CycleStartsMessage(0, Faction.BLUE), MessageChannel.CONTROL);
+//        client.sendNetworkMessage(new CycleStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
+//        server.sendNetworkMessage(new CycleStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
+//        client.sendNetworkMessage(new CycleStartsMessage(0, Faction.BLUE), MessageChannel.CONTROL);
+//        server.sendNetworkMessage(new CycleStartsMessage(0, Faction.BLUE), MessageChannel.DATA);
 //
 //        server.stopHosting();
 //    }
@@ -95,8 +95,8 @@ public class TestNetworkAdapter //implements INetworkMessageReceivedEventHandler
 //        //To change body of implemented methods use File | Settings | File Templates.
 //    }
 //
-//    public void onMessageReceived(GameStartsMessage message) {
-//        Assert.assertTrue("Falscher MessageType übertragen.", message instanceof GameStartsMessage);
-//        Assert.assertTrue("(Farb)Daten korrupt.", ((GameStartsMessage) message).getFaction().equals(Faction.BLUE));
+//    public void onMessageReceived(CycleStartsMessage message) {
+//        Assert.assertTrue("Falscher MessageType übertragen.", message instanceof CycleStartsMessage);
+//        Assert.assertTrue("(Farb)Daten korrupt.", ((CycleStartsMessage) message).getFaction().equals(Faction.BLUE));
 //    }
 }

@@ -85,7 +85,7 @@ public class GameLogicUseCase implements IEnvironment {
 
     @Override
     public boolean isStillActive() {
-        return true ? (currentlyActiveGame.getWinningPlayer() == null) : false;
+        return currentlyActiveGame.getWinningPlayer() != null;
     }
 
     /**

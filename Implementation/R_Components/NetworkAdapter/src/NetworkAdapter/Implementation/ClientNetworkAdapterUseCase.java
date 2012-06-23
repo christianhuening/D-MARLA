@@ -59,7 +59,7 @@ class ClientNetworkAdapterUseCase
             if (message instanceof ClientAckMessage) {
 
                 clientId = message.getClientId();
-                controlChannel = new NetworkChannel<NetworkMessage>(protocol, this, Thread.currentThread().getContextClassLoader());
+                controlChannel = new NetworkChannel<NetworkMessage>(protocol, this);
                 controlChannel.start();
 
                 socket = new Socket(address, port + 1);
@@ -71,7 +71,7 @@ class ClientNetworkAdapterUseCase
 
                 //if that worked, too, we can establish the data connection and are done
                 if (message instanceof ClientAckMessage) {
-                    dataChannel = new NetworkChannel<NetworkMessage>(protocol, this, Thread.currentThread().getContextClassLoader());
+                    dataChannel = new NetworkChannel<NetworkMessage>(protocol, this);
                     dataChannel.start();
                 } else { // abort (we were so close..) :(
                     throw new HostUnreachableException();

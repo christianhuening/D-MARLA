@@ -24,9 +24,6 @@ public class EnvironmentPluginLoaderUseCase {
 
     private PluginHelper pluginHelper;
     private Map<TEnvironmentDescription, File> environmentPluginPaths;
-    private IEnvironmentPluginDescriptor loadedEnvironmentDescriptor;
-    private TEnvironmentDescription loadedEnvironment;
-    private Constructor customActionDescriptionMessage;
     private Constructor customEnvironmentStateMessage;
     private Class customAbstractVisualization;
     private Class customInterfaceVisualization;
@@ -73,69 +70,51 @@ public class EnvironmentPluginLoaderUseCase {
             throw new UnsupportedOperationException("protocol violated: listAvailableEnvironments must be called before this method.");
         }
 
-        if (loadedEnvironment == null || !loadedEnvironment.equals(environment)) {
+        IEnvironmentPluginDescriptor loadedEnvironmentDescriptor = null;
 
-            try {
-                // Load all classes from the jar where this plugin is located
-                List<Class> classesInJar = pluginHelper.listClassesFromJar(environmentPluginPaths.get(environment).getPath());
-                pluginHelper.loadJar(environmentPluginPaths.get(environment).getPath());
-
-                //search for the first class that abides the contract that is not the interface itself
-                for (Class c : classesInJar) {
-                    if (!IEnvironmentPluginDescriptor.class.equals(c)
-                            && IEnvironmentPluginDescriptor.class.isAssignableFrom(c)) {
-
-                        //save available AgentSystemDescriptor description and it's directory
-                        loadedEnvironmentDescriptor = (IEnvironmentPluginDescriptor) c.newInstance();
-                        loadedEnvironment = environment;
-                        continue;
-
-                    }
-
-                    //now that this time the plugin is really loaded, get the types of all needed classes for use
-                    //in the factory methods
-                    if (!IEnvironmentStateMessage.class.equals(c)
-                            && IEnvironmentStateMessage.class.isAssignableFrom(c)) {
-
-                        customEnvironmentStateMessage = findSuitableConstructor(c, int.class, IEnvironmentState.class);
-                        if (customEnvironmentStateMessage == null) {
-                            throw new PluginNotReadableException("A custom environment state message was found, but didn't provide the needed constructor => (int clientId, E extends IEnvironmentState state).", environmentPluginPaths.get(environment).getPath());
-                        }
-                        continue;
-                    }
-
-                    if (!IActionDescriptionMessage.class.equals(c)
-                            && IActionDescriptionMessage.class.isAssignableFrom(c)) {
-
-                        //examine constructors
-                        customActionDescriptionMessage = findSuitableConstructor(c, int.class, IActionDescription.class);
-
-                        if (customActionDescriptionMessage == null) {
-                            throw new PluginNotReadableException("A custom action description message was found, but didn't provide the needed constructor => (int clientId, A extends IActionDescription state).", environmentPluginPaths.get(environment).getPath());
-                        }
-
-                        continue;
-                    }
+        try {
+            // Load all classes from the jar where this plugin is located
+            List<Class>classesInJar = pluginHelper.loadJar(environmentPluginPaths.get(environment).getPath());
 
 
-                    if (!AbstractVisualizeReplayPanel.class.equals(c)
-                            && AbstractVisualizeReplayPanel.class.isAssignableFrom(c)) {
-                        customAbstractVisualization = c;
-                        continue;
-                    }
+            //search for the first class that abides the contract that is not the interface itself
+            for (Class c : classesInJar) {
+                if (!IEnvironmentPluginDescriptor.class.equals(c)
+                        && IEnvironmentPluginDescriptor.class.isAssignableFrom(c)) {
 
-                    if (!IVisualizeReplay.class.equals(c)
-                            && IVisualizeReplay.class.isAssignableFrom(c)) {
-                        customInterfaceVisualization = c;
-                        continue;
-                    }
+                    //save available AgentSystemDescriptor description and it's directory
+                    loadedEnvironmentDescriptor = (IEnvironmentPluginDescriptor) c.newInstance();
+                    continue;
                 }
 
-            } catch (InstantiationException e) {
-                throw new TechnicalException("Unable to load Class from '" + environmentPluginPaths.get(environment) + "' Reason: \n\n" + e);
-            } catch (IllegalAccessException e) {
-                throw new TechnicalException("Unable to load Class from '" + environmentPluginPaths.get(environment) + "' Reason: \n\n" + e);
+                //now that this time the plugin is really loaded, get the types of all needed classes for use
+                //in the factory methods
+                if (!IEnvironmentStateMessage.class.equals(c)
+                        && IEnvironmentStateMessage.class.isAssignableFrom(c)) {
+
+                    customEnvironmentStateMessage = pluginHelper.findSuitableConstructor(c, int.class, IEnvironmentState.class);
+                    if (customEnvironmentStateMessage == null) {
+                        throw new PluginNotReadableException("A custom environment state message was found, but didn't provide the needed constructor => (int clientId, E extends IEnvironmentState state).", environmentPluginPaths.get(environment).getPath());
+                    }
+                    continue;
+                }
+
+                if (!AbstractVisualizeReplayPanel.class.equals(c)
+                        && AbstractVisualizeReplayPanel.class.isAssignableFrom(c)) {
+                    customAbstractVisualization = c;
+                    continue;
+                }
+
+                if (!IVisualizeReplay.class.equals(c)
+                        && IVisualizeReplay.class.isAssignableFrom(c)) {
+                    customInterfaceVisualization = c;
+                }
             }
+
+        } catch (InstantiationException e) {
+            throw new TechnicalException("Unable to load Class from '" + environmentPluginPaths.get(environment) + "' Reason: \n\n" + e);
+        } catch (IllegalAccessException e) {
+            throw new TechnicalException("Unable to load Class from '" + environmentPluginPaths.get(environment) + "' Reason: \n\n" + e);
         }
 
         if (loadedEnvironmentDescriptor != null) {
@@ -143,52 +122,6 @@ public class EnvironmentPluginLoaderUseCase {
         } else {
             throw new PluginNotReadableException("plugin didn't provide a descriptor.", environmentPluginPaths.get(environment).getPath());
         }
-    }
-
-    /**
-     * Looks for a compatible constructors in a class object.
-     * <br/><br/>
-     * For the definition of compatible see isAssignable
-     *
-     * @param toExamine The class to look for the constructor in != null
-     * @param typesToLookFor the
-     * @return
-     */
-    private Constructor findSuitableConstructor(Class toExamine, Class... typesToLookFor) {
-        System.out.println(toExamine);
-        Class[] argTypes;
-
-        for (Constructor ctor : toExamine.getConstructors()) {
-            System.out.println(ctor);
-            argTypes = ctor.getParameterTypes();
-
-            if (isAssignable(argTypes, typesToLookFor)) {
-                return ctor;
-            }
-        }
-
-        return null;
-    }
-
-    /**
-     * Determines if all types in argTypes are compatible to the classes in types.
-     * <br/><br/>
-     * Compatible means:<br/>
-     * 1. Same length of list<br/>
-     * 2. Each type in argTypes is the same type or a subtype of the class in the same index in types
-     *
-     * @param argTypes a list of argument types
-     * @param types    the types to look for
-     * @return see description
-     */
-    private boolean isAssignable(Class[] argTypes, Class... types) {
-        if (argTypes.length != types.length) return false;
-
-        for (int i = 0; i < argTypes.length; i++) {
-            if (!types[i].isAssignableFrom(argTypes[i])) return false;
-        }
-
-        return true;
     }
 
     /**
@@ -232,30 +165,6 @@ public class EnvironmentPluginLoaderUseCase {
 
         return new DefaultEnvironmentStateMessage(targetClientId, environmentState);
 
-    }
-
-    /**
-     * Creates an action description message. If the environment provides a custom implementation, it will be used.
-     * Otherwise a default message is used. The message will be targeted to the server automatically
-     *
-     * @param actionDescription the action description to send
-     * @return not null
-     */
-    public NetworkMessage createActionDescriptionMessage(IActionDescription actionDescription) {
-        if (customActionDescriptionMessage != null) {
-
-            try { //TODO: needs better exception handling
-                return (NetworkMessage) customEnvironmentStateMessage.newInstance(0, actionDescription);
-            } catch (InstantiationException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            } catch (InvocationTargetException e) {
-                e.printStackTrace();
-            }
-        }
-
-        return new DefaultActionDescriptionMessage(0, actionDescription);
     }
 
     public IVisualizeReplay getReplayVisualization() {

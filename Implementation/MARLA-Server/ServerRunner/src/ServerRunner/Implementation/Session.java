@@ -15,6 +15,8 @@ import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.Exceptions.NotConnectedException;
 import NetworkAdapter.Interface.IServerNetworkAdapter;
 import NetworkAdapter.Interface.MessageChannel;
+import NetworkAdapter.Messages.CycleEndsMessage;
+import NetworkAdapter.Messages.CycleStartsMessage;
 import NetworkAdapter.Messages.SessionEndsMessage;
 import NetworkAdapter.Messages.SessionStartsMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
@@ -217,7 +219,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
         for (TNetworkClient networkClient : clientsInThisSession) {
             clientsForPlayers.put(new TMARLAClientInstance(networkClient.getName(), networkClient.getId()), networkClient);
 
-            //serverNetworkAdapter.sendNetworkMessage(new GameStartsMessage(networkClient.getId(), playerFaction), MessageChannel.DATA);
+            serverNetworkAdapter.sendNetworkMessage(new CycleStartsMessage(networkClient.getId(), null), MessageChannel.DATA);
         }
 
         try {
@@ -226,7 +228,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
             e.printStackTrace();
         }
 
-        sendCurrentGameStateToClient(clientsForPlayers.get(environment.getActiveInstance()));
+        sendCurrentEnvironmentStateToClient(clientsForPlayers.get(environment.getActiveInstance()));
         synchronized (this) {
             // TODO: A timeout mechanic would be nice, if the clients do not respond.
             wait();
@@ -237,7 +239,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
         sendPlayerEventMessage(new TClientEvent(ClientEventType.GameStarted, this.getTransportType()));
     }
 
-    private void sendCurrentGameStateToClient(TNetworkClient networkClient) throws NotConnectedException, ConnectionLostException {
+    private void sendCurrentEnvironmentStateToClient(TNetworkClient networkClient) throws NotConnectedException, ConnectionLostException {
         serverNetworkAdapter.sendNetworkMessage(pluginLoader.createEnvironmentStateMessage(currentEnvironmentState, networkClient.getId()), MessageChannel.DATA);
     }
 
@@ -245,9 +247,9 @@ class Session extends Thread implements IHasTransportType<TSession> {
         synchronized (this) {
             while (status.equals(SessionStatus.RUNNING)) {
                 currentEnvironmentState = environment.executeAction(actionsInTurn);
-
+                System.err.println("Environment still active: " + environment.isStillActive());
                 if (environment.isStillActive()) {
-                    sendCurrentGameStateToClient(clientsForPlayers.get(environment.getActiveInstance()));
+                    sendCurrentEnvironmentStateToClient(clientsForPlayers.get(environment.getActiveInstance()));
                     this.wait();
                 } else {
                     endGame();
@@ -261,17 +263,17 @@ class Session extends Thread implements IHasTransportType<TSession> {
         environment.end();
 
         //TODO: coupling to environment logic too high, needs to be fixed!!!
-//        for (TMARLAClientInstance player : clientsForPlayers.keySet()) {
-//            EnvironmentEndsMessage message;
-//
-//            if (currentEnvironmentState.getWinningClient().equals(player)) {
-//                message = new EnvironmentEndsMessage(true, clientsForPlayers.get(player).getId());
-//            } else {
-//                message = new EnvironmentEndsMessage(false, clientsForPlayers.get(player).getId());
-//            }
-//
-//            serverNetworkAdapter.sendNetworkMessage(message, MessageChannel.DATA);
-//        }
+        for (TMARLAClientInstance player : clientsForPlayers.keySet()) {
+            CycleEndsMessage message;
+
+            if (environment.getActiveInstance().equals(player)) {
+                message = new CycleEndsMessage(true, clientsForPlayers.get(player).getId());
+            } else {
+                message = new CycleEndsMessage(false, clientsForPlayers.get(player).getId());
+            }
+
+            serverNetworkAdapter.sendNetworkMessage(message, MessageChannel.DATA);
+        }
 
         sendPlayerEventMessage(new TClientEvent(ClientEventType.GameEnded, this.getTransportType()));
     }

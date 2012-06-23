@@ -81,7 +81,7 @@ public class PluginLoaderComponent implements IPluginLoader {
 
     @Override
     public NetworkMessage createActionDescriptionMessage(IActionDescription actionDescription) {
-        return environmentPluginLoaderUseCase.createActionDescriptionMessage(actionDescription);
+        return agentSystemPluginLoaderUseCase.createActionDescriptionMessage(actionDescription);
     }
 
     @Override

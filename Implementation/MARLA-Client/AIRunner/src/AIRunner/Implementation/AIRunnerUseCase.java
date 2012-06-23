@@ -12,8 +12,8 @@ import NetworkAdapter.Interface.Exceptions.HostUnreachableException;
 import NetworkAdapter.Interface.IClientNetworkAdapter;
 import NetworkAdapter.Interface.INetworkMessageReceivedEventHandler;
 import NetworkAdapter.Interface.NetworkEventType;
-import NetworkAdapter.Messages.EnvironmentEndsMessage;
-import NetworkAdapter.Messages.GameStartsMessage;
+import NetworkAdapter.Messages.CycleEndsMessage;
+import NetworkAdapter.Messages.CycleStartsMessage;
 import NetworkAdapter.Messages.SessionEndsMessage;
 import NetworkAdapter.Messages.SessionStartsMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
@@ -96,8 +96,8 @@ public class AIRunnerUseCase implements IAIRunner, IAIRunnerEventHandler, INetwo
         } else if(message instanceof SessionEndsMessage) {
             sessionRunning = false;
             onAIRunnerEvent(AIRunnerEventType.SessionEnded);
-        } else if(message instanceof GameStartsMessage) {
-            pluginContainer.start(((GameStartsMessage) message).getEnvironmentInitInfo());
+        } else if(message instanceof CycleStartsMessage) {
+            pluginContainer.start(((CycleStartsMessage) message).getEnvironmentInitInfo());
         } else if(message instanceof IEnvironmentStateMessage) {
             pluginContainer.receiveGameState(((IEnvironmentStateMessage) message).getEnvironmentState());
 
@@ -105,7 +105,7 @@ public class AIRunnerUseCase implements IAIRunner, IAIRunnerEventHandler, INetwo
                 pluginContainer.notify();
             }
 
-        } else if(message instanceof EnvironmentEndsMessage) {
+        } else if(message instanceof CycleEndsMessage) {
             onAIRunnerEvent(AIRunnerEventType.GameEnded);
             pluginContainer.end();
         }

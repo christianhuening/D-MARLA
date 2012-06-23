@@ -231,7 +231,7 @@ class ServerNetworkAdapterUseCase
         clientsAccess.unlock();
 
         //start listening on the control connection
-        session.controlChannel = new NetworkChannel<NetworkMessage>(networkAccessProtocol, this, Thread.currentThread().getContextClassLoader());
+        session.controlChannel = new NetworkChannel<NetworkMessage>(networkAccessProtocol, this);
         session.controlChannel.start();
 
         return id;
@@ -245,7 +245,7 @@ class ServerNetworkAdapterUseCase
 
         if (isValidClientId(clientId)) {
             ClientSession clientSession = clients.get(clientId);
-            clientSession.dataChannel = new NetworkChannel<NetworkMessage>(networkAccessProtocol, this, Thread.currentThread().getContextClassLoader());
+            clientSession.dataChannel = new NetworkChannel<NetworkMessage>(networkAccessProtocol, this);
             clientSession.dataChannel.start();
             result = true;
         }

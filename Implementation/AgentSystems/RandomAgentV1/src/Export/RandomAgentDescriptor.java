@@ -6,6 +6,7 @@ import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
+import Factory.GameLogic.TransportTypes.TGameState;
 
 import java.util.HashSet;
 import java.util.Set;

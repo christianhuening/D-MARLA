@@ -7,6 +7,7 @@ import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Constructor;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -17,11 +18,12 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 /**
- *  This class helps with the loading of plugins
+ * This class helps with the loading of plugins
  */
 class PluginHelper {
 
-    private URLClassLoader classLoader;
+     ClassLoader classLoader = null;
+
     /**
      * Returns a list of all jars in a directory. This is not only true for jars located directly in the
      * directory, but also for jars in any sub-folder of the given folder.
@@ -34,11 +36,13 @@ class PluginHelper {
 
         File[] files = new File(directory).listFiles();
 
-        for (File file : files) {
-            if (file.isFile() && file.getPath().endsWith(".jar")) {
-                result.add(file.getAbsolutePath());
-            } else if (file.isDirectory()) {
-                result.addAll(findJarsRecursively(file.getPath()));
+        if (files != null) {
+            for (File file : files) {
+                if (file.isFile() && file.getPath().endsWith(".jar")) {
+                    result.add(file.getAbsolutePath());
+                } else if (file.isDirectory()) {
+                    result.addAll(findJarsRecursively(file.getPath()));
+                }
             }
         }
 
@@ -47,51 +51,49 @@ class PluginHelper {
 
     /**
      * Creates a new classloader, in which all classes from the given jar are loaded.
+     *
      * @param pathToJar the location of the jar != null
      * @return the classloader
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException if the jar is not readable
+     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException
+     *                                  if the jar is not readable
      * @throws IllegalArgumentException if no path is found under the given path
      */
-    public void loadJar(String pathToJar) throws TechnicalException, PluginNotReadableException {
-        try {
-            //create a new class loader and make it the new context
-            classLoader = new URLClassLoader(new URL[]{new File(pathToJar).toURI().toURL()}, Thread.currentThread().getContextClassLoader());
-            Thread.currentThread().setContextClassLoader(classLoader);
+    public List<Class> loadJar(String pathToJar) throws TechnicalException, PluginNotReadableException {
 
-            //then make all classes of the plugin known to the class loader
-            for (Class<?> clazz : listClassesFromJar(pathToJar)) {
-                System.out.println("pluginloader: " + clazz);
-                try {
-                    Class.forName(clazz.getName(), true, classLoader);
-                } catch (ClassNotFoundException e) {
-                    throw new PluginNotReadableException(e.toString(), pathToJar);
-                }
+        List<Class> classes = listClassesFromJar(pathToJar);
+        //then make all classes of the plugin known to the class loader
+        for (Class<?> clazz : classes) {
+            System.err.println("pluginloader: " + clazz);
+            System.err.println("with: " + classLoader);
+            try {
+                Class.forName(clazz.getName(), true, classLoader);
+            } catch (ClassNotFoundException e) {
+                throw new PluginNotReadableException(e.getMessage(), pathToJar);
             }
-
-        } catch (MalformedURLException e) {
-            throw new TechnicalException(ErrorMessages.get("invalidJarPath") + e);
-        } catch (IOException e) {
-            throw new PluginNotReadableException(e.toString(), pathToJar);
         }
+
+        Thread.currentThread().setContextClassLoader(classLoader);
+        return classes;
     }
+
 
     /**
      * Returns a list containing all class files found in the jar described by the parameter.
      * The classes are not fully initialized but from now on known to the JVM.
+     *
      * @param pathToJar the location of the jar != null
      * @return empty, if no class files are in the jar
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException if the jar is not readable
+     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException
+     *                                  if the jar is not readable
      * @throws IllegalArgumentException if no path is found under the given path
      */
     public List<Class> listClassesFromJar(String pathToJar) throws TechnicalException {
         //create file access resources needed
-        URLClassLoader classLoader = null;
         List<Class> classes = new LinkedList<Class>();
 
         try {
-
             classLoader = new URLClassLoader(new URL[]{new File(pathToJar).toURI().toURL()}, Thread.currentThread().getContextClassLoader());
-
+            System.err.println("listing jar, classes loaded by: " + classLoader);
             JarFile jarFile = new JarFile(pathToJar);
             Enumeration<JarEntry> e = jarFile.entries();
 
@@ -111,7 +113,7 @@ class PluginHelper {
                         className = jarEntry.getName().replaceAll("/", "\\.").replace(".class", "");
 
                         //load and add
-                        classes.add(classLoader.loadClass(className));
+                        classes.add(Class.forName(className, false, classLoader));
                     } catch (ClassNotFoundException ex) {
                         System.err.println("Class '" + jarEntry.getName().replaceAll("/", "\\.") + "' could not be found while loading jar:\n" + pathToJar);
                     }
@@ -127,5 +129,50 @@ class PluginHelper {
         } catch (IOException e) {
             throw new TechnicalException(ErrorMessages.get("invalidJarPath") + e);
         }
+    }
+
+
+    /**
+     * Looks for a compatible constructors in a class object.
+     * <br/><br/>
+     * For the definition of compatible see isAssignable
+     *
+     * @param toExamine      The class to look for the constructor in != null
+     * @param typesToLookFor the
+     * @return
+     */
+    public Constructor findSuitableConstructor(Class toExamine, Class... typesToLookFor) {
+        Class[] argTypes;
+
+        for (Constructor ctor : toExamine.getConstructors()) {
+            argTypes = ctor.getParameterTypes();
+
+            if (isAssignable(argTypes, typesToLookFor)) {
+                return ctor;
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Determines if all types in argTypes are compatible to the classes in types.
+     * <br/><br/>
+     * Compatible means:<br/>
+     * 1. Same length of list<br/>
+     * 2. Each type in argTypes is the same type or a subtype of the class in the same index in types
+     *
+     * @param argTypes a list of argument types
+     * @param types    the types to look for
+     * @return see description
+     */
+    public boolean isAssignable(Class[] argTypes, Class... types) {
+        if (argTypes.length != types.length) return false;
+
+        for (int i = 0; i < argTypes.length; i++) {
+            if (!types[i].isAssignableFrom(argTypes[i])) return false;
+        }
+
+        return true;
     }
 }

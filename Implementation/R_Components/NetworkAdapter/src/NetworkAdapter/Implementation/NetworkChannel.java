@@ -21,13 +21,11 @@ class NetworkChannel<M extends NetworkMessage> extends Thread {
      *
      * @param networkAccessProtocol an established protocol !=  null
      * @param handle the handle for the event of an incoming network message
-     * @param contextClassLoader
      */
-    public NetworkChannel(NetworkAccessProtocol networkAccessProtocol, NetworkMessageReceivedHandle handle, ClassLoader contextClassLoader) {
+    public NetworkChannel(NetworkAccessProtocol networkAccessProtocol, NetworkMessageReceivedHandle handle) {
         super("NetworkChannel");
         this.networkAccessProtocol = networkAccessProtocol;
         this.handle = handle;
-        this.parentThreadClassLoader = contextClassLoader;
     }
 
     @Override
