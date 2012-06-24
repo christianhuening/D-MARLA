@@ -6,6 +6,7 @@ import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import Settings.SettingException;
 
 import java.io.File;
 import java.util.List;
@@ -19,12 +20,12 @@ public interface IPluginLoader {
     /**
      * Searches recursively for environment plugins in the given directory.
      *
-     * @param environmentPluginDirectory the directory to search in != null
      * @return empty if no environment plugins were found
      * @throws TechnicalException if technical errors prevent the component from loading the plugin described
      * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
+     * @throws SettingException @throws SettingException if the environmentPluginsfolder is not correctly set int he app's settings.
      */
-    public List<TEnvironmentDescription> listAvailableEnvironments(String environmentPluginDirectory) throws TechnicalException, PluginNotReadableException;
+    public List<TEnvironmentDescription> listAvailableEnvironments() throws TechnicalException, PluginNotReadableException, SettingException;
 
     /**
      * Loads the specified environment plugin an returns an instance of it.
@@ -47,12 +48,13 @@ public interface IPluginLoader {
 
     /**
      * Searches recursively for agent system plugins in the given directory.
-     * @param agentPluginDirectory the directory to search in != null
+     *
      * @return empty if no agent system plugins found in that directory
      * @throws TechnicalException if technical errors prevent the component from loading the plugin described
      * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
+     * @throws SettingException if the agentSystemPluginsFolder is not correctly set int he app's settings.
      */
-    public List<TAgentSystemDescription> listAvailableAgentSystemPlugins(String agentPluginDirectory) throws TechnicalException, PluginNotReadableException;
+    public List<TAgentSystemDescription> listAvailableAgentSystemPlugins() throws TechnicalException, PluginNotReadableException, SettingException;
 
     /**
      * Loads the specified environment plugin and returns an instance of it.
@@ -78,20 +80,21 @@ public interface IPluginLoader {
      * Creates an environment state message. If the environment provides a custom implementation, it will be used.
      * Otherwise a default message is used.
      * @pre Environment must be loaded!
-     * @param environmentState the environment state to send
      * @param clientId the client id of the client targeted to, != null
+     * @param environmentState the environment state to send
      * @return not null
      */
-    public NetworkMessage createEnvironmentStateMessage(IEnvironmentState environmentState, int clientId);
+    public NetworkMessage createEnvironmentStateMessage(int clientId, IEnvironmentState environmentState);
 
     /**
      * Creates an action description message. If the environment provides a custom implementation, it will be used.
      * Otherwise a default message is used. The message will be targeted to the server automatically
      * @pre Environment must be loaded!
      * @param actionDescription the action description to send
+     * @param clientId the client's network id
      * @return not null
      */
-    public NetworkMessage createActionDescriptionMessage(IActionDescription actionDescription);
+    public NetworkMessage createActionDescriptionMessage(int clientId, IActionDescription actionDescription);
 
     /**
      * Loads the implementation of IVisualizeReplay from the pre-loaded Environment.

@@ -30,7 +30,6 @@ class NetworkChannel<M extends NetworkMessage> extends Thread {
 
     @Override
     public void run() {
-        Thread.currentThread().setContextClassLoader(parentThreadClassLoader);
 
         while (!isInterrupted()) {
             try {

@@ -70,26 +70,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkChannel.java" />
         <option value="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ClientNetworkAdapterUseCase.java" />
         <option value="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ServerNetworkAdapterUseCase.java" />
         <option value="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkAccessProtocol.java" />
         <option value="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ContextAwareObjectInputStream.java" />
-        <option value="$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/PluginContainer.java" />
         <option value="$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Contract/IAgentSystem.java" />
-        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/PluginLoaderComponent.java" />
-        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/AgentSystemPluginLoaderUseCase.java" />
         <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/PluginHelper.java" />
         <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java" />
         <option value="$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/AIRunnerUseCase.java" />
+        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/AgentSystemPluginLoaderUseCase.java" />
+        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/PluginLoaderComponent.java" />
+        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Interface/IPluginLoader.java" />
+        <option value="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkChannel.java" />
+        <option value="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Messages/DefaultActionDescriptionMessage.java" />
+        <option value="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/CustomNetworkMessages/NetworkMessage.java" />
+        <option value="$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/PluginContainer.java" />
+        <option value="$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Plugins/PluginManager.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -117,6 +121,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files" />
       </pane>
@@ -153,6 +167,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PluginLoader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Interface" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -203,6 +221,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="NetworkAdapter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetworkAdapter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetworkAdapter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Messages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -244,6 +284,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="EnvironmentPluginAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnvironmentPluginAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnvironmentPluginAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnvironmentPluginAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CustomNetworkMessages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="AIRunner" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -294,7 +374,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AgentSystemManagement" />
+              <option name="myItemId" value="AIClientFacade" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,7 +384,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AgentSystemManagement" />
+              <option name="myItemId" value="AIClientFacade" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -312,11 +392,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AgentSystemManagement" />
+              <option name="myItemId" value="AIClientFacade" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Services" />
+              <option name="myItemId" value="Interface" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,7 +406,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AgentSystemManagement" />
+              <option name="myItemId" value="AIClientFacade" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -334,18 +414,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AgentSystemManagement" />
+              <option name="myItemId" value="AIClientFacade" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MARLA-Client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+              <option name="myItemId" value="Implementation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -365,9 +439,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Application.AIClientGUI">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -390,6 +464,24 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -418,24 +510,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -525,24 +599,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39944133" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34776536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34768212" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24951644" sideWeight="0.7234637" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27653632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20684126" sideWeight="0.7240618" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27593818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -609,46 +683,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ServerNetworkAdapterUseCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="264" column="36" selection-start="9636" selection-end="9636" vertical-scroll-proportion="0.5726257" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ServerNetworkAdapterComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Service/ICycleReplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="49" selection-start="223" selection-end="223" vertical-scroll-proportion="0.37527594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="29" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.5143488" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ContextAwareObjectInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="43" selection-start="843" selection-end="843" vertical-scroll-proportion="0.27285922" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkAccessProtocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="40" selection-start="1875" selection-end="1875" vertical-scroll-proportion="0.62278104" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Contract/IAgentSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="87" selection-start="845" selection-end="863" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Plugins/PluginManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="69" selection-start="1818" selection-end="1829" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Contract/IAgentSystemPluginDescriptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="17" selection-start="461" selection-end="461" vertical-scroll-proportion="0.4077961" />
@@ -659,45 +693,80 @@
         <state line="21" column="52" selection-start="968" selection-end="968" vertical-scroll-proportion="0.3912134" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/PluginContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="53" selection-start="3675" selection-end="3675" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/PluginLoaderComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="144" selection-start="4110" selection-end="4110" vertical-scroll-proportion="0.70292884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/PluginHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="53" selection-start="4690" selection-end="4690" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/AIRunnerUseCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="2" selection-start="4640" selection-end="4640" vertical-scroll-proportion="0.69086653">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1774#1797#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="119" column="53" selection-start="4690" selection-end="4690" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="154" selection-start="6025" selection-end="6025" vertical-scroll-proportion="0.6814988">
-          <folding />
-        </state>
+        <state line="124" column="154" selection-start="6025" selection-end="6025" vertical-scroll-proportion="0.6814988" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Interface/IPluginLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="46" selection-start="5329" selection-end="5329" vertical-scroll-proportion="0.4571843" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/PluginLoaderComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="93" selection-start="3874" selection-end="3874" vertical-scroll-proportion="0.37130177" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkAccessProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="61" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.044378698" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="23" selection-start="2764" selection-end="2764" vertical-scroll-proportion="1.8998549" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/AgentSystemPluginLoaderUseCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="33" selection-start="6630" selection-end="6630" vertical-scroll-proportion="0.76112413">
+        <state line="144" column="50" selection-start="7059" selection-end="7059" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Messages/DefaultActionDescriptionMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="42" selection-start="2752" selection-end="2752" vertical-scroll-proportion="0.8026125" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/CustomNetworkMessages/NetworkMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="33" selection-start="2515" selection-end="2515" vertical-scroll-proportion="0.3091437" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/AIRunnerUseCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="30" selection-start="4761" selection-end="4761" vertical-scroll-proportion="2.7782426" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AIClientFacade/src/AIClientFacade/Implementation/AIClientFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="13" selection-start="885" selection-end="885" vertical-scroll-proportion="0.1891892">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AIClientFacade/src/AIClientFacade/Interface/AIClientApplicationCoreFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="805" selection-end="805" vertical-scroll-proportion="0.10810811">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Plugins/PluginManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="60" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.44482365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/PluginContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="50" selection-start="3597" selection-end="3597" vertical-scroll-proportion="0.38680318">
           <folding />
         </state>
       </provider>
@@ -761,6 +830,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

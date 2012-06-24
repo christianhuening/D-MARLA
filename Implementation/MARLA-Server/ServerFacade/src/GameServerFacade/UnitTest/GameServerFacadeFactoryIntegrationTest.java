@@ -1,4 +1,4 @@
-import GameServerFacade.Interface.GameServerFacadeFactory;
+import GameServerFacade.Interface.ServerFacadeFactory;
 import junit.framework.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -19,6 +19,6 @@ public class GameServerFacadeFactoryIntegrationTest {
 
     @Test
     public void BasicFacadeSetupTest() {
-        Assert.assertNotNull(GameServerFacadeFactory.getIntegrationTestApplicationCore());
+        Assert.assertNotNull(ServerFacadeFactory.getProductiveApplicationCore());
     }
 }

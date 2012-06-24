@@ -8,6 +8,8 @@ import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import NetworkAdapter.Messages.DefaultActionDescriptionMessage;
 import NetworkAdapter.Messages.DefaultEnvironmentStateMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
+import Settings.AppSettings;
+import Settings.SettingException;
 
 import java.io.File;
 import java.lang.reflect.Constructor;
@@ -29,21 +31,23 @@ public class EnvironmentPluginLoaderUseCase {
     private Class customInterfaceVisualization;
 
 
-    public EnvironmentPluginLoaderUseCase() {
+    public EnvironmentPluginLoaderUseCase() throws TechnicalException, SettingException, PluginNotReadableException {
         pluginHelper = new PluginHelper();
+        listAvailableEnvironments();
     }
 
-    public List<TEnvironmentDescription> listAvailableEnvironments(String environmentPluginDirectory) throws TechnicalException, PluginNotReadableException {
+    public List<TEnvironmentDescription> listAvailableEnvironments() throws TechnicalException, PluginNotReadableException, SettingException {
+        pluginHelper = new PluginHelper();
         environmentPluginPaths = new Hashtable<TEnvironmentDescription, File>();
 
         List<TEnvironmentDescription> result = new LinkedList<TEnvironmentDescription>();
+        try {
+            // Load all plugins recursively from the directory specified in the config file.
+            List<String> allJars = pluginHelper.findJarsRecursively(AppSettings.getString("environmentPluginsFolder"));
 
-        // Load all plugins recursively from the directory specified in the config file.
-        List<String> allJars = pluginHelper.findJarsRecursively(environmentPluginDirectory);
+            TEnvironmentDescription tmp = null;
+            for (String jarPath : allJars) {
 
-        TEnvironmentDescription tmp = null;
-        for (String jarPath : allJars) {
-            try {
                 //look for the first class that abides the contract that is not the interface itself
                 for (Class c : pluginHelper.listClassesFromJar(jarPath)) {
                     if (IEnvironmentPluginDescriptor.class != c
@@ -55,26 +59,29 @@ public class EnvironmentPluginLoaderUseCase {
                         environmentPluginPaths.put(tmp, new File(jarPath));
                     }
                 }
-            } catch (InstantiationException e) {
-                throw new TechnicalException("Unable to load Class from '" + jarPath + "' Reason: \n\n" + e);
-            } catch (IllegalAccessException e) {
-                throw new TechnicalException("Unable to load Class from '" + jarPath + "' Reason: \n\n" + e);
-            }
-        }
 
+            }
+        } catch (InstantiationException e) {
+            throw new TechnicalException("Unable to load Class from plugin. Reason: \n\n" + e);
+        } catch (IllegalAccessException e) {
+            throw new TechnicalException("Unable to load Class from plugin. Reason: \n\n" + e);
+        } catch (SettingException se) {
+            // we assume, that we are in the client and thus can't have this setting
+            //TODO: This must be fixed, Server- and Client Pluginloader should be separated completely
+        }
         return result;
     }
 
     public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
-        if (environmentPluginPaths == null) {
-            throw new UnsupportedOperationException("protocol violated: listAvailableEnvironments must be called before this method.");
-        }
-
         IEnvironmentPluginDescriptor loadedEnvironmentDescriptor = null;
+
+        customEnvironmentStateMessage = null;
+        customAbstractVisualization = null;
+        customInterfaceVisualization = null;
 
         try {
             // Load all classes from the jar where this plugin is located
-            List<Class>classesInJar = pluginHelper.loadJar(environmentPluginPaths.get(environment).getPath());
+            List<Class> classesInJar = pluginHelper.loadJar(environmentPluginPaths.get(environment).getPath());
 
 
             //search for the first class that abides the contract that is not the interface itself
@@ -151,9 +158,10 @@ public class EnvironmentPluginLoaderUseCase {
      * @return not null
      */
     public NetworkMessage createEnvironmentStateMessage(IEnvironmentState environmentState, int targetClientId) {
+        NetworkMessage message;
         if (customEnvironmentStateMessage != null) {
             try { //TODO: needs better exception handling
-                return (NetworkMessage) customEnvironmentStateMessage.newInstance(targetClientId, environmentState);
+                message = (NetworkMessage) customEnvironmentStateMessage.newInstance(targetClientId, environmentState);
             } catch (InstantiationException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
@@ -163,8 +171,9 @@ public class EnvironmentPluginLoaderUseCase {
             }
         }
 
-        return new DefaultEnvironmentStateMessage(targetClientId, environmentState);
-
+        message = new DefaultEnvironmentStateMessage(targetClientId, environmentState);
+        System.err.println("environment state class loader: " + environmentState.getClass().getClassLoader());
+        return message;
     }
 
     public IVisualizeReplay getReplayVisualization() {

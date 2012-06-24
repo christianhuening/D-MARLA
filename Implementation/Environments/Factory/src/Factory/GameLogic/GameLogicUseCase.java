@@ -41,6 +41,7 @@ public class GameLogicUseCase implements IEnvironment {
     public GameLogicUseCase(ISaveGameStatistics saveGameStatistics) {
         this.saveGameStatistics = saveGameStatistics;
         this.factoryPluginDescriptor = new FactoryPluginDescriptor();
+        System.err.println("TActionsInTurn Classloader im UseCase-Konstruktor: " + TActionsInTurn.class.getClassLoader());
     }
 
 // ------------------------ CANONICAL METHODS ------------------------
@@ -85,7 +86,7 @@ public class GameLogicUseCase implements IEnvironment {
 
     @Override
     public boolean isStillActive() {
-        return currentlyActiveGame.getWinningPlayer() != null;
+        return currentlyActiveGame.getWinningPlayer() == null;
     }
 
     /**

@@ -8,6 +8,7 @@ import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import RemoteInterface.ICycleStatistics;
 import ServerRunner.Interface.IServerRunner;
+import Settings.SettingException;
 
 import java.util.List;
 
@@ -18,10 +19,20 @@ import java.util.List;
  * Time: 17:16
  * To change this template use File | Settings | File Templates.
  */
-public interface ICycleServerFacade extends
+public interface IServerFacade extends
         ICycleStatistics,
         ISaveGameStatistics,
         IServerRunner {
+
+    /**
+     * Searches recursively for environment plugins in the given directory.
+     *
+     * @return empty if no environment plugins were found
+     * @throws TechnicalException if technical errors prevent the component from loading the plugin described
+     * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
+     * @throws Settings.SettingException @throws SettingException if the environmentPluginsfolder is not correctly set int he app's settings.
+     */
+    public List<TEnvironmentDescription> listAvailableEnvironments() throws TechnicalException, PluginNotReadableException, SettingException;
 
     /**
      * Saves the given map to a file in the maps directory.

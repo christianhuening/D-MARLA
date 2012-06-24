@@ -26,6 +26,7 @@ import ServerRunner.Interface.SessionIsNotInReadyStateException;
 import TransportTypes.TClientEvent;
 import TransportTypes.TNetworkClient;
 import TransportTypes.TSession;
+import org.picocontainer.MutablePicoContainer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -49,7 +50,8 @@ class Session extends Thread implements IHasTransportType<TSession> {
     private int numberOfPlayedGames = 0;
 
     private String name;
-    private final IPluginLoader pluginLoader;
+    private final MutablePicoContainer picoContainer;
+    private IPluginLoader pluginLoader;
 
     private SessionStatus status;
 
@@ -89,13 +91,13 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
 // --------------------------- CONSTRUCTORS ---------------------------
 
-    public Session(TSession session, IServerNetworkAdapter serverNetworkAdapterInstance, IPluginLoader pluginLoader, ISaveGameStatistics saveGameStatistics) throws TechnicalException, PluginNotReadableException {
-        this(session.getName(), session.getNumberOfGames(), session.getClientsInThisSession(), session.getMapMetaData(), serverNetworkAdapterInstance, pluginLoader, session.getEnvironmentDescription(), saveGameStatistics);
+    public Session(TSession session, IServerNetworkAdapter serverNetworkAdapterInstance, MutablePicoContainer picoContainer, ISaveGameStatistics saveGameStatistics) throws TechnicalException, PluginNotReadableException {
+        this(session.getName(), session.getNumberOfGames(), session.getClientsInThisSession(), session.getMapMetaData(), serverNetworkAdapterInstance, picoContainer, session.getEnvironmentDescription(), saveGameStatistics);
     }
 
-    public Session(String name, int numberOfIterations, List<TNetworkClient> clientsInThisSession, TMapMetaData mapMetaData, IServerNetworkAdapter serverNetworkAdapter, IPluginLoader pluginLoader, TEnvironmentDescription environmentDescription, ISaveGameStatistics gameStatistics) throws TechnicalException, PluginNotReadableException {
+    public Session(String name, int numberOfIterations, List<TNetworkClient> clientsInThisSession, TMapMetaData mapMetaData, IServerNetworkAdapter serverNetworkAdapter, MutablePicoContainer picoContainer, TEnvironmentDescription environmentDescription, ISaveGameStatistics gameStatistics) throws TechnicalException, PluginNotReadableException {
         this.name = name;
-        this.pluginLoader = pluginLoader;
+        this.picoContainer = picoContainer;
         this.status = SessionStatus.READY;
         this.numberOfGames = numberOfIterations;
         this.clientsInThisSession = clientsInThisSession;
@@ -121,6 +123,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
 // --------------------- Interface Runnable ---------------------
 
     public void run() {
+        pluginLoader = picoContainer.getComponent(IPluginLoader.class);
         try {
             this.environment = pluginLoader.loadEnvironmentPlugin(environmentDescription).getInstance(this.gameStatistics);
         } catch (TechnicalException e) {
@@ -134,6 +137,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
         }
 
         this.status = SessionStatus.RUNNING;
+
         sendPlayerEventMessage(new TClientEvent(ClientEventType.SessionStarted, this.getTransportType()));
 
         for (TNetworkClient networkClient : clientsInThisSession) {
@@ -236,18 +240,20 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
         advanceTurns();
 
-        sendPlayerEventMessage(new TClientEvent(ClientEventType.GameStarted, this.getTransportType()));
+        sendPlayerEventMessage(new TClientEvent(ClientEventType.CycleStarted, this.getTransportType()));
     }
 
     private void sendCurrentEnvironmentStateToClient(TNetworkClient networkClient) throws NotConnectedException, ConnectionLostException {
-        serverNetworkAdapter.sendNetworkMessage(pluginLoader.createEnvironmentStateMessage(currentEnvironmentState, networkClient.getId()), MessageChannel.DATA);
+        serverNetworkAdapter.sendNetworkMessage(pluginLoader.createEnvironmentStateMessage(networkClient.getId(), currentEnvironmentState), MessageChannel.DATA);
     }
 
     private void advanceTurns() throws NotConnectedException, ConnectionLostException, InterruptedException, TechnicalException {
+
         synchronized (this) {
             while (status.equals(SessionStatus.RUNNING)) {
+                System.err.println("Zugestellt in der Session: " + actionsInTurn.getClass().getClassLoader());
                 currentEnvironmentState = environment.executeAction(actionsInTurn);
-                System.err.println("Environment still active: " + environment.isStillActive());
+
                 if (environment.isStillActive()) {
                     sendCurrentEnvironmentStateToClient(clientsForPlayers.get(environment.getActiveInstance()));
                     this.wait();
@@ -262,7 +268,6 @@ class Session extends Thread implements IHasTransportType<TSession> {
     private void endGame() throws NotConnectedException, ConnectionLostException, InterruptedException, TechnicalException {
         environment.end();
 
-        //TODO: coupling to environment logic too high, needs to be fixed!!!
         for (TMARLAClientInstance player : clientsForPlayers.keySet()) {
             CycleEndsMessage message;
 
@@ -275,7 +280,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
             serverNetworkAdapter.sendNetworkMessage(message, MessageChannel.DATA);
         }
 
-        sendPlayerEventMessage(new TClientEvent(ClientEventType.GameEnded, this.getTransportType()));
+        sendPlayerEventMessage(new TClientEvent(ClientEventType.CycleEnded, this.getTransportType()));
     }
 
     static synchronized void sendPlayerEventMessage(TClientEvent event) {

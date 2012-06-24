@@ -31,7 +31,7 @@ public class PluginManager {
 
     public List<TAgentSystemDescription> getAvailablePlugins() throws TechnicalException, SettingException, PluginNotReadableException {
 
-        return pluginLoader.listAvailableAgentSystemPlugins(AppSettings.getString("agentSystemPluginDirectory"));
+        return pluginLoader.listAvailableAgentSystemPlugins();
     }
 
     public IAgentSystem getAgentSystemInstance(TAgentSystemDescription system, IPluginServiceProvider provider) throws TechnicalException, PluginNotReadableException, SettingException {

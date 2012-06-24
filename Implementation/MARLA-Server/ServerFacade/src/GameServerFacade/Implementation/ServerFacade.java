@@ -2,14 +2,13 @@ package GameServerFacade.Implementation;
 
 import EnvironmentPluginAPI.Contract.Exception.CorruptMapFileException;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import EnvironmentPluginAPI.Contract.IEnvironmentPluginDescriptor;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Service.ICycleReplay;
 import EnvironmentPluginAPI.Service.ISaveGameStatistics;
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
 import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
 import Exceptions.GameReplayNotContainedInDatabaseException;
-import GameServerFacade.Interface.ICycleServerFacade;
+import GameServerFacade.Interface.IServerFacade;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.IServerNetworkAdapter;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
@@ -18,12 +17,12 @@ import RemoteInterface.ICycleStatistics;
 import ServerRunner.Interface.IPlayerEventHandler;
 import ServerRunner.Interface.IServerRunner;
 import ServerRunner.Interface.SessionIsNotInReadyStateException;
-import Settings.AppSettings;
 import Settings.SettingException;
 import TransportTypes.TCycleReplayDescription;
 import TransportTypes.TNetworkClient;
 import TransportTypes.TSession;
 import org.joda.time.DateTime;
+import org.picocontainer.MutablePicoContainer;
 
 import java.rmi.RemoteException;
 import java.util.List;
@@ -32,22 +31,22 @@ import java.util.UUID;
 /**
  *
  */
-public class CycleServerFacade implements ICycleServerFacade {
+public class ServerFacade implements IServerFacade {
 
-    ICycleStatistics cycleStatistics;
-    ISaveGameStatistics saveGameStatistics;
-    IServerRunner serverRunner;
-    IServerNetworkAdapter serverNetworkAdapter;
-    IPluginLoader pluginLoader;
+    private ICycleStatistics cycleStatistics;
+    private ISaveGameStatistics saveGameStatistics;
+    private IServerRunner serverRunner;
+    private IServerNetworkAdapter serverNetworkAdapter;
+    private MutablePicoContainer mutablePicoContainer;
 
-    public CycleServerFacade(ICycleStatistics cycleStatistics, ISaveGameStatistics saveGameStatistics,
-                             IServerRunner serverRunner, IServerNetworkAdapter networkAdapter, IPluginLoader pluginLoader) {
+    public ServerFacade(ICycleStatistics cycleStatistics, ISaveGameStatistics saveGameStatistics,
+                        IServerRunner serverRunner, IServerNetworkAdapter networkAdapter, MutablePicoContainer mutablePicoContainer) {
 
         this.cycleStatistics = cycleStatistics;
         this.saveGameStatistics = saveGameStatistics;
         this.serverRunner = serverRunner;
         this.serverNetworkAdapter = networkAdapter;
-        this.pluginLoader = pluginLoader;
+        this.mutablePicoContainer = mutablePicoContainer;
     }
 
     @Override
@@ -151,22 +150,26 @@ public class CycleServerFacade implements ICycleServerFacade {
     }
 
     @Override
-    public void saveMap(TMapMetaData mapMetaData, TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
-        IEnvironmentPluginDescriptor gameLogic = pluginLoader.loadEnvironmentPlugin(environment);
+    public List<TEnvironmentDescription> listAvailableEnvironments() throws TechnicalException, PluginNotReadableException, SettingException {
+        IPluginLoader pluginLoader = mutablePicoContainer.getComponent(IPluginLoader.class);
+        return pluginLoader.listAvailableEnvironments();
+    }
 
-        gameLogic.getInstance(saveGameStatistics).saveMap(mapMetaData);
+    @Override
+    public void saveMap(TMapMetaData mapMetaData, TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
+        IPluginLoader pluginLoader = mutablePicoContainer.getComponent(IPluginLoader.class);
+
+        pluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).saveMap(mapMetaData);
     }
 
     @Override
     public List<TMapMetaData> getAvailableMaps(TEnvironmentDescription environment) throws CorruptMapFileException, TechnicalException, PluginNotReadableException {
-        try {
-            pluginLoader.listAvailableEnvironments(AppSettings.getString("environmentPluginsFolder"));
-        } catch (SettingException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-        IEnvironmentPluginDescriptor gameLogic = pluginLoader.loadEnvironmentPlugin(environment);
 
-        return gameLogic.getInstance(saveGameStatistics).getAvailableMaps();
+        IPluginLoader pluginLoader = mutablePicoContainer.getComponent(IPluginLoader.class);
+        List<TMapMetaData> result = null;
+        result = pluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).getAvailableMaps();
+        System.err.println("TMapMetaData geladen von: " + result.get(0).getClass().getClassLoader());
+        return result;
     }
 
     @Override

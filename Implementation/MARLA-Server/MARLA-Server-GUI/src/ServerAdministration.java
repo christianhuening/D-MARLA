@@ -1,6 +1,6 @@
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import GameServerFacade.Interface.GameServerFacadeFactory;
-import GameServerFacade.Interface.ICycleServerFacade;
+import GameServerFacade.Interface.ServerFacadeFactory;
+import GameServerFacade.Interface.IServerFacade;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import RemoteInterface.ClientSocketFactory;
 import RemoteInterface.ICycleStatistics;
@@ -11,7 +11,6 @@ import TransportTypes.TSession;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.InetAddress;
@@ -51,13 +50,11 @@ public class ServerAdministration implements Observer {
 
     public ServerAdministration() {
 
-
-
         // Add Main GUI as Observer to sessionConfig
         sessionConfig.addObserver(this);
 
         // get Facade
-        final ICycleServerFacade facade = GameServerFacadeFactory.getIntegrationTestApplicationCore();
+        final IServerFacade facade = ServerFacadeFactory.getProductiveApplicationCore();
 
         try {
             facade.startHosting();

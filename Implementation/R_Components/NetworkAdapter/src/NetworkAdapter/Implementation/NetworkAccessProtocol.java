@@ -42,8 +42,6 @@ class NetworkAccessProtocol {
         try {
             objectOutputStream.writeObject(message);
             objectOutputStream.flush();
-            System.err.println("sending: " + message);
-            System.err.println(message.getClass().getClassLoader());
 
         } catch (NotSerializableException ne) {
             throw new TypeIsNotSerializableException(ne);
@@ -68,8 +66,6 @@ class NetworkAccessProtocol {
         try {
 
             message = (NetworkMessage)objectInputStream.readObject();
-            System.err.println("receiving : " + message);
-            System.err.println(message.getClass().getClassLoader());
         } catch (IOException ex) {
             ex.printStackTrace();
             throw new ConnectionLostException(clientId);

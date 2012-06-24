@@ -2,7 +2,7 @@ import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Service.ICycleReplay;
 import Exceptions.GameReplayNotContainedInDatabaseException;
-import GameServerFacade.Interface.ICycleServerFacade;
+import GameServerFacade.Interface.IServerFacade;
 import RemoteInterface.ICycleStatistics;
 import TransportTypes.TCycleReplayDescription;
 import org.joda.time.DateTime;
@@ -16,10 +16,10 @@ import java.util.UUID;
  */
 public class RMIServiceConnector implements ICycleStatistics {
 
-    private transient ICycleServerFacade facade;
+    private transient IServerFacade facade;
     private TEnvironmentDescription environmentDescription;
 
-    public RMIServiceConnector(ICycleServerFacade gameServerFacade) {
+    public RMIServiceConnector(IServerFacade gameServerFacade) {
         this.facade = gameServerFacade;
     }
 

@@ -21,6 +21,7 @@ import TransportTypes.TClientEvent;
 import TransportTypes.TNetworkClient;
 import TransportTypes.TSession;
 import org.joda.time.DateTime;
+import org.picocontainer.MutablePicoContainer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,19 +35,18 @@ import java.util.UUID;
  * To change this template use File | Settings | File Templates.
  */
 public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceivedEventHandler {
-
-    private final IPluginLoader pluginLoader;
     private final IServerNetworkAdapter networkAdapter;
     private final ISaveGameStatistics saveGameStatistics;
+    private final MutablePicoContainer mutablePicoContainer;
 
     private List<TNetworkClient> networkClients;
 
     private List<Session> sessions;
 
-    public ServerRunnerUseCase(ISaveGameStatistics gameStatistics, IPluginLoader pluginLoader, IServerNetworkAdapter networkAdapter) {
-        this.pluginLoader = pluginLoader;
+    public ServerRunnerUseCase(ISaveGameStatistics gameStatistics, IServerNetworkAdapter networkAdapter, MutablePicoContainer mutablePicoContainer) {
         this.networkAdapter = networkAdapter;
         this.saveGameStatistics = gameStatistics;
+        this.mutablePicoContainer = mutablePicoContainer;
 
         networkClients = new ArrayList<TNetworkClient>();
         sessions = new ArrayList<Session>();
@@ -57,6 +57,8 @@ public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceiv
 
     @Override
     public void onMessageReceived(NetworkMessage message) {
+
+
         if (message instanceof IActionDescriptionMessage) {
             for (Session s : sessions) {
                 for (TNetworkClient networkClient : s.getClientsInThisSession()) {
@@ -102,7 +104,7 @@ public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceiv
             System.out.println("ERROR: The provided session player count was less than 2.");
         }
 
-        Session newSession = new Session(session, getServerNetworkAdapterInstance(), pluginLoader, this.saveGameStatistics);
+        Session newSession = new Session(session, getServerNetworkAdapterInstance(), mutablePicoContainer, this.saveGameStatistics);
 
         sessions.add(newSession);
 

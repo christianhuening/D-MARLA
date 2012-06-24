@@ -53,6 +53,11 @@ public abstract class NetworkMessage implements Serializable {
         this.clientId = clientId;
     }
 
+    protected void setClientId(int clientId) {
+        this.clientId = clientId;
+    }
+
+
     /**
      * in client mode: The MARLA-Client id from which the message was sent<br/>
      * in server mode: The MARLA-Client id to which the message is targeted

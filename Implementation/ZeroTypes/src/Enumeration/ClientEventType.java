@@ -12,7 +12,7 @@ public enum ClientEventType {
     ClientDisconnected,
     SessionStarted,
     SessionEnded,
-    GameStarted,
-    GameEnded,
+    CycleStarted,
+    CycleEnded,
     SessionFailedWithError
 }

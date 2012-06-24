@@ -10,6 +10,7 @@ import EnvironmentPluginAPI.Service.ISaveGameStatistics;
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
 import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
 import Factory.GameLogic.Enums.Direction;
+import Factory.GameLogic.TransportTypes.TActionsInTurn;
 import Factory.GameLogic.TransportTypes.TUnit;
 
 import java.util.List;
@@ -30,6 +31,7 @@ public class GameLogicComponent implements IEnvironment {
 
     public GameLogicComponent(ISaveGameStatistics saveGameStatistics) {
         this.useCase = new GameLogicUseCase(saveGameStatistics);
+        System.err.println("TActionsInTurn Classloader im Component-Konstruktor: " + TActionsInTurn.class.getClassLoader());
     }
 
 // ------------------------ INTERFACE METHODS ------------------------

@@ -1,12 +1,13 @@
 package PluginLoader.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import EnvironmentPluginAPI.Contract.*;
-import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import EnvironmentPluginAPI.Contract.*;
+import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IPluginLoader;
+import Settings.SettingException;
 
 import java.io.File;
 import java.util.List;
@@ -19,14 +20,14 @@ public class PluginLoaderComponent implements IPluginLoader {
     private EnvironmentPluginLoaderUseCase environmentPluginLoaderUseCase;
     private AgentSystemPluginLoaderUseCase agentSystemPluginLoaderUseCase;
 
-    public PluginLoaderComponent(){
+    public PluginLoaderComponent() throws TechnicalException, SettingException, PluginNotReadableException {
         environmentPluginLoaderUseCase = new EnvironmentPluginLoaderUseCase();
         agentSystemPluginLoaderUseCase = new AgentSystemPluginLoaderUseCase();
     }
 
     @Override
-    public List<TEnvironmentDescription> listAvailableEnvironments(String environmentPluginDirectory) throws TechnicalException, PluginNotReadableException {
-        return environmentPluginLoaderUseCase.listAvailableEnvironments(environmentPluginDirectory);
+    public List<TEnvironmentDescription> listAvailableEnvironments() throws TechnicalException, PluginNotReadableException, SettingException {
+        return environmentPluginLoaderUseCase.listAvailableEnvironments();
     }
 
     @Override
@@ -50,8 +51,8 @@ public class PluginLoaderComponent implements IPluginLoader {
     }
 
     @Override
-    public List<TAgentSystemDescription> listAvailableAgentSystemPlugins(String agentPluginDirectory) throws TechnicalException, PluginNotReadableException {
-        return agentSystemPluginLoaderUseCase.listAvailableAgentSystemPlugins(agentPluginDirectory);
+    public List<TAgentSystemDescription> listAvailableAgentSystemPlugins() throws TechnicalException, PluginNotReadableException, SettingException {
+        return agentSystemPluginLoaderUseCase.listAvailableAgentSystemPlugins();
     }
 
     @Override
@@ -75,13 +76,13 @@ public class PluginLoaderComponent implements IPluginLoader {
     }
 
     @Override
-    public NetworkMessage createEnvironmentStateMessage(IEnvironmentState environmentState, int clientId) {
+    public NetworkMessage createEnvironmentStateMessage(int clientId, IEnvironmentState environmentState) {
         return environmentPluginLoaderUseCase.createEnvironmentStateMessage(environmentState,clientId);
     }
 
     @Override
-    public NetworkMessage createActionDescriptionMessage(IActionDescription actionDescription) {
-        return agentSystemPluginLoaderUseCase.createActionDescriptionMessage(actionDescription);
+    public NetworkMessage createActionDescriptionMessage(int clientId, IActionDescription actionDescription) {
+        return agentSystemPluginLoaderUseCase.createActionDescriptionMessage(clientId, actionDescription);
     }
 
     @Override

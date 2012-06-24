@@ -87,10 +87,12 @@ public class Game extends Observable implements java.io.Serializable {
             throw new IllegalNumberOfClientsException("There were more than 2 players in the list. Please choose exactly two.");
         }
 
+        Random rand = new Random();
+
         this.players = players;
         this.mapMetaData = mapMetaData;
         mapGenerator = new MapGenerator(mapMetaData, factories);
-        activePlayer = players.get(0);
+        activePlayer = players.get(rand.nextInt(players.size()));
         this.board = mapGenerator.generateMap();
         gameStartedAt = new DateTime();
 
@@ -99,6 +101,8 @@ public class Game extends Observable implements java.io.Serializable {
         for (Factory factory : factories) {
             this.addObserver(factory);
         }
+
+        System.err.println("TActionsInTurn Classloader im Game-Konstruktor: " + TActionsInTurn.class.getClassLoader());
     }
 
 // ------------------------ CANONICAL METHODS ------------------------

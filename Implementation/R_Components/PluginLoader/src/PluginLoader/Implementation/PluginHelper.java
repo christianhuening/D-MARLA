@@ -63,14 +63,14 @@ class PluginHelper {
         List<Class> classes = listClassesFromJar(pathToJar);
         //then make all classes of the plugin known to the class loader
         for (Class<?> clazz : classes) {
-            System.err.println("pluginloader: " + clazz);
-            System.err.println("with: " + classLoader);
             try {
                 Class.forName(clazz.getName(), true, classLoader);
             } catch (ClassNotFoundException e) {
                 throw new PluginNotReadableException(e.getMessage(), pathToJar);
             }
         }
+
+        System.err.println("Classloader im PluginHelper: " + classLoader);
 
         Thread.currentThread().setContextClassLoader(classLoader);
         return classes;
@@ -93,7 +93,6 @@ class PluginHelper {
 
         try {
             classLoader = new URLClassLoader(new URL[]{new File(pathToJar).toURI().toURL()}, Thread.currentThread().getContextClassLoader());
-            System.err.println("listing jar, classes loaded by: " + classLoader);
             JarFile jarFile = new JarFile(pathToJar);
             Enumeration<JarEntry> e = jarFile.entries();
 

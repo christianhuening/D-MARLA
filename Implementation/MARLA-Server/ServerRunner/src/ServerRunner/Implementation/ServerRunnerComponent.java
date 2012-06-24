@@ -6,12 +6,12 @@ import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.IServerNetworkAdapter;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
 import ServerRunner.Interface.IPlayerEventHandler;
 import ServerRunner.Interface.IServerRunner;
 import ServerRunner.Interface.SessionIsNotInReadyStateException;
 import TransportTypes.TNetworkClient;
 import TransportTypes.TSession;
+import org.picocontainer.MutablePicoContainer;
 
 import java.util.List;
 import java.util.UUID;
@@ -27,8 +27,8 @@ public class ServerRunnerComponent implements IServerRunner {
 
     ServerRunnerUseCase useCase;
 
-    public ServerRunnerComponent(ISaveGameStatistics saveGameStatistics, IPluginLoader pluginLoader, IServerNetworkAdapter networkAdapter) {
-        this.useCase = new ServerRunnerUseCase(saveGameStatistics, pluginLoader, networkAdapter);
+    public ServerRunnerComponent(ISaveGameStatistics saveGameStatistics, IServerNetworkAdapter networkAdapter, MutablePicoContainer mutablePicoContainer) {
+        this.useCase = new ServerRunnerUseCase(saveGameStatistics, networkAdapter, mutablePicoContainer);
     }
 
     @Override

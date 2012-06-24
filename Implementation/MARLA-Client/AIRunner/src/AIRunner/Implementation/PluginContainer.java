@@ -79,9 +79,9 @@ public class PluginContainer extends Thread {
                     synchronized (this) {
                         wait();
                     }
-                    System.err.println("actual environmentstate class loaded with: " + environmentState.getClass().getClassLoader());
+
                     clientNetworkAdapter.sendNetworkMessage(
-                            pluginLoader.createActionDescriptionMessage(
+                            pluginLoader.createActionDescriptionMessage(clientNetworkAdapter.getClientId(),
                                     plugin.getActionsForEnvironmentStatus(environmentState))
                                 , MessageChannel.DATA);
                 }

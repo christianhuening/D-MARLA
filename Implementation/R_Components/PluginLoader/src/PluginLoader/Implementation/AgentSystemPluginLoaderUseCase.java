@@ -8,6 +8,8 @@ import EnvironmentPluginAPI.CustomNetworkMessages.IActionDescriptionMessage;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import NetworkAdapter.Messages.DefaultActionDescriptionMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
+import Settings.AppSettings;
+import Settings.SettingException;
 
 import java.io.File;
 import java.lang.reflect.Constructor;
@@ -27,20 +29,22 @@ public class AgentSystemPluginLoaderUseCase {
     private Constructor customActionDescriptionMessage;
 
 
-    public AgentSystemPluginLoaderUseCase() {
+    public AgentSystemPluginLoaderUseCase() throws TechnicalException, SettingException, PluginNotReadableException {
         pluginHelper = new PluginHelper();
+        listAvailableAgentSystemPlugins();
     }
 
-    public List<TAgentSystemDescription> listAvailableAgentSystemPlugins(String agentPluginDirectory) throws TechnicalException, PluginNotReadableException {
+    public List<TAgentSystemDescription> listAvailableAgentSystemPlugins() throws TechnicalException, PluginNotReadableException, SettingException {
+        pluginHelper = new PluginHelper();
         aiPluginPaths = new Hashtable<TAgentSystemDescription, File>();
 
         List<TAgentSystemDescription> result = new LinkedList<TAgentSystemDescription>();
 
         // Load all plugins recursively from the directory specified in the config file.
-        List<String> allJars = pluginHelper.findJarsRecursively(agentPluginDirectory);
+        try {
+            List<String> allJars = pluginHelper.findJarsRecursively(AppSettings.getString("agentSystemPluginDirectory"));
 
-        for (String jarPath : allJars) {
-            try {
+            for (String jarPath : allJars) {
                 //look for the first class that abides the contract that is not the interface itself
                 for (Class c : pluginHelper.listClassesFromJar(jarPath)) {
                     if (IAgentSystemPluginDescriptor.class != c
@@ -53,23 +57,25 @@ public class AgentSystemPluginLoaderUseCase {
                         break;
                     }
                 }
-            } catch (InstantiationException e) {
-                throw new TechnicalException("Unable to load Class from '" + jarPath + "' Reason: \n\n" + e);
-            } catch (IllegalAccessException e) {
-                throw new TechnicalException("Unable to load Class from '" + jarPath + "' Reason: \n\n" + e);
+
             }
+
+        } catch (InstantiationException e) {
+            throw new TechnicalException("Unable to load Class from plugin. Reason: \n\n" + e);
+        } catch (IllegalAccessException e) {
+            throw new TechnicalException("Unable to load Class from plugin. Reason: \n\n" + e);
+        } catch (SettingException se) {
+            // we assume, that we are in the server and thus can't have this setting
+            //TODO: This must be fixed, Server- and Client Pluginloader should be separated completely
         }
 
         return result;
     }
 
     public IAgentSystemPluginDescriptor loadAgentSystemPlugin(TAgentSystemDescription agentSystem) throws TechnicalException, PluginNotReadableException {
-
-        if (aiPluginPaths == null) {
-            throw new UnsupportedOperationException("protocol violated: listAvailableAgentSystems must be called before this method.");
-        }
-
         IAgentSystemPluginDescriptor loadedAgentSystemDescriptor = null;
+
+        customActionDescriptionMessage = null;
 
         try {
             // Load all classes from the jar where this plugin is located
@@ -134,13 +140,14 @@ public class AgentSystemPluginLoaderUseCase {
      * Otherwise a default message is used. The message will be targeted to the server automatically
      *
      * @param actionDescription the action description to send
+     * @param clientId          client's network id
      * @return not null
      */
-    public NetworkMessage createActionDescriptionMessage(IActionDescription actionDescription) {
+    public NetworkMessage createActionDescriptionMessage(int clientId, IActionDescription actionDescription) {
         if (customActionDescriptionMessage != null) {
 
             try { //TODO: needs better exception handling
-                return (NetworkMessage) customActionDescriptionMessage.newInstance(0, actionDescription);
+                return (NetworkMessage) customActionDescriptionMessage.newInstance(clientId, actionDescription);
             } catch (InstantiationException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {

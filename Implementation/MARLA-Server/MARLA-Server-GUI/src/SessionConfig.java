@@ -3,12 +3,9 @@ import EnvironmentPluginAPI.Contract.Exception.CorruptMapFileException;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
-import GameServerFacade.Interface.GameServerFacadeFactory;
-import GameServerFacade.Interface.ICycleServerFacade;
-import PluginLoader.Implementation.PluginLoaderComponent;
+import GameServerFacade.Interface.IServerFacade;
+import GameServerFacade.Interface.ServerFacadeFactory;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
-import Settings.AppSettings;
 import Settings.SettingException;
 import TransportTypes.TNetworkClient;
 import TransportTypes.TSession;
@@ -58,22 +55,18 @@ public class SessionConfig extends Observable {
     private ClientTableModel clientsAvailableTableModel;
     private MapListTableModel mapListTableModel;
 
-    private ICycleServerFacade facade;
+    private final IServerFacade facade;
     private boolean mapEdited = false;
 
     private EnvironmentComboBoxModel environmentComboBoxModel;
-    private IPluginLoader pluginLoader;
     private List<TEnvironmentDescription> environmentDescriptions;
 
-    public SessionConfig() {
+    public SessionConfig() throws TechnicalException, SettingException, PluginNotReadableException {
 
-        facade = GameServerFacadeFactory.getIntegrationTestApplicationCore();
-
-        // Load available EnvironmentPlugins
-        pluginLoader = new PluginLoaderComponent();
+        this.facade = ServerFacadeFactory.getProductiveApplicationCore();
 
         try {
-            environmentDescriptions = pluginLoader.listAvailableEnvironments(AppSettings.getString("environmentPluginsFolder"));
+            environmentDescriptions = facade.listAvailableEnvironments();
         } catch (TechnicalException e) {
             e.printStackTrace();
         } catch (PluginNotReadableException e) {

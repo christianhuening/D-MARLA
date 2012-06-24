@@ -50,6 +50,7 @@ public class DefaultActionDescriptionMessage extends NetworkMessage implements S
      */
     @Override
     public void writeExternal(ObjectOutput out) throws IOException {
+        out.writeInt(getClientId());
         out.writeObject(actionDescription);
     }
 
@@ -67,6 +68,7 @@ public class DefaultActionDescriptionMessage extends NetworkMessage implements S
      */
     @Override
     public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+        setClientId(in.readInt());
         actionDescription = (IActionDescription)in.readObject();
     }
 }
