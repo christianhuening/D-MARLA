@@ -5,6 +5,7 @@ import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import EnvironmentPluginAPI.CustomNetworkMessages.IActionDescriptionMessage;
 import EnvironmentPluginAPI.CustomNetworkMessages.IEnvironmentStateMessage;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
+import EnvironmentPluginAPI.Service.ISaveGameStatistics;
 import NetworkAdapter.Messages.DefaultActionDescriptionMessage;
 import NetworkAdapter.Messages.DefaultEnvironmentStateMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
@@ -29,6 +30,7 @@ public class EnvironmentPluginLoaderUseCase {
     private Constructor customEnvironmentStateMessage;
     private Class customAbstractVisualization;
     private Class customInterfaceVisualization;
+    private IEnvironmentPluginDescriptor loadedEnvironmentDescriptor = null;
 
 
     public EnvironmentPluginLoaderUseCase() throws TechnicalException, SettingException, PluginNotReadableException {
@@ -72,8 +74,7 @@ public class EnvironmentPluginLoaderUseCase {
         return result;
     }
 
-    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
-        IEnvironmentPluginDescriptor loadedEnvironmentDescriptor = null;
+    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment, boolean setContextClassloader) throws TechnicalException, PluginNotReadableException {
 
         customEnvironmentStateMessage = null;
         customAbstractVisualization = null;
@@ -81,7 +82,7 @@ public class EnvironmentPluginLoaderUseCase {
 
         try {
             // Load all classes from the jar where this plugin is located
-            List<Class> classesInJar = pluginHelper.loadJar(environmentPluginPaths.get(environment).getPath());
+            List<Class> classesInJar = pluginHelper.loadJar(environmentPluginPaths.get(environment).getPath(), setContextClassloader);
 
 
             //search for the first class that abides the contract that is not the interface itself
@@ -198,5 +199,13 @@ public class EnvironmentPluginLoaderUseCase {
         }
 
         return null;
+    }
+
+    public IEnvironment createEnvironmentInstance(ISaveGameStatistics saveGameStatistics) throws TechnicalException {
+        if(loadedEnvironmentDescriptor == null) {
+            throw new UnsupportedOperationException("No plugin was loaded!");
+        }
+
+        return loadedEnvironmentDescriptor.getInstance(saveGameStatistics);
     }
 }

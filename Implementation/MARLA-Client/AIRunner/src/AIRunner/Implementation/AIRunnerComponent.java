@@ -9,7 +9,7 @@ import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import NetworkAdapter.Interface.Exceptions.HostUnreachableException;
 import NetworkAdapter.Interface.IClientNetworkAdapter;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
+import PluginLoader.Interface.IAgentSystemPluginLoader;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 
 import java.security.InvalidParameterException;
@@ -20,15 +20,15 @@ public class AIRunnerComponent implements IAIRunner {
 
     private final IClientNetworkAdapter networkAdapter;
     private final IAgentSystemManagement agentSystemManagement;
-    private final IPluginLoader pluginLoader;
+    private final IAgentSystemPluginLoader agentSystemPluginLoader;
     private AIRunnerUseCase aiRunnerUseCase;
 
-    public AIRunnerComponent(IClientNetworkAdapter networkAdapter, IAgentSystemManagement agentSystemManagement, IPluginLoader pluginLoader){
+    public AIRunnerComponent(IClientNetworkAdapter networkAdapter, IAgentSystemManagement agentSystemManagement, IAgentSystemPluginLoader agentSystemPluginLoader){
 
         this.networkAdapter = networkAdapter;
         this.agentSystemManagement = agentSystemManagement;
-        this.pluginLoader = pluginLoader;
-        this.aiRunnerUseCase = new AIRunnerUseCase(networkAdapter, agentSystemManagement, pluginLoader);
+        this.agentSystemPluginLoader = agentSystemPluginLoader;
+        this.aiRunnerUseCase = new AIRunnerUseCase(networkAdapter, agentSystemManagement, agentSystemPluginLoader);
 
     }
 

@@ -7,7 +7,7 @@ import AgentSystemManagement.Plugins.PluginManager;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IAgentSystem;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
+import PluginLoader.Interface.IAgentSystemPluginLoader;
 import Settings.SettingException;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 
@@ -17,12 +17,12 @@ public class AgentSystemManagementComponent implements IAgentSystemManagement {
 
     private PluginManager pluginManager;
     private AgentSystemManagementUseCase agentSystemManagementUseCase;
-    private final IPluginLoader pluginLoader;
+    private final IAgentSystemPluginLoader agentSystemPluginLoader;
 
-    public AgentSystemManagementComponent(IAgentProvider agentProvider, IPluginLoader pluginLoader) throws TechnicalException, SettingException {
-        this.pluginLoader = pluginLoader;
-        pluginManager = new PluginManager(pluginLoader);
-        this.agentSystemManagementUseCase = new AgentSystemManagementUseCase(pluginManager, agentProvider, pluginLoader);
+    public AgentSystemManagementComponent(IAgentProvider agentProvider, IAgentSystemPluginLoader agentSystemPluginLoader) throws TechnicalException, SettingException {
+        this.agentSystemPluginLoader = agentSystemPluginLoader;
+        pluginManager = new PluginManager(agentSystemPluginLoader);
+        this.agentSystemManagementUseCase = new AgentSystemManagementUseCase(pluginManager, agentProvider, agentSystemPluginLoader);
     }
 
     public List<TAgentSystemDescription> getAvailableAgentSystems() throws TechnicalException, SettingException, PluginNotReadableException {

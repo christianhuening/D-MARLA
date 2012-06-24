@@ -19,79 +19,25 @@ import java.util.regex.Pattern;
  */
 public class ContextAwareObjectInputStream extends ObjectInputStream {
 
-    private static Pattern arrayBracketsFinderOfDoom = Pattern.compile("(.+?)([\\[]]+)");
     private ClassLoader currentTccl;
 
     public ContextAwareObjectInputStream(InputStream in) throws IOException {
         super(in);
         currentTccl = Thread.currentThread().getContextClassLoader();
+        System.err.println("inputstream started in thread " + Thread.currentThread());
+        System.err.println("current classloader: " + currentTccl);
     }
 
     @Override
-    public Class resolveClass(ObjectStreamClass desc) throws IOException,
-            ClassNotFoundException {
+    public Class resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {
+        currentTccl = Thread.currentThread().getContextClassLoader();
+        System.err.println("looking in Thread: " + Thread.currentThread() + " for " + desc.getName() + " [" + currentTccl + "]");
         try {
             return super.resolveClass(desc);
         } catch (ClassNotFoundException e) {
+            System.err.println("not found, looking in Thread: " + Thread.currentThread() + " for " + desc.getName() + " [" + currentTccl + "]");
             return Class.forName(desc.getName(), true, currentTccl);
         }
     }
 
-
-    /**
-     * Converts to a Java class name from a descriptor.
-     * Taken from: http://www.docjar.com/html/api/javassist/bytecode/Descriptor.java.html
-     *
-     * @param descriptor type descriptor.
-     */
-
-    public static String toClassName(String descriptor) {
-        int arrayDim = 0;
-        int i = 0;
-        char c = descriptor.charAt(0);
-        while (c == '[') {
-            ++arrayDim;
-            c = descriptor.charAt(++i);
-        }
-
-        String name;
-        if (c == 'L') {
-            int i2 = descriptor.indexOf(';', i++);
-            name = descriptor.substring(i, i2).replace('/', '.');
-            i = i2;
-        } else if (c == 'V')
-            name = "void";
-        else if (c == 'I')
-            name = "int";
-        else if (c == 'B')
-            name = "byte";
-        else if (c == 'J')
-            name = "long";
-        else if (c == 'D')
-            name = "double";
-        else if (c == 'F')
-            name = "float";
-        else if (c == 'C')
-            name = "char";
-        else if (c == 'S')
-            name = "short";
-        else if (c == 'Z')
-            name = "boolean";
-        else
-            throw new RuntimeException("bad descriptor: " + descriptor);
-
-        if (i + 1 != descriptor.length())
-            throw new RuntimeException("multiple descriptors?: " + descriptor);
-
-        if (arrayDim == 0)
-            return name;
-        else {
-            StringBuffer sbuf = new StringBuffer(name);
-            do {
-                sbuf.append("[]");
-            } while (--arrayDim > 0);
-
-            return sbuf.toString();
-        }
-    }
 }

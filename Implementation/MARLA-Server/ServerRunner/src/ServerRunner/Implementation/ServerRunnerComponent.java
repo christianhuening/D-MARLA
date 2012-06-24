@@ -6,6 +6,7 @@ import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.IServerNetworkAdapter;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
+import PluginLoader.Interface.IEnvironmentPluginLoader;
 import ServerRunner.Interface.IPlayerEventHandler;
 import ServerRunner.Interface.IServerRunner;
 import ServerRunner.Interface.SessionIsNotInReadyStateException;
@@ -27,8 +28,8 @@ public class ServerRunnerComponent implements IServerRunner {
 
     ServerRunnerUseCase useCase;
 
-    public ServerRunnerComponent(ISaveGameStatistics saveGameStatistics, IServerNetworkAdapter networkAdapter, MutablePicoContainer mutablePicoContainer) {
-        this.useCase = new ServerRunnerUseCase(saveGameStatistics, networkAdapter, mutablePicoContainer);
+    public ServerRunnerComponent(ISaveGameStatistics saveGameStatistics, IServerNetworkAdapter networkAdapter, IEnvironmentPluginLoader environmentPluginLoader) {
+        this.useCase = new ServerRunnerUseCase(saveGameStatistics, networkAdapter, environmentPluginLoader);
     }
 
     @Override

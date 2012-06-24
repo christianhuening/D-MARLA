@@ -1,11 +1,11 @@
 package AgentSystemManagement.Plugins;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IAgentSystem;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
+import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
+import PluginLoader.Interface.IAgentSystemPluginLoader;
 import Settings.AppSettings;
 import Settings.SettingException;
 
@@ -16,10 +16,10 @@ public class PluginManager {
 
     private Pattern agentPathPattern;
     private String agentSystemPluginDirectory;
-    private final IPluginLoader pluginLoader;
+    private final IAgentSystemPluginLoader agentSystemPluginLoader;
 
-    public PluginManager(IPluginLoader pluginLoader) throws SettingException {
-        this.pluginLoader = pluginLoader;
+    public PluginManager(IAgentSystemPluginLoader agentSystemPluginLoader) throws SettingException {
+        this.agentSystemPluginLoader = agentSystemPluginLoader;
         agentSystemPluginDirectory = AppSettings.getString("agentSystemPluginDirectory");
         if (agentSystemPluginDirectory.endsWith("/") || agentSystemPluginDirectory.endsWith("\\")) {
             agentSystemPluginDirectory = agentSystemPluginDirectory.substring(0, agentSystemPluginDirectory.length()-1);
@@ -31,10 +31,10 @@ public class PluginManager {
 
     public List<TAgentSystemDescription> getAvailablePlugins() throws TechnicalException, SettingException, PluginNotReadableException {
 
-        return pluginLoader.listAvailableAgentSystemPlugins();
+        return agentSystemPluginLoader.listAvailableAgentSystemPlugins();
     }
 
     public IAgentSystem getAgentSystemInstance(TAgentSystemDescription system, IPluginServiceProvider provider) throws TechnicalException, PluginNotReadableException, SettingException {
-        return pluginLoader.loadAgentSystemPlugin(system).getInstance(provider);
+        return agentSystemPluginLoader.loadAgentSystemPlugin(system).getInstance(provider);
     }
 }

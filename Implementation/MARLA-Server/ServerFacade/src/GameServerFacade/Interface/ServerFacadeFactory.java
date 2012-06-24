@@ -5,8 +5,8 @@ import GameServerFacade.Implementation.ServerFacade;
 import GameStatistics.Implementation.CycleStatisticsComponent;
 import NetworkAdapter.Implementation.ServerNetworkAdapterComponent;
 import NetworkAdapter.Interface.IServerNetworkAdapter;
-import PluginLoader.Implementation.PluginLoaderComponent;
-import PluginLoader.Interface.IPluginLoader;
+import PluginLoader.Implementation.EnvironmentPluginLoaderComponent;
+import PluginLoader.Interface.IEnvironmentPluginLoader;
 import RemoteInterface.ICycleStatistics;
 import ServerRunner.Implementation.ServerRunnerComponent;
 import ServerRunner.Interface.IServerRunner;
@@ -31,7 +31,7 @@ public class ServerFacadeFactory {
         MutablePicoContainer container = new DefaultPicoContainer();
 
         container.addComponent(container);
-        container.addComponent(IPluginLoader.class, PluginLoaderComponent.class);
+        container.as(CACHE).addComponent(IEnvironmentPluginLoader.class, EnvironmentPluginLoaderComponent.class);
         container.as(CACHE).addComponent(ICycleStatistics.class, CycleStatisticsComponent.class);
         container.as(CACHE).addComponent(ISaveGameStatistics.class, CycleStatisticsComponent.class);
         container.as(CACHE).addComponent(IServerRunner.class, ServerRunnerComponent.class);

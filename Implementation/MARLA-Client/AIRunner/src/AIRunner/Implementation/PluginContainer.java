@@ -11,7 +11,7 @@ import NetworkAdapter.Interface.IClientNetworkAdapter;
 import NetworkAdapter.Interface.MessageChannel;
 import AgentSystemPluginAPI.Contract.IAgentSystem;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
+import PluginLoader.Interface.IAgentSystemPluginLoader;
 import Settings.SettingException;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 
@@ -25,7 +25,7 @@ public class PluginContainer extends Thread {
     private final IAgentSystemManagement agentSystemManagement;
     private final IClientNetworkAdapter clientNetworkAdapter;
     private final IAIRunnerEventHandler IAIRunnerEventHandler;
-    private final IPluginLoader pluginLoader;
+    private final IAgentSystemPluginLoader agentSystemPluginLoader;
     private IAgentSystem plugin;
     private IEnvironmentState environmentState;
     private TAgentSystemDescription agentSystemDescription;
@@ -38,12 +38,12 @@ public class PluginContainer extends Thread {
     public PluginContainer(IAgentSystemManagement agentSystemManagement,
                            IClientNetworkAdapter clientNetworkAdapter,
                            IAIRunnerEventHandler aiRunnerEventHandler,
-                           IPluginLoader pluginLoader, String hostname, int port)
+                           IAgentSystemPluginLoader agentSystemPluginLoader, String hostname, int port)
             throws TechnicalException, PluginNotReadableException {
         this.agentSystemManagement = agentSystemManagement;
         this.clientNetworkAdapter = clientNetworkAdapter;
         this.IAIRunnerEventHandler = aiRunnerEventHandler;
-        this.pluginLoader = pluginLoader;
+        this.agentSystemPluginLoader = agentSystemPluginLoader;
         this.hostname = hostname;
         this.port = port;
     }
@@ -81,7 +81,7 @@ public class PluginContainer extends Thread {
                     }
 
                     clientNetworkAdapter.sendNetworkMessage(
-                            pluginLoader.createActionDescriptionMessage(clientNetworkAdapter.getClientId(),
+                            agentSystemPluginLoader.createActionDescriptionMessage(clientNetworkAdapter.getClientId(),
                                     plugin.getActionsForEnvironmentStatus(environmentState))
                                 , MessageChannel.DATA);
                 }

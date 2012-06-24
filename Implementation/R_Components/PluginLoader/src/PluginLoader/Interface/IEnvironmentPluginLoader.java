@@ -4,18 +4,20 @@ import EnvironmentPluginAPI.Contract.*;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
+import EnvironmentPluginAPI.Service.ISaveGameStatistics;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import RemoteInterface.ICycleStatistics;
 import Settings.SettingException;
 
 import java.io.File;
 import java.util.List;
 
 /**
- * This component implements methods for inspecting and loading plugins at runtime. It also helps
- * finding and creating the different object types used by MARLA that reside in a plugin.
+ * This component implements methods for inspecting and loading environment plugins at runtime. It also helps
+ * finding and creating the different object types used by MARLA that may reside in an environment plugin.
  */
-public interface IPluginLoader {
+public interface IEnvironmentPluginLoader {
 
     /**
      * Searches recursively for environment plugins in the given directory.
@@ -31,11 +33,12 @@ public interface IPluginLoader {
      * Loads the specified environment plugin an returns an instance of it.
      * @pre listAvailableEnvironments must have been used before
      * @param environment the environment plugin to load
+     * @param setContextClassloader when true, the class loader that was used to load the plugin, is set as the context for the given flag.
      * @return != null
      * @throws TechnicalException if technical errors prevent the component from loading the plugin specified
      * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
      */
-    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException;
+    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment, boolean setContextClassloader) throws TechnicalException, PluginNotReadableException;
 
     /**
      * Returns the file handle for the directory, where the plugin jar is located at.
@@ -47,34 +50,12 @@ public interface IPluginLoader {
     public File getEnvironmentPluginPath(TEnvironmentDescription environmentDescription) throws TechnicalException, PluginNotReadableException;
 
     /**
-     * Searches recursively for agent system plugins in the given directory.
+     * Returns a new instance of the loaded environment.
      *
-     * @return empty if no agent system plugins found in that directory
-     * @throws TechnicalException if technical errors prevent the component from loading the plugin described
-     * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
-     * @throws SettingException if the agentSystemPluginsFolder is not correctly set int he app's settings.
+     * @throws UnsupportedOperationException if no environment plugin was loaded previously.
+     * @return
      */
-    public List<TAgentSystemDescription> listAvailableAgentSystemPlugins() throws TechnicalException, PluginNotReadableException, SettingException;
-
-    /**
-     * Loads the specified environment plugin and returns an instance of it.
-     *
-     * @pre listAvailableAgentSystemPlugins must have been used before
-     * @param agentSystem the agent system plugin to load != null
-     * @return != null
-     * @throws TechnicalException if technical errors prevent the component from loading the plugin described
-     * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
-     */
-    public IAgentSystemPluginDescriptor loadAgentSystemPlugin(TAgentSystemDescription agentSystem) throws TechnicalException, PluginNotReadableException;
-
-    /**
-     * Returns the file handle for the directory, where the plugin jar is located at.
-     * @param agentSystemDescription a description of an existing agent system plugin != null
-     * @return null, if agent system plugin was not found
-     * @throws TechnicalException if technical errors prevent the component from loading the plugin specified
-     * @throws PluginNotReadableException if the plugin is not readable, for example if no TAgentSystemDescription is provided
-     */
-    public File getAgentSystemPluginPath(TAgentSystemDescription agentSystemDescription) throws TechnicalException, PluginNotReadableException;
+    public IEnvironment createEnvironmentInstance(ISaveGameStatistics saveGameStatistics) throws TechnicalException;
 
     /**
      * Creates an environment state message. If the environment provides a custom implementation, it will be used.
@@ -85,16 +66,6 @@ public interface IPluginLoader {
      * @return not null
      */
     public NetworkMessage createEnvironmentStateMessage(int clientId, IEnvironmentState environmentState);
-
-    /**
-     * Creates an action description message. If the environment provides a custom implementation, it will be used.
-     * Otherwise a default message is used. The message will be targeted to the server automatically
-     * @pre Environment must be loaded!
-     * @param actionDescription the action description to send
-     * @param clientId the client's network id
-     * @return not null
-     */
-    public NetworkMessage createActionDescriptionMessage(int clientId, IActionDescription actionDescription);
 
     /**
      * Loads the implementation of IVisualizeReplay from the pre-loaded Environment.

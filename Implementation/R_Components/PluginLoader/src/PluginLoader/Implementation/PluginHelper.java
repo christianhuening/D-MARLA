@@ -3,6 +3,7 @@ package PluginLoader.Implementation;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import Exceptions.ErrorMessages;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
+import sun.misc.Launcher;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -22,7 +23,7 @@ import java.util.jar.JarFile;
  */
 class PluginHelper {
 
-     ClassLoader classLoader = null;
+    ClassLoader classLoader = null;
 
     /**
      * Returns a list of all jars in a directory. This is not only true for jars located directly in the
@@ -58,7 +59,7 @@ class PluginHelper {
      *                                  if the jar is not readable
      * @throws IllegalArgumentException if no path is found under the given path
      */
-    public List<Class> loadJar(String pathToJar) throws TechnicalException, PluginNotReadableException {
+    public List<Class> loadJar(String pathToJar, boolean setContextClassLoader) throws TechnicalException, PluginNotReadableException {
 
         List<Class> classes = listClassesFromJar(pathToJar);
         //then make all classes of the plugin known to the class loader
@@ -71,7 +72,8 @@ class PluginHelper {
         }
 
         System.err.println("Classloader im PluginHelper: " + classLoader);
-
+        System.err.println("loading plugin into: " + Thread.currentThread());
+        System.err.println("setting context classloader in " + Thread.currentThread());
         Thread.currentThread().setContextClassLoader(classLoader);
         return classes;
     }
@@ -92,7 +94,7 @@ class PluginHelper {
         List<Class> classes = new LinkedList<Class>();
 
         try {
-            classLoader = new URLClassLoader(new URL[]{new File(pathToJar).toURI().toURL()}, Thread.currentThread().getContextClassLoader());
+            classLoader = new URLClassLoader(new URL[]{new File(pathToJar).toURI().toURL()}, Launcher.getLauncher().getClassLoader());
             JarFile jarFile = new JarFile(pathToJar);
             Enumeration<JarEntry> e = jarFile.entries();
 

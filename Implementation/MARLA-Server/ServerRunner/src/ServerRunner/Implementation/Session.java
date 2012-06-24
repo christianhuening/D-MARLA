@@ -20,13 +20,12 @@ import NetworkAdapter.Messages.CycleStartsMessage;
 import NetworkAdapter.Messages.SessionEndsMessage;
 import NetworkAdapter.Messages.SessionStartsMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
+import PluginLoader.Interface.IEnvironmentPluginLoader;
 import ServerRunner.Interface.IPlayerEventHandler;
 import ServerRunner.Interface.SessionIsNotInReadyStateException;
 import TransportTypes.TClientEvent;
 import TransportTypes.TNetworkClient;
 import TransportTypes.TSession;
-import org.picocontainer.MutablePicoContainer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,8 +49,6 @@ class Session extends Thread implements IHasTransportType<TSession> {
     private int numberOfPlayedGames = 0;
 
     private String name;
-    private final MutablePicoContainer picoContainer;
-    private IPluginLoader pluginLoader;
 
     private SessionStatus status;
 
@@ -73,6 +70,8 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
     private IEnvironment environment;
 
+    private IEnvironmentPluginLoader environmentPluginLoader;
+
     private IServerNetworkAdapter serverNetworkAdapter;
 
     private IEnvironmentState currentEnvironmentState;
@@ -91,13 +90,14 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
 // --------------------------- CONSTRUCTORS ---------------------------
 
-    public Session(TSession session, IServerNetworkAdapter serverNetworkAdapterInstance, MutablePicoContainer picoContainer, ISaveGameStatistics saveGameStatistics) throws TechnicalException, PluginNotReadableException {
-        this(session.getName(), session.getNumberOfGames(), session.getClientsInThisSession(), session.getMapMetaData(), serverNetworkAdapterInstance, picoContainer, session.getEnvironmentDescription(), saveGameStatistics);
+    public Session(TSession session, IServerNetworkAdapter serverNetworkAdapterInstance, IEnvironmentPluginLoader environmentPluginLoader, ISaveGameStatistics saveGameStatistics) throws TechnicalException, PluginNotReadableException {
+        this(session.getName(), session.getNumberOfGames(), session.getClientsInThisSession(), session.getMapMetaData(), serverNetworkAdapterInstance, environmentPluginLoader, session.getEnvironmentDescription(), saveGameStatistics);
     }
 
-    public Session(String name, int numberOfIterations, List<TNetworkClient> clientsInThisSession, TMapMetaData mapMetaData, IServerNetworkAdapter serverNetworkAdapter, MutablePicoContainer picoContainer, TEnvironmentDescription environmentDescription, ISaveGameStatistics gameStatistics) throws TechnicalException, PluginNotReadableException {
+    public Session(String name, int numberOfIterations, List<TNetworkClient> clientsInThisSession, TMapMetaData mapMetaData, IServerNetworkAdapter serverNetworkAdapter, IEnvironmentPluginLoader environmentPluginLoader, TEnvironmentDescription environmentDescription, ISaveGameStatistics gameStatistics) throws TechnicalException, PluginNotReadableException {
+        super("Session");
         this.name = name;
-        this.picoContainer = picoContainer;
+        this.environmentPluginLoader = environmentPluginLoader;
         this.status = SessionStatus.READY;
         this.numberOfGames = numberOfIterations;
         this.clientsInThisSession = clientsInThisSession;
@@ -123,22 +123,17 @@ class Session extends Thread implements IHasTransportType<TSession> {
 // --------------------- Interface Runnable ---------------------
 
     public void run() {
-        pluginLoader = picoContainer.getComponent(IPluginLoader.class);
-        try {
-            this.environment = pluginLoader.loadEnvironmentPlugin(environmentDescription).getInstance(this.gameStatistics);
-        } catch (TechnicalException e) {
-            status = SessionStatus.FAILED;
-            e.printStackTrace();
-            return;
-        } catch (PluginNotReadableException e) {
-            status = SessionStatus.FAILED;
-            e.printStackTrace();
-            return;
-        }
 
         this.status = SessionStatus.RUNNING;
 
-        sendPlayerEventMessage(new TClientEvent(ClientEventType.SessionStarted, this.getTransportType()));
+        try {
+            environment = environmentPluginLoader.createEnvironmentInstance(gameStatistics);
+        } catch (TechnicalException e) {
+            //TODO: Better exception handling, session should fail
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        sendPlayerEventMessage(new TClientEvent(ClientEventType.SessionStarted, getTransportType()));
 
         for (TNetworkClient networkClient : clientsInThisSession) {
             try {
@@ -230,6 +225,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
             currentEnvironmentState = environment.start(new ArrayList<TMARLAClientInstance>(clientsForPlayers.keySet()), mapMetaData);
         } catch (EnvironmentPluginAPI.Contract.Exception.IllegalNumberOfClientsException e) {
             e.printStackTrace();
+            //TODO: Better exception handling, session should fail
         }
 
         sendCurrentEnvironmentStateToClient(clientsForPlayers.get(environment.getActiveInstance()));
@@ -244,7 +240,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
     }
 
     private void sendCurrentEnvironmentStateToClient(TNetworkClient networkClient) throws NotConnectedException, ConnectionLostException {
-        serverNetworkAdapter.sendNetworkMessage(pluginLoader.createEnvironmentStateMessage(networkClient.getId(), currentEnvironmentState), MessageChannel.DATA);
+        serverNetworkAdapter.sendNetworkMessage(environmentPluginLoader.createEnvironmentStateMessage(networkClient.getId(), currentEnvironmentState), MessageChannel.DATA);
     }
 
     private void advanceTurns() throws NotConnectedException, ConnectionLostException, InterruptedException, TechnicalException {

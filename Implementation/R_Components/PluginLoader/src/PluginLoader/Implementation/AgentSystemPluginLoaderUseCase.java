@@ -8,6 +8,7 @@ import EnvironmentPluginAPI.CustomNetworkMessages.IActionDescriptionMessage;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import NetworkAdapter.Messages.DefaultActionDescriptionMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
+import PluginLoader.Interface.IAgentSystemPluginLoader;
 import Settings.AppSettings;
 import Settings.SettingException;
 
@@ -22,7 +23,7 @@ import java.util.Map;
 /**
  * This class implements all logic affiliated with the loading of agent system plugins.
  */
-public class AgentSystemPluginLoaderUseCase {
+public class AgentSystemPluginLoaderUseCase implements IAgentSystemPluginLoader {
 
     private Map<TAgentSystemDescription, File> aiPluginPaths;
     private PluginHelper pluginHelper;
@@ -79,7 +80,7 @@ public class AgentSystemPluginLoaderUseCase {
 
         try {
             // Load all classes from the jar where this plugin is located
-            List<Class> classesInJar = pluginHelper.loadJar(aiPluginPaths.get(agentSystem).getPath());
+            List<Class> classesInJar = pluginHelper.loadJar(aiPluginPaths.get(agentSystem).getPath(), true);
 
 
             //search for the first class that abides the contract that is not the interface itself
@@ -159,4 +160,5 @@ public class AgentSystemPluginLoaderUseCase {
 
         return new DefaultActionDescriptionMessage(0, actionDescription);
     }
+
 }

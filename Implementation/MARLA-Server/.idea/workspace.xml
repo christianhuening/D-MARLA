@@ -61,8 +61,10 @@
       <file leaf-file-name="ServerFacade.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ServerFacade/src/GameServerFacade/Implementation/ServerFacade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="58" selection-start="7235" selection-end="7235" vertical-scroll-proportion="0.8945687">
-              <folding />
+            <state line="163" column="77" selection-start="6874" selection-end="6874" vertical-scroll-proportion="0.71246004">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,20 +79,20 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/PluginHelper.java" />
-        <option value="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkAccessProtocol.java" />
-        <option value="$PROJECT_DIR$/ServerFacade/src/GameServerFacade/Interface/GameServerFacadeFactory.java" />
-        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Interface/IPluginLoader.java" />
-        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/PluginLoaderComponent.java" />
-        <option value="$PROJECT_DIR$/ServerFacade/src/GameServerFacade/Interface/ICycleServerFacade.java" />
-        <option value="$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/ServerRunnerComponent.java" />
-        <option value="$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/ServerRunnerUseCase.java" />
-        <option value="$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/Session.java" />
         <option value="$PROJECT_DIR$/ServerFacade/src/GameServerFacade/Implementation/CycleServerFacade.java" />
-        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java" />
-        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/AgentSystemPluginLoaderUseCase.java" />
         <option value="$PROJECT_DIR$/MARLA-Server-GUI/src/ServerAdministration.java" />
         <option value="$PROJECT_DIR$/MARLA-Server-GUI/src/SessionConfig.java" />
+        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/AgentSystemPluginLoaderUseCase.java" />
+        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/PluginLoaderComponent.java" />
+        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Interface/IPluginLoader.java" />
+        <option value="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ContextAwareObjectInputStream.java" />
+        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/PluginHelper.java" />
+        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java" />
+        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Interface/IEnvironmentPluginLoader.java" />
+        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderComponent.java" />
+        <option value="$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/Session.java" />
+        <option value="$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/ServerRunnerUseCase.java" />
+        <option value="$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/ServerRunnerComponent.java" />
         <option value="$PROJECT_DIR$/ServerFacade/src/GameServerFacade/Interface/ServerFacadeFactory.java" />
         <option value="$PROJECT_DIR$/ServerFacade/src/GameServerFacade/Implementation/ServerFacade.java" />
       </list>
@@ -269,6 +271,134 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Implementation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PluginLoader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PluginLoader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PluginLoader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Interface" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PluginLoader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PluginLoader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implementation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetworkAdapter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetworkAdapter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnvironmentPluginAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnvironmentPluginAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnvironmentPluginAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnvironmentPluginAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnvironmentPluginAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,7 +591,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.2637969" order="-1" side_tool="false" content_ui="tabs" />
@@ -480,7 +610,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20630679" sideWeight="0.52538633" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26490065" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26490065" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -546,95 +676,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ZeroTypes/src/Settings/AppSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.70564514">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Interface/IPluginLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="714" selection-end="1382" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerFacade/src/GameServerFacade/Interface/IServerFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="141" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MARLA-Server-GUI/src/EnvironmentComboBoxModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/ServerRunnerComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="48" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.74491394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/ServerRunnerUseCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="105" selection-start="4478" selection-end="4478" vertical-scroll-proportion="0.41314554">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="41" selection-start="2597" selection-end="2597" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MARLA-Server-GUI/src/SessionTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="318" selection-end="318" vertical-scroll-proportion="0.22848201">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="33" selection-start="3777" selection-end="3777" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/AgentSystemPluginLoaderUseCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="46" selection-start="3551" selection-end="3551" vertical-scroll-proportion="0.40734825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MARLA-Server-GUI/src/SessionConfig.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerFacade/src/GameServerFacade/Interface/ServerFacadeFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="30" selection-start="1161" selection-end="1173" vertical-scroll-proportion="0.53184164">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MARLA-Server-GUI/src/ServerAdministration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="40" selection-start="6332" selection-end="6332" vertical-scroll-proportion="3.4819276">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MARLA-Server-GUI/src/MapListTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="11" selection-start="449" selection-end="449" vertical-scroll-proportion="0.38037866">
@@ -649,10 +690,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.6.0_33/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="628" column="29" selection-start="23746" selection-end="23746" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/AgentSystemPluginLoaderUseCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="102" selection-start="3835" selection-end="3835" vertical-scroll-proportion="0.4225352">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ClientSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="291" selection-end="291" vertical-scroll-proportion="0.13538112">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ContextAwareObjectInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="50" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.68075114">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/PluginHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="61" selection-start="2847" selection-end="2847" vertical-scroll-proportion="1.5962441">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="115" selection-start="9661" selection-end="9686" vertical-scroll-proportion="0.74480367">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="115" selection-start="2570" selection-end="2570" vertical-scroll-proportion="0.5608646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Interface/IEnvironmentPluginLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="115" selection-start="3246" selection-end="3246" vertical-scroll-proportion="0.41979522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="66" selection-start="5148" selection-end="5148" vertical-scroll-proportion="0.4191686">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1828#1849#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/ServerRunnerUseCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="108" selection-start="4302" selection-end="4302" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRunner/src/ServerRunner/Implementation/ServerRunnerComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="106" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.4256651">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerFacade/src/GameServerFacade/Interface/ServerFacadeFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="41" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.5586854">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ServerFacade/src/GameServerFacade/Implementation/ServerFacade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="58" selection-start="7235" selection-end="7235" vertical-scroll-proportion="0.8945687">
-          <folding />
+        <state line="163" column="77" selection-start="6874" selection-end="6874" vertical-scroll-proportion="0.71246004">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

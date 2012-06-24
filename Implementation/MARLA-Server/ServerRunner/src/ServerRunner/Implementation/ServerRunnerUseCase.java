@@ -13,7 +13,7 @@ import NetworkAdapter.Interface.IServerNetworkAdapter;
 import NetworkAdapter.Interface.NetworkEventType;
 import NetworkAdapter.Messages.ClientJoinMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
+import PluginLoader.Interface.IEnvironmentPluginLoader;
 import ServerRunner.Interface.IPlayerEventHandler;
 import ServerRunner.Interface.IServerRunner;
 import ServerRunner.Interface.SessionIsNotInReadyStateException;
@@ -21,7 +21,6 @@ import TransportTypes.TClientEvent;
 import TransportTypes.TNetworkClient;
 import TransportTypes.TSession;
 import org.joda.time.DateTime;
-import org.picocontainer.MutablePicoContainer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,16 +36,16 @@ import java.util.UUID;
 public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceivedEventHandler {
     private final IServerNetworkAdapter networkAdapter;
     private final ISaveGameStatistics saveGameStatistics;
-    private final MutablePicoContainer mutablePicoContainer;
+    private final IEnvironmentPluginLoader environmentPluginLoader;
 
     private List<TNetworkClient> networkClients;
 
     private List<Session> sessions;
 
-    public ServerRunnerUseCase(ISaveGameStatistics gameStatistics, IServerNetworkAdapter networkAdapter, MutablePicoContainer mutablePicoContainer) {
+    public ServerRunnerUseCase(ISaveGameStatistics gameStatistics, IServerNetworkAdapter networkAdapter, IEnvironmentPluginLoader environmentPluginLoader) {
         this.networkAdapter = networkAdapter;
         this.saveGameStatistics = gameStatistics;
-        this.mutablePicoContainer = mutablePicoContainer;
+        this.environmentPluginLoader = environmentPluginLoader;
 
         networkClients = new ArrayList<TNetworkClient>();
         sessions = new ArrayList<Session>();
@@ -100,11 +99,8 @@ public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceiv
 
     @Override
     public UUID createSession(TSession session) throws TechnicalException, PluginNotReadableException {
-        if (session.getClientsInThisSession().size() < 2) {
-            System.out.println("ERROR: The provided session player count was less than 2.");
-        }
 
-        Session newSession = new Session(session, getServerNetworkAdapterInstance(), mutablePicoContainer, this.saveGameStatistics);
+        Session newSession = new Session(session, getServerNetworkAdapterInstance(), environmentPluginLoader, saveGameStatistics);
 
         sessions.add(newSession);
 

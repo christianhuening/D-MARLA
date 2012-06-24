@@ -6,7 +6,7 @@ import AgentSystemManagement.Plugins.PluginManager;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IAgentSystem;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
+import PluginLoader.Interface.IAgentSystemPluginLoader;
 import Settings.SettingException;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 
@@ -15,12 +15,12 @@ import java.util.List;
 public class AgentSystemManagementUseCase implements IAgentSystemManagement {
     private IAgentProvider agentProvider;
     private PluginManager pluginManager;
-    private IPluginLoader pluginLoader;
+    private IAgentSystemPluginLoader agentSystemPluginLoader;
 
-    public AgentSystemManagementUseCase(PluginManager pluginManager, IAgentProvider agentProvider, IPluginLoader loader) {
+    public AgentSystemManagementUseCase(PluginManager pluginManager, IAgentProvider agentProvider, IAgentSystemPluginLoader agentSystemPluginLoader) {
         this.agentProvider = agentProvider;
         this.pluginManager = pluginManager;
-        this.pluginLoader = loader;
+        this.agentSystemPluginLoader = agentSystemPluginLoader;
     }
 
     @Override
@@ -30,6 +30,6 @@ public class AgentSystemManagementUseCase implements IAgentSystemManagement {
 
     @Override
     public IAgentSystem getAgentSystem(TAgentSystemDescription toLoad) throws TechnicalException, PluginNotReadableException, SettingException {
-        return pluginManager.getAgentSystemInstance(toLoad, new AgentSystemServiceProvider(agentProvider, pluginLoader.getAgentSystemPluginPath(toLoad).toString(), pluginLoader.getAgentSystemPluginPath(toLoad).toString() + "/settings.properties"));
+        return pluginManager.getAgentSystemInstance(toLoad, new AgentSystemServiceProvider(agentProvider, agentSystemPluginLoader.getAgentSystemPluginPath(toLoad).toString(), agentSystemPluginLoader.getAgentSystemPluginPath(toLoad).toString() + "/settings.properties"));
     }
 }

@@ -17,7 +17,7 @@ import NetworkAdapter.Messages.CycleStartsMessage;
 import NetworkAdapter.Messages.SessionEndsMessage;
 import NetworkAdapter.Messages.SessionStartsMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
+import PluginLoader.Interface.IAgentSystemPluginLoader;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 
 import java.security.InvalidParameterException;
@@ -31,7 +31,7 @@ import java.util.List;
 public class AIRunnerUseCase implements IAIRunner, IAIRunnerEventHandler, INetworkMessageReceivedEventHandler<NetworkMessage> {
 
     private final IClientNetworkAdapter networkAdapter;
-    private final IPluginLoader pluginLoader;
+    private final IAgentSystemPluginLoader agentSystemPluginLoader;
     private final IAgentSystemManagement agentSystemManagement;
     private PluginContainer pluginContainer = null;
     private List<IAIRunnerEventHandler> IAIRunnerEventHandlers = new LinkedList<IAIRunnerEventHandler>();
@@ -39,10 +39,10 @@ public class AIRunnerUseCase implements IAIRunner, IAIRunnerEventHandler, INetwo
 
     public AIRunnerUseCase(IClientNetworkAdapter networkAdapter,
                            IAgentSystemManagement agentSystemManagement,
-                           IPluginLoader pluginLoader){
+                           IAgentSystemPluginLoader agentSystemPluginLoader){
 
         this.networkAdapter = networkAdapter;
-        this.pluginLoader = pluginLoader;
+        this.agentSystemPluginLoader = agentSystemPluginLoader;
         networkAdapter.subscribeForNetworkMessageReceivedEvent(this, NetworkMessage.class);
         this.agentSystemManagement = agentSystemManagement;
     }
@@ -70,7 +70,7 @@ public class AIRunnerUseCase implements IAIRunner, IAIRunnerEventHandler, INetwo
 
     @Override
     public void connectToServer(TAgentSystemDescription agentSystemDescription, String hostname, int port) throws HostUnreachableException, InvalidParameterException, PluginNotReadableException, TechnicalException {
-        pluginContainer = new PluginContainer(agentSystemManagement, networkAdapter, this, pluginLoader, hostname, port);
+        pluginContainer = new PluginContainer(agentSystemManagement, networkAdapter, this, agentSystemPluginLoader, hostname, port);
         pluginContainer.load(agentSystemDescription);
         onAIRunnerEvent(AIRunnerEventType.Connected);
     }

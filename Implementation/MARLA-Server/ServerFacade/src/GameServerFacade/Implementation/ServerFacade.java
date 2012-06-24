@@ -12,7 +12,7 @@ import GameServerFacade.Interface.IServerFacade;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.IServerNetworkAdapter;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
+import PluginLoader.Interface.IEnvironmentPluginLoader;
 import RemoteInterface.ICycleStatistics;
 import ServerRunner.Interface.IPlayerEventHandler;
 import ServerRunner.Interface.IServerRunner;
@@ -37,16 +37,16 @@ public class ServerFacade implements IServerFacade {
     private ISaveGameStatistics saveGameStatistics;
     private IServerRunner serverRunner;
     private IServerNetworkAdapter serverNetworkAdapter;
-    private MutablePicoContainer mutablePicoContainer;
+    private IEnvironmentPluginLoader environmentPluginLoader;
 
     public ServerFacade(ICycleStatistics cycleStatistics, ISaveGameStatistics saveGameStatistics,
-                        IServerRunner serverRunner, IServerNetworkAdapter networkAdapter, MutablePicoContainer mutablePicoContainer) {
+                        IServerRunner serverRunner, IServerNetworkAdapter networkAdapter, IEnvironmentPluginLoader environmentPluginLoader) {
 
         this.cycleStatistics = cycleStatistics;
         this.saveGameStatistics = saveGameStatistics;
         this.serverRunner = serverRunner;
         this.serverNetworkAdapter = networkAdapter;
-        this.mutablePicoContainer = mutablePicoContainer;
+        this.environmentPluginLoader = environmentPluginLoader;
     }
 
     @Override
@@ -151,25 +151,17 @@ public class ServerFacade implements IServerFacade {
 
     @Override
     public List<TEnvironmentDescription> listAvailableEnvironments() throws TechnicalException, PluginNotReadableException, SettingException {
-        IPluginLoader pluginLoader = mutablePicoContainer.getComponent(IPluginLoader.class);
-        return pluginLoader.listAvailableEnvironments();
+        return environmentPluginLoader.listAvailableEnvironments();
     }
 
     @Override
     public void saveMap(TMapMetaData mapMetaData, TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
-        IPluginLoader pluginLoader = mutablePicoContainer.getComponent(IPluginLoader.class);
-
-        pluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).saveMap(mapMetaData);
+        environmentPluginLoader.loadEnvironmentPlugin(environment, false).getInstance(saveGameStatistics).saveMap(mapMetaData);
     }
 
     @Override
     public List<TMapMetaData> getAvailableMaps(TEnvironmentDescription environment) throws CorruptMapFileException, TechnicalException, PluginNotReadableException {
-
-        IPluginLoader pluginLoader = mutablePicoContainer.getComponent(IPluginLoader.class);
-        List<TMapMetaData> result = null;
-        result = pluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).getAvailableMaps();
-        System.err.println("TMapMetaData geladen von: " + result.get(0).getClass().getClassLoader());
-        return result;
+        return  environmentPluginLoader.loadEnvironmentPlugin(environment, false).getInstance(saveGameStatistics).getAvailableMaps();
     }
 
     @Override
