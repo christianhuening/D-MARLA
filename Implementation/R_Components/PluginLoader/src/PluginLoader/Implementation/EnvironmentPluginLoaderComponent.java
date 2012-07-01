@@ -30,8 +30,8 @@ public class EnvironmentPluginLoaderComponent implements IEnvironmentPluginLoade
     }
 
     @Override
-    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment, boolean setContextClassloader) throws TechnicalException, PluginNotReadableException {
-        return environmentPluginLoaderUseCase.loadEnvironmentPlugin(environment, setContextClassloader);
+    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
+        return environmentPluginLoaderUseCase.loadEnvironmentPlugin(environment);
     }
 
     /**

@@ -1,3 +1,5 @@
+package Models;
+
 import TransportTypes.TNetworkClient;
 import org.joda.time.DateTime;
 

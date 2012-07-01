@@ -18,7 +18,6 @@ public class FactoryPluginDescriptor implements IEnvironmentPluginDescriptor {
 
     @Override
     public IEnvironment getInstance(ISaveGameStatistics gameStatisticSaver) throws TechnicalException {
-        System.err.println("TActionsInTurn Classloader im Descriptor-Konstruktor: " + TActionsInTurn.class.getClassLoader());
         return new GameLogicComponent(gameStatisticSaver);
     }
 }

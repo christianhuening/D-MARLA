@@ -33,12 +33,11 @@ public interface IEnvironmentPluginLoader {
      * Loads the specified environment plugin an returns an instance of it.
      * @pre listAvailableEnvironments must have been used before
      * @param environment the environment plugin to load
-     * @param setContextClassloader when true, the class loader that was used to load the plugin, is set as the context for the given flag.
      * @return != null
      * @throws TechnicalException if technical errors prevent the component from loading the plugin specified
      * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
      */
-    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment, boolean setContextClassloader) throws TechnicalException, PluginNotReadableException;
+    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException;
 
     /**
      * Returns the file handle for the directory, where the plugin jar is located at.

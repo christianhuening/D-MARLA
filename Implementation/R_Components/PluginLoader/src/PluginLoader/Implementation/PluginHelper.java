@@ -59,7 +59,7 @@ class PluginHelper {
      *                                  if the jar is not readable
      * @throws IllegalArgumentException if no path is found under the given path
      */
-    public List<Class> loadJar(String pathToJar, boolean setContextClassLoader) throws TechnicalException, PluginNotReadableException {
+    public List<Class> loadJar(String pathToJar) throws TechnicalException, PluginNotReadableException {
 
         List<Class> classes = listClassesFromJar(pathToJar);
         //then make all classes of the plugin known to the class loader

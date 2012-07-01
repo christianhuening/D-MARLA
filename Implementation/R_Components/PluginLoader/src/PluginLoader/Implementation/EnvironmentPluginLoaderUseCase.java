@@ -67,14 +67,12 @@ public class EnvironmentPluginLoaderUseCase {
             throw new TechnicalException("Unable to load Class from plugin. Reason: \n\n" + e);
         } catch (IllegalAccessException e) {
             throw new TechnicalException("Unable to load Class from plugin. Reason: \n\n" + e);
-        } catch (SettingException se) {
-            // we assume, that we are in the client and thus can't have this setting
-            //TODO: This must be fixed, Server- and Client Pluginloader should be separated completely
         }
+
         return result;
     }
 
-    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment, boolean setContextClassloader) throws TechnicalException, PluginNotReadableException {
+    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
 
         customEnvironmentStateMessage = null;
         customAbstractVisualization = null;
@@ -82,7 +80,7 @@ public class EnvironmentPluginLoaderUseCase {
 
         try {
             // Load all classes from the jar where this plugin is located
-            List<Class> classesInJar = pluginHelper.loadJar(environmentPluginPaths.get(environment).getPath(), setContextClassloader);
+            List<Class> classesInJar = pluginHelper.loadJar(environmentPluginPaths.get(environment).getPath());
 
 
             //search for the first class that abides the contract that is not the interface itself

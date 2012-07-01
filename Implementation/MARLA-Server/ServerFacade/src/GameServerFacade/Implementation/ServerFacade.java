@@ -2,6 +2,7 @@ package GameServerFacade.Implementation;
 
 import EnvironmentPluginAPI.Contract.Exception.CorruptMapFileException;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Contract.IEnvironmentPluginDescriptor;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Service.ICycleReplay;
 import EnvironmentPluginAPI.Service.ISaveGameStatistics;
@@ -150,18 +151,23 @@ public class ServerFacade implements IServerFacade {
     }
 
     @Override
+    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
+        return environmentPluginLoader.loadEnvironmentPlugin(environment);
+    }
+
+    @Override
     public List<TEnvironmentDescription> listAvailableEnvironments() throws TechnicalException, PluginNotReadableException, SettingException {
         return environmentPluginLoader.listAvailableEnvironments();
     }
 
     @Override
     public void saveMap(TMapMetaData mapMetaData, TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
-        environmentPluginLoader.loadEnvironmentPlugin(environment, false).getInstance(saveGameStatistics).saveMap(mapMetaData);
+        environmentPluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).saveMap(mapMetaData);
     }
 
     @Override
     public List<TMapMetaData> getAvailableMaps(TEnvironmentDescription environment) throws CorruptMapFileException, TechnicalException, PluginNotReadableException {
-        return  environmentPluginLoader.loadEnvironmentPlugin(environment, false).getInstance(saveGameStatistics).getAvailableMaps();
+        return  environmentPluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).getAvailableMaps();
     }
 
     @Override

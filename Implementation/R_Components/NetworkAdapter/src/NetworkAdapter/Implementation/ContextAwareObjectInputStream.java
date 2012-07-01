@@ -24,18 +24,13 @@ public class ContextAwareObjectInputStream extends ObjectInputStream {
     public ContextAwareObjectInputStream(InputStream in) throws IOException {
         super(in);
         currentTccl = Thread.currentThread().getContextClassLoader();
-        System.err.println("inputstream started in thread " + Thread.currentThread());
-        System.err.println("current classloader: " + currentTccl);
     }
 
     @Override
     public Class resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {
-        currentTccl = Thread.currentThread().getContextClassLoader();
-        System.err.println("looking in Thread: " + Thread.currentThread() + " for " + desc.getName() + " [" + currentTccl + "]");
         try {
             return super.resolveClass(desc);
         } catch (ClassNotFoundException e) {
-            System.err.println("not found, looking in Thread: " + Thread.currentThread() + " for " + desc.getName() + " [" + currentTccl + "]");
             return Class.forName(desc.getName(), true, currentTccl);
         }
     }

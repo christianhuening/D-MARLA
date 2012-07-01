@@ -80,7 +80,7 @@ public class AgentSystemPluginLoaderUseCase implements IAgentSystemPluginLoader 
 
         try {
             // Load all classes from the jar where this plugin is located
-            List<Class> classesInJar = pluginHelper.loadJar(aiPluginPaths.get(agentSystem).getPath(), true);
+            List<Class> classesInJar = pluginHelper.loadJar(aiPluginPaths.get(agentSystem).getPath());
 
 
             //search for the first class that abides the contract that is not the interface itself

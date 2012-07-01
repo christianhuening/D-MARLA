@@ -101,8 +101,6 @@ public class Game extends Observable implements java.io.Serializable {
         for (Factory factory : factories) {
             this.addObserver(factory);
         }
-
-        System.err.println("TActionsInTurn Classloader im Game-Konstruktor: " + TActionsInTurn.class.getClassLoader());
     }
 
 // ------------------------ CANONICAL METHODS ------------------------

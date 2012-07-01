@@ -116,10 +116,7 @@ public class Factory implements Observer, IHasTransportType<TFactory>, java.io.S
         if (controller == Faction.NEUTRAL)
             return;
 
-        System.out.println("HUBAMAN!");
-
         remainingRoundsToSpawn--;
-        System.out.println(remainingRoundsToSpawn);
         if (remainingRoundsToSpawn <= 0) {
             remainingRoundsToSpawn = roundsToSpawnNeeded;
             spawn();

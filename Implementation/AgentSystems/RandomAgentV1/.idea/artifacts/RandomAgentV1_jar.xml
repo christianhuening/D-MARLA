@@ -6,8 +6,8 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/../../AIClient/agentPlugins/RandomAgentv1/META-INF/MANIFEST.MF" />
       </element>
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../../Deployment/MARLA-Server/EnvironmentPlugins/Factory.jar" path-in-jar="/" />
       <element id="library" level="project" name="AgentSystemPluginAPI" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../MARLA-Server/EnvironmentPlugins/Factory.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

@@ -2,6 +2,7 @@ package GameServerFacade.Interface;
 
 import EnvironmentPluginAPI.Contract.Exception.CorruptMapFileException;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Contract.IEnvironmentPluginDescriptor;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Service.ISaveGameStatistics;
 import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
@@ -23,6 +24,16 @@ public interface IServerFacade extends
         ICycleStatistics,
         ISaveGameStatistics,
         IServerRunner {
+
+    /**
+     * Loads the specified environment plugin an returns an instance of it.
+     * @pre listAvailableEnvironments must have been used before
+     * @param environment the environment plugin to load
+     * @return != null
+     * @throws TechnicalException if technical errors prevent the component from loading the plugin specified
+     * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
+     */
+    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException;
 
     /**
      * Searches recursively for environment plugins in the given directory.

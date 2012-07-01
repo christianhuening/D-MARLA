@@ -247,7 +247,6 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
         synchronized (this) {
             while (status.equals(SessionStatus.RUNNING)) {
-                System.err.println("Zugestellt in der Session: " + actionsInTurn.getClass().getClassLoader());
                 currentEnvironmentState = environment.executeAction(actionsInTurn);
 
                 if (environment.isStillActive()) {

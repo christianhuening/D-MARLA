@@ -31,7 +31,6 @@ public class GameLogicComponent implements IEnvironment {
 
     public GameLogicComponent(ISaveGameStatistics saveGameStatistics) {
         this.useCase = new GameLogicUseCase(saveGameStatistics);
-        System.err.println("TActionsInTurn Classloader im Component-Konstruktor: " + TActionsInTurn.class.getClassLoader());
     }
 
 // ------------------------ INTERFACE METHODS ------------------------

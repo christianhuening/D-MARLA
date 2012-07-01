@@ -1,3 +1,5 @@
+package Models;
+
 import TransportTypes.TSession;
 
 import javax.swing.table.DefaultTableModel;

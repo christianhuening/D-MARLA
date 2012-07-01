@@ -1,7 +1,9 @@
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import GameServerFacade.Interface.ServerFacadeFactory;
 import GameServerFacade.Interface.IServerFacade;
+import Models.SessionTableModel;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
+import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import RemoteInterface.ClientSocketFactory;
 import RemoteInterface.ICycleStatistics;
 import ServerRunner.Interface.IPlayerEventHandler;
@@ -11,6 +13,7 @@ import TransportTypes.TSession;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.InetAddress;
@@ -56,10 +59,30 @@ public class ServerAdministration implements Observer {
         // get Facade
         final IServerFacade facade = ServerFacadeFactory.getProductiveApplicationCore();
 
+        EnvironmentSelectionDialog dialog = new EnvironmentSelectionDialog(facade);
+        dialog.pack();
+
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (dim.width - dialog.getWidth()) / 2;
+        int y = (dim.height - dialog.getHeight()) / 2;
+        dialog.setLocation(x, y);
+
+
+        dialog.setVisible(true);
+
+        try {
+            facade.loadEnvironmentPlugin(dialog.getSelectedEnvironment());
+        } catch (PluginNotReadableException e) {
+            e.printStackTrace();  //TODO: Needs better exception handling
+        } catch (TechnicalException e) {
+            e.printStackTrace();  //TODO: Needs better exception handling
+        }
+
+
         try {
             facade.startHosting();
         } catch (TechnicalException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();  //TODO: Needs better exception handling
         } catch (ConnectionLostException e) {
             JOptionPane.showMessageDialog(frame,
                     "The connection to the server was lost.",
