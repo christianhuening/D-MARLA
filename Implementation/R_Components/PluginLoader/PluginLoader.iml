@@ -10,7 +10,7 @@
     <orderEntry type="module" module-name="EnvironmentPluginAPI" exported="" />
     <orderEntry type="module" module-name="ZeroTypes" exported="" />
     <orderEntry type="module" module-name="AgentSystemPluginAPI" exported="" />
-    <orderEntry type="module" module-name="NetworkAdapter" />
+    <orderEntry type="module" module-name="NetworkAdapter" exported="" />
     <orderEntry type="library" name="junit-4.10" level="project" />
   </component>
 </module>

@@ -5,9 +5,9 @@ import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Service.ICycleReplay;
 import Exceptions.GameReplayNotContainedInDatabaseException;
-import PluginLoader.Implementation.PluginLoaderComponent;
+import PluginLoader.Implementation.EnvironmentPluginLoaderComponent;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import PluginLoader.Interface.IPluginLoader;
+import PluginLoader.Interface.IEnvironmentPluginLoader;
 import RemoteInterface.ICycleStatistics;
 import Settings.AppSettings;
 import Settings.SettingException;
@@ -60,7 +60,7 @@ public class OverseerMain {
     private CycleDescriptionTableModel cycleDescriptionTableModel;
     private EnvironmentComboBoxModel environmentComboBoxModel;
 
-    private IPluginLoader pluginLoader;
+    private IEnvironmentPluginLoader pluginLoader;
     private List<TEnvironmentDescription> environmentDescriptions;
 
 
@@ -69,10 +69,19 @@ public class OverseerMain {
     public OverseerMain() {
 
         // Load available EnvironmentPlugins
-        pluginLoader = new PluginLoaderComponent();
+        try {
+            pluginLoader = new EnvironmentPluginLoaderComponent();
+        } catch (TechnicalException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (SettingException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (PluginNotReadableException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
 
         try {
-            environmentDescriptions = pluginLoader.listAvailableEnvironments(AppSettings.getString("environmentPluginsFolder"));
+            environmentDescriptions = pluginLoader.listAvailableEnvironments();
+            //AppSettings.getString("environmentPluginsFolder")
         } catch (TechnicalException e) {
             e.printStackTrace();
         } catch (PluginNotReadableException e) {
