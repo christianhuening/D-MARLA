@@ -162,7 +162,7 @@ public class OverseerMain {
                                 TEnvironmentDescription environmentDescription = environmentComboBoxModel.getEnvironmentDescription(environmentComboBox.getSelectedIndex());
 
                                 registry = LocateRegistry.getRegistry(remoteHost);
-                                gameStatistics = (ICycleStatistics) registry.lookup("IGameStatistics");
+                                gameStatistics = (ICycleStatistics) registry.lookup("ICycleStatistics");
 
                                 // Load Environment
                                 pluginLoader.loadEnvironmentPlugin(environmentDescription);
