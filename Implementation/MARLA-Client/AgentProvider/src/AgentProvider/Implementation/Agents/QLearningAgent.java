@@ -4,6 +4,7 @@ package AgentProvider.Implementation.Agents;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Contract.StateAction;
+import Exceptions.ErrorMessages;
 
 public class QLearningAgent extends EpsilonGreedyAgent {
     private StateAction sa;
@@ -28,6 +29,10 @@ public class QLearningAgent extends EpsilonGreedyAgent {
 
     @Override
     public StateAction step(float rewardForLastStep, StateAction newState) throws TechnicalException {
+        if(sa == null) {
+            throw new RuntimeException(ErrorMessages.get("startStateNotInitialized", getName()));
+        }
+
         updateQ(sa, getBestAction(newState), rewardForLastStep);
 
         sa = getEpsilonInfluencedAction(newState);

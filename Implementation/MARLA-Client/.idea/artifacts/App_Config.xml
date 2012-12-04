@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact build-on-make="true" name="App Config">
-    <output-path>$PROJECT_DIR$/../../Deployment/MARLA-Client</output-path>
-    <root id="root">
-      <element id="directory" name="cfg" />
-      <element id="dir-copy" path="$PROJECT_DIR$/cfg" />
-    </root>
-  </artifact>
-</component>

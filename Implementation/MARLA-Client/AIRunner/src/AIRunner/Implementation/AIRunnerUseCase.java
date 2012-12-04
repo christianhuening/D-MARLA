@@ -39,7 +39,7 @@ public class AIRunnerUseCase implements IAIRunner, IAIRunnerEventHandler, INetwo
 
     public AIRunnerUseCase(IClientNetworkAdapter networkAdapter,
                            IAgentSystemManagement agentSystemManagement,
-                           IAgentSystemPluginLoader agentSystemPluginLoader){
+                           IAgentSystemPluginLoader agentSystemPluginLoader) {
 
         this.networkAdapter = networkAdapter;
         this.agentSystemPluginLoader = agentSystemPluginLoader;
@@ -49,14 +49,14 @@ public class AIRunnerUseCase implements IAIRunner, IAIRunnerEventHandler, INetwo
 
     @Override
     public void onAIRunnerEvent(AIRunnerEventType eventType) {
-        for(IAIRunnerEventHandler eventHandler : IAIRunnerEventHandlers) {
+        for (IAIRunnerEventHandler eventHandler : IAIRunnerEventHandlers) {
             eventHandler.onAIRunnerEvent(eventType);
         }
     }
 
     @Override
     public void onSessionStart(int games) {
-        for(IAIRunnerEventHandler eventHandler : IAIRunnerEventHandlers) {
+        for (IAIRunnerEventHandler eventHandler : IAIRunnerEventHandlers) {
             eventHandler.onSessionStart(games);
         }
     }
@@ -82,7 +82,7 @@ public class AIRunnerUseCase implements IAIRunner, IAIRunnerEventHandler, INetwo
 
     @Override
     public void disconnect() throws SessionRunningException {
-        if(pluginContainer == null && !sessionRunning) {
+        if (pluginContainer == null && !sessionRunning) {
             networkAdapter.disconnect();
             onAIRunnerEvent(AIRunnerEventType.Disconnected);
         }
@@ -90,23 +90,20 @@ public class AIRunnerUseCase implements IAIRunner, IAIRunnerEventHandler, INetwo
 
     @Override
     public void onMessageReceived(NetworkMessage message) {
-        if(message instanceof SessionStartsMessage) {
+        if (message instanceof SessionStartsMessage) {
             sessionRunning = true;
             onSessionStart(((SessionStartsMessage) message).getGamesToBePlayed());
-        } else if(message instanceof SessionEndsMessage) {
+        } else if (message instanceof SessionEndsMessage) {
             sessionRunning = false;
             onAIRunnerEvent(AIRunnerEventType.SessionEnded);
-        } else if(message instanceof CycleStartsMessage) {
+            System.err.println("informiere über session emde");
+        } else if (message instanceof CycleStartsMessage) {
             pluginContainer.start(((CycleStartsMessage) message).getEnvironmentInitInfo());
-        } else if(message instanceof IEnvironmentStateMessage) {
+        } else if (message instanceof IEnvironmentStateMessage) {
             pluginContainer.receiveGameState(((IEnvironmentStateMessage) message).getEnvironmentState());
 
-            synchronized (pluginContainer) {
-                pluginContainer.notify();
-            }
-
-        } else if(message instanceof CycleEndsMessage) {
-            onAIRunnerEvent(AIRunnerEventType.GameEnded);
+        } else if (message instanceof CycleEndsMessage) {
+            onAIRunnerEvent(AIRunnerEventType.CycleEnded);
             pluginContainer.end();
         }
     }

@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Factory">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../MARLA-Server/EnvironmentPlugins/Factory.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

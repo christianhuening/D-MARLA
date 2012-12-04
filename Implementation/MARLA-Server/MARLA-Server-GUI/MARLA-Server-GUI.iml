@@ -12,7 +12,7 @@
     <orderEntry type="module" module-name="EnvironmentPluginAPI" />
     <orderEntry type="module" module-name="ServerFacade" />
     <orderEntry type="module" module-name="PluginLoader" />
-    <orderEntry type="library" name="seaglasslookandfeel-0.1.7.31" level="project" />
+    <orderEntry type="library" name="seaglasslookandfeel-0.2" level="project" />
   </component>
 </module>
 

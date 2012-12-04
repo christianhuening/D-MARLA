@@ -4,7 +4,6 @@ import GameServerFacade.Interface.IServerFacade;
 import Models.EnvironmentListTableModel;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import Settings.SettingException;
-import org.apache.derby.impl.sql.compile.TableElementNode;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

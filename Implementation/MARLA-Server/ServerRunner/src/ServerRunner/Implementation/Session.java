@@ -66,8 +66,6 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
     private HashMap<TMARLAClientInstance, TNetworkClient> clientsForPlayers;
 
-    private TMapMetaData mapMetaData;
-
     private IEnvironment environment;
 
     private IEnvironmentPluginLoader environmentPluginLoader;
@@ -91,10 +89,10 @@ class Session extends Thread implements IHasTransportType<TSession> {
 // --------------------------- CONSTRUCTORS ---------------------------
 
     public Session(TSession session, IServerNetworkAdapter serverNetworkAdapterInstance, IEnvironmentPluginLoader environmentPluginLoader, ISaveGameStatistics saveGameStatistics) throws TechnicalException, PluginNotReadableException {
-        this(session.getName(), session.getNumberOfGames(), session.getClientsInThisSession(), session.getMapMetaData(), serverNetworkAdapterInstance, environmentPluginLoader, session.getEnvironmentDescription(), saveGameStatistics);
+        this(session.getName(), session.getNumberOfGames(), session.getClientsInThisSession(), serverNetworkAdapterInstance, environmentPluginLoader, session.getEnvironmentDescription(), saveGameStatistics);
     }
 
-    public Session(String name, int numberOfIterations, List<TNetworkClient> clientsInThisSession, TMapMetaData mapMetaData, IServerNetworkAdapter serverNetworkAdapter, IEnvironmentPluginLoader environmentPluginLoader, TEnvironmentDescription environmentDescription, ISaveGameStatistics gameStatistics) throws TechnicalException, PluginNotReadableException {
+    public Session(String name, int numberOfIterations, List<TNetworkClient> clientsInThisSession, IServerNetworkAdapter serverNetworkAdapter, IEnvironmentPluginLoader environmentPluginLoader, TEnvironmentDescription environmentDescription, ISaveGameStatistics gameStatistics) throws TechnicalException, PluginNotReadableException {
         super("Session");
         this.name = name;
         this.environmentPluginLoader = environmentPluginLoader;
@@ -102,7 +100,6 @@ class Session extends Thread implements IHasTransportType<TSession> {
         this.numberOfGames = numberOfIterations;
         this.clientsInThisSession = clientsInThisSession;
         this.serverNetworkAdapter = serverNetworkAdapter;
-        this.mapMetaData = mapMetaData;
         this.environmentDescription = environmentDescription;
         this.gameStatistics = gameStatistics;
 
@@ -205,7 +202,6 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
         this.numberOfGames = session.getNumberOfGames();
         this.clientsInThisSession = session.getClientsInThisSession();
-        this.mapMetaData = session.getMapMetaData();
     }
 
     public List<TMARLAClientInstance> getPlayersInThisSession() {
@@ -222,7 +218,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
         }
 
         try {
-            currentEnvironmentState = environment.start(new ArrayList<TMARLAClientInstance>(clientsForPlayers.keySet()), mapMetaData);
+            currentEnvironmentState = environment.start(new ArrayList<TMARLAClientInstance>(clientsForPlayers.keySet()), null);
         } catch (EnvironmentPluginAPI.Contract.Exception.IllegalNumberOfClientsException e) {
             e.printStackTrace();
             //TODO: Better exception handling, session should fail
@@ -286,6 +282,6 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
     @Override
     public TSession getTransportType() {
-        return new TSession(sessionId, name, status, clientsInThisSession.size(), numberOfGames, clientsInThisSession, mapMetaData, environmentDescription);
+        return new TSession(sessionId, name, status, clientsInThisSession.size(), numberOfGames, clientsInThisSession, environmentDescription);
     }
 }

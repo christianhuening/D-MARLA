@@ -28,7 +28,7 @@ public class SessionTableModel extends DefaultTableModel {
 
     public void addSession(TSession session){
         sessionList.put(this.getRowCount(),session);
-        this.addRow(new String[] {session.getName(), String.valueOf(session.getPlayerCount()), session.getMapMetaData().toString(), session.getStatus().toString() });
+        this.addRow(new String[] {session.getName(), String.valueOf(session.getPlayerCount()), session.getStatus().toString() });
     }
 
     public void addSessions(List<TSession> sessions){

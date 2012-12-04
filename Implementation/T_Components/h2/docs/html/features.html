@@ -299,8 +299,8 @@ translate -->
 <td class="compareN">No *15</td>
 <td class="compareN">No *15</td>
 <td class="compareN">No</td>
-<td class="compareY">Yes</td>
 <td class="compareN">No</td>
+<td class="compareY">Yes</td>
 </tr><tr>
 <td>Temporary Tables</td>
 <td class="compareY">Yes</td>
@@ -895,6 +895,7 @@ public static ResultSet getMatrix(Connection conn, Integer size)
 CREATE ALIAS MATRIX FOR "org.h2.samples.Function.getMatrix";
 SELECT * FROM MATRIX(4) ORDER BY X, Y;
 </pre>
+
 
 <h2 id="triggers">Triggers</h2>
 <p> This database supports Java triggers that are called before or after a row is updated, inserted or deleted. Triggers can be used for complex consistency checks, or to update related data in the database. It is also possible to use triggers to simulate materialized views. For a complete sample application, see <code>src/test/org/h2/samples/TriggerSample.java</code>. A Java trigger must implement the interface <code>org.h2.api.Trigger</code>. The trigger class must be available in the classpath of the database engine (when using the server mode, it must be in the classpath of the server). </p>

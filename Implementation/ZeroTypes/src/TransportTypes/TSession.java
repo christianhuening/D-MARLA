@@ -41,12 +41,6 @@ public class TSession implements java.io.Serializable {
     public List<TNetworkClient> getClientsInThisSession() {
         return clientsInThisSession;
     }
-
-    private TMapMetaData mapMetaData;
-
-    public TMapMetaData getMapMetaData() {
-        return mapMetaData;
-    }
     
     private TEnvironmentDescription environmentDescription;
 
@@ -56,14 +50,13 @@ public class TSession implements java.io.Serializable {
 
 // --------------------------- CONSTRUCTORS ---------------------------
 
-    public TSession(UUID id, String name, SessionStatus status, int playerCount, int numberOfGames, List<TNetworkClient> clientsInThisSession, TMapMetaData mapMetaData, TEnvironmentDescription environmentDescription) {
+    public TSession(UUID id, String name, SessionStatus status, int playerCount, int numberOfGames, List<TNetworkClient> clientsInThisSession, TEnvironmentDescription environmentDescription) {
         this.id = id;
         this.name = name;
         this.status = status;
         this.playerCount = playerCount;
         this.numberOfGames = numberOfGames;
         this.clientsInThisSession = clientsInThisSession;
-        this.mapMetaData = mapMetaData;
         this.environmentDescription = environmentDescription;
     }
 }

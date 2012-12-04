@@ -1,6 +1,6 @@
 var class_server_runner_1_1_implementation_1_1_server_runner_use_case =
 [
-    [ "ServerRunnerUseCase", "class_server_runner_1_1_implementation_1_1_server_runner_use_case.html#a4cf583a880285090d314be2a5a5f3a1a", null ],
+    [ "ServerRunnerUseCase", "class_server_runner_1_1_implementation_1_1_server_runner_use_case.html#a2d44573e34a01c832122298641f7ca7b", null ],
     [ "createSession", "class_server_runner_1_1_implementation_1_1_server_runner_use_case.html#a421871ac4460076a6c47d80a4d952b9f", null ],
     [ "getAllSessions", "class_server_runner_1_1_implementation_1_1_server_runner_use_case.html#ab7047081955f237a26a362ddb7f2d3b1", null ],
     [ "getConnectedPlayers", "class_server_runner_1_1_implementation_1_1_server_runner_use_case.html#aaa3e025db56bfb0bc7534b4dca7e3d34", null ],

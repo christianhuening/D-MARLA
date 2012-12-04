@@ -12,8 +12,8 @@ public class ErrorMessages {
     private static Properties errorCodes;
 
     private static void loadProperties() {
-        if(errorCodes == null) {
-        try {
+        if (errorCodes == null) {
+            try {
                 errorCodes = new Properties();
                 errorCodes.load(new FileInputStream("./cfg/errorCodes.properties"));
             } catch (IOException ex) {
@@ -25,5 +25,15 @@ public class ErrorMessages {
     public static String get(String errorCode) {
         loadProperties();
         return errorCodes.getProperty(errorCode);
+    }
+
+    public static String get(String errorCode, Object... values) {
+        loadProperties();
+
+        try {
+            return String.format(errorCodes.getProperty(errorCode), values);
+        } catch (Throwable e) {
+            return get(errorCode);
+        }
     }
 }

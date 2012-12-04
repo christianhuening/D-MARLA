@@ -13,7 +13,7 @@
     <orderEntry type="library" exported="" name="junit-4.10" level="project" />
     <orderEntry type="module" module-name="EnvironmentPluginAPI" exported="" />
     <orderEntry type="module" module-name="AgentSystemPluginAPI" exported="" />
-    <orderEntry type="library" name="h2-1.3.167" level="project" />
+    <orderEntry type="library" name="h2-1.3.168" level="project" />
   </component>
 </module>
 

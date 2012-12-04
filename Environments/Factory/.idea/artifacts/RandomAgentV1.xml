@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="RandomAgentV1">
+    <output-path>$PROJECT_DIR$/../../Implementation/MARLA-Client/agentPlugins/RandomAgentV1</output-path>
+    <root id="archive" name="RandomAgentV1.jar">
+      <element id="module-output" name="RandomAgentV1" />
+    </root>
+  </artifact>
+</component>

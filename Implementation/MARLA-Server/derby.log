@@ -1,10 +1,10 @@
 ----------------------------------------------------------------
-Mon Jun 18 15:29:13 CEST 2012:
-Booten von Derby Version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): Instanz a816c00e-0137-ffc8-6a55-00000612f018
-für Datenbankverzeichnis C:\Arbeit\Programmierung\Java\LernendeAgentenSVN\Implementation\MARLA-Server\target\database\jpa-test-database   mit Klassenladeprogrammn sun.misc.Launcher$AppClassLoader@6d6f0472
+Tue Oct 16 16:21:09 CEST 2012:
+Booten von Derby Version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): Instanz a816c00e-013a-69f3-1616-00000b533e38
+für Datenbankverzeichnis D:\Work\Programmieren\Java\D-MARLA\Implementation\MARLA-Server\target\database\jpa-test-database   mit Klassenladeprogrammn sun.misc.Launcher$AppClassLoader@1a45a877
 
 java.vendor=Sun Microsystems Inc.
-java.runtime.version=1.6.0_32-b05
-user.dir=C:\Arbeit\Programmierung\Java\LernendeAgentenSVN\Implementation\MARLA-Server
+java.runtime.version=1.6.0_33-b03
+user.dir=D:\Work\Programmieren\Java\D-MARLA\Implementation\MARLA-Server
 derby.system.home=null
 Das Ladeprogramm für Datenbankklassen wurde gestartet - derby.database.classpath=''

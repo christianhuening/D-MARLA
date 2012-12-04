@@ -5,7 +5,10 @@ import Exceptions.TypeIsNotSerializableException;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Messages.ConnectionEndMessage;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.NotSerializableException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.util.logging.Level;
@@ -64,13 +67,11 @@ class NetworkAccessProtocol {
 
         // try to read the raw data from the network and construct a message object from it
         try {
-
-            message = (NetworkMessage)objectInputStream.readObject();
+            message = (NetworkMessage) objectInputStream.readObject();
         } catch (IOException ex) {
             ex.printStackTrace();
             throw new ConnectionLostException(clientId);
         } catch (ClassNotFoundException ex) {
-
             System.err.println("Unable to find class. Make sure the same version of all types are known on both server and client ends.");
             ex.printStackTrace();
         } catch (Exception ex) {
@@ -97,17 +98,17 @@ class NetworkAccessProtocol {
      */
     public void closeConnection(ConnectionEndMessage message) throws ConnectionLostException {
         writeMessage(message);
-        try {
-            socket.close();
-        } catch (IOException e) {
-            throw new ConnectionLostException(clientId);
-        }
     }
 
     public void forceClose() {
         try {
-            socket.close();
+            objectInputStream.close();
+            objectOutputStream.close();
         } catch (IOException e) {
         }
+    }
+
+    public boolean isSocketOpen() {
+        return !socket.isClosed();
     }
 }

@@ -3,6 +3,7 @@ package AgentProvider.Implementation.Agents;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Contract.StateAction;
+import Exceptions.ErrorMessages;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -40,6 +41,10 @@ public class SarsaLambdaAgent extends EpsilonGreedyAgent {
 
     @Override
     public StateAction step(float rewardForLastStep, StateAction newState) throws TechnicalException {
+        if(sa == null) {
+            throw new RuntimeException(ErrorMessages.get("startStateNotInitialized", getName()));
+        }
+
         s_a_ = getEpsilonInfluencedAction(newState);
 
         updateValues(rewardForLastStep, s_a_);
@@ -50,6 +55,7 @@ public class SarsaLambdaAgent extends EpsilonGreedyAgent {
     }
 
     private void updateValues(float reward, StateAction s_a_) throws TechnicalException {
+
         oldQ = qValues.getValue(sa);
         oldE = eValues.getValue(sa) + 1.0f;
 

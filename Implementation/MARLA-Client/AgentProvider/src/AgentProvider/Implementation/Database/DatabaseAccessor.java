@@ -11,7 +11,7 @@ import java.sql.SQLException;
  */
 abstract class DatabaseAccessor {
 
-    private Connection connection;
+    protected Connection connection;
 
     public DatabaseAccessor(Connection connection) throws TechnicalException {
         this.connection = connection;
@@ -33,5 +33,13 @@ abstract class DatabaseAccessor {
 
     protected Connection activeConnection() {
         return connection;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        if(connection.isClosed()) {
+            connection.close();
+        }
+        super.finalize();
     }
 }

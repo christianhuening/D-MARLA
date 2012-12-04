@@ -4,6 +4,7 @@ package AgentProvider.Implementation.Agents;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Contract.StateAction;
+import Exceptions.ErrorMessages;
 
 public class SarsaAgent extends EpsilonGreedyAgent {
 
@@ -27,6 +28,10 @@ public class SarsaAgent extends EpsilonGreedyAgent {
 
     @Override
     public StateAction step(float rewardForLastStep, StateAction newState) throws TechnicalException {
+        if(sa == null) {
+            throw new RuntimeException(ErrorMessages.get("startStateNotInitialized", getName()));
+        }
+
         s_a_ = getEpsilonInfluencedAction(newState);
 
         updateQ(s_a_, rewardForLastStep);

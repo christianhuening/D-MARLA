@@ -1,6 +1,7 @@
 package AgentSystemManagement.Plugins;
 
 import AgentSystemPluginAPI.Contract.IAgentSystem;
+import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
@@ -14,23 +15,13 @@ import java.util.regex.Pattern;
 
 public class PluginManager {
 
-    private Pattern agentPathPattern;
-    private String agentSystemPluginDirectory;
     private final IAgentSystemPluginLoader agentSystemPluginLoader;
 
     public PluginManager(IAgentSystemPluginLoader agentSystemPluginLoader) throws SettingException {
         this.agentSystemPluginLoader = agentSystemPluginLoader;
-        agentSystemPluginDirectory = AppSettings.getString("agentSystemPluginDirectory");
-        if (agentSystemPluginDirectory.endsWith("/") || agentSystemPluginDirectory.endsWith("\\")) {
-            agentSystemPluginDirectory = agentSystemPluginDirectory.substring(0, agentSystemPluginDirectory.length()-1);
-        }
-
-        //try to parse agent sub directory from path
-        agentPathPattern = Pattern.compile(".*?[/\\\\]+" + agentSystemPluginDirectory + "[/\\\\]+(.*?[\\w ]+)[/\\\\]+[\\w ]+\\.jar");
     }
 
     public List<TAgentSystemDescription> getAvailablePlugins() throws TechnicalException, SettingException, PluginNotReadableException {
-
         return agentSystemPluginLoader.listAvailableAgentSystemPlugins();
     }
 

@@ -1,9 +1,11 @@
 package EnvironmentPluginAPI.Contract;
 
+import java.io.Serializable;
+
 /**
  * This class is used to identify and describe environment plugins.
  */
-public class TEnvironmentDescription {
+public class TEnvironmentDescription implements Serializable {
 
     private final String name;
     private final String version;

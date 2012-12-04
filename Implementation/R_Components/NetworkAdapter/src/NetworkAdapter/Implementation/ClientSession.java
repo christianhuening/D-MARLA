@@ -54,20 +54,21 @@ class ClientSession {
      * @throws ConnectionLostException
      */
     public void close(ConnectionEndMessage message) throws ConnectionLostException {
+        controlChannel.close(message);
+
         if (dataChannel != null) {
             dataChannel.close(message);
         }
-
-        controlChannel.close(message);
     }
 
     /**
      * Forcibly closes all related connections without abiding the protocol.
      */
     public void forceClose() {
+        controlChannel.forceClose();
+
         if (dataChannel != null) {
             dataChannel.forceClose();
         }
-        controlChannel.forceClose();
     }
 }

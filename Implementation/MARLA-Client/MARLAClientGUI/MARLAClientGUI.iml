@@ -13,7 +13,7 @@
     <orderEntry type="module" module-name="EnvironmentPluginAPI" exported="" />
     <orderEntry type="module" module-name="PluginLoader" exported="" />
     <orderEntry type="module" module-name="AgentSystemPluginAPI" exported="" />
-    <orderEntry type="library" name="seaglasslookandfeel-0.1.7.3" level="project" />
+    <orderEntry type="library" name="seaglasslookandfeel-0.2" level="project" />
   </component>
 </module>
 

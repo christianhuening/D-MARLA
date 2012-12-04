@@ -8,7 +8,7 @@ public enum AIRunnerEventType {
     Disconnected,
     SessionStarted,
     SessionEnded,
-    GameEnded,
+    CycleEnded,
     ConnectionLost,
     TechnicalError,
 }

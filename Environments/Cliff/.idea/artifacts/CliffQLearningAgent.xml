@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="CliffQLearningAgent">
+    <output-path>$PROJECT_DIR$/../../Implementation/MARLA-Client/agentPlugins/CliffQLearning</output-path>
+    <root id="archive" name="CliffQLearningAgent.jar">
+      <element id="module-output" name="CliffQLearning" />
+      <element id="module-output" name="CliffEnvironment" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Deployment/MARLA-Server/EnvironmentPluginAPI.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Deployment/MARLA-Client/AgentSystemPluginAPI.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

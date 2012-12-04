@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$class_simple_factory_player_1_1_implementation_1_1_entities_1_1_raw_state.html" title="SimpleFactoryPlayer.Implementation.\lEntities.RawState" alt="" coords="227,5,466,46"/>
-<area shape="rect" id="node4" href="$class_simple_factory_player_1_1_implementation_1_1_state_action_generator.html" title="SimpleFactoryPlayer.Implementation.\lStateActionGenerator" alt="" coords="227,70,466,111"/>
-<area shape="rect" id="node6" href="$interface_plugin_a_p_i_1_1_contract_1_1_i_state_action_generator.html" title="PluginAPI.Contract.IState\lActionGenerator" alt="" coords="5,70,176,111"/>
-<area shape="rect" id="node8" href="$class_simple_factory_player_1_1_implementation_1_1_entities_1_1_raw_field.html" title="SimpleFactoryPlayer.Implementation.\lEntities.RawField" alt="" coords="227,139,466,181"/>
-</map>

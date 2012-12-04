@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node5" href="$class_factory_game_1_1_game_logic_1_1_transport_types_1_1_t_factory_field.html" title="FactoryGame.GameLogic.Transport\lTypes.TFactoryField" alt="" coords="512,5,741,46"/>
-<area shape="rect" id="node7" href="$class_factory_game_1_1_game_logic_1_1_transport_types_1_1_t_influence_field.html" title="FactoryGame.GameLogic.Transport\lTypes.TInfluenceField" alt="" coords="512,70,741,111"/>
-<area shape="rect" id="node9" href="$class_factory_game_1_1_game_logic_1_1_transport_types_1_1_t_normal_field.html" title="FactoryGame.GameLogic.Transport\lTypes.TNormalField" alt="" coords="512,135,741,177"/>
-<area shape="rect" id="node2" href="$interface_interfaces_1_1_i_has_consistency_check.html" title="Interfaces.IHasConsistency\lCheck" alt="" coords="6,70,186,111"/>
-</map>

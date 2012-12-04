@@ -36,11 +36,6 @@ public class NeuronalNet implements IDictionary {
 	}
 
     @Override
-    public Map<StateAction, Float> getAllSimilarStatesFor(StateAction key) throws TechnicalException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
     public void resetValues() throws TechnicalException {
         //To change body of implemented methods use File | Settings | File Templates.
     }

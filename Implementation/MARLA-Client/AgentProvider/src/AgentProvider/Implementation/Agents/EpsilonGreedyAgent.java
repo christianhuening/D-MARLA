@@ -4,6 +4,7 @@ import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Contract.StateAction;
 import AgentSystemPluginAPI.Services.IAgent;
+import Exceptions.ErrorMessages;
 
 import java.util.Random;
 import java.util.Set;
@@ -23,7 +24,6 @@ abstract class EpsilonGreedyAgent implements IAgent {
     private String name;
 
     //epsilon greedy implementation
-    private StateAction currentState;
     protected final IDictionary qValues;
 
     private IStateActionGenerator stateActionGenerator;
@@ -56,14 +56,21 @@ abstract class EpsilonGreedyAgent implements IAgent {
         return result;
     }
 
-    protected IStateActionGenerator getStateActionGenerator() {
-        return stateActionGenerator;
-    }
-
     protected StateAction getEpsilonInfluencedAction(StateAction state) throws TechnicalException {
 
-        Set<StateAction> possibleActions = stateActionGenerator.getAllPossibleActions(state);
+        StateAction result;
 
+        // get all possible actions and test their validity
+        Set<StateAction> possibleActions = stateActionGenerator.getAllPossibleActions(state);
+        for(StateAction sa : possibleActions) {
+            if(sa == null || sa.getCompressedRepresentation() == null) {
+                throw new RuntimeException(ErrorMessages.get("erroneousStateActionGenerator"));
+            }
+        }
+
+        // If there are alternatives:
+        // normally choose the best one, but by chance choose one with a worse expected reward
+        // else take the single one.
         if(possibleActions.size() > 1 && epsilon >= random.nextFloat()) {
 
             possibleActions.remove(getBestAction(state));
@@ -76,11 +83,15 @@ abstract class EpsilonGreedyAgent implements IAgent {
                 i++;
             }
 
-            return stateActions[random.nextInt(stateActions.length)];
+            result = stateActions[random.nextInt(stateActions.length)];
 
         } else {
-            return getBestAction(state);
+            result = getBestAction(state);
         }
+
+        System.err.println("epsilonInflucenced stateAction: " + result);
+
+        return  result;
     }
 
     public abstract StateAction step(float rewardForLastStep, StateAction newState) throws TechnicalException;

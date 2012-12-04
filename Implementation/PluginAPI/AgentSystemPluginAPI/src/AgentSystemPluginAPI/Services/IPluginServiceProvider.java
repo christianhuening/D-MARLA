@@ -3,17 +3,25 @@ package AgentSystemPluginAPI.Services;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 
+import java.io.File;
+
 /**
  * This interface shows all services, that the container provides for an AgentSystemPlugin.
  */
 public interface IPluginServiceProvider {
 
     /**
-     * Saves the value given under the key in the settings.properties next to this plugin file.
+     *  Returns the file that represents the directory where the current agent system plugin is located in.
+     * @return != null
+     */
+    public File agentDirectory();
+
+    /**
+     *  Saves the value given under the key in the settings.properties next to this plugin file.
      *
-     * If the key already exists, it will be overwritten.
-     * @param key the key for which the value is saved
-     * @param newValue the value to save.
+     *  If the key already exists, it will be overwritten.
+     *  @param key the key for which the value is saved
+     *  @param newValue the value to save.
      */
     public void saveAgentSystemSetting(String key, String newValue);
 

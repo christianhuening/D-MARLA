@@ -12,7 +12,6 @@
     <orderEntry type="module" module-name="AgentProvider" exported="" />
     <orderEntry type="module" module-name="ZeroTypes" exported="" />
     <orderEntry type="library" exported="" name="junit-4.10" level="project" />
-    <orderEntry type="library" exported="" name="jcl-core-2.3" level="project" />
     <orderEntry type="module" module-name="AgentSystemPluginAPI" exported="" />
     <orderEntry type="module" module-name="EnvironmentPluginAPI" exported="" />
     <orderEntry type="module" module-name="PluginLoader" exported="" />

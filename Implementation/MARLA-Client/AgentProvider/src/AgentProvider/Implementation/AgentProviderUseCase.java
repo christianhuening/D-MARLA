@@ -18,7 +18,7 @@ class AgentProviderUseCase implements IAgentProvider, IAgentSettingUpdatedListen
 
     private PersistenceFactory persistenceFactory;
     private Map<String, AgentSettingsAccessor> settings;
-    private String agentSystemName;
+    private String agentSystemPath;
 
     public AgentProviderUseCase() {
         settings = new Hashtable<String, AgentSettingsAccessor>();
@@ -26,8 +26,8 @@ class AgentProviderUseCase implements IAgentProvider, IAgentSettingUpdatedListen
 
     @Override
     public void loadAgentSystem(String pathToAgentSystem) throws TechnicalException, SettingException {
-        this.agentSystemName = pathToAgentSystem;
-        persistenceFactory = new PersistenceFactory(pathToAgentSystem);
+        this.agentSystemPath = pathToAgentSystem;
+        this.persistenceFactory = new PersistenceFactory(pathToAgentSystem);
     }
 
     @Override

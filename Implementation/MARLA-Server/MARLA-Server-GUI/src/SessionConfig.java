@@ -48,7 +48,6 @@ public class SessionConfig extends Observable {
     private JTable clientsAvailableTable;
     private JTable clientsInSessionTable;
     private JTextField maximumFactorySizeTextField;
-    private JLabel maximumFactorySizeLabel;
     private JComboBox allMapsComboBox;
     private JTextField mapNameTextField;
     private JButton saveMapButton;
@@ -155,7 +154,6 @@ public class SessionConfig extends Observable {
                             clientsInSessionTableModel.getRowCount(),
                             Integer.parseInt(gameNumberTextField.getText()),
                             clients,
-                            createMapMetaDataFromGUI(),
                             environmentComboBoxModel.getEnvironmentDescription(environmentComboBox.getSelectedIndex()));
 
                     facade.createSession(session);
@@ -188,24 +186,6 @@ public class SessionConfig extends Observable {
                 sessionConfigPanel.setVisible(false);
             }
         });
-
-        saveMapButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                try {
-                    TMapMetaData map = createMapMetaDataFromGUI();
-                    facade.saveMap(map, environmentComboBoxModel.getEnvironmentDescription(environmentComboBox.getSelectedIndex()));
-                    //updateMapList();
-                    mapListTableModel.addMap(map);
-                    saveMapButton.setEnabled(true);
-                } catch (TechnicalException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                } catch (PluginNotReadableException e) {
-                    // TODO: WTF? why is there a pluginnotreadableexception here
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                }
-            }
-        });
     }
 
     private void updateMapList() {
@@ -217,11 +197,11 @@ public class SessionConfig extends Observable {
                 mapListTableModel.addMaps(facade.getAvailableMaps(env));
             }
         } catch (CorruptMapFileException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         } catch (TechnicalException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         } catch (PluginNotReadableException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
     }
 
@@ -236,29 +216,12 @@ public class SessionConfig extends Observable {
         maximumFactorySizeTextField.setText("" + metaData.getMaximumFactorySize());
     }
 
-    private TMapMetaData createMapMetaDataFromGUI() {
-        // Create Map Metadata from FormComponents
-        int symmetry = mapSymmetryComboBox.getSelectedIndex();
-        Integer edgeLength = Integer.parseInt(edgeFieldTextField.getText());
-        Integer seed = Integer.parseInt(mapSeedTextField.getText());
-        Integer factoryFactor = Integer.parseInt(factoryFactorTextField.getText());
-        Integer factorySizeFactor = Integer.parseInt(factorySizeFactorTextField.getText());
-        Integer maximumFactorySize = Integer.parseInt(maximumFactorySizeTextField.getText());
-
-        return new TMapMetaData(mapNameTextField.getText(), symmetry, seed, edgeLength, factoryFactor, factorySizeFactor, maximumFactorySize);
-    }
-
     /**
-     * Cleares SessionConfig GUI for new Session
+     * Clears SessionConfig GUI for new Session
      */
     public void enableSessionConfig() {
         this.gameNumberTextField.setText("");
         this.sessionNameTextField.setText("");
-        this.edgeFieldTextField.setText("");
-        this.factoryFactorTextField.setText("");
-        this.factorySizeFactorTextField.setText("");
-        this.mapSeedTextField.setText("");
-        this.maximumFactorySizeTextField.setText("");
 
         this.clientsAvailableTableModel.removeAllClients();
         this.clientsAvailableTableModel.addClients(facade.getFreeClients());

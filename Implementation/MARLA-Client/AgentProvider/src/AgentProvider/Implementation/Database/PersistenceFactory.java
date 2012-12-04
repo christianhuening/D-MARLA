@@ -20,7 +20,6 @@ import java.util.List;
 public class PersistenceFactory {
     private String pathToAgentSystemPlugin;
     private static boolean driverLoaded;
-    private String agentSystemPluginDirectory;
     private static Connection connection;
     private ResultSet resultSet;
 
@@ -48,10 +47,10 @@ public class PersistenceFactory {
         //Create database connection for the given agentSystem
         if (connection == null) {
             try {
-                connection = DriverManager.getConnection("jdbc:h2:" + pathToAgentSystemPlugin + "/LearningData;CACHE_SIZE=131072");
+                connection = DriverManager.getConnection("jdbc:h2:" + pathToAgentSystemPlugin + "/LearningData;DB_CLOSE_ON_EXIT=FALSE");
                 connection.setAutoCommit(true);
             } catch (SQLException ex) {
-                throw new TechnicalException(ErrorMessages.get("databaseConnectionError") + "jdbc:h2:" + pathToAgentSystemPlugin + "/LearningData;CACHE_SIZE=131072" +  "\n\nReason:\n" + ex.getMessage());
+                throw new TechnicalException(ErrorMessages.get("databaseConnectionError") + "jdbc:h2:" + pathToAgentSystemPlugin + "/LearningData;DB_CLOSE_ON_EXIT=FALSE" +  "\n\nReason:\n" + ex.getMessage());
             }
         }
 

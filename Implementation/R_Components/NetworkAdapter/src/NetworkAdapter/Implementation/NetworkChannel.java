@@ -15,12 +15,13 @@ class NetworkChannel<M extends NetworkMessage> extends Thread {
     private NetworkAccessProtocol networkAccessProtocol;
     private NetworkMessageReceivedHandle handle;
     private ClassLoader parentThreadClassLoader;
+    private boolean disconnecting = false;
 
     /**
      * Creates a thread that receives and sends messages on the given network protocol.
      *
      * @param networkAccessProtocol an established protocol !=  null
-     * @param handle the handle for the event of an incoming network message
+     * @param handle                the handle for the event of an incoming network message
      */
     public NetworkChannel(NetworkAccessProtocol networkAccessProtocol, NetworkMessageReceivedHandle handle) {
         super("NetworkChannel");
@@ -34,7 +35,13 @@ class NetworkChannel<M extends NetworkMessage> extends Thread {
         while (!isInterrupted()) {
             try {
                 NetworkMessage message = networkAccessProtocol.readMessage();
-                deliverMessage(message);
+
+                if (message instanceof ConnectionEndMessage) {
+                    forceClose();
+                    disconnecting = true;
+                } else {
+                    deliverMessage(message);
+                }
             } catch (ConnectionLostException e) {
                 if (!isInterrupted()) {
                     deliverException(e);
@@ -93,11 +100,10 @@ class NetworkChannel<M extends NetworkMessage> extends Thread {
     }
 
     /**
-     * hardly closes the channel. Doesn't wait for anything.
+     * Closes the channel hardly. Doesn't wait for anything.
      */
     public void forceClose() {
         interrupt();
-
         networkAccessProtocol.forceClose();
     }
 

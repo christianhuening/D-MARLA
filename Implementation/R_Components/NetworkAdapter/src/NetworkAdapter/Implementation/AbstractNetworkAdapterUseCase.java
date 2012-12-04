@@ -23,7 +23,7 @@ abstract class AbstractNetworkAdapterUseCase {
         subscribers = new Hashtable<Class, SubscriberCollection>();
     }
 
-    public <T extends NetworkMessage> void subscribeForNetworkMessageReceivedEvent(INetworkMessageReceivedEventHandler<T> eventHandler, Class messageType) {
+    public synchronized void subscribeForNetworkMessageReceivedEvent(INetworkMessageReceivedEventHandler eventHandler, Class messageType) {
 
         if (!subscribers.containsKey(messageType)) {
             subscribers.put(messageType, new SubscriberCollection());
@@ -34,11 +34,16 @@ abstract class AbstractNetworkAdapterUseCase {
         subscriberCollection.addSubscriber(eventHandler);
     }
 
-    protected <T extends NetworkMessage> void informSubscribers(T message)  {
+    protected void informSubscribers(NetworkMessage message)  {
 
         for (Class key : subscribers.keySet()) {
-            if (key.isAssignableFrom(message.getClass())) {
-                subscribers.get(key).deliverMessage(message);
+            try {
+                if (key.isAssignableFrom(message.getClass())) {
+                    subscribers.get(key).deliverMessage(message);
+                }
+            } catch (Throwable e) {
+                System.err.println("An error occured while calling the event listener: " + subscribers.get(key));
+                e.printStackTrace();
             }
         }
 

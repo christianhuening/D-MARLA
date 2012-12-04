@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="SimpleFactoryPlayer:jar">
-    <output-path>$PROJECT_DIR$/../../MARLA-Client/agentPlugins/SimpleFactoryPlayer</output-path>
-    <root id="archive" name="SimpleFactoryPlayer.jar">
-      <element id="module-output" name="SimpleFactoryPlayer" />
-    </root>
-  </artifact>
-</component>

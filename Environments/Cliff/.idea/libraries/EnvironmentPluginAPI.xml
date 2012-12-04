@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="EnvironmentPluginAPI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Deployment/MARLA-Server/EnvironmentPluginAPI.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

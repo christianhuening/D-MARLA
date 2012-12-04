@@ -102,7 +102,7 @@ class ClientNetworkAdapterUseCase
     }
 
     @Override
-    public void sendNetworkMessage(NetworkMessage message, MessageChannel channel) throws NotConnectedException, ConnectionLostException {
+    public synchronized void sendNetworkMessage(NetworkMessage message, MessageChannel channel) throws NotConnectedException, ConnectionLostException {
         if (channel == MessageChannel.DATA) {
             dataChannel.sendNetworkMessage(message);
         } else {

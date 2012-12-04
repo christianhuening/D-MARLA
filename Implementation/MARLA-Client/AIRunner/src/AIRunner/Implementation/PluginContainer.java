@@ -123,7 +123,10 @@ public class PluginContainer extends Thread {
      * @param environmentState
      */
     public void receiveGameState(IEnvironmentState environmentState) {
-        this.environmentState = environmentState;
+        synchronized (this) {
+            this.environmentState = environmentState;
+            notify();
+        }
     }
 
     public void start(Object environmentInitInfo) {

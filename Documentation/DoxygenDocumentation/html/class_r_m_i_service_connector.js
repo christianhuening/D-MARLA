@@ -1,14 +1,14 @@
 var class_r_m_i_service_connector =
 [
-    [ "RMIServiceConnector", "class_r_m_i_service_connector.html#ae0a27c8d5702cd333e03455d013b3fc9", null ],
-    [ "getAverageTurnsPerGame", "class_r_m_i_service_connector.html#af94603feb7421fe2ed9ca45ce6f7cc03", null ],
-    [ "getCurrentGamesPerMinute", "class_r_m_i_service_connector.html#a4125b9bf32a3938ea43d053baea03767", null ],
-    [ "getDescriptionsForNLastPlayedGames", "class_r_m_i_service_connector.html#a2c6643e24ed4d83a5c3d15d83975cd75", null ],
-    [ "getGameReplay", "class_r_m_i_service_connector.html#a3c2665e2b946d815e54f3be0d20e37b5", null ],
-    [ "getGameReplayDescriptionsByDeltaTime", "class_r_m_i_service_connector.html#a99d7305af27a42be6af71bc71a6a5ec5", null ],
-    [ "getPlayerNames", "class_r_m_i_service_connector.html#a4f1604f40053dc3a815bc001c5b7c685", null ],
-    [ "getTotalNumberOfGamesLost", "class_r_m_i_service_connector.html#aeca0bdd9a90f9d2c63948ecdf8f08260", null ],
-    [ "getTotalNumberOfGamesWon", "class_r_m_i_service_connector.html#aeafd3705247d62b62674840199e7f5d8", null ],
-    [ "getTotalNumberOfPlayedGames", "class_r_m_i_service_connector.html#a396f5b50dd5c907740ddba39a2289bca", null ],
-    [ "getWinLoseRatio", "class_r_m_i_service_connector.html#a647d984fb17cd54ef0dc8c80a3c437b6", null ]
+    [ "RMIServiceConnector", "class_r_m_i_service_connector.html#a03458e73bd97fe0a3933487191211128", null ],
+    [ "getAverageTurnsPerCycle", "class_r_m_i_service_connector.html#a3ac004ba36c2307676a141185617dfbe", null ],
+    [ "getClientNames", "class_r_m_i_service_connector.html#a33233da8647d9d9fc4da1d1448da7ab8", null ],
+    [ "getCurrentGamesPerMinute", "class_r_m_i_service_connector.html#aa166f0696518c933f9156f944b43dff3", null ],
+    [ "getCycleReplay", "class_r_m_i_service_connector.html#a404fdbc06061f13b246928900e91516c", null ],
+    [ "getCycleReplayDescriptionsByDeltaTime", "class_r_m_i_service_connector.html#a5845ae3e6d7498ab14c05dd8c6b9bb4d", null ],
+    [ "getDescriptionsForNLastCycles", "class_r_m_i_service_connector.html#a6214a5e7ff2e31ba4d2721640f732ecd", null ],
+    [ "getTotalNumberOfCycles", "class_r_m_i_service_connector.html#a63046b186a933b6b233b6a20d7fbf189", null ],
+    [ "getTotalNumberOfCyclesLost", "class_r_m_i_service_connector.html#a3adcde76470047df5992a59b8b9c8a3c", null ],
+    [ "getTotalNumberOfCyclesWon", "class_r_m_i_service_connector.html#a1dfb08b0829b5980263532e463d8088c", null ],
+    [ "getWinLoseRatio", "class_r_m_i_service_connector.html#a3d86a81546e6639d2d93d973510c3e71", null ]
 ];

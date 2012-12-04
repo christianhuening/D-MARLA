@@ -28,7 +28,7 @@ public class ClientNetworkAdapterComponent implements IClientNetworkAdapter {
     }
 
     @Override
-    public <T extends NetworkMessage> void subscribeForNetworkMessageReceivedEvent(INetworkMessageReceivedEventHandler<T> eventHandler, Class messageType) {
+    public void subscribeForNetworkMessageReceivedEvent(INetworkMessageReceivedEventHandler eventHandler, Class messageType) {
         clientNetworkAdapterUseCase.subscribeForNetworkMessageReceivedEvent(eventHandler, messageType);
     }
 

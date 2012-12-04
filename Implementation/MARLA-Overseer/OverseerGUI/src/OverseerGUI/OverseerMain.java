@@ -23,6 +23,7 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.rmi.NotBoundException;
+import java.rmi.RMISecurityManager;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -162,7 +163,7 @@ public class OverseerMain {
                                 TEnvironmentDescription environmentDescription = environmentComboBoxModel.getEnvironmentDescription(environmentComboBox.getSelectedIndex());
 
                                 registry = LocateRegistry.getRegistry(remoteHost);
-                                gameStatistics = (ICycleStatistics) registry.lookup("IGameStatistics");
+                                gameStatistics = (ICycleStatistics) registry.lookup("ICycleStatistics");
 
                                 // Load Environment
                                 pluginLoader.loadEnvironmentPlugin(environmentDescription);
@@ -308,6 +309,11 @@ public class OverseerMain {
 
 
     public static void main(String[] args) {
+        System.setSecurityManager(new RMISecurityManager() {
+            public void checkPermission(java.security.Permission permission){}
+            public void checkPermission(java.security.Permission permission, java.lang.Object o){}
+        });
+
         try {
             UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
         } catch (Exception e) {

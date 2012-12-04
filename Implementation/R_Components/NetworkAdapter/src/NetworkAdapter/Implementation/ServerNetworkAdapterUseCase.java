@@ -47,8 +47,9 @@ class ServerNetworkAdapterUseCase
     /**
      * Sets up a tcp host, listening on the ports specified in the settings.properties.
      *
-     * @throws Settings.SettingException,     if a problem with the application's settings file occurs
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException, if a problem with the connection occurs
+     * @throws Settings.SettingException, if a problem with the application's settings file occurs
+     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException,
+     *                                    if a problem with the connection occurs
      */
     public ServerNetworkAdapterUseCase() throws SettingException, TechnicalException {
 
@@ -63,7 +64,8 @@ class ServerNetworkAdapterUseCase
     }
 
     /**
-     * @throws NetworkAdapter.Interface.Exceptions.ConnectionLostException if any application settings were unreachable or configured incorrectly
+     * @throws NetworkAdapter.Interface.Exceptions.ConnectionLostException
+     *                            if any application settings were unreachable or configured incorrectly
      * @throws TechnicalException if any severe technical exceptions occur, i.e. the port is blocked.
      */
     public void startHosting() throws TechnicalException, ConnectionLostException {
@@ -99,24 +101,16 @@ class ServerNetworkAdapterUseCase
     }
 
     public void stopHosting() {
+        // stop session and data channel creators
+        dataChannelCreator.interrupt();
+        sessionCreator.interrupt();
 
-        try {
-            // stop session and data channel creators
-            dataChannelCreator.interrupt();
-            sessionCreator.interrupt();
-
-            // stop listening for new connections
-            controlSocket.close();
-            dataSocket.close();
-
-            // stop all waiting Threads
-            for (ClientSession c : clients) {
-                try {
-                    c.close(new ConnectionEndMessage(c.getClientId(), "serverShuttingDown"));
-                } catch (ConnectionLostException e) {
-                } // server is shutting down anyway
-            }
-        } catch (IOException ex) {
+        // stop all waiting Threads
+        for (ClientSession c : clients) {
+            try {
+                c.close(new ConnectionEndMessage(c.getClientId(), "serverShuttingDown"));
+            } catch (ConnectionLostException e) {
+            } // server is shutting down anyway
         }
     }
 

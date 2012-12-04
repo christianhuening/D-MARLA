@@ -54,27 +54,33 @@ public class AIClientMain {
          */
         facade.addListener( new IAIRunnerEventHandler() {
             @Override
-            public void onAIRunnerEvent(AIRunnerEventType eventType) {
+            public void onAIRunnerEvent(final AIRunnerEventType eventType) {
 
-                if(eventType == AIRunnerEventType.GameEnded){
-                    progressBar1.setValue(progressBar1.getValue()+1);
-                }
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(eventType == AIRunnerEventType.CycleEnded){
+                            progressBar1.setValue(progressBar1.getValue()+1);
+                            System.err.println("müsste balken setzen");
+                        }
 
-                if(eventType == AIRunnerEventType.SessionEnded){
-                    progressBar1.setValue(0);
-                }
+                        if(eventType == AIRunnerEventType.SessionEnded){
+                            progressBar1.setValue(0);
+                        }
 
-                if(eventType == AIRunnerEventType.Connected){
-                    connectionLabel.setForeground(Color.green);
-                    connectionLabel.setText("Connected");
-                    connectButton.setEnabled(false);
-                }
+                        if(eventType == AIRunnerEventType.Connected){
+                            connectionLabel.setForeground(Color.green);
+                            connectionLabel.setText("Connected");
+                            connectButton.setEnabled(false);
+                        }
 
-                if(eventType == AIRunnerEventType.ConnectionLost || eventType == AIRunnerEventType.Disconnected){
-                    connectionLabel.setForeground(Color.red);
-                    connectionLabel.setText("Not Connected");
-                    connectButton.setEnabled(true);
-                }
+                        if(eventType == AIRunnerEventType.ConnectionLost || eventType == AIRunnerEventType.Disconnected){
+                            connectionLabel.setForeground(Color.red);
+                            connectionLabel.setText("Not Connected");
+                            connectButton.setEnabled(true);
+                        }
+                    }
+                });
 
             }
 
