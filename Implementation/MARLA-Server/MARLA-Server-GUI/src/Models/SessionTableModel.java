@@ -1,6 +1,6 @@
 package Models;
 
-import TransportTypes.TSession;
+import ZeroTypes.TransportTypes.TSession;
 
 import javax.swing.table.DefaultTableModel;
 import java.util.HashMap;

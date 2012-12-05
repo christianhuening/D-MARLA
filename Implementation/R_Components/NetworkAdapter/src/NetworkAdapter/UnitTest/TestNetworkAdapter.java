@@ -1,4 +1,4 @@
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import NetworkAdapter.Implementation.ClientNetworkAdapterComponent;
 import NetworkAdapter.Implementation.ServerNetworkAdapterComponent;

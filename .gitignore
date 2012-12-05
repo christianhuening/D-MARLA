@@ -4,3 +4,7 @@
 *.jar
 *.war
 *.ear
+Deployment
+/Deployment/MARLA-Server
+/Deployment/PluginAPI
+/Deployment/MARLA-Client

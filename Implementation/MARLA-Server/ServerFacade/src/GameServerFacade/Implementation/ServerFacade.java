@@ -1,31 +1,30 @@
 package GameServerFacade.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.CorruptMapFileException;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.IEnvironmentPluginDescriptor;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Service.ICycleReplay;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
-import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
-import Exceptions.GameReplayNotContainedInDatabaseException;
+import ZeroTypes.Exceptions.GameReplayNotContainedInDatabaseException;
 import GameServerFacade.Interface.IServerFacade;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.IServerNetworkAdapter;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IEnvironmentPluginLoader;
-import RemoteInterface.ICycleStatistics;
+import ZeroTypes.RemoteInterface.ICycleStatistics;
 import ServerRunner.Interface.IPlayerEventHandler;
 import ServerRunner.Interface.IServerRunner;
 import ServerRunner.Interface.SessionIsNotInReadyStateException;
-import Settings.SettingException;
-import TransportTypes.TCycleReplayDescription;
-import TransportTypes.TNetworkClient;
-import TransportTypes.TSession;
-import org.joda.time.DateTime;
-import org.picocontainer.MutablePicoContainer;
+import ZeroTypes.Settings.SettingException;
+import ZeroTypes.TransportTypes.TCycleReplayDescription;
+import ZeroTypes.TransportTypes.TNetworkClient;
+import ZeroTypes.TransportTypes.TSession;
 
 import java.rmi.RemoteException;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -35,12 +34,12 @@ import java.util.UUID;
 public class ServerFacade implements IServerFacade {
 
     private ICycleStatistics cycleStatistics;
-    private ISaveGameStatistics saveGameStatistics;
+    private ICycleStatisticsSaver saveGameStatistics;
     private IServerRunner serverRunner;
     private IServerNetworkAdapter serverNetworkAdapter;
     private IEnvironmentPluginLoader environmentPluginLoader;
 
-    public ServerFacade(ICycleStatistics cycleStatistics, ISaveGameStatistics saveGameStatistics,
+    public ServerFacade(ICycleStatistics cycleStatistics, ICycleStatisticsSaver saveGameStatistics,
                         IServerRunner serverRunner, IServerNetworkAdapter networkAdapter, IEnvironmentPluginLoader environmentPluginLoader) {
 
         this.cycleStatistics = cycleStatistics;
@@ -61,7 +60,7 @@ public class ServerFacade implements IServerFacade {
     }
 
     @Override
-    public List<TCycleReplayDescription> getCycleReplayDescriptionsByDeltaTime(DateTime startingTime, DateTime endingTime, TEnvironmentDescription environment) throws RemoteException, TechnicalException {
+    public List<TCycleReplayDescription> getCycleReplayDescriptionsByDeltaTime(Date startingTime, Date endingTime, TEnvironmentDescription environment) throws RemoteException, TechnicalException {
         return cycleStatistics.getCycleReplayDescriptionsByDeltaTime(startingTime, endingTime, environment);
     }
 
@@ -161,13 +160,13 @@ public class ServerFacade implements IServerFacade {
     }
 
     @Override
-    public void saveMap(TMapMetaData mapMetaData, TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
-        environmentPluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).saveMap(mapMetaData);
+    public void saveConfiguration(IEnvironmentConfiguration configuration, TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
+        environmentPluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).saveConfiguration(configuration);
     }
 
     @Override
-    public List<TMapMetaData> getAvailableMaps(TEnvironmentDescription environment) throws CorruptMapFileException, TechnicalException, PluginNotReadableException {
-        return  environmentPluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).getAvailableMaps();
+    public List<IEnvironmentConfiguration> getAvailableConfigurations(TEnvironmentDescription environment) throws CorruptConfigurationFileException, TechnicalException, PluginNotReadableException {
+        return  environmentPluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).getAvailableConfigurations();
     }
 
     @Override

@@ -1,0 +1,14 @@
+digraph "NetworkAdapter.Messages.DefaultEnvironmentStateMessage"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="NetworkAdapter.Messages.\lDefaultEnvironmentStateMessage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="EnvironmentPluginAPI.Custom\lNetworkMessages.NetworkMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_environment_plugin_a_p_i_1_1_custom_network_messages_1_1_network_message.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Serializable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="IEnvironmentStateMessage",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

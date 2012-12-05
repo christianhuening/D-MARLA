@@ -4,30 +4,30 @@
     <list default="true" readonly="true" id="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" name="Default" comment="" />
     <ignored path="MARLA-Client.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354595402141" ignored="false" />
+    <file path="/Dummy.txt" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354682231382" ignored="false" />
     <file path="$PROJECT_DIR$/../AgentSystems/CliffQLearning/src/CliffQLearningAgentDescriptor.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354550418608" ignored="false" />
     <file path="/CliffQLearningAgentDescriptor.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354550409408" ignored="false" />
     <file path="$PROJECT_DIR$/../AgentSystems/CliffQLearning/src/CliffQLearningAgentSystem.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354141490264" ignored="false" />
-    <file path="/CliffQLearningAgentSystem.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354600181323" ignored="false" />
+    <file path="/CliffQLearningAgentSystem.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354686710902" ignored="false" />
     <file path="/CliffActionDescription.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354138841122" ignored="false" />
     <file path="$PROJECT_DIR$/../Environments/Cliff/src/Actions/CliffActionDescription.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354138843640" ignored="false" />
     <file path="$PROJECT_DIR$/../Environments/Cliff/src/Actions/CliffEnvironmentState.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354140678004" ignored="false" />
     <file path="/CliffEnvironmentState.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354557191068" ignored="false" />
     <file path="$PROJECT_DIR$/../Environments/Cliff/src/Logic/CliffSession.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354551126043" ignored="false" />
     <file path="/CliffSession.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354551117821" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/SessionConfig.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354548483961" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/ServerRunner/src/ServerRunner/Implementation/Session.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354546578957" ignored="false" />
-    <file path="/Session.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354546536369" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/SessionConfig.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354687960789" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/ServerRunner/src/ServerRunner/Implementation/Session.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354685791169" ignored="false" />
+    <file path="/Session.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354685767364" ignored="false" />
     <file path="$PROJECT_DIR$/../ZeroTypes/src/TransportTypes/TSession.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354546611932" ignored="false" />
     <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/Models/SessionTableModel.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354546624716" ignored="false" />
     <file path="/AgentProviderUseCase.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354548998795" ignored="false" />
-    <file path="/PluginContainer.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354595844389" ignored="false" />
+    <file path="/PluginContainer.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354686304679" ignored="false" />
     <file path="$PROJECT_DIR$/AIClientFacade/src/AIClientFacade/Interface/AIClientApplicationCoreFactory.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354549488149" ignored="false" />
     <file path="/PluginManager.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354554921839" ignored="false" />
     <file path="/IPluginServiceProvider.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354554568816" ignored="false" />
     <file path="/AgentSystemServiceProvider.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354555666907" ignored="false" />
     <file path="/AgentSystemManagementUseCase.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354555634056" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffQLearning/src/CliffQLearningAgentSystem.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354600185915" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffQLearning/src/CliffQLearningAgentSystem.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354686866628" ignored="false" />
     <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/Logic/CliffSession.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354555805062" ignored="false" />
     <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/Actions/CliffEnvironmentState.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354558191019" ignored="false" />
     <file path="/DBDictionary.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354595306831" ignored="false" />
@@ -35,7 +35,7 @@
     <file path="/EpsilonGreedyAgent.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354596993082" ignored="false" />
     <file path="$USER_HOME$/Desktop/src/Main.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354566101895" ignored="false" />
     <file path="/Main.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354581473010" ignored="false" />
-    <file path="/fragment.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354570798481" ignored="false" />
+    <file path="/fragment.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668676048" ignored="false" />
     <file path="$USER_HOME$/Desktop/untitled/src/Main.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354581513557" ignored="false" />
     <file path="/DatabaseAccessor.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354577244853" ignored="false" />
     <file path="/TestAgentProvider.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354576238065" ignored="false" />
@@ -47,14 +47,71 @@
     <file path="/ICache.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354592311559" ignored="false" />
     <file path="/ValueNotFoundException.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354589569027" ignored="false" />
     <file path="/DatabaseCache.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354594359528" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/CliffEnvironmentPlugin.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354596179658" ignored="false" />
-    <file path="/CliffEnvironmentPlugin.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354596167066" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/CliffEnvironmentPlugin.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354686781874" ignored="false" />
+    <file path="/CliffEnvironmentPlugin.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354685956867" ignored="false" />
     <file path="/SarsaLambdaAgent.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354597566539" ignored="false" />
     <file path="/ErrorMessages.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354598048326" ignored="false" />
     <file path="/SarsaAgent.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354598099610" ignored="false" />
     <file path="$PROJECT_DIR$/AIRunner/src/AIRunner/Interface/AIRunnerEventType.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354600516306" ignored="false" />
     <file path="/AIClientMain.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354600854875" ignored="false" />
-    <file path="/AIRunnerUseCase.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354600615804" ignored="false" />
+    <file path="/AIRunnerUseCase.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354682285106" ignored="false" />
+    <file path="/persistence.xml" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354656486975" ignored="false" />
+    <file path="$PROJECT_DIR$/../R_Components/PersistenceManager/src/META-INF/persistence.xml" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354667877156" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/ServerAdministration.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354638997621" ignored="false" />
+    <file path="/ServerAdministration.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354638963367" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/Entities/CycleReplayDescription.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354667907241" ignored="false" />
+    <file path="/CycleReplayDescription.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354664368115" ignored="false" />
+    <file path="$PROJECT_DIR$/../ZeroTypes/src/TransportTypes/TCycleReplayDescription.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668005601" ignored="false" />
+    <file path="/TCycleReplayDescription.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354664420929" ignored="false" />
+    <file path="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Service/ICycleReplay.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354667995984" ignored="false" />
+    <file path="/ICycleReplay.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354664482132" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/UnitTest/GameStatisticsComponentTest.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668673064" ignored="false" />
+    <file path="/GameStatisticsComponentTest.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354667812979" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/UnitTest/TestReplay.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668116970" ignored="false" />
+    <file path="/TestReplay.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354666460850" ignored="false" />
+    <file path="/CycleStatisticsComponent.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354666790458" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/CycleStatisticsComponent.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668111504" ignored="false" />
+    <file path="$PROJECT_DIR$/../ZeroTypes/src/RemoteInterface/ICycleStatistics.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354667995984" ignored="false" />
+    <file path="/CycleStatisticsUseCase.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354667496209" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/CycleStatisticsUseCase.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668092756" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/CycleReplayDescriptionDao.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668101932" ignored="false" />
+    <file path="/CycleReplayDescriptionDao.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354667380430" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/ServerFacade/src/GameServerFacade/Implementation/ServerFacade.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354685720577" ignored="false" />
+    <file path="/ServerFacade.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354667576958" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/RMIServiceConnector.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668256032" ignored="false" />
+    <file path="/RMIServiceConnector.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354667606094" ignored="false" />
+    <file path="/TNetworkClient.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668029934" ignored="false" />
+    <file path="$PROJECT_DIR$/../ZeroTypes/src/TransportTypes/TNetworkClient.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668036727" ignored="false" />
+    <file path="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ClientSession.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668078051" ignored="false" />
+    <file path="/ClientSession.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668077699" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/ServerRunner/src/ServerRunner/Implementation/ServerRunnerUseCase.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668149163" ignored="false" />
+    <file path="/ServerRunnerUseCase.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668145794" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/Models/ClientTableModel.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354687711301" ignored="false" />
+    <file path="/ClientTableModel.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354687709916" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Overseer/OverseerGUI/src/OverseerGUI/OverseerMain.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668857507" ignored="false" />
+    <file path="/OverseerMain.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354668852798" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/Statistics/CliffReplay.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354684896688" ignored="false" />
+    <file path="/CliffReplay.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354684445237" ignored="false" />
+    <file path="/GridWorldConfiguration.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354687037250" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/Logic/GridWorldConfiguration.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354687044467" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/Logic/GridWorldStyle.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354683345876" ignored="false" />
+    <file path="/GridWorldStyle.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354683345876" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/Logic/Cycle.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354684896688" ignored="false" />
+    <file path="/Cycle.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354684295318" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/Logic/GridType.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354684197818" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/CliffEnvironmentPluginDescriptor.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354686017781" ignored="false" />
+    <file path="/CliffEnvironmentPluginDescriptor.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354684773541" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/Logic/Session.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354686886996" ignored="false" />
+    <file path="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/IEnvironment.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354685398625" ignored="false" />
+    <file path="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354685512262" ignored="false" />
+    <file path="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Interface/IEnvironmentPluginLoader.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354685545010" ignored="false" />
+    <file path="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/IEnvironmentPluginDescriptor.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354685565557" ignored="false" />
+    <file path="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderComponent.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354685601118" ignored="false" />
+    <file path="/IAgentSystem.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354686247718" ignored="false" />
+    <file path="/CycleStartsMessage.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354686418738" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/Actions/EnvironmentState.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354686758450" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffQLearning/src/CliffQLearningAgentDescriptor.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354686874375" ignored="false" />
+    <file path="/SessionConfig.java" changelist="3caa70b0-3ed7-46ad-9528-7fa6a63d5d87" time="1354687948275" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +126,24 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Contract/StateAction.java" line="42" class="AgentSystemPluginAPI.Contract.StateAction" package="AgentSystemPluginAPI.Contract">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -104,51 +178,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/AgentProviderUseCase.java" line="61" class="AgentProvider.Implementation.AgentProviderUseCase" package="AgentProvider.Implementation">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Contract/StateAction.java" line="42" class="AgentSystemPluginAPI.Contract.StateAction" package="AgentSystemPluginAPI.Contract">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/PluginContainer.java" line="126" class="AIRunner.Implementation.PluginContainer" package="AIRunner.Implementation">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -157,29 +186,7 @@
     <favorites_list name="MARLA-Client" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AIRunnerUseCase.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/AIRunnerUseCase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="60" selection-start="4310" selection-end="4310" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AIClientMain.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MARLAClientGUI/src/AIClientMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="30" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.48142415">
-              <folding>
-                <element signature="e#1925#3097#0" expanded="true" />
-                <element signature="e#3078#3079#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -197,22 +204,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Database/Cache.java" />
-        <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Database/MemoryICache.java" />
-        <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Database/ValueNotFoundException.java" />
-        <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Database/ICache.java" />
+        <option value="$PROJECT_DIR$/AgentProvider/src/UnitTest/TestReinforcementAlgorithms.java" />
         <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Database/DatabaseCache.java" />
-        <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Database/MemoryCache.java" />
-        <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Database/PersistenceFactory.java" />
-        <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Database/DBDictionary.java" />
-        <option value="$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/PluginContainer.java" />
-        <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Agents/EpsilonGreedyAgent.java" />
-        <option value="$PROJECT_DIR$/../ZeroTypes/src/Exceptions/ErrorMessages.java" />
-        <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Agents/SarsaAgent.java" />
-        <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Agents/SarsaLambdaAgent.java" />
-        <option value="$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Agents/QLearningAgent.java" />
-        <option value="$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/AIRunnerUseCase.java" />
+        <option value="$PROJECT_DIR$/AgentProvider/src/UnitTest/TestAgentProvider.java" />
+        <option value="$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Interface/IAgentSystemManagement.java" />
+        <option value="$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Implementation/AgentSystemManagementUseCase.java" />
+        <option value="$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Plugins/PluginManager.java" />
+        <option value="$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Implementation/AgentSystemManagementComponent.java" />
+        <option value="$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Implementation/AgentSystemServiceProvider.java" />
+        <option value="$PROJECT_DIR$/AIRunner/src/AIRunner/Interface/IAIRunner.java" />
+        <option value="$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/AIRunnerComponent.java" />
+        <option value="$PROJECT_DIR$/AIClientFacade/src/AIClientFacade/Interface/IAIClientFacade.java" />
+        <option value="$PROJECT_DIR$/AIClientFacade/src/AIClientFacade/Implementation/AIClientFacade.java" />
         <option value="$PROJECT_DIR$/MARLAClientGUI/src/AIClientMain.java" />
+        <option value="$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Contract/IAgentSystem.java" />
+        <option value="$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/PluginContainer.java" />
+        <option value="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Messages/CycleStartsMessage.java" />
       </list>
     </option>
   </component>
@@ -274,9 +281,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files" />
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -286,6 +290,9 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files" />
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -301,7 +308,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MARLAClientGUI" />
+              <option name="myItemId" value="AgentSystemPluginAPI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,7 +318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MARLAClientGUI" />
+              <option name="myItemId" value="AgentSystemPluginAPI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -319,8 +326,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AIClientMain" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+              <option name="myItemId" value="AgentSystemPluginAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -329,11 +336,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MARLAClientGUI" />
+              <option name="myItemId" value="AgentSystemPluginAPI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgentSystemPluginAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Contract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MARLA-Client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgentProvider" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,7 +375,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/agentPlugins" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -626,7 +651,6 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.49614963" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -637,11 +661,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34763476" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14621131" sideWeight="0.21892188" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14621131" sideWeight="0.3608361" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14621131" sideWeight="0.51265126" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14621131" sideWeight="0.37073708" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26072606" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.49614963" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -713,115 +738,138 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/JoinClassLoader.java">
+    <entry file="file://$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Database/DatabaseCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="21" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.61608154">
+        <state line="35" column="50" selection-start="1224" selection-end="1224" vertical-scroll-proportion="0.26984128">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgentProvider/src/UnitTest/TestAgentProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="63" selection-start="911" selection-end="911" vertical-scroll-proportion="0.77954143">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Interface/IAgentSystemManagement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="98" selection-start="778" selection-end="778" vertical-scroll-proportion="0.6296296">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Implementation/AgentSystemManagementUseCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="105" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.659612">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Plugins/PluginManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="79" selection-start="817" selection-end="817" vertical-scroll-proportion="0.53968257">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Implementation/AgentSystemManagementComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="103" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.5097002">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkChannel.java">
+    <entry file="file://$PROJECT_DIR$/AgentSystemManagement/src/AgentSystemManagement/Implementation/AgentSystemServiceProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.0">
+        <state line="48" column="56" selection-start="2086" selection-end="2086" vertical-scroll-proportion="0.6895943">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AIRunner/src/AIRunner/Interface/IAIRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="198" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.659612">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/AIRunnerComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="205" selection-start="1624" selection-end="1624" vertical-scroll-proportion="-0.38977072">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AIClientFacade/src/AIClientFacade/Interface/IAIClientFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="106" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.33686066">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ClientNetworkAdapterUseCase.java">
+    <entry file="file://$PROJECT_DIR$/AIClientFacade/src/AIClientFacade/Implementation/AIClientFacade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="833" selection-end="833" vertical-scroll-proportion="-1.1442307">
+        <state line="25" column="52" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.6296296">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MARLAClientGUI/src/AIClientMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="32" selection-start="4090" selection-end="4090" vertical-scroll-proportion="0.029982364">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Contract/IAgentSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.38977072">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/AbstractNetworkAdapterUseCase.java">
+    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Messages/CycleStartsMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1820" selection-end="1820" vertical-scroll-proportion="1.3134615">
-          <folding />
+        <state line="18" column="85" selection-start="662" selection-end="662" vertical-scroll-proportion="0.53968257">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/SubscriberCollection.java">
+    <entry file="file://$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/AIRunnerUseCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.3326923">
+        <state line="99" column="67" selection-start="4369" selection-end="4369" vertical-scroll-proportion="0.42328042">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/PluginContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="0" selection-start="4892" selection-end="4892" vertical-scroll-proportion="0.3326923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Agents/EpsilonGreedyAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2628" selection-end="2628" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ZeroTypes/src/Exceptions/ErrorMessages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="72" selection-start="587" selection-end="587" vertical-scroll-proportion="0.3272933">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Agents/SarsaAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="978" selection-end="1110" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Agents/SarsaLambdaAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="9" selection-start="1459" selection-end="1459" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Agents/QLearningAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="9" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.57757646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AgentProvider/src/UnitTest/TestReinforcementAlgorithms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="0" selection-start="6499" selection-end="6499" vertical-scroll-proportion="0.03171008">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AgentProvider/src/AgentProvider/Implementation/Database/DatabaseCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="0" selection-start="3924" selection-end="3924" vertical-scroll-proportion="0.6795017">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MARLAClientGUI/src/AIClientMain.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AIRunner/src/AIRunner/Implementation/AIRunnerUseCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="60" selection-start="4310" selection-end="4310" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MARLAClientGUI/src/AIClientMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="30" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.48142415">
+        <state line="132" column="47" selection-start="5011" selection-end="5011" vertical-scroll-proportion="0.33686066">
           <folding>
-            <element signature="e#1925#3097#0" expanded="true" />
-            <element signature="e#3078#3079#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -837,6 +885,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -884,7 +933,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -892,7 +940,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>seaglasslookandfeel-0.2</last-edited>
+          <last-edited>junit-4.10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -3,16 +3,19 @@ import AgentProvider.Implementation.Database.AgentSettingsAccessor;
 import AgentProvider.Implementation.Database.PersistenceFactory;
 import AgentProvider.Implementation.KeyNotFoundException;
 import AgentProvider.Implementation.PersistenceType;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.StateAction;
-import Settings.SettingException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import ZeroTypes.Settings.SettingException;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.sql.SQLException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
 
 public class TestAgentProvider {
 

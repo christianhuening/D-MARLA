@@ -1,8 +1,9 @@
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import EnvironmentPluginAPI.Contract.IEnvironment;
 import EnvironmentPluginAPI.Contract.IEnvironmentPluginDescriptor;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
 
 /**
  * This is an example of how an environment plugin descriptor may look like.
@@ -15,7 +16,7 @@ public class CliffEnvironmentPluginDescriptor implements IEnvironmentPluginDescr
     }
 
     @Override
-    public IEnvironment getInstance(ISaveGameStatistics iSaveGameStatistics) throws TechnicalException {
-        return new CliffEnvironmentPlugin();
+    public IEnvironment getInstance(ICycleStatisticsSaver cycleStatisticsSaver) throws TechnicalException {
+        return new CliffEnvironmentPlugin(cycleStatisticsSaver);
     }
 }

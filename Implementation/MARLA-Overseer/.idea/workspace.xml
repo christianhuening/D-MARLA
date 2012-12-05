@@ -51,6 +51,47 @@
     <list default="true" readonly="true" id="5feed42b-5a8e-4682-9bca-c25963724f3d" name="Default" comment="" />
     <ignored path="Overseer.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668676048" ignored="false" />
+    <file path="/EnvironmentPluginLoaderUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354636048309" ignored="false" />
+    <file path="/OverseerMain.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668852798" ignored="false" />
+    <file path="/GameReplayForm.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354635122539" ignored="false" />
+    <file path="/a.dummy" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354636577656" ignored="false" />
+    <file path="/persistence.xml" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354656486975" ignored="false" />
+    <file path="$PROJECT_DIR$/../R_Components/PersistenceManager/src/META-INF/persistence.xml" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667877156" ignored="false" />
+    <file path="/fragment.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668676048" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/ServerAdministration.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354638997574" ignored="false" />
+    <file path="/ServerAdministration.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354638963320" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/Entities/CycleReplayDescription.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667907179" ignored="false" />
+    <file path="/CycleReplayDescription.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354664368115" ignored="false" />
+    <file path="$PROJECT_DIR$/../ZeroTypes/src/TransportTypes/TCycleReplayDescription.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668005535" ignored="false" />
+    <file path="/TCycleReplayDescription.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354664420929" ignored="false" />
+    <file path="/ICycleReplay.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354664482090" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/UnitTest/GameStatisticsComponentTest.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668673014" ignored="false" />
+    <file path="/GameStatisticsComponentTest.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667812979" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/UnitTest/TestReplay.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668116920" ignored="false" />
+    <file path="/TestReplay.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354666460850" ignored="false" />
+    <file path="/CycleStatisticsComponent.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354666790384" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/CycleStatisticsComponent.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668111451" ignored="false" />
+    <file path="$PROJECT_DIR$/../ZeroTypes/src/RemoteInterface/ICycleStatistics.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667995938" ignored="false" />
+    <file path="/CycleStatisticsUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667496209" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/CycleStatisticsUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668092705" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/CycleReplayDescriptionDao.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668101884" ignored="false" />
+    <file path="/CycleReplayDescriptionDao.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667380430" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/ServerFacade/src/GameServerFacade/Implementation/ServerFacade.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668163021" ignored="false" />
+    <file path="/ServerFacade.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667576958" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/RMIServiceConnector.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668255986" ignored="false" />
+    <file path="/RMIServiceConnector.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667606094" ignored="false" />
+    <file path="/TNetworkClient.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668029934" ignored="false" />
+    <file path="$PROJECT_DIR$/../ZeroTypes/src/TransportTypes/TNetworkClient.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668036727" ignored="false" />
+    <file path="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ClientSession.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668078051" ignored="false" />
+    <file path="/ClientSession.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668077699" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/ServerRunner/src/ServerRunner/Implementation/ServerRunnerUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668149163" ignored="false" />
+    <file path="/ServerRunnerUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668145794" ignored="false" />
+    <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/Models/ClientTableModel.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668237520" ignored="false" />
+    <file path="/ClientTableModel.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668230590" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffQLearning/src/CliffQLearningAgentSystem.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354669439919" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/Statistics/CliffReplay.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354670079443" ignored="false" />
+    <file path="/CliffReplay.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354670005920" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +106,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any>
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -73,6 +115,7 @@
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
         <option name="COUNT_FILTER" value="0" />
         <option name="CONDITION_ENABLED" value="false" />
@@ -88,6 +131,7 @@
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
         <option name="COUNT_FILTER" value="0" />
         <option name="CONDITION_ENABLED" value="false" />
@@ -97,9 +141,11 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Overseer" />
   </component>
@@ -114,10 +160,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/TEnvironmentDescription.java" />
+        <option value="$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/GameReplayForm.java" />
+        <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java" />
         <option value="$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java" />
       </list>
     </option>
@@ -154,139 +207,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OverseerGUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OverseerGUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OverseerGUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OverseerGUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OverseerMain" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OverseerGUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OverseerGUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnvironmentPluginAPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnvironmentPluginAPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnvironmentPluginAPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnvironmentPluginAPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnvironmentPluginAPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Contract" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files" />
       </pane>
       <pane id="PackagesPane">
         <subPane>
@@ -298,8 +220,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Overseer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -310,29 +239,24 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Environments/Factory" />
+    <property name="options.lastSelected" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../T_Components/usertype/usertype.spi-3.0.0.CR1.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.OverseerGUI">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -340,29 +264,7 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
@@ -389,12 +291,20 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" />
@@ -408,12 +318,7 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <module name="" />
@@ -433,12 +338,7 @@
       </option>
       <envs />
       <patterns />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
+      <method />
     </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.OverseerGUI" />
@@ -482,6 +382,26 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="false" />
@@ -490,22 +410,22 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15820417" sideWeight="0.6721854" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15795091" sideWeight="0.6732673" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -532,7 +452,6 @@
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
@@ -542,9 +461,11 @@
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
@@ -593,26 +514,14 @@
         <state line="17" column="17" selection-start="745" selection-end="745" vertical-scroll-proportion="0.21778585" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Service/ICycleReplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="3" selection-start="343" selection-end="343" vertical-scroll-proportion="0.17985612" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Interface/IEnvironmentPluginLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="41" selection-start="1420" selection-end="1420" vertical-scroll-proportion="0.017985612" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Environments/Factory/Factory.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.6.0_33/jre/lib/rt.jar!/sun/rmi/transport/StreamRemoteCall.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="110" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.82474226">
-          <folding />
-        </state>
+        <state line="37" column="110" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.82474226" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.6.0_33/src.zip!/java/lang/Thread.java">
@@ -622,18 +531,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/TEnvironmentDescription.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.14604811">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Service/ICycleReplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="3" selection-start="343" selection-end="343" vertical-scroll-proportion="0.18088737">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/AbstractVisualizeReplayPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/IVisualizeReplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="432" selection-end="432" vertical-scroll-proportion="-0.43515357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="309" column="31" selection-start="14086" selection-end="14086" vertical-scroll-proportion="0.7091562">
+        <state line="187" column="149" selection-start="8479" selection-end="8479" vertical-scroll-proportion="0.39078498">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5732#10654#0" expanded="true" />
+            <element signature="e#6418#10602#0" expanded="true" />
+            <element signature="e#10579#10580#0" expanded="true" />
+            <element signature="e#10643#10644#0" expanded="true" />
+            <element signature="e#10794#11040#0" expanded="true" />
+            <element signature="e#11029#11030#0" expanded="true" />
+            <element signature="e#11085#11241#0" expanded="true" />
+            <element signature="e#11230#11231#0" expanded="true" />
+            <element signature="e#11300#11582#0" expanded="true" />
+            <element signature="e#11571#11572#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/TEnvironmentDescription.java">
+    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.14604811">
+        <state line="189" column="20" selection-start="8947" selection-end="8947" vertical-scroll-proportion="0.3327645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/GameReplayForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="65" selection-start="3074" selection-end="3074" vertical-scroll-proportion="0.55119455">
           <folding />
         </state>
       </provider>
@@ -702,7 +656,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>seaglasslookandfeel-0.1.7.3</last-edited>
+          <last-edited>junit-4.10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

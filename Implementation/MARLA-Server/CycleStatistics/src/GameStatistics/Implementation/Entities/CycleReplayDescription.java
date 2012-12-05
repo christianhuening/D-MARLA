@@ -1,14 +1,13 @@
 package GameStatistics.Implementation.Entities;
 
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
-import Interfaces.IHasTransportType;
-import TransportTypes.TCycleReplayDescription;
+import ZeroTypes.Interfaces.IHasTransportType;
+import ZeroTypes.TransportTypes.TCycleReplayDescription;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
-import org.joda.time.DateTime;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -30,10 +29,9 @@ public class CycleReplayDescription implements IHasTransportType<TCycleReplayDes
     public long Id;
 
     //@Column
-    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
-    private DateTime replayDate;
+    private Date replayDate;
 
-    public DateTime getReplayDate() {
+    public Date getReplayDate() {
         return replayDate;
     }
 
@@ -85,7 +83,7 @@ public class CycleReplayDescription implements IHasTransportType<TCycleReplayDes
         this(dateTime, playersInReplay, winningPlayer, numberOfTurns, null);
     }*/
 
-    public CycleReplayDescription(UUID gameReplayId, DateTime replayDate, List<String> players, String winningPlayer, int numberOfTurns, TEnvironmentDescription environmentDescription) {
+    public CycleReplayDescription(UUID gameReplayId, Date replayDate, List<String> players, String winningPlayer, int numberOfTurns, TEnvironmentDescription environmentDescription) {
         this.replayID = gameReplayId;
         this.replayDate = replayDate;
         this.players = players;
@@ -94,6 +92,7 @@ public class CycleReplayDescription implements IHasTransportType<TCycleReplayDes
         this.environmentDescription = environmentDescription.toString();
 
         this.gameReplayFileLocation = "./GameReplays/Replay_" + replayID.toString() + ".replay";
+
     }
 
 // ------------------------ CANONICAL METHODS ------------------------

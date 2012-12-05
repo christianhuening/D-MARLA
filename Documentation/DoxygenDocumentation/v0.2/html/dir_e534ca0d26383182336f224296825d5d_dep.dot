@@ -1,0 +1,13 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Client/AIClientFacade" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_9d824b7d9f72e8edc14bfc50d56e5255 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="MARLA-Client" fontname="Helvetica", fontsize="10", URL="dir_9d824b7d9f72e8edc14bfc50d56e5255.html"]
+  subgraph clusterdir_e534ca0d26383182336f224296825d5d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_e534ca0d26383182336f224296825d5d.html"];
+    dir_e534ca0d26383182336f224296825d5d [shape=plaintext label="AIClientFacade"];
+    dir_1c0d9d7955555a6532620de9ae1b9a6a [shape=box label="src" color="red" fillcolor="white" style="filled" URL="dir_1c0d9d7955555a6532620de9ae1b9a6a.html"];
+  }
+  }
+}

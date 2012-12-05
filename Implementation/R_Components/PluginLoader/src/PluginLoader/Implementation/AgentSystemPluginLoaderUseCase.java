@@ -2,15 +2,15 @@ package PluginLoader.Implementation;
 
 import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.IActionDescription;
 import EnvironmentPluginAPI.CustomNetworkMessages.IActionDescriptionMessage;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import NetworkAdapter.Messages.DefaultActionDescriptionMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IAgentSystemPluginLoader;
-import Settings.AppSettings;
-import Settings.SettingException;
+import ZeroTypes.Settings.AppSettings;
+import ZeroTypes.Settings.SettingException;
 
 import java.io.File;
 import java.lang.reflect.Constructor;
@@ -123,7 +123,7 @@ public class AgentSystemPluginLoaderUseCase implements IAgentSystemPluginLoader 
      *
      * @param agentSystemDescription a description of an existing agent system plugin != null
      * @return null, if agent system plugin was not found
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException
+     * @throws EnvironmentPluginAPI.Exceptions.TechnicalException
      *          if technical errors prevent the component from loading the plugin specified
      * @throws PluginLoader.Interface.Exceptions.PluginNotReadableException
      *          if the plugin is not readable, for example if no TAgentSystemDescription is provided

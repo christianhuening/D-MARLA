@@ -1,7 +1,7 @@
 package NetworkAdapter.Implementation;
 
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
-import Exceptions.TypeIsNotSerializableException;
+import ZeroTypes.Exceptions.TypeIsNotSerializableException;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Messages.ConnectionEndMessage;
 

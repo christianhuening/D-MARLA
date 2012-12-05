@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/ZeroTypes/src/RemoteInterface" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_83c27a1a8280ea473d9aae3ae06dc9ce {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_83c27a1a8280ea473d9aae3ae06dc9ce.html"]
+  dir_945d5cbe3968998dde17e148e60726c6 [shape=box, label="RemoteInterface", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_945d5cbe3968998dde17e148e60726c6.html"];
+  }
+}

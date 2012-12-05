@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/R_Components/NetworkAdapter/src/NetworkAdapter/Messages" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_89e8126efe14f00db61a7d0f2b62bf5d {
+    graph [ bgcolor="#ddddee", pencolor="black", label="NetworkAdapter" fontname="Helvetica", fontsize="10", URL="dir_89e8126efe14f00db61a7d0f2b62bf5d.html"]
+  dir_fd0cae668c1a48d0b3d2a3b52ff92e2e [shape=box, label="Messages", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_fd0cae668c1a48d0b3d2a3b52ff92e2e.html"];
+  }
+}

@@ -1,8 +1,8 @@
 package NetworkAdapter.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
-import Exceptions.ErrorMessages;
+import ZeroTypes.Exceptions.ErrorMessages;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.Exceptions.HostUnreachableException;
 import NetworkAdapter.Interface.Exceptions.NotConnectedException;

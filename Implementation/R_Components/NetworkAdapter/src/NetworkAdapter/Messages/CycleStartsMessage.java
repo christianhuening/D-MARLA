@@ -1,23 +1,24 @@
 package NetworkAdapter.Messages;
 
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
 
 /**
  * This message is sent by the server to inform clients about the game start.
  */
 public class CycleStartsMessage extends NetworkMessage {
 
-    private Object environmentInitInfo;
+    private IEnvironmentConfiguration environmentConfiguration;
 
-    public CycleStartsMessage(int clientId, Object environmentInitInfo) {
+    public CycleStartsMessage(int clientId, IEnvironmentConfiguration environmentConfiguration) {
         super(clientId);
-        this.environmentInitInfo = environmentInitInfo;
+        this.environmentConfiguration = environmentConfiguration;
     }
 
     /**
-     * @return The color, that the player was assigned to.
+     * @return Arbitrary info that defines the environment configuration. May be null
      */
-    public Object getEnvironmentInitInfo() {
-        return environmentInitInfo;
+    public IEnvironmentConfiguration getEnvironmentConfiguration() {
+        return environmentConfiguration;
     }
 }

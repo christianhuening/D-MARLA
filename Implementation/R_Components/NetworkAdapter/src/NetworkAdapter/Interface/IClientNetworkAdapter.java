@@ -1,7 +1,7 @@
 package NetworkAdapter.Interface;
 
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.Exceptions.HostUnreachableException;
 import NetworkAdapter.Interface.Exceptions.NotConnectedException;

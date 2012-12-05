@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Agents" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_53795efd05e10d13a6beef1c5a41c4f7 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Implementation" fontname="Helvetica", fontsize="10", URL="dir_53795efd05e10d13a6beef1c5a41c4f7.html"]
+  dir_df76e2ca3ddf9309d95788950008fb45 [shape=box, label="Agents", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_df76e2ca3ddf9309d95788950008fb45.html"];
+  }
+}

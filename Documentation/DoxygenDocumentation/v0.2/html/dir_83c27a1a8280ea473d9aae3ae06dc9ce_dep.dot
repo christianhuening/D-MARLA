@@ -1,0 +1,18 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/ZeroTypes/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_cdec1c9683b0f0c476f288b19d494731 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="ZeroTypes" fontname="Helvetica", fontsize="10", URL="dir_cdec1c9683b0f0c476f288b19d494731.html"]
+  subgraph clusterdir_83c27a1a8280ea473d9aae3ae06dc9ce {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_83c27a1a8280ea473d9aae3ae06dc9ce.html"];
+    dir_83c27a1a8280ea473d9aae3ae06dc9ce [shape=plaintext label="src"];
+    dir_38e7561e6fe018de459901fd7e34e515 [shape=box label="Enumeration" color="black" fillcolor="white" style="filled" URL="dir_38e7561e6fe018de459901fd7e34e515.html"];
+    dir_a78b357509627df0097b2e2af722d3a5 [shape=box label="Exceptions" color="black" fillcolor="white" style="filled" URL="dir_a78b357509627df0097b2e2af722d3a5.html"];
+    dir_bbb5440c0ceea05ae0a51814b3c736e8 [shape=box label="Interfaces" color="black" fillcolor="white" style="filled" URL="dir_bbb5440c0ceea05ae0a51814b3c736e8.html"];
+    dir_945d5cbe3968998dde17e148e60726c6 [shape=box label="RemoteInterface" color="black" fillcolor="white" style="filled" URL="dir_945d5cbe3968998dde17e148e60726c6.html"];
+    dir_8a6bededca4b8ece6ecf0adaec1a53e6 [shape=box label="Settings" color="black" fillcolor="white" style="filled" URL="dir_8a6bededca4b8ece6ecf0adaec1a53e6.html"];
+    dir_5bccc24ad9db9ffedad877c14dfb5111 [shape=box label="TransportTypes" color="black" fillcolor="white" style="filled" URL="dir_5bccc24ad9db9ffedad877c14dfb5111.html"];
+  }
+  }
+}

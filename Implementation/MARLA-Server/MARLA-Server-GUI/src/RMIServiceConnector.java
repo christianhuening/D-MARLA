@@ -1,13 +1,13 @@
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Service.ICycleReplay;
-import Exceptions.GameReplayNotContainedInDatabaseException;
+import ZeroTypes.Exceptions.GameReplayNotContainedInDatabaseException;
 import GameServerFacade.Interface.IServerFacade;
-import RemoteInterface.ICycleStatistics;
-import TransportTypes.TCycleReplayDescription;
-import org.joda.time.DateTime;
+import ZeroTypes.RemoteInterface.ICycleStatistics;
+import ZeroTypes.TransportTypes.TCycleReplayDescription;
 
 import java.rmi.RemoteException;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -34,7 +34,7 @@ public class RMIServiceConnector implements ICycleStatistics {
     }
 
     @Override
-    public List<TCycleReplayDescription> getCycleReplayDescriptionsByDeltaTime(DateTime startingTime, DateTime endingTime, TEnvironmentDescription environmentDescription) throws RemoteException, TechnicalException {
+    public List<TCycleReplayDescription> getCycleReplayDescriptionsByDeltaTime(Date startingTime, Date endingTime, TEnvironmentDescription environmentDescription) throws RemoteException, TechnicalException {
         return facade.getCycleReplayDescriptionsByDeltaTime(startingTime, endingTime, environmentDescription);
     }
 

@@ -1,0 +1,15 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_df0304752b06677cfa1dca6199f47c69 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_df0304752b06677cfa1dca6199f47c69.html"];
+    dir_df0304752b06677cfa1dca6199f47c69 [shape=plaintext label="Implementation"];
+    dir_9d824b7d9f72e8edc14bfc50d56e5255 [shape=box label="MARLA-Client" color="red" fillcolor="white" style="filled" URL="dir_9d824b7d9f72e8edc14bfc50d56e5255.html"];
+    dir_7336d76966cbc61dea00521a7fe022e7 [shape=box label="MARLA-Overseer" color="red" fillcolor="white" style="filled" URL="dir_7336d76966cbc61dea00521a7fe022e7.html"];
+    dir_df7ba0713187a0f813e54fe96bb624f3 [shape=box label="MARLA-Server" color="red" fillcolor="white" style="filled" URL="dir_df7ba0713187a0f813e54fe96bb624f3.html"];
+    dir_1d754f9aabca48f119f52606f4dbd846 [shape=box label="PluginAPI" color="red" fillcolor="white" style="filled" URL="dir_1d754f9aabca48f119f52606f4dbd846.html"];
+    dir_3620bb53abd0f5cae4c369c1e1987135 [shape=box label="R_Components" color="red" fillcolor="white" style="filled" URL="dir_3620bb53abd0f5cae4c369c1e1987135.html"];
+    dir_cdec1c9683b0f0c476f288b19d494731 [shape=box label="ZeroTypes" color="red" fillcolor="white" style="filled" URL="dir_cdec1c9683b0f0c476f288b19d494731.html"];
+  }
+}

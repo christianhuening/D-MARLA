@@ -1,0 +1,12 @@
+var interface_environment_plugin_a_p_i_1_1_contract_1_1_i_environment_3_01_a_01extends_01_i_action_d686fdc49be8a3e97c2c58e31ebea6d52 =
+[
+    [ "end", "interface_environment_plugin_a_p_i_1_1_contract_1_1_i_environment_3_01_a_01extends_01_i_action_d686fdc49be8a3e97c2c58e31ebea6d52.html#ae585ad4d394252c6673d2fa68cfbf05c", null ],
+    [ "endTurn", "interface_environment_plugin_a_p_i_1_1_contract_1_1_i_environment_3_01_a_01extends_01_i_action_d686fdc49be8a3e97c2c58e31ebea6d52.html#a3193078df2afc37a101492468366f504", null ],
+    [ "executeAction", "interface_environment_plugin_a_p_i_1_1_contract_1_1_i_environment_3_01_a_01extends_01_i_action_d686fdc49be8a3e97c2c58e31ebea6d52.html#a5672a539d0b803406539a55b167e48f5", null ],
+    [ "getActiveInstance", "interface_environment_plugin_a_p_i_1_1_contract_1_1_i_environment_3_01_a_01extends_01_i_action_d686fdc49be8a3e97c2c58e31ebea6d52.html#ad41926935458cb8d55cb34cdc9175f6a", null ],
+    [ "getAvailableMaps", "interface_environment_plugin_a_p_i_1_1_contract_1_1_i_environment_3_01_a_01extends_01_i_action_d686fdc49be8a3e97c2c58e31ebea6d52.html#affea58d7f64eec96eea86fccfaa6210b", null ],
+    [ "getCurrentEnvironmentState", "interface_environment_plugin_a_p_i_1_1_contract_1_1_i_environment_3_01_a_01extends_01_i_action_d686fdc49be8a3e97c2c58e31ebea6d52.html#a2433a629612f51a7656fccf136bbef7f", null ],
+    [ "isStillActive", "interface_environment_plugin_a_p_i_1_1_contract_1_1_i_environment_3_01_a_01extends_01_i_action_d686fdc49be8a3e97c2c58e31ebea6d52.html#ad9d6d2b9b4d2237e9cdb1231f06f80f8", null ],
+    [ "saveMap", "interface_environment_plugin_a_p_i_1_1_contract_1_1_i_environment_3_01_a_01extends_01_i_action_d686fdc49be8a3e97c2c58e31ebea6d52.html#a0fca57f3e12747ea1792fb4f6dcf3fac", null ],
+    [ "start", "interface_environment_plugin_a_p_i_1_1_contract_1_1_i_environment_3_01_a_01extends_01_i_action_d686fdc49be8a3e97c2c58e31ebea6d52.html#a315e0ac3ef0c8fcd052c80f5d4295c4e", null ]
+];

@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/ZeroTypes/src/TransportTypes" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_83c27a1a8280ea473d9aae3ae06dc9ce {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_83c27a1a8280ea473d9aae3ae06dc9ce.html"]
+  dir_5bccc24ad9db9ffedad877c14dfb5111 [shape=box, label="TransportTypes", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5bccc24ad9db9ffedad877c14dfb5111.html"];
+  }
+}

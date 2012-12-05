@@ -1,8 +1,8 @@
 package AgentProvider.Implementation.Database;
 
 import AgentProvider.Implementation.KeyNotFoundException;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import Exceptions.ErrorMessages;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import ZeroTypes.Exceptions.ErrorMessages;
 
 import java.sql.*;
 import java.util.LinkedList;

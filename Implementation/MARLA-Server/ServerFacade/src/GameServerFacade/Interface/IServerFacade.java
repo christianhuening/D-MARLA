@@ -1,16 +1,18 @@
 package GameServerFacade.Interface;
 
-import EnvironmentPluginAPI.Contract.Exception.CorruptMapFileException;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.IEnvironmentPluginDescriptor;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
 import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import RemoteInterface.ICycleStatistics;
+import ZeroTypes.RemoteInterface.ICycleStatistics;
 import ServerRunner.Interface.IServerRunner;
-import Settings.SettingException;
+import ZeroTypes.Settings.SettingException;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -22,7 +24,7 @@ import java.util.List;
  */
 public interface IServerFacade extends
         ICycleStatistics,
-        ISaveGameStatistics,
+        ICycleStatisticsSaver,
         IServerRunner {
 
     /**
@@ -41,21 +43,21 @@ public interface IServerFacade extends
      * @return empty if no environment plugins were found
      * @throws TechnicalException if technical errors prevent the component from loading the plugin described
      * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
-     * @throws Settings.SettingException @throws SettingException if the environmentPluginsfolder is not correctly set int he app's settings.
+     * @throws ZeroTypes.Settings.SettingException @throws SettingException if the environmentPluginsfolder is not correctly set int he app's settings.
      */
     public List<TEnvironmentDescription> listAvailableEnvironments() throws TechnicalException, PluginNotReadableException, SettingException;
 
     /**
      * Saves the given map to a file in the maps directory.
      * if a map with that name already exists, it will be overwritten.
-     * @param mapMetaData the map to save
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException
+     * @param configuration the configuration to save
+     * @throws EnvironmentPluginAPI.Exceptions.TechnicalException
      */
-    public void saveMap(TMapMetaData mapMetaData, TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException;
+    public void saveConfiguration(IEnvironmentConfiguration configuration, TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException;
 
     /**
      * Gets all available maps from the maps directory.
      * @return empty, if no maps found.
      */
-    public List<TMapMetaData> getAvailableMaps(TEnvironmentDescription environment) throws CorruptMapFileException, TechnicalException, PluginNotReadableException;
+    public List<IEnvironmentConfiguration> getAvailableConfigurations(TEnvironmentDescription environment) throws CorruptConfigurationFileException, TechnicalException, PluginNotReadableException;
 }

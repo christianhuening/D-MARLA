@@ -1,12 +1,18 @@
 package AgentSystemPluginAPI.Services;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 
 import java.io.File;
 
 /**
- * This interface shows all services, that the container provides for an AgentSystemPlugin.
+ *  This interface exposes services, that the MARLA system provides for agent system plugins.
+ *  <br/><br/>
+ *  (Currently) there are means for<br/>
+ *  - reading and saving settings from the automatically generated agent settings file, i.e learning parameters<br/>
+ *  TODO: Maybe do the parsing in the service provider?
+ *  - getting the path were the plugin is located.
+ *  - retrieving temporal difference learning implementations<br/>
  */
 public interface IPluginServiceProvider {
 
@@ -18,30 +24,30 @@ public interface IPluginServiceProvider {
 
     /**
      *  Saves the value given under the key in the settings.properties next to this plugin file.
-     *
-     *  If the key already exists, it will be overwritten.
-     *  @param key the key for which the value is saved
-     *  @param newValue the value to save.
+     *  <br/><br/>
+     *  If the key already exists, it's value will be overwritten.
+     * @param key the key for which the value is saved != null
+     * @param newValue the value to save.
      */
     public void saveAgentSystemSetting(String key, String newValue);
 
     /**
-     * Returns the value for the specified key, saved in the settings.properties next to the plugin file.
-     * @param key the key to look for
+     *  Returns the value for the specified key, saved in the settings.properties next to the plugin file.
+     * @param key the key to look for != null
      * @return the saved value. null, if not present in the file.
      */
     public String getAgentSystemSetting(String key);
 
     /**
-     * Returns a concrete implementation of a reinforcement learning agent. It's learning data will be persistent over
-     * different program starts.
+     *  Returns an implementation of a reinforcement learning agent. It's learning data will be persistent over
+     *  different program starts.
+     *  <br/><br/>
+     *  If no agent with this name was used so far, it will be created automatically. If an agent with this name was used
+     *  before, the returned agent will use the learned data of previous runs.
      *
-     * If no agent with this name was used so far, it will be created automatically. If an agent with this name was used
-     * before, the returned agent will use the learned data of previous runs.
-     *
-     * NOTICE: This is even true, if you pass a different agent type.
+     *  NOTICE: This is even true, if you pass a different agent type.
      * @param agentName The name of the agent.
-     * @param learningAlgorithm
+     * @param learningAlgorithm The implementation of the learning algorithm
      * @return @see description, != null
      * @throws TechnicalException
      */

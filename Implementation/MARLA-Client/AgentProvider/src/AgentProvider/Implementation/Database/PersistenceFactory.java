@@ -2,9 +2,9 @@ package AgentProvider.Implementation.Database;
 
 import AgentProvider.Implementation.Agents.IDictionary;
 import AgentProvider.Implementation.PersistenceType;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import Exceptions.ErrorMessages;
-import Settings.SettingException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import ZeroTypes.Exceptions.ErrorMessages;
+import ZeroTypes.Settings.SettingException;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

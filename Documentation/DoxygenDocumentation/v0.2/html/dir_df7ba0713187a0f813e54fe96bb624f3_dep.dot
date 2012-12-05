@@ -1,0 +1,16 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Server" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_df0304752b06677cfa1dca6199f47c69 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Implementation" fontname="Helvetica", fontsize="10", URL="dir_df0304752b06677cfa1dca6199f47c69.html"]
+  subgraph clusterdir_df7ba0713187a0f813e54fe96bb624f3 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_df7ba0713187a0f813e54fe96bb624f3.html"];
+    dir_df7ba0713187a0f813e54fe96bb624f3 [shape=plaintext label="MARLA-Server"];
+    dir_0fb0c54f730eef74656dac91a1bc5cda [shape=box label="CycleStatistics" color="red" fillcolor="white" style="filled" URL="dir_0fb0c54f730eef74656dac91a1bc5cda.html"];
+    dir_ab993efaec0bb10338fce3bfd166760c [shape=box label="MARLA-Server-GUI" color="red" fillcolor="white" style="filled" URL="dir_ab993efaec0bb10338fce3bfd166760c.html"];
+    dir_0028c2d2bac0b35ed8f8d5132f3e4cae [shape=box label="ServerFacade" color="red" fillcolor="white" style="filled" URL="dir_0028c2d2bac0b35ed8f8d5132f3e4cae.html"];
+    dir_87b3a2595eb58dfd31a2c4b79a77db9d [shape=box label="ServerRunner" color="red" fillcolor="white" style="filled" URL="dir_87b3a2595eb58dfd31a2c4b79a77db9d.html"];
+  }
+  }
+}

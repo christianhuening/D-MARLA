@@ -1,10 +1,10 @@
 package PersistenceManager.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import Exceptions.ErrorMessages;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import ZeroTypes.Exceptions.ErrorMessages;
 import PersistenceManager.Interface.IPersistenceManager;
-import Settings.AppSettings;
-import Settings.SettingException;
+import ZeroTypes.Settings.AppSettings;
+import ZeroTypes.Settings.SettingException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

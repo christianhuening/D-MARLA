@@ -1,10 +1,8 @@
 package AgentProvider.Implementation;
 
 import AgentProvider.Implementation.Agents.IDictionary;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.StateAction;
-
-import java.util.Map;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 
 public class NeuronalNet implements IDictionary {
 

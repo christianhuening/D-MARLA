@@ -1,7 +1,7 @@
 package ServerRunner.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.IServerNetworkAdapter;
@@ -10,8 +10,8 @@ import PluginLoader.Interface.IEnvironmentPluginLoader;
 import ServerRunner.Interface.IPlayerEventHandler;
 import ServerRunner.Interface.IServerRunner;
 import ServerRunner.Interface.SessionIsNotInReadyStateException;
-import TransportTypes.TNetworkClient;
-import TransportTypes.TSession;
+import ZeroTypes.TransportTypes.TNetworkClient;
+import ZeroTypes.TransportTypes.TSession;
 
 import java.util.List;
 import java.util.UUID;
@@ -27,7 +27,7 @@ public class ServerRunnerComponent implements IServerRunner {
 
     ServerRunnerUseCase useCase;
 
-    public ServerRunnerComponent(ISaveGameStatistics saveGameStatistics, IServerNetworkAdapter networkAdapter, IEnvironmentPluginLoader environmentPluginLoader) {
+    public ServerRunnerComponent(ICycleStatisticsSaver saveGameStatistics, IServerNetworkAdapter networkAdapter, IEnvironmentPluginLoader environmentPluginLoader) {
         this.useCase = new ServerRunnerUseCase(saveGameStatistics, networkAdapter, environmentPluginLoader);
     }
 

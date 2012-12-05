@@ -1,0 +1,13 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Client/AgentSystemManagement" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_9d824b7d9f72e8edc14bfc50d56e5255 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="MARLA-Client" fontname="Helvetica", fontsize="10", URL="dir_9d824b7d9f72e8edc14bfc50d56e5255.html"]
+  subgraph clusterdir_8b18c74ba6eb1d9f7f5416c158d35c91 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_8b18c74ba6eb1d9f7f5416c158d35c91.html"];
+    dir_8b18c74ba6eb1d9f7f5416c158d35c91 [shape=plaintext label="AgentSystemManagement"];
+    dir_5bcb22561bb076c9942ffb84511e3514 [shape=box label="src" color="red" fillcolor="white" style="filled" URL="dir_5bcb22561bb076c9942ffb84511e3514.html"];
+  }
+  }
+}

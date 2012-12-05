@@ -1,14 +1,14 @@
 package NetworkAdapter.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.Exceptions.NotConnectedException;
 import NetworkAdapter.Interface.INetworkMessageReceivedEventHandler;
 import NetworkAdapter.Interface.IServerNetworkAdapter;
 import NetworkAdapter.Interface.MessageChannel;
-import Settings.SettingException;
-import TransportTypes.TNetworkClient;
+import ZeroTypes.Settings.SettingException;
+import ZeroTypes.TransportTypes.TNetworkClient;
 
 import java.util.List;
 

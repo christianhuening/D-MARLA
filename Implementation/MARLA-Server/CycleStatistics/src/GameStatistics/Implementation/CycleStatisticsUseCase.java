@@ -1,23 +1,19 @@
 package GameStatistics.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Service.ICycleReplay;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
-import Exceptions.GameReplayNotContainedInDatabaseException;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
+import ZeroTypes.Exceptions.GameReplayNotContainedInDatabaseException;
 import GameStatistics.Implementation.Entities.CycleReplayDescription;
-import RemoteInterface.ICycleStatistics;
-import TransportTypes.TCycleReplayDescription;
-import org.joda.time.DateTime;
+import ZeroTypes.RemoteInterface.ICycleStatistics;
+import ZeroTypes.TransportTypes.TCycleReplayDescription;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,7 +22,7 @@ import java.util.UUID;
  * Time: 14:59
  * To change this template use File | Settings | File Templates.
  */
-public class CycleStatisticsUseCase implements ICycleStatistics, ISaveGameStatistics {
+public class CycleStatisticsUseCase implements ICycleStatistics, ICycleStatisticsSaver {
 // ------------------------------ FIELDS ------------------------------
 
     private GameReplayDescriptionSaverHelper gameReplayDescriptionSaverHelper;
@@ -79,7 +75,7 @@ public class CycleStatisticsUseCase implements ICycleStatistics, ISaveGameStatis
     }
 
     @Override
-    public List<TCycleReplayDescription> getCycleReplayDescriptionsByDeltaTime(DateTime startingTime, DateTime endingTime, TEnvironmentDescription environment) throws TechnicalException {
+    public List<TCycleReplayDescription> getCycleReplayDescriptionsByDeltaTime(Date startingTime, Date endingTime, TEnvironmentDescription environment) throws TechnicalException {
         List<CycleReplayDescription> replays = getGameReplayDescriptionDaoForEnvironment(environment).getGameReplaysFromToTime(startingTime, endingTime);
         List<TCycleReplayDescription> descriptions = new ArrayList<TCycleReplayDescription>();
 
@@ -93,8 +89,10 @@ public class CycleStatisticsUseCase implements ICycleStatistics, ISaveGameStatis
 
     @Override
     public float getCurrentGamesPerMinute(TEnvironmentDescription environment) throws TechnicalException {
-        DateTime startingTime = DateTime.now().minusMinutes(1);
-        DateTime endingTime = DateTime.now();
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MINUTE, -1);
+        Date startingTime = calendar.getTime();
+        Date endingTime = Calendar.getInstance().getTime();
 
         List<CycleReplayDescription> replays = getGameReplayDescriptionDaoForEnvironment(environment).getGameReplaysFromToTime(startingTime, endingTime);
 
@@ -206,11 +204,11 @@ public class CycleStatisticsUseCase implements ICycleStatistics, ISaveGameStatis
         return result;
     }
 
-// --------------------- Interface ISaveGameStatistics ---------------------
+// --------------------- Interface ICycleStatisticsSaver ---------------------
 
     @Override
     public void SaveReplay(final ICycleReplay replay, final TEnvironmentDescription environment) throws TechnicalException {
-        final CycleReplayDescription description = new CycleReplayDescription(replay.getReplayId(), replay.getReplayDate(), replay.getPlayers(), replay.getWinningPlayer(), replay.getNumberOfTurns(), environment);
+        final CycleReplayDescription description = new CycleReplayDescription(replay.getReplayId(), replay.getReplayDate(), replay.getAgentSystems(), replay.getAgentSystemsWithGoalReached(), replay.getNumberOfTurns(), environment);
 
         new Thread(new Runnable() {
             @Override

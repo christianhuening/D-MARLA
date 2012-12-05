@@ -1,0 +1,26 @@
+digraph "TestNetworkAdapter"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TestNetworkAdapter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="INetworkMessageReceivedEvent\lHandler",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" client" ,fontname="Helvetica"];
+  Node3 [label="NetworkAdapter.Implementation.\lClientNetworkAdapterComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_implementation_1_1_client_network_adapter_component.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="NetworkAdapter.Interface.\lIClientNetworkAdapter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_network_adapter_1_1_interface_1_1_i_client_network_adapter.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" server" ,fontname="Helvetica"];
+  Node5 [label="NetworkAdapter.Implementation.\lServerNetworkAdapterComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_implementation_1_1_server_network_adapter_component.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="NetworkAdapter.Interface.\lIServerNetworkAdapter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_network_adapter_1_1_interface_1_1_i_server_network_adapter.html"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" serverNetworkAdapterUseCase" ,fontname="Helvetica"];
+  Node7 [label="NetworkAdapter.Implementation.\lServerNetworkAdapterUseCase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="NetworkAdapter.Implementation.\lAbstractNetworkAdapterUseCase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" types" ,fontname="Helvetica"];
+  Node9 [label="Type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="NetworkChannel::NetworkMessage\lReceivedHandle\< NetworkMessage \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

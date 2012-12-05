@@ -5,12 +5,12 @@ import AIRunner.Interface.IAIRunner;
 import AIRunner.Interface.IAIRunnerEventHandler;
 import AIRunner.Interface.SessionRunningException;
 import AgentSystemManagement.Interface.IAgentSystemManagement;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import NetworkAdapter.Interface.Exceptions.HostUnreachableException;
 import NetworkAdapter.Interface.IClientNetworkAdapter;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IAgentSystemPluginLoader;
-import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 
 import java.security.InvalidParameterException;
 

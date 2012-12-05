@@ -1,0 +1,15 @@
+digraph "AIRunner.Interface.IAIRunner"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="AIRunner.Interface.IAIRunner",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="AIClientFacade.Interface.\lIAIClientFacade",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_a_i_client_facade_1_1_interface_1_1_i_a_i_client_facade.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="AIClientFacade.Implementation.\lAIClientFacade",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_client_facade_1_1_implementation_1_1_a_i_client_facade.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="AIRunner.Implementation.\lAIRunnerComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_runner_1_1_implementation_1_1_a_i_runner_component.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="AIRunner.Implementation.\lAIRunnerUseCase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_runner_1_1_implementation_1_1_a_i_runner_use_case.html"];
+}

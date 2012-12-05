@@ -5,8 +5,13 @@
     <persistence-unit name="Derby">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-        <jar-file>file:./Deployment/MARLA-Server/EnvironmentPluginAPI.jar</jar-file>
-        <jar-file>file:./Deployment/MARLA-Server/MARLA-Server-GUI.jar</jar-file>
+        <!--
+        <jar-file>file:../Deployment/MARLA-Server/MARLA-Server.jar</jar-file>
+        -->
+
+        <class>GameStatistics.Implementation.Entities.ClientName</class>
+        <class>GameStatistics.Implementation.Entities.CycleReplayDescription</class>
+        <class>PersistenceManager.Implementation.Entities.TestEntity</class>
 
         <properties>
             <property name="hibernate.archive.autodetection" value="class"/>
@@ -24,8 +29,9 @@
     <persistence-unit name="UnitTestDerby">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-        <jar-file>file:///../../../Deployment/MARLA-Server/EnvironmentPluginAPI.jar</jar-file>
-        <jar-file>file:../../../Deployment/MARLA-Server/MARLA-Server-GUI.jar</jar-file>
+        <class>GameStatistics.Implementation.Entities.ClientName</class>
+        <class>GameStatistics.Implementation.Entities.CycleReplayDescription</class>
+        <class>PersistenceManager.Implementation.Entities.TestEntity</class>
 
         <properties>
             <property name="hibernate.archive.autodetection" value="class"/>

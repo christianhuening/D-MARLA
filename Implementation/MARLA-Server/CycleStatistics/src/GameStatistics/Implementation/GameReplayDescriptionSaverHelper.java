@@ -1,6 +1,6 @@
 package GameStatistics.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Service.ICycleReplay;
 import GameStatistics.Implementation.Entities.ClientName;
@@ -36,7 +36,7 @@ public class GameReplayDescriptionSaverHelper {
             saveTGameReplayToFile(replay, description.getGameReplayFileLocation());
 
             // TODO: An interface method that should return a List<String> returns a List<Object> for some weird unknown reason...It's a bug Dave...
-            for (Object player : replay.getPlayers()) {
+            for (Object player : replay.getAgentSystems()) {
                 this.getPlayerNameDaoForEnvironment(environment).saveClientName((String) player);
             }
 

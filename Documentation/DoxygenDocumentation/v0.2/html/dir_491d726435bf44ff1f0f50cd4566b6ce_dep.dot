@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Client/MARLAClientGUI/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_61a8cb7d782d55e344cc6d4601b12e7e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="MARLAClientGUI" fontname="Helvetica", fontsize="10", URL="dir_61a8cb7d782d55e344cc6d4601b12e7e.html"]
+  dir_491d726435bf44ff1f0f50cd4566b6ce [shape=box, label="src", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_491d726435bf44ff1f0f50cd4566b6ce.html"];
+  }
+}

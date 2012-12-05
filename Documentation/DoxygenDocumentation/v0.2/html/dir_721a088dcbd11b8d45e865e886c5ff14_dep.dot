@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/CustomNetworkMessages" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_2cd99d7a9775647c220d59b691ef0011 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="EnvironmentPluginAPI" fontname="Helvetica", fontsize="10", URL="dir_2cd99d7a9775647c220d59b691ef0011.html"]
+  dir_721a088dcbd11b8d45e865e886c5ff14 [shape=box, label="CustomNetworkMessages", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_721a088dcbd11b8d45e865e886c5ff14.html"];
+  }
+}

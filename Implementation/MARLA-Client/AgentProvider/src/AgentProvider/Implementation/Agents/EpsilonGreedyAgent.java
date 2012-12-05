@@ -1,10 +1,10 @@
 package AgentProvider.Implementation.Agents;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Contract.StateAction;
 import AgentSystemPluginAPI.Services.IAgent;
-import Exceptions.ErrorMessages;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import ZeroTypes.Exceptions.ErrorMessages;
 
 import java.util.Random;
 import java.util.Set;

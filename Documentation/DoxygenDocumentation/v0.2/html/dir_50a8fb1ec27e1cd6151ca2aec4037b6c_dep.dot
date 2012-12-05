@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Client/AIRunner/src/AIRunner/Interface" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_1aa44dc500b17cd2fb2c811841a5e5fd {
+    graph [ bgcolor="#ddddee", pencolor="black", label="AIRunner" fontname="Helvetica", fontsize="10", URL="dir_1aa44dc500b17cd2fb2c811841a5e5fd.html"]
+  dir_50a8fb1ec27e1cd6151ca2aec4037b6c [shape=box, label="Interface", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_50a8fb1ec27e1cd6151ca2aec4037b6c.html"];
+  }
+}

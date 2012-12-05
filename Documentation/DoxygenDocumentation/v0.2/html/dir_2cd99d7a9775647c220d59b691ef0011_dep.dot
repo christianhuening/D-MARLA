@@ -1,0 +1,17 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_2bf4f5e982196c96f56bb2243e8ae845 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_2bf4f5e982196c96f56bb2243e8ae845.html"]
+  subgraph clusterdir_2cd99d7a9775647c220d59b691ef0011 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_2cd99d7a9775647c220d59b691ef0011.html"];
+    dir_2cd99d7a9775647c220d59b691ef0011 [shape=plaintext label="EnvironmentPluginAPI"];
+    dir_783d33578cf95523f93026848ea95edd [shape=box label="Contract" color="black" fillcolor="white" style="filled" URL="dir_783d33578cf95523f93026848ea95edd.html"];
+    dir_721a088dcbd11b8d45e865e886c5ff14 [shape=box label="CustomNetworkMessages" color="black" fillcolor="white" style="filled" URL="dir_721a088dcbd11b8d45e865e886c5ff14.html"];
+    dir_0d7424fa1a208f1fd2e4ceeca697403c [shape=box label="Exceptions" color="black" fillcolor="white" style="filled" URL="dir_0d7424fa1a208f1fd2e4ceeca697403c.html"];
+    dir_b95f55fcb7434db6b32ddfa9fa32edab [shape=box label="Service" color="black" fillcolor="white" style="filled" URL="dir_b95f55fcb7434db6b32ddfa9fa32edab.html"];
+    dir_3e0e282879bc7fec56b3efbb432bf4ad [shape=box label="TransportTypes" color="black" fillcolor="white" style="filled" URL="dir_3e0e282879bc7fec56b3efbb432bf4ad.html"];
+  }
+  }
+}

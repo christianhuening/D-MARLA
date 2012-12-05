@@ -2,7 +2,8 @@ package NetworkAdapter.Implementation;
 
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Messages.ConnectionEndMessage;
-import org.joda.time.DateTime;
+
+import java.util.Date;
 
 /**
  * This class represents a connected client. It holds a control and a data channel.
@@ -12,12 +13,12 @@ class ClientSession {
     private String clientName;
     public NetworkChannel controlChannel;
     public NetworkChannel dataChannel;
-    private DateTime connectionTime;
+    private Date connectionTime;
 
     public ClientSession(int clientId, String clientName) {
         this.clientId = clientId;
         this.clientName = clientName;
-        connectionTime = new DateTime();
+        connectionTime = new Date();
     }
 
     /**
@@ -43,7 +44,7 @@ class ClientSession {
      *
      * @return != null
      */
-    public DateTime getConnectionTime() {
+    public Date getConnectionTime() {
         return connectionTime;
     }
 

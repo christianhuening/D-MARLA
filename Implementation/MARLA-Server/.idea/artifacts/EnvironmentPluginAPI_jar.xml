@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="EnvironmentPluginAPI:jar">
+    <output-path>$PROJECT_DIR$/../../Deployment/PluginAPI</output-path>
+    <root id="archive" name="EnvironmentPluginAPI.jar">
+      <element id="module-output" name="EnvironmentPluginAPI" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../T_Components/junit4.10/junit-4.10.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

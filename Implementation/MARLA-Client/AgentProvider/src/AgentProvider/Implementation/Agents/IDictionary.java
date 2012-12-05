@@ -1,9 +1,7 @@
 package AgentProvider.Implementation.Agents;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.StateAction;
-
-import java.util.Map;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 
 /**
  * This interface defines how reinforcement learning agents are allowed to access their learning data.

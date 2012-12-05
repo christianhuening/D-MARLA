@@ -1,47 +1,60 @@
-import Actions.CliffActionDescription;
-import EnvironmentPluginAPI.Contract.Exception.CorruptMapFileException;
-import EnvironmentPluginAPI.Contract.Exception.IllegalNumberOfClientsException;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import EnvironmentPluginAPI.Contract.IActionDescription;
+import Actions.ActionDescription;
+import Actions.EnvironmentState;
 import EnvironmentPluginAPI.Contract.IEnvironment;
 import EnvironmentPluginAPI.Contract.IEnvironmentState;
+import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
+import EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException;
+import EnvironmentPluginAPI.Exceptions.IllegalNumberOfClientsException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
-import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
-import Logic.CliffSession;
+import Logic.GridWorldConfiguration;
+import Logic.GridWorldStyle;
+import Logic.Session;
+import Statistics.CliffReplay;
 
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Jason
- * Date: 28.11.12
- * Time: 18:41
- * To change this template use File | Settings | File Templates.
+ *  This class implements the grid-world environment plugin.
  */
-public class CliffEnvironmentPlugin implements IEnvironment {
+public class CliffEnvironmentPlugin implements IEnvironment<GridWorldConfiguration, EnvironmentState, ActionDescription> {
 
-    private CliffSession session;
+    private final ICycleStatisticsSaver cycleStatisticsSaver;
+    private Session session;
     private TMARLAClientInstance activeInstance;
+    private CliffReplay replay;
 
-    @Override
-    public List<TMapMetaData> getAvailableMaps() throws CorruptMapFileException, TechnicalException {
-        return new LinkedList<TMapMetaData>();
+
+    public CliffEnvironmentPlugin(ICycleStatisticsSaver cycleStatisticsSaver) {
+        this.cycleStatisticsSaver = cycleStatisticsSaver;
     }
 
     @Override
-    public void saveMap(TMapMetaData tMapMetaData) throws TechnicalException {
-        //To change body of implemented methods use File | Settings | File Templates.
+    public List<GridWorldConfiguration> getAvailableConfigurations() throws CorruptConfigurationFileException, TechnicalException {
+        LinkedList<GridWorldConfiguration> configurations = new LinkedList<GridWorldConfiguration>();
+        configurations.add(new GridWorldConfiguration(20, 8, GridWorldStyle.Cliff));
+        configurations.add(new GridWorldConfiguration(20, 8, GridWorldStyle.Random));
+        return configurations;
     }
 
     @Override
-    public IEnvironmentState start(List<TMARLAClientInstance> marlaClientInstances, TMapMetaData tMapMetaData) throws TechnicalException, IllegalNumberOfClientsException {
+    public void saveConfiguration(GridWorldConfiguration configuration) throws TechnicalException {
+        // not yet..
+    }
+
+    @Override
+    public IEnvironmentState start(List<TMARLAClientInstance> marlaClientInstances, GridWorldConfiguration configuration) throws TechnicalException, IllegalNumberOfClientsException {
         if (marlaClientInstances.size() != 1) {
             throw new IllegalNumberOfClientsException("The cliff needs exactly one participant.");
         }
 
-        session = new CliffSession();
+        session = new Session(configuration);
         activeInstance = marlaClientInstances.get(0);
+        replay = new CliffReplay("QLearningAgent", 0, configuration);
+        replay.addState(session.getCurrentState());
+
         return session.getCurrentState();
     }
 
@@ -56,25 +69,23 @@ public class CliffEnvironmentPlugin implements IEnvironment {
     }
 
     @Override
-    public IEnvironmentState getCurrentGameState() throws TechnicalException {
+    public EnvironmentState getCurrentEnvironmentState() throws TechnicalException {
         return session.getCurrentState();
     }
 
     @Override
-    public IEnvironmentState executeAction(IActionDescription actionDescription) throws TechnicalException {
-        CliffActionDescription action = (CliffActionDescription)actionDescription;
-        session.moveAgent(action.getDirection());
+    public EnvironmentState executeAction(ActionDescription actionDescription) throws TechnicalException {
+        session.moveAgent(actionDescription.getDirection());
+
+        replay.addState(session.getCurrentState());
+        replay.countTurn();
 
         return session.getCurrentState();
-    }
-
-    @Override
-    public void endTurn() throws TechnicalException {
-        // nothing to do here
     }
 
     @Override
     public void end() throws TechnicalException {
-        // nothing to do here
+        cycleStatisticsSaver.SaveReplay(replay, new TEnvironmentDescription("The Cliff", "v0.01", "A simple environment, illustrating the cliff environment" +
+                " from the book by Sutton. See http://webdocs.cs.ualberta.ca/~sutton/book/ebook/node1.html"));
     }
 }

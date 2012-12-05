@@ -1,21 +1,18 @@
-import Enumeration.SessionStatus;
-import EnvironmentPluginAPI.Contract.Exception.CorruptMapFileException;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException;
+import Models.ConfigurationListTableModel;
+import ZeroTypes.Enumerations.SessionStatus;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
-import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
 import GameServerFacade.Interface.IServerFacade;
 import GameServerFacade.Interface.ServerFacadeFactory;
 import Models.ClientTableModel;
 import Models.EnvironmentComboBoxModel;
-import Models.MapListTableModel;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import Settings.SettingException;
-import TransportTypes.TNetworkClient;
-import TransportTypes.TSession;
+import ZeroTypes.Settings.SettingException;
+import ZeroTypes.TransportTypes.TNetworkClient;
+import ZeroTypes.TransportTypes.TSession;
 
 import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.UnknownHostException;
@@ -51,11 +48,11 @@ public class SessionConfig extends Observable {
     private JComboBox allMapsComboBox;
     private JTextField mapNameTextField;
     private JButton saveMapButton;
-    private JTable mapList;
+    private JTable configurationList;
     private JComboBox environmentComboBox;
     private ClientTableModel clientsInSessionTableModel;
     private ClientTableModel clientsAvailableTableModel;
-    private MapListTableModel mapListTableModel;
+    private ConfigurationListTableModel configurationListTableModel;
 
     private final IServerFacade facade;
     private boolean mapEdited = false;
@@ -88,26 +85,14 @@ public class SessionConfig extends Observable {
         clientsAvailableTable.setModel(new ClientTableModel());
         clientsInSessionTable.setModel(new ClientTableModel());
 
-        mapList.setModel(new MapListTableModel());
+        configurationList.setModel(new ConfigurationListTableModel());
 
 
         clientsInSessionTableModel = (ClientTableModel) clientsInSessionTable.getModel();
         clientsAvailableTableModel = (ClientTableModel) clientsAvailableTable.getModel();
-        mapListTableModel = (MapListTableModel) mapList.getModel();
+        configurationListTableModel = (ConfigurationListTableModel) configurationList.getModel();
 
-        updateMapList();
-
-        mapList.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
-
-            @Override
-            public void valueChanged(ListSelectionEvent e) {
-                if(mapList.getSelectedRow() > -1 && mapListTableModel.getSize() >= mapList.getSelectedRow()){
-                    fillGUIWithMapMetaData(mapListTableModel.get(mapList.getSelectedRow()));
-                }
-            }
-
-        });
-
+        updateConfigurationList();
 
         // TODO: Error Messages einsammeln und in einem Dialog anzeigen
         addClientToSession.addActionListener(new ActionListener() {
@@ -151,6 +136,7 @@ public class SessionConfig extends Observable {
 
                     TSession session = new TSession(UUID.randomUUID(), sessionNameTextField.getText(),
                             SessionStatus.READY,
+                            configurationListTableModel.get(configurationList.getSelectedRow()),
                             clientsInSessionTableModel.getRowCount(),
                             Integer.parseInt(gameNumberTextField.getText()),
                             clients,
@@ -165,9 +151,9 @@ public class SessionConfig extends Observable {
                 } catch (UnknownHostException e) {
 
                 } catch (PluginNotReadableException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    e.printStackTrace();
                 } catch (TechnicalException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    e.printStackTrace();
                 }
             }
         });
@@ -188,32 +174,21 @@ public class SessionConfig extends Observable {
         });
     }
 
-    private void updateMapList() {
+    private void updateConfigurationList() {
         try {
-            mapList.clearSelection();
-            mapListTableModel.removeAllMaps();
+            configurationList.clearSelection();
+            configurationListTableModel.removeAllConfigurations();
             if(environmentComboBox.getItemCount() > 0){
                 TEnvironmentDescription env = environmentComboBoxModel.getEnvironmentDescription(environmentComboBox.getSelectedIndex());
-                mapListTableModel.addMaps(facade.getAvailableMaps(env));
+                configurationListTableModel.addConfigurations(facade.getAvailableConfigurations(env));
             }
-        } catch (CorruptMapFileException e) {
+        } catch (CorruptConfigurationFileException e) {
             e.printStackTrace();
         } catch (TechnicalException e) {
             e.printStackTrace();
         } catch (PluginNotReadableException e) {
             e.printStackTrace();
         }
-    }
-
-    private void fillGUIWithMapMetaData(TMapMetaData metaData) {
-        mapNameTextField.setText(metaData.getName());
-        mapSymmetryComboBox.setSelectedIndex(metaData.getSymmetry());
-
-        edgeFieldTextField.setText("" + metaData.getEdgeLength());
-        mapSeedTextField.setText("" + metaData.getSeed());
-        factoryFactorTextField.setText("" + metaData.getFactoryNumberFactor());
-        factorySizeFactorTextField.setText("" + metaData.getFactorySizeFactor());
-        maximumFactorySizeTextField.setText("" + metaData.getMaximumFactorySize());
     }
 
     /**

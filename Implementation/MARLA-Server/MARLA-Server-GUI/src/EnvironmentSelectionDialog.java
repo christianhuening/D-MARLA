@@ -1,9 +1,9 @@
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import GameServerFacade.Interface.IServerFacade;
 import Models.EnvironmentListTableModel;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import Settings.SettingException;
+import ZeroTypes.Settings.SettingException;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

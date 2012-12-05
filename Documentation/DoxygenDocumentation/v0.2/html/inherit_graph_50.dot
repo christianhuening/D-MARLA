@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GameStatistics.Implementation.\lGameReplayDescriptionSaverHelper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_game_statistics_1_1_implementation_1_1_game_replay_description_saver_helper.html"];
+}

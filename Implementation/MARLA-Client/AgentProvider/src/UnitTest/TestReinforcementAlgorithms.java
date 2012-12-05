@@ -1,11 +1,11 @@
 import AgentProvider.Implementation.AgentProviderComponent;
 import AgentProvider.Interface.IAgentProvider;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Contract.StateAction;
 import AgentSystemPluginAPI.Services.IAgent;
 import AgentSystemPluginAPI.Services.LearningAlgorithm;
-import Settings.SettingException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import ZeroTypes.Settings.SettingException;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;

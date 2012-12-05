@@ -1,0 +1,13 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RuntimeException",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="EnvironmentPluginAPI.Custom\lNetworkMessages.DecodingMessage\lFailedException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_environment_plugin_a_p_i_1_1_custom_network_messages_1_1_decoding_message_failed_exception.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="EnvironmentPluginAPI.Exceptions.\lIllegalActionException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_environment_plugin_a_p_i_1_1_exceptions_1_1_illegal_action_exception.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Exceptions.TypeIsNotSerializable\lException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_exceptions_1_1_type_is_not_serializable_exception.html"];
+}

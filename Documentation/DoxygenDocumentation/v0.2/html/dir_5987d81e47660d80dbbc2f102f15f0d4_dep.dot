@@ -1,0 +1,13 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/R_Components/PluginLoader/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_26e978d3508a30e2c74706671f394228 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="PluginLoader" fontname="Helvetica", fontsize="10", URL="dir_26e978d3508a30e2c74706671f394228.html"]
+  subgraph clusterdir_5987d81e47660d80dbbc2f102f15f0d4 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_5987d81e47660d80dbbc2f102f15f0d4.html"];
+    dir_5987d81e47660d80dbbc2f102f15f0d4 [shape=plaintext label="src"];
+    dir_4e6bcb78990bd1af2deaf6d974f51128 [shape=box label="PluginLoader" color="red" fillcolor="white" style="filled" URL="dir_4e6bcb78990bd1af2deaf6d974f51128.html"];
+  }
+  }
+}

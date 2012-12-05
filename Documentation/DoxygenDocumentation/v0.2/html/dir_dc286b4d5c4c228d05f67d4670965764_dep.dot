@@ -1,0 +1,15 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Server/ServerFacade/src/GameServerFacade" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8b914307714837b799383a68446c59ed {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_8b914307714837b799383a68446c59ed.html"]
+  subgraph clusterdir_dc286b4d5c4c228d05f67d4670965764 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_dc286b4d5c4c228d05f67d4670965764.html"];
+    dir_dc286b4d5c4c228d05f67d4670965764 [shape=plaintext label="GameServerFacade"];
+    dir_de640b1da48dba894b08e1ba19d05654 [shape=box label="Implementation" color="black" fillcolor="white" style="filled" URL="dir_de640b1da48dba894b08e1ba19d05654.html"];
+    dir_b59848bf394ef2d483205192aa46f849 [shape=box label="Interface" color="black" fillcolor="white" style="filled" URL="dir_b59848bf394ef2d483205192aa46f849.html"];
+    dir_02961653530d0285ea8332f2754d00bf [shape=box label="UnitTest" color="black" fillcolor="white" style="filled" URL="dir_02961653530d0285ea8332f2754d00bf.html"];
+  }
+  }
+}

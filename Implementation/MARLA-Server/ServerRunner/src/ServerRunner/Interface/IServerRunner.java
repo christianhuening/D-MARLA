@@ -1,11 +1,11 @@
 package ServerRunner.Interface;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import TransportTypes.TNetworkClient;
+import ZeroTypes.TransportTypes.TNetworkClient;
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
-import TransportTypes.TSession;
+import ZeroTypes.TransportTypes.TSession;
 
 import java.util.List;
 import java.util.UUID;
@@ -15,7 +15,7 @@ public interface IServerRunner {
     /**
      * Starts hosting the GameServer services over the network.
      *
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException
+     * @throws EnvironmentPluginAPI.Exceptions.TechnicalException
      * @throws ConnectionLostException
      */
     public void startHosting() throws TechnicalException, ConnectionLostException;

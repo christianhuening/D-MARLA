@@ -12,7 +12,6 @@
     <orderEntry type="module" module-name="NetworkAdapter" exported="" />
     <orderEntry type="module" module-name="ServerRunner" exported="" />
     <orderEntry type="library" exported="" name="picocontainer-2.14.1" level="project" />
-    <orderEntry type="library" exported="" name="joda-time-2.1" level="project" />
     <orderEntry type="module" module-name="ZeroTypes" exported="" />
     <orderEntry type="module" module-name="EnvironmentPluginAPI" />
     <orderEntry type="module" module-name="PluginLoader" />

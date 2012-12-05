@@ -2,11 +2,11 @@ import AIClientFacade.Interface.AIClientApplicationCoreFactory;
 import AIClientFacade.Interface.IAIClientFacade;
 import AIRunner.Interface.AIRunnerEventType;
 import AIRunner.Interface.IAIRunnerEventHandler;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import NetworkAdapter.Interface.Exceptions.HostUnreachableException;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import NetworkAdapter.Interface.Exceptions.HostUnreachableException;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import Settings.SettingException;
+import ZeroTypes.Settings.SettingException;
 
 import javax.swing.*;
 import java.awt.*;
@@ -107,9 +107,9 @@ public class AIClientMain {
         } catch (TechnicalException e) {
             e.printStackTrace();
         } catch (PluginNotReadableException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         } catch (SettingException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
         agentTable.setModel(agentTableModel);
 

@@ -1,0 +1,13 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Server/CycleStatistics/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0fb0c54f730eef74656dac91a1bc5cda {
+    graph [ bgcolor="#ddddee", pencolor="black", label="CycleStatistics" fontname="Helvetica", fontsize="10", URL="dir_0fb0c54f730eef74656dac91a1bc5cda.html"]
+  subgraph clusterdir_2ea1577bfd6af0ae51198fac5076881b {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_2ea1577bfd6af0ae51198fac5076881b.html"];
+    dir_2ea1577bfd6af0ae51198fac5076881b [shape=plaintext label="src"];
+    dir_2ab1b7ceffea2ab53641bd5fe2cad4ba [shape=box label="GameStatistics" color="red" fillcolor="white" style="filled" URL="dir_2ab1b7ceffea2ab53641bd5fe2cad4ba.html"];
+  }
+  }
+}

@@ -1,8 +1,8 @@
 package NetworkAdapter.Interface;
 
-import TransportTypes.TNetworkClient;
+import ZeroTypes.TransportTypes.TNetworkClient;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.Exceptions.NotConnectedException;
 
@@ -23,8 +23,8 @@ public interface IServerNetworkAdapter {
 	public <T extends NetworkMessage> void subscribeForNetworkMessageReceivedEvent(INetworkMessageReceivedEventHandler<T> eventHandler, Class messageType);
 
     /**
-     * @throws Settings.SettingException if any application settings were unreachable or configured incorrectly
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException if any severe technical exceptions occur, i.e. the port is blocked.
+     * @throws ZeroTypes.Settings.SettingException if any application settings were unreachable or configured incorrectly
+     * @throws EnvironmentPluginAPI.Exceptions.TechnicalException if any severe technical exceptions occur, i.e. the port is blocked.
      */
     public void startHosting() throws TechnicalException, ConnectionLostException;
 

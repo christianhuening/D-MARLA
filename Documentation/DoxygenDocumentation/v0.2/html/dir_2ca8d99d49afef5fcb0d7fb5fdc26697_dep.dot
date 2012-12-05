@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Overseer/OverseerGUI/src/OverseerGUI" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_3b4230e5bb8d9b760933c901c334cfe9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_3b4230e5bb8d9b760933c901c334cfe9.html"]
+  dir_2ca8d99d49afef5fcb0d7fb5fdc26697 [shape=box, label="OverseerGUI", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2ca8d99d49afef5fcb0d7fb5fdc26697.html"];
+  }
+}

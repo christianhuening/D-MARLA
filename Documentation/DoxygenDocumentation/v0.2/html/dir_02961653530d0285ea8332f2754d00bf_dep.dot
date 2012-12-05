@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Server/ServerFacade/src/GameServerFacade/UnitTest" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_dc286b4d5c4c228d05f67d4670965764 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="GameServerFacade" fontname="Helvetica", fontsize="10", URL="dir_dc286b4d5c4c228d05f67d4670965764.html"]
+  dir_02961653530d0285ea8332f2754d00bf [shape=box, label="UnitTest", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_02961653530d0285ea8332f2754d00bf.html"];
+  }
+}

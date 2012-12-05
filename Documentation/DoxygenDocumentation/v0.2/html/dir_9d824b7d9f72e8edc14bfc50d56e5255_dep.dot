@@ -1,0 +1,17 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Client" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_df0304752b06677cfa1dca6199f47c69 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Implementation" fontname="Helvetica", fontsize="10", URL="dir_df0304752b06677cfa1dca6199f47c69.html"]
+  subgraph clusterdir_9d824b7d9f72e8edc14bfc50d56e5255 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_9d824b7d9f72e8edc14bfc50d56e5255.html"];
+    dir_9d824b7d9f72e8edc14bfc50d56e5255 [shape=plaintext label="MARLA-Client"];
+    dir_755c91e1ee74c4a73d3af7c677eed549 [shape=box label="AgentProvider" color="red" fillcolor="white" style="filled" URL="dir_755c91e1ee74c4a73d3af7c677eed549.html"];
+    dir_8b18c74ba6eb1d9f7f5416c158d35c91 [shape=box label="AgentSystemManagement" color="red" fillcolor="white" style="filled" URL="dir_8b18c74ba6eb1d9f7f5416c158d35c91.html"];
+    dir_e534ca0d26383182336f224296825d5d [shape=box label="AIClientFacade" color="red" fillcolor="white" style="filled" URL="dir_e534ca0d26383182336f224296825d5d.html"];
+    dir_92b4037322f4336f317a8e5f8f14553b [shape=box label="AIRunner" color="red" fillcolor="white" style="filled" URL="dir_92b4037322f4336f317a8e5f8f14553b.html"];
+    dir_61a8cb7d782d55e344cc6d4601b12e7e [shape=box label="MARLAClientGUI" color="red" fillcolor="white" style="filled" URL="dir_61a8cb7d782d55e344cc6d4601b12e7e.html"];
+  }
+  }
+}

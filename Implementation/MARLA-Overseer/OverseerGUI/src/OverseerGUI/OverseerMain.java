@@ -1,7 +1,7 @@
 package OverseerGUI;
 
-import EnvironmentPluginAPI.Contract.AbstractVisualizeReplayPanel;
 import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Contract.IVisualizeReplay;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Service.ICycleReplay;
 import Exceptions.GameReplayNotContainedInDatabaseException;
@@ -9,10 +9,8 @@ import PluginLoader.Implementation.EnvironmentPluginLoaderComponent;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IEnvironmentPluginLoader;
 import RemoteInterface.ICycleStatistics;
-import Settings.AppSettings;
 import Settings.SettingException;
 import TransportTypes.TCycleReplayDescription;
-import org.joda.time.DateTime;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -27,6 +25,7 @@ import java.rmi.RMISecurityManager;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.Calendar;
 import java.util.List;
 
 
@@ -168,11 +167,13 @@ public class OverseerMain {
                                 // Load Environment
                                 pluginLoader.loadEnvironmentPlugin(environmentDescription);
 
-                                // Get VisualizationPanel
-                                AbstractVisualizeReplayPanel visualizeReplayPanel = pluginLoader.getReplayVisualizationForSwing();
 
-                                // Add VisualizationPanel to GameReplayForm
-                                gameReplayForm.setVisualizationPlugin(visualizeReplayPanel);
+
+                                IVisualizeReplay visualizeReplay = pluginLoader.getReplayVisualizationForSwing();
+                                if(visualizeReplay == null) {
+                                    visualizeReplay = pluginLoader.getReplayVisualization();
+                                }
+                                gameReplayForm.setVisualizationPlugin(visualizeReplay);
 
                                 // get Available Players from Server
                                 playerListModel.removeAllElements();
@@ -181,8 +182,10 @@ public class OverseerMain {
                                 }
 
                                 // get Available GameReplayDescriptions for the Last minute
-                                // #TODO: GameStatistics should have a method which allows for retreival of the last n-Games instead of a time interval
-                                gameDescs = gameStatistics.getCycleReplayDescriptionsByDeltaTime(DateTime.now().minusDays(1), DateTime.now(), environmentDescription);
+                                // #TODO: GameStatistics should have a method which allows for retrieval of the last n-Games instead of a time interval
+                                Calendar calendar = Calendar.getInstance();
+                                calendar.add(Calendar.DATE, -1);
+                                gameDescs = gameStatistics.getCycleReplayDescriptionsByDeltaTime(calendar.getTime(), Calendar.getInstance().getTime(), environmentDescription);
                                 cycleDescriptionTableModel.removeAllGameDescriptions();
                                 cycleDescriptionTableModel.addGameDescriptions(gameDescs);
 
@@ -310,8 +313,11 @@ public class OverseerMain {
 
     public static void main(String[] args) {
         System.setSecurityManager(new RMISecurityManager() {
-            public void checkPermission(java.security.Permission permission){}
-            public void checkPermission(java.security.Permission permission, java.lang.Object o){}
+            public void checkPermission(java.security.Permission permission) {
+            }
+
+            public void checkPermission(java.security.Permission permission, java.lang.Object o) {
+            }
         });
 
         try {

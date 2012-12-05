@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Externalizable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="EnvironmentPluginAPI.Custom\lNetworkMessages.IActionDescription\lMessage\< A extends IActionDescription \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_environment_plugin_a_p_i_1_1_custom_network_messages_1_1_i_action_description_message_a970759cf4d73da967718a5c27999059.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="EnvironmentPluginAPI.Custom\lNetworkMessages.IEnvironmentState\lMessage\< E extends IEnvironmentState \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_environment_plugin_a_p_i_1_1_custom_network_messages_1_1_i_environment_state_message_3a53694f0b44a542540bc15ef06a8a940.html"];
+}

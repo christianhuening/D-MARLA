@@ -1,16 +1,17 @@
 package PluginLoader.Implementation;
 
 import EnvironmentPluginAPI.Contract.*;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import EnvironmentPluginAPI.CustomNetworkMessages.IActionDescriptionMessage;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.CustomNetworkMessages.IEnvironmentStateMessage;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
-import NetworkAdapter.Messages.DefaultActionDescriptionMessage;
+import EnvironmentPluginAPI.Service.AbstractVisualizeReplayPanel;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
+import EnvironmentPluginAPI.Service.IVisualizeReplay;
 import NetworkAdapter.Messages.DefaultEnvironmentStateMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import Settings.AppSettings;
-import Settings.SettingException;
+import ZeroTypes.Settings.AppSettings;
+import ZeroTypes.Settings.SettingException;
 
 import java.io.File;
 import java.lang.reflect.Constructor;
@@ -105,15 +106,15 @@ public class EnvironmentPluginLoaderUseCase {
                     continue;
                 }
 
-                if (!AbstractVisualizeReplayPanel.class.equals(c)
-                        && AbstractVisualizeReplayPanel.class.isAssignableFrom(c)) {
-                    customAbstractVisualization = c;
-                    continue;
-                }
+                if (IVisualizeReplay.class.isAssignableFrom(c)
+                        && !IVisualizeReplay.class.equals(c)
+                        && !AbstractVisualizeReplayPanel.class.equals(c)) {
 
-                if (!IVisualizeReplay.class.equals(c)
-                        && IVisualizeReplay.class.isAssignableFrom(c)) {
-                    customInterfaceVisualization = c;
+                    if (AbstractVisualizeReplayPanel.class.isAssignableFrom(c)) {
+                        customAbstractVisualization = c;
+                    } else {
+                        customInterfaceVisualization = c;
+                    }
                 }
             }
 
@@ -135,7 +136,7 @@ public class EnvironmentPluginLoaderUseCase {
      *
      * @param environmentDescription a description of an existing environment != null
      * @return null, if environment was not found
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException
+     * @throws EnvironmentPluginAPI.Exceptions.TechnicalException
      *          if technical errors prevent the component from loading the plugin specified
      * @throws PluginLoader.Interface.Exceptions.PluginNotReadableException
      *          if the plugin is not readable, for example if no TEnvironmentDescription is provided
@@ -176,8 +177,11 @@ public class EnvironmentPluginLoaderUseCase {
     }
 
     public IVisualizeReplay getReplayVisualization() {
+
         try { //TODO: needs better exception handling
-            return (IVisualizeReplay) customInterfaceVisualization.newInstance();
+            if (customInterfaceVisualization != null) {
+                return (IVisualizeReplay) customInterfaceVisualization.newInstance();
+            }
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -189,7 +193,9 @@ public class EnvironmentPluginLoaderUseCase {
 
     public AbstractVisualizeReplayPanel getReplayVisualizationForSwing() {
         try { //TODO: needs better exception handling
-            return (AbstractVisualizeReplayPanel) customAbstractVisualization.newInstance();
+            if (customAbstractVisualization != null) {
+                return (AbstractVisualizeReplayPanel) customAbstractVisualization.newInstance();
+            }
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -199,8 +205,8 @@ public class EnvironmentPluginLoaderUseCase {
         return null;
     }
 
-    public IEnvironment createEnvironmentInstance(ISaveGameStatistics saveGameStatistics) throws TechnicalException {
-        if(loadedEnvironmentDescriptor == null) {
+    public IEnvironment createEnvironmentInstance(ICycleStatisticsSaver saveGameStatistics) throws TechnicalException {
+        if (loadedEnvironmentDescriptor == null) {
             throw new UnsupportedOperationException("No plugin was loaded!");
         }
 

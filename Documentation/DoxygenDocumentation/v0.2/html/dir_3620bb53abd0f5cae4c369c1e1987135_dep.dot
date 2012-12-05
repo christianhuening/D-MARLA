@@ -1,0 +1,15 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/R_Components" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_df0304752b06677cfa1dca6199f47c69 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Implementation" fontname="Helvetica", fontsize="10", URL="dir_df0304752b06677cfa1dca6199f47c69.html"]
+  subgraph clusterdir_3620bb53abd0f5cae4c369c1e1987135 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_3620bb53abd0f5cae4c369c1e1987135.html"];
+    dir_3620bb53abd0f5cae4c369c1e1987135 [shape=plaintext label="R_Components"];
+    dir_c928de1b399d899cfb6c6aaab2536c85 [shape=box label="NetworkAdapter" color="red" fillcolor="white" style="filled" URL="dir_c928de1b399d899cfb6c6aaab2536c85.html"];
+    dir_b9f9cc3ef2a0b3b5219e7d8699867103 [shape=box label="PersistenceManager" color="red" fillcolor="white" style="filled" URL="dir_b9f9cc3ef2a0b3b5219e7d8699867103.html"];
+    dir_26e978d3508a30e2c74706671f394228 [shape=box label="PluginLoader" color="red" fillcolor="white" style="filled" URL="dir_26e978d3508a30e2c74706671f394228.html"];
+  }
+  }
+}

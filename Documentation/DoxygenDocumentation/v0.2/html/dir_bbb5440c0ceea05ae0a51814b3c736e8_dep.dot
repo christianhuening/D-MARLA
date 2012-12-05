@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/ZeroTypes/src/Interfaces" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_83c27a1a8280ea473d9aae3ae06dc9ce {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_83c27a1a8280ea473d9aae3ae06dc9ce.html"]
+  dir_bbb5440c0ceea05ae0a51814b3c736e8 [shape=box, label="Interfaces", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_bbb5440c0ceea05ae0a51814b3c736e8.html"];
+  }
+}

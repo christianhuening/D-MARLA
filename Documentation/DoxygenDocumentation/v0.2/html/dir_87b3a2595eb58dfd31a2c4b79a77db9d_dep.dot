@@ -1,0 +1,13 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Server/ServerRunner" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_df7ba0713187a0f813e54fe96bb624f3 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="MARLA-Server" fontname="Helvetica", fontsize="10", URL="dir_df7ba0713187a0f813e54fe96bb624f3.html"]
+  subgraph clusterdir_87b3a2595eb58dfd31a2c4b79a77db9d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_87b3a2595eb58dfd31a2c4b79a77db9d.html"];
+    dir_87b3a2595eb58dfd31a2c4b79a77db9d [shape=plaintext label="ServerRunner"];
+    dir_caf7a0ed1a64eca2bb792c53936e784a [shape=box label="src" color="red" fillcolor="white" style="filled" URL="dir_caf7a0ed1a64eca2bb792c53936e784a.html"];
+  }
+  }
+}

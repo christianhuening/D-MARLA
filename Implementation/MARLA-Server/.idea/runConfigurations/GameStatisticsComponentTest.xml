@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="GameStatisticsComponentTest" type="JUnit" factoryName="JUnit" editBeforeRun="true">
-    <module name="GameStatistics" />
+    <module name="CycleStatistics" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
     <option name="ALTERNATIVE_JRE_PATH" value="" />
     <option name="PACKAGE_NAME" value="" />

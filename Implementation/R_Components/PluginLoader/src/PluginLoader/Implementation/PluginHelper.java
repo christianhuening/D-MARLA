@@ -1,7 +1,7 @@
 package PluginLoader.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import Exceptions.ErrorMessages;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import ZeroTypes.Exceptions.ErrorMessages;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import sun.misc.Launcher;
 
@@ -55,7 +55,7 @@ class PluginHelper {
      *
      * @param pathToJar the location of the jar != null
      * @return the classloader
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException
+     * @throws EnvironmentPluginAPI.Exceptions.TechnicalException
      *                                  if the jar is not readable
      * @throws IllegalArgumentException if no path is found under the given path
      */
@@ -85,7 +85,7 @@ class PluginHelper {
      *
      * @param pathToJar the location of the jar != null
      * @return empty, if no class files are in the jar
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException
+     * @throws EnvironmentPluginAPI.Exceptions.TechnicalException
      *                                  if the jar is not readable
      * @throws IllegalArgumentException if no path is found under the given path
      */

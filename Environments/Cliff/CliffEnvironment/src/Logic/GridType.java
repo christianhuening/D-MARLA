@@ -6,5 +6,5 @@ package Logic;
 public enum GridType {
     GOAL,
     NORMAL,
-    CLIFF
+    PENALTY
 }

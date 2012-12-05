@@ -9,7 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ZeroTypes" exported="" />
-    <orderEntry type="library" exported="" name="joda-time-2.1" level="project" />
     <orderEntry type="module" module-name="EnvironmentPluginAPI" exported="" />
     <orderEntry type="module-library" scope="TEST">
       <library>

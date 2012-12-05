@@ -12,7 +12,6 @@
     <orderEntry type="library" exported="" name="antlr-2.7.7" level="project" />
     <orderEntry type="module" module-name="PersistenceManager" exported="" />
     <orderEntry type="library" exported="" name="junit-4.10" level="project" />
-    <orderEntry type="library" exported="" name="joda-time-2.1" level="project" />
     <orderEntry type="module" module-name="EnvironmentPluginAPI" />
   </component>
 </module>

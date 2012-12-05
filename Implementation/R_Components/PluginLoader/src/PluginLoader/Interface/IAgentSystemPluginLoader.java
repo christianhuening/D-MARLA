@@ -2,11 +2,11 @@ package PluginLoader.Interface;
 
 import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.IActionDescription;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import Settings.SettingException;
+import ZeroTypes.Settings.SettingException;
 
 import java.io.File;
 import java.util.List;
@@ -21,9 +21,9 @@ public interface IAgentSystemPluginLoader {
      * Searches recursively for agent system plugins in the given directory.
      *
      * @return empty if no agent system plugins found in that directory
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException if technical errors prevent the component from loading the plugin described
+     * @throws EnvironmentPluginAPI.Exceptions.TechnicalException if technical errors prevent the component from loading the plugin described
      * @throws PluginLoader.Interface.Exceptions.PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
-     * @throws Settings.SettingException if the agentSystemPluginsFolder is not correctly set int he app's settings.
+     * @throws ZeroTypes.Settings.SettingException if the agentSystemPluginsFolder is not correctly set int he app's settings.
      */
     public List<TAgentSystemDescription> listAvailableAgentSystemPlugins() throws TechnicalException, PluginNotReadableException, SettingException;
 

@@ -1,17 +1,14 @@
 package AgentSystemManagement.Plugins;
 
 import AgentSystemPluginAPI.Contract.IAgentSystem;
-import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IAgentSystemPluginLoader;
-import Settings.AppSettings;
-import Settings.SettingException;
+import ZeroTypes.Settings.SettingException;
 
 import java.util.List;
-import java.util.regex.Pattern;
 
 public class PluginManager {
 

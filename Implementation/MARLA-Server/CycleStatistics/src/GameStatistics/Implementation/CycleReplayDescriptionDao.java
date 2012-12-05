@@ -8,15 +8,15 @@ package GameStatistics.Implementation;
  * To change this template use File | Settings | File Templates.
  */
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
-import Exceptions.ErrorMessages;
+import ZeroTypes.Exceptions.ErrorMessages;
 import GameStatistics.Implementation.Entities.CycleReplayDescription;
 import PersistenceManager.Interface.AbstractDao;
-import org.joda.time.DateTime;
 
 import javax.persistence.TypedQuery;
 import java.io.File;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -64,7 +64,7 @@ public class CycleReplayDescriptionDao extends AbstractDao<CycleReplayDescriptio
         }
     }
 
-    public List<CycleReplayDescription> getGameReplaysFromToTime(DateTime from, DateTime to) throws TechnicalException {
+    public List<CycleReplayDescription> getGameReplaysFromToTime(Date from, Date to) throws TechnicalException {
         synchronized (daoLock) {
             TypedQuery<CycleReplayDescription> query = getEntityManager().createQuery(
                     "SELECT g FROM CycleReplayDescription g WHERE g.replayDate >= :startingTime AND g.replayDate <= :endingTime AND g.environmentDescription = :environment", CycleReplayDescription.class).setParameter("startingTime", from).setParameter("endingTime", to).setParameter("environment", this.environmentDescription);

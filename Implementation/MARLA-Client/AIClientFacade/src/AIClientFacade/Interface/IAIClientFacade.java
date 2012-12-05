@@ -1,11 +1,11 @@
 package AIClientFacade.Interface;
 
 import AIRunner.Interface.IAIRunner;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import NetworkAdapter.Interface.Exceptions.NotConnectedException;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import NetworkAdapter.Interface.Exceptions.NotConnectedException;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import Settings.SettingException;
+import ZeroTypes.Settings.SettingException;
 
 import java.util.List;
 

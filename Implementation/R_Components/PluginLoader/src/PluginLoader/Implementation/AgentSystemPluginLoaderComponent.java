@@ -2,12 +2,12 @@ package PluginLoader.Implementation;
 
 import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.IActionDescription;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IAgentSystemPluginLoader;
-import Settings.SettingException;
+import ZeroTypes.Settings.SettingException;
 
 import java.io.File;
 import java.util.List;

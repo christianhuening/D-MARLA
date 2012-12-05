@@ -4,11 +4,11 @@ import AgentProvider.Implementation.Agents.*;
 import AgentProvider.Implementation.Database.AgentSettingsAccessor;
 import AgentProvider.Implementation.Database.PersistenceFactory;
 import AgentProvider.Interface.IAgentProvider;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Services.IAgent;
 import AgentSystemPluginAPI.Services.LearningAlgorithm;
-import Settings.SettingException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import ZeroTypes.Settings.SettingException;
 
 import java.util.Hashtable;
 import java.util.List;

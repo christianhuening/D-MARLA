@@ -1,15 +1,15 @@
 package GameStatistics.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Service.ICycleReplay;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
-import Exceptions.GameReplayNotContainedInDatabaseException;
-import RemoteInterface.ICycleStatistics;
-import TransportTypes.TCycleReplayDescription;
-import org.joda.time.DateTime;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
+import ZeroTypes.Exceptions.GameReplayNotContainedInDatabaseException;
+import ZeroTypes.RemoteInterface.ICycleStatistics;
+import ZeroTypes.TransportTypes.TCycleReplayDescription;
 
 import java.rmi.RemoteException;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -20,7 +20,7 @@ import java.util.UUID;
  * Time: 14:59
  * To change this template use File | Settings | File Templates.
  */
-public class CycleStatisticsComponent implements ICycleStatistics, ISaveGameStatistics {
+public class CycleStatisticsComponent implements ICycleStatistics, ICycleStatisticsSaver {
 // ------------------------------ FIELDS ------------------------------
 
     private CycleStatisticsUseCase gameStatisticsUseCase;
@@ -49,7 +49,7 @@ public class CycleStatisticsComponent implements ICycleStatistics, ISaveGameStat
     }
 
     @Override
-    public List<TCycleReplayDescription> getCycleReplayDescriptionsByDeltaTime(DateTime startingTime, DateTime endingTime, TEnvironmentDescription environment) throws RemoteException, TechnicalException {
+    public List<TCycleReplayDescription> getCycleReplayDescriptionsByDeltaTime(Date startingTime, Date endingTime, TEnvironmentDescription environment) throws RemoteException, TechnicalException {
         return gameStatisticsUseCase.getCycleReplayDescriptionsByDeltaTime(startingTime, endingTime, environment);
     }
 
@@ -88,7 +88,7 @@ public class CycleStatisticsComponent implements ICycleStatistics, ISaveGameStat
         return gameStatisticsUseCase.getDescriptionsForNLastCycles(numberOfGames, environment);
     }
 
-// --------------------- Interface ISaveGameStatistics ---------------------
+// --------------------- Interface ICycleStatisticsSaver ---------------------
 
 
     @Override

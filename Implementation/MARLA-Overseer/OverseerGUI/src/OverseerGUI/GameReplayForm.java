@@ -1,6 +1,7 @@
 package OverseerGUI;
 
 import EnvironmentPluginAPI.Contract.AbstractVisualizeReplayPanel;
+import EnvironmentPluginAPI.Contract.IVisualizeReplay;
 import EnvironmentPluginAPI.Service.ICycleReplay;
 
 import javax.swing.*;
@@ -21,14 +22,15 @@ public class GameReplayForm {
     private JSlider replaySpeedSlider;
 
     private ICycleReplay replay;
-    private AbstractVisualizeReplayPanel visualizeReplay;
+    private IVisualizeReplay visualizeReplay;
+    private boolean swing;
 
     public GameReplayForm() {
 
         playButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(replay != null){
+                if (replay != null) {
                     visualizeReplay.play();
                     pauseButton.setEnabled(true);
                 }
@@ -38,7 +40,7 @@ public class GameReplayForm {
         stepForwardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(replay != null){
+                if (replay != null) {
                     visualizeReplay.stepForward();
                 }
             }
@@ -56,7 +58,7 @@ public class GameReplayForm {
         replaySpeedSlider.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
-                if(!replaySpeedSlider.getValueIsAdjusting() && visualizeReplay != null){
+                if (!replaySpeedSlider.getValueIsAdjusting() && visualizeReplay != null) {
                     visualizeReplay.changeReplaySpeed(replaySpeedSlider.getValue());
                 }
             }
@@ -65,27 +67,36 @@ public class GameReplayForm {
         stepBackButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(replay != null){
+                if (replay != null) {
                     visualizeReplay.stepBackward();
                 }
             }
         });
     }
 
-    public void setGameReplay(ICycleReplay replay){
+    public void setGameReplay(ICycleReplay replay) {
         this.replay = replay;
         visualizeReplay.setGameReplay(replay);
     }
 
-    public void setVisualizationPlugin(AbstractVisualizeReplayPanel plugin){
-        this.visualizeReplay = plugin;
+    public void setVisualizationPlugin(IVisualizeReplay plugin) {
+        if (plugin != null) { //if a visualization plugin is set
 
-        gamePanel.setLayout(new BorderLayout());
-        gamePanel.add(visualizeReplay);
-        gamePanel.revalidate();
-        visualizeReplay.changeReplaySpeed(replaySpeedSlider.getValue());
+            this.visualizeReplay = plugin;
+            swing = plugin instanceof AbstractVisualizeReplayPanel;
+            gamePanel.setLayout(new BorderLayout());
 
+            if (swing) {
+                gamePanel.add((AbstractVisualizeReplayPanel) visualizeReplay);
+                gamePanel.revalidate();
+            }
+
+            visualizeReplay.changeReplaySpeed(replaySpeedSlider.getValue());
+        } else { //if ne plugin was provided disable all controls
+            pauseButton.setEnabled(false);
+            playButton.setEnabled(false);
+            stepBackButton.setEnabled(false);
+            stepBackButton.setEnabled(false);
+        }
     }
-
-
 }

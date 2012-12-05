@@ -1,6 +1,6 @@
 package GameStatistics.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import GameStatistics.Implementation.Entities.ClientName;
 import PersistenceManager.Interface.AbstractDao;
 import org.hibernate.Query;

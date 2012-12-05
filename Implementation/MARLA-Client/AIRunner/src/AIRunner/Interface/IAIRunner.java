@@ -1,9 +1,9 @@
 package AIRunner.Interface;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import NetworkAdapter.Interface.Exceptions.HostUnreachableException;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 
 import java.security.InvalidParameterException;
 

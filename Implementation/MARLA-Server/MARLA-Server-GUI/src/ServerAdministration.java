@@ -1,14 +1,14 @@
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import GameServerFacade.Interface.ServerFacadeFactory;
 import GameServerFacade.Interface.IServerFacade;
 import Models.SessionTableModel;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import RemoteInterface.ClientSocketFactory;
-import RemoteInterface.ICycleStatistics;
+import ZeroTypes.RemoteInterface.ClientSocketFactory;
+import ZeroTypes.RemoteInterface.ICycleStatistics;
 import ServerRunner.Interface.IPlayerEventHandler;
-import TransportTypes.TClientEvent;
-import TransportTypes.TSession;
+import ZeroTypes.TransportTypes.TClientEvent;
+import ZeroTypes.TransportTypes.TSession;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -179,9 +179,13 @@ public class ServerAdministration implements Observer {
     }
 
     public static void main(String[] args) {
+
         System.setSecurityManager(new RMISecurityManager() {
-            public void checkPermission(java.security.Permission permission){}
-            public void checkPermission(java.security.Permission permission, java.lang.Object o){}
+            public void checkPermission(java.security.Permission permission) {
+            }
+
+            public void checkPermission(java.security.Permission permission, java.lang.Object o) {
+            }
         });
 
         try {

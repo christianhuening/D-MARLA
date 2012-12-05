@@ -1,0 +1,14 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/PluginAPI" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_df0304752b06677cfa1dca6199f47c69 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Implementation" fontname="Helvetica", fontsize="10", URL="dir_df0304752b06677cfa1dca6199f47c69.html"]
+  subgraph clusterdir_1d754f9aabca48f119f52606f4dbd846 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_1d754f9aabca48f119f52606f4dbd846.html"];
+    dir_1d754f9aabca48f119f52606f4dbd846 [shape=plaintext label="PluginAPI"];
+    dir_03892a12554ec550fe29218970db49db [shape=box label="AgentSystemPluginAPI" color="red" fillcolor="white" style="filled" URL="dir_03892a12554ec550fe29218970db49db.html"];
+    dir_9c139c13664e18dd93ee204337dd1215 [shape=box label="EnvironmentPluginAPI" color="red" fillcolor="white" style="filled" URL="dir_9c139c13664e18dd93ee204337dd1215.html"];
+  }
+  }
+}

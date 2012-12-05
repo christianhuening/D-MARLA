@@ -1,11 +1,11 @@
 package ServerRunner.Implementation;
 
-import Enumeration.ClientEventType;
-import Enumeration.SessionStatus;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import ZeroTypes.Enumerations.ClientEventType;
+import ZeroTypes.Enumerations.SessionStatus;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.CustomNetworkMessages.IActionDescriptionMessage;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.INetworkMessageReceivedEventHandler;
@@ -17,12 +17,12 @@ import PluginLoader.Interface.IEnvironmentPluginLoader;
 import ServerRunner.Interface.IPlayerEventHandler;
 import ServerRunner.Interface.IServerRunner;
 import ServerRunner.Interface.SessionIsNotInReadyStateException;
-import TransportTypes.TClientEvent;
-import TransportTypes.TNetworkClient;
-import TransportTypes.TSession;
-import org.joda.time.DateTime;
+import ZeroTypes.TransportTypes.TClientEvent;
+import ZeroTypes.TransportTypes.TNetworkClient;
+import ZeroTypes.TransportTypes.TSession;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
 
@@ -35,14 +35,14 @@ import java.util.UUID;
  */
 public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceivedEventHandler {
     private final IServerNetworkAdapter networkAdapter;
-    private final ISaveGameStatistics saveGameStatistics;
+    private final ICycleStatisticsSaver saveGameStatistics;
     private final IEnvironmentPluginLoader environmentPluginLoader;
 
     private List<TNetworkClient> networkClients;
 
     private List<Session> sessions;
 
-    public ServerRunnerUseCase(ISaveGameStatistics gameStatistics, IServerNetworkAdapter networkAdapter, IEnvironmentPluginLoader environmentPluginLoader) {
+    public ServerRunnerUseCase(ICycleStatisticsSaver gameStatistics, IServerNetworkAdapter networkAdapter, IEnvironmentPluginLoader environmentPluginLoader) {
         this.networkAdapter = networkAdapter;
         this.saveGameStatistics = gameStatistics;
         this.environmentPluginLoader = environmentPluginLoader;
@@ -74,7 +74,7 @@ public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceiv
 
             ClientJoinMessage clientJoinMessage = (ClientJoinMessage) message;
 
-            networkClients.add(new TNetworkClient(clientJoinMessage.getClientId(), clientJoinMessage.getAgentName(), clientJoinMessage.getAddress(), DateTime.now()));
+            networkClients.add(new TNetworkClient(clientJoinMessage.getClientId(), clientJoinMessage.getAgentName(), clientJoinMessage.getAddress(), Calendar.getInstance().getTime()));
 
             Session.sendPlayerEventMessage(new TClientEvent(ClientEventType.ClientJoined, null));
         }

@@ -5,9 +5,10 @@ import AIRunner.Interface.IAIRunner;
 import AIRunner.Interface.IAIRunnerEventHandler;
 import AIRunner.Interface.SessionRunningException;
 import AgentSystemManagement.Interface.IAgentSystemManagement;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 import EnvironmentPluginAPI.CustomNetworkMessages.IEnvironmentStateMessage;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import NetworkAdapter.Interface.Exceptions.HostUnreachableException;
 import NetworkAdapter.Interface.IClientNetworkAdapter;
 import NetworkAdapter.Interface.INetworkMessageReceivedEventHandler;
@@ -18,7 +19,6 @@ import NetworkAdapter.Messages.SessionEndsMessage;
 import NetworkAdapter.Messages.SessionStartsMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IAgentSystemPluginLoader;
-import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 
 import java.security.InvalidParameterException;
 import java.util.LinkedList;
@@ -96,9 +96,8 @@ public class AIRunnerUseCase implements IAIRunner, IAIRunnerEventHandler, INetwo
         } else if (message instanceof SessionEndsMessage) {
             sessionRunning = false;
             onAIRunnerEvent(AIRunnerEventType.SessionEnded);
-            System.err.println("informiere über session emde");
         } else if (message instanceof CycleStartsMessage) {
-            pluginContainer.start(((CycleStartsMessage) message).getEnvironmentInitInfo());
+            pluginContainer.start(((CycleStartsMessage) message).getEnvironmentConfiguration());
         } else if (message instanceof IEnvironmentStateMessage) {
             pluginContainer.receiveGameState(((IEnvironmentStateMessage) message).getEnvironmentState());
 

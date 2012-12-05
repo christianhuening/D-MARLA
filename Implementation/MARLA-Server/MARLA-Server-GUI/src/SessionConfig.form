@@ -222,7 +222,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="b9558" class="javax.swing.JTable" binding="mapList">
+          <component id="b9558" class="javax.swing.JTable" binding="configurationList">
             <constraints/>
             <properties>
               <cellSelectionEnabled value="false"/>

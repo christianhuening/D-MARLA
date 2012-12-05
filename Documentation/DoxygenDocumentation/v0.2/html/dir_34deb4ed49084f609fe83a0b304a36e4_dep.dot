@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/R_Components/PersistenceManager/src/PersistenceManager/Implementation/Entities" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f15c8fcfc838d44e07d1db78dc9cafb7 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Implementation" fontname="Helvetica", fontsize="10", URL="dir_f15c8fcfc838d44e07d1db78dc9cafb7.html"]
+  dir_34deb4ed49084f609fe83a0b304a36e4 [shape=box, label="Entities", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_34deb4ed49084f609fe83a0b304a36e4.html"];
+  }
+}

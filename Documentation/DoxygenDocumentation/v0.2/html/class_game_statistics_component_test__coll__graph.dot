@@ -1,0 +1,35 @@
+digraph "GameStatisticsComponentTest"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GameStatisticsComponentTest",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" iCycleStatisticsSaver" ,fontname="Helvetica"];
+  Node2 [label="EnvironmentPluginAPI.Service.\lICycleStatisticsSaver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_environment_plugin_a_p_i_1_1_service_1_1_i_cycle_statistics_saver.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cycleDescriptionDao" ,fontname="Helvetica"];
+  Node3 [label="GameStatistics.Implementation.\lCycleReplayDescriptionDao",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_game_statistics_1_1_implementation_1_1_cycle_replay_description_dao.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PersistenceManager\l::Interface::AbstractDao\l\< CycleReplayDescription \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" testGameReplays" ,fontname="Helvetica"];
+  Node5 [label="List\< ICycleReplay \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" testPlayers" ,fontname="Helvetica"];
+  Node6 [label="List\< String \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" allPossiblePlayerCombinations" ,fontname="Helvetica"];
+  Node7 [label="List\< playerCombination \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" clientNameDao" ,fontname="Helvetica"];
+  Node8 [label="GameStatistics.Implementation.\lClientNameDao",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_game_statistics_1_1_implementation_1_1_client_name_dao.html"];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="PersistenceManager\l::Interface::AbstractDao\l\< ClientName \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" iCycleStatistics" ,fontname="Helvetica"];
+  Node10 [label="RemoteInterface.ICycleStatistics",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_remote_interface_1_1_i_cycle_statistics.html"];
+  Node11 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Remote",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gameStatisticsComponent" ,fontname="Helvetica"];
+  Node12 [label="GameStatistics.Implementation.\lCycleStatisticsComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_game_statistics_1_1_implementation_1_1_cycle_statistics_component.html"];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gameReplayDescriptionSaver\lHelper" ,fontname="Helvetica"];
+  Node13 [label="GameStatistics.Implementation.\lGameReplayDescriptionSaverHelper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_game_statistics_1_1_implementation_1_1_game_replay_description_saver_helper.html"];
+  Node14 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" testReplayDescriptions" ,fontname="Helvetica"];
+  Node14 [label="List\< CycleReplayDescription \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

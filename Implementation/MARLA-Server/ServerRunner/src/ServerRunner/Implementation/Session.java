@@ -1,16 +1,17 @@
 package ServerRunner.Implementation;
 
-import Enumeration.ClientEventType;
-import Enumeration.SessionStatus;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
+import ZeroTypes.Enumerations.ClientEventType;
+import ZeroTypes.Enumerations.SessionStatus;
+import EnvironmentPluginAPI.Exceptions.IllegalNumberOfClientsException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.IActionDescription;
 import EnvironmentPluginAPI.Contract.IEnvironment;
 import EnvironmentPluginAPI.Contract.IEnvironmentState;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
-import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
-import Interfaces.IHasTransportType;
+import ZeroTypes.Interfaces.IHasTransportType;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.Exceptions.NotConnectedException;
 import NetworkAdapter.Interface.IServerNetworkAdapter;
@@ -23,9 +24,9 @@ import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IEnvironmentPluginLoader;
 import ServerRunner.Interface.IPlayerEventHandler;
 import ServerRunner.Interface.SessionIsNotInReadyStateException;
-import TransportTypes.TClientEvent;
-import TransportTypes.TNetworkClient;
-import TransportTypes.TSession;
+import ZeroTypes.TransportTypes.TClientEvent;
+import ZeroTypes.TransportTypes.TNetworkClient;
+import ZeroTypes.TransportTypes.TSession;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -68,6 +69,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
     private IEnvironment environment;
 
+    private final IEnvironmentConfiguration configuration;
     private IEnvironmentPluginLoader environmentPluginLoader;
 
     private IServerNetworkAdapter serverNetworkAdapter;
@@ -78,7 +80,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
     private TEnvironmentDescription environmentDescription;
 
-    private ISaveGameStatistics gameStatistics;
+    private ICycleStatisticsSaver gameStatistics;
 
 // -------------------------- STATIC METHODS --------------------------
 
@@ -88,13 +90,14 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
 // --------------------------- CONSTRUCTORS ---------------------------
 
-    public Session(TSession session, IServerNetworkAdapter serverNetworkAdapterInstance, IEnvironmentPluginLoader environmentPluginLoader, ISaveGameStatistics saveGameStatistics) throws TechnicalException, PluginNotReadableException {
-        this(session.getName(), session.getNumberOfGames(), session.getClientsInThisSession(), serverNetworkAdapterInstance, environmentPluginLoader, session.getEnvironmentDescription(), saveGameStatistics);
+    public Session(TSession session, IServerNetworkAdapter serverNetworkAdapterInstance, IEnvironmentPluginLoader environmentPluginLoader, ICycleStatisticsSaver saveGameStatistics) throws TechnicalException, PluginNotReadableException {
+        this(session.getName(), session.getNumberOfGames(), session.getConfiguration(), session.getClientsInThisSession(), serverNetworkAdapterInstance, environmentPluginLoader, session.getEnvironmentDescription(), saveGameStatistics);
     }
 
-    public Session(String name, int numberOfIterations, List<TNetworkClient> clientsInThisSession, IServerNetworkAdapter serverNetworkAdapter, IEnvironmentPluginLoader environmentPluginLoader, TEnvironmentDescription environmentDescription, ISaveGameStatistics gameStatistics) throws TechnicalException, PluginNotReadableException {
+    public Session(String name, int numberOfIterations, IEnvironmentConfiguration configuration, List<TNetworkClient> clientsInThisSession, IServerNetworkAdapter serverNetworkAdapter, IEnvironmentPluginLoader environmentPluginLoader, TEnvironmentDescription environmentDescription, ICycleStatisticsSaver gameStatistics) throws TechnicalException, PluginNotReadableException {
         super("Session");
         this.name = name;
+        this.configuration = configuration;
         this.environmentPluginLoader = environmentPluginLoader;
         this.status = SessionStatus.READY;
         this.numberOfGames = numberOfIterations;
@@ -211,17 +214,17 @@ class Session extends Thread implements IHasTransportType<TSession> {
 // -------------------------- PRIVATE METHODS --------------------------
 
     private void executeGame() throws NotConnectedException, ConnectionLostException, InterruptedException, TechnicalException {
+        try {
+            currentEnvironmentState = environment.start(new ArrayList<TMARLAClientInstance>(clientsForPlayers.keySet()), configuration);
+        } catch (IllegalNumberOfClientsException e) {
+            e.printStackTrace();
+            //TODO: Better exception handling, session should fail
+        }
+
         for (TNetworkClient networkClient : clientsInThisSession) {
             clientsForPlayers.put(new TMARLAClientInstance(networkClient.getName(), networkClient.getId()), networkClient);
 
-            serverNetworkAdapter.sendNetworkMessage(new CycleStartsMessage(networkClient.getId(), null), MessageChannel.DATA);
-        }
-
-        try {
-            currentEnvironmentState = environment.start(new ArrayList<TMARLAClientInstance>(clientsForPlayers.keySet()), null);
-        } catch (EnvironmentPluginAPI.Contract.Exception.IllegalNumberOfClientsException e) {
-            e.printStackTrace();
-            //TODO: Better exception handling, session should fail
+            serverNetworkAdapter.sendNetworkMessage(new CycleStartsMessage(networkClient.getId(), configuration), MessageChannel.DATA);
         }
 
         sendCurrentEnvironmentStateToClient(clientsForPlayers.get(environment.getActiveInstance()));
@@ -282,6 +285,6 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
     @Override
     public TSession getTransportType() {
-        return new TSession(sessionId, name, status, clientsInThisSession.size(), numberOfGames, clientsInThisSession, environmentDescription);
+        return new TSession(sessionId, name, status, configuration, clientsInThisSession.size(), numberOfGames, clientsInThisSession, environmentDescription);
     }
 }

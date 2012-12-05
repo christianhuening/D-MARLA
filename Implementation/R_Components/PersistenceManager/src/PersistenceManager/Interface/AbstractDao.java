@@ -1,6 +1,6 @@
 package PersistenceManager.Interface;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import PersistenceManager.Implementation.PersistenceManagerComponent;
 
 import javax.persistence.EntityManager;

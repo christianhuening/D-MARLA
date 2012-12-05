@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="AgentSystemPluginAPI">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../Deployment/MARLA-Client/AgentSystemPluginAPI.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Deployment/PluginAPI/AgentSystemPluginAPI.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

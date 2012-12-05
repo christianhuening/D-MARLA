@@ -1,6 +1,6 @@
 package AgentSystemPluginAPI.Services;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import AgentSystemPluginAPI.Contract.StateAction;
 
 /**

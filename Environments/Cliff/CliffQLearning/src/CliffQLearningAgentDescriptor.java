@@ -2,8 +2,8 @@ import AgentSystemPluginAPI.Contract.IAgentSystem;
 import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 
 import java.util.HashSet;
 import java.util.Set;

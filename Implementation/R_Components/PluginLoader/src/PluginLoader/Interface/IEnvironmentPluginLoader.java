@@ -1,14 +1,14 @@
 package PluginLoader.Interface;
 
 import EnvironmentPluginAPI.Contract.*;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
-import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
+import EnvironmentPluginAPI.Service.AbstractVisualizeReplayPanel;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
+import EnvironmentPluginAPI.Service.IVisualizeReplay;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
-import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
-import RemoteInterface.ICycleStatistics;
-import Settings.SettingException;
+import ZeroTypes.Settings.SettingException;
 
 import java.io.File;
 import java.util.List;
@@ -52,9 +52,10 @@ public interface IEnvironmentPluginLoader {
      * Returns a new instance of the loaded environment.
      *
      * @throws UnsupportedOperationException if no environment plugin was loaded previously.
-     * @return
+     * @return != null
+     * @param cycleStatisticsSaver != null
      */
-    public IEnvironment createEnvironmentInstance(ISaveGameStatistics saveGameStatistics) throws TechnicalException;
+    public IEnvironment createEnvironmentInstance(ICycleStatisticsSaver cycleStatisticsSaver) throws TechnicalException;
 
     /**
      * Creates an environment state message. If the environment provides a custom implementation, it will be used.

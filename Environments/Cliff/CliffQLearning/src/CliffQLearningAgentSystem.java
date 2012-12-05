@@ -1,15 +1,18 @@
-import Actions.CliffActionDescription;
-import Actions.CliffEnvironmentState;
+import Actions.ActionDescription;
 import Actions.Direction;
+import Actions.EnvironmentState;
 import AgentSystemPluginAPI.Contract.IAgentSystem;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Contract.StateAction;
 import AgentSystemPluginAPI.Services.IAgent;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 import AgentSystemPluginAPI.Services.LearningAlgorithm;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import Logic.GridWorldConfiguration;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -18,54 +21,64 @@ import java.util.Set;
 /**
  * A simple agent system for the a grid world, consisting of one q-learning agent.
  */
-public class CliffQLearningAgentSystem implements IAgentSystem<CliffEnvironmentState, CliffActionDescription> {
+public class CliffQLearningAgentSystem implements IAgentSystem<GridWorldConfiguration, EnvironmentState, ActionDescription> {
 
+    private final IPluginServiceProvider pluginServiceProvider;
     IAgent sarsaLambdaAgent;
+    private int gridWidth;
+    private int gridHeight;
 
     public CliffQLearningAgentSystem(IPluginServiceProvider pluginServiceProvider) throws TechnicalException {
 
-        sarsaLambdaAgent = pluginServiceProvider.getTableAgent("qlearning", LearningAlgorithm.SARSALambda, new IStateActionGenerator() {
-            @Override
-            public Set<StateAction> getAllPossibleActions(StateAction stateAction) {
-                DataInputStream in = new DataInputStream(new ByteArrayInputStream(stateAction.getStateDescription().getBytes()));
-                try {
-                    int width = in.read();
-                    int height = in.read();
-                    int x = in.read();
-                    int y = in.read();
+        this.pluginServiceProvider = pluginServiceProvider;
+    }
 
-                    Set<StateAction> possibleActions = new HashSet<StateAction>();
+    @Override
+    public void start(GridWorldConfiguration configuration) throws TechnicalException {
+        gridWidth = configuration.getWidth();
+        gridHeight = configuration.getHeight();
 
-                    if (x < width - 1) possibleActions.add(new StateAction(stateAction.getStateDescription(), "RIGHT"));
-                    if (x > 0) possibleActions.add(new StateAction(stateAction.getStateDescription(), "LEFT"));
-                    if (y > 0) possibleActions.add(new StateAction(stateAction.getStateDescription(), "DOWN"));
-                    if (y < height - 1) possibleActions.add(new StateAction(stateAction.getStateDescription(), "UP"));
+        if (sarsaLambdaAgent != null) {
+            sarsaLambdaAgent = pluginServiceProvider.getTableAgent("qlearning", LearningAlgorithm.SARSALambda, new IStateActionGenerator() {
+                @Override
+                public Set<StateAction> getAllPossibleActions(StateAction stateAction) {
+                    DataInputStream in = new DataInputStream(new ByteArrayInputStream(stateAction.getStateDescription().getBytes()));
+                    try {
+                        int x = in.read();
+                        int y = in.read();
 
-                    return possibleActions;
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    return new HashSet<StateAction>();
+                        Set<StateAction> possibleActions = new HashSet<StateAction>();
+
+                        if (x < gridWidth - 1) possibleActions.add(new StateAction(stateAction.getStateDescription(), "RIGHT"));
+                        if (x > 0) possibleActions.add(new StateAction(stateAction.getStateDescription(), "LEFT"));
+                        if (y > 0) possibleActions.add(new StateAction(stateAction.getStateDescription(), "DOWN"));
+                        if (y < gridHeight - 1) possibleActions.add(new StateAction(stateAction.getStateDescription(), "UP"));
+
+                        return possibleActions;
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        return new HashSet<StateAction>();
+                    }
                 }
-            }
-        });
 
-        sarsaLambdaAgent.setAlpha(0.6f);
-        sarsaLambdaAgent.setEpsilon(0.001f);
-        sarsaLambdaAgent.setGamma(0.7f);
-        sarsaLambdaAgent.setLambda(0.5f);
+            });
+
+            // set learning parameters
+            sarsaLambdaAgent.setAlpha(0.6f);
+            sarsaLambdaAgent.setEpsilon(0.001f);
+            sarsaLambdaAgent.setGamma(0.7f);
+            sarsaLambdaAgent.setLambda(0.5f);
+        }
+
+        sarsaLambdaAgent.startEpisode(new StateAction(new EnvironmentState(0, 0, false, 0.0f).getCompressedRepresentation()));
     }
 
     @Override
-    public void start(Object o) throws TechnicalException {
-        sarsaLambdaAgent.startEpisode(new StateAction(new CliffEnvironmentState(0, 0, false, 0.0f, 20, 8).getCompressedRepresentation()));
-    }
-
-    @Override
-    public CliffActionDescription getActionsForEnvironmentStatus(CliffEnvironmentState environmentState) throws TechnicalException {
+    public ActionDescription getActionsForEnvironmentStatus(EnvironmentState environmentState) throws TechnicalException {
         System.err.println("environmentState erhalten: ");
 
         StateAction newStateAction = sarsaLambdaAgent.step(environmentState.getReward(), new StateAction(environmentState.getCompressedRepresentation()));
-        return new CliffActionDescription(Direction.valueOf(newStateAction.getActionDescription()));
+        return new ActionDescription(Direction.valueOf(newStateAction.getActionDescription()));
     }
 
     @Override

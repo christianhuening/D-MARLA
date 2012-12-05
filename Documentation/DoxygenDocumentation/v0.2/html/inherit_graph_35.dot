@@ -1,0 +1,43 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="IActionDescriptionMessage",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="NetworkAdapter.Messages.\lDefaultActionDescriptionMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_messages_1_1_default_action_description_message.html"];
+  Node3 [label="IEnvironmentStateMessage",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="NetworkAdapter.Messages.\lDefaultEnvironmentStateMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_messages_1_1_default_environment_state_message.html"];
+  Node5 [label="RMISocketFactory",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="RemoteInterface.ClientSocket\lFactory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_remote_interface_1_1_client_socket_factory.html"];
+  Node7 [label="Serializable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="EnvironmentPluginAPI.Contract.\lTEnvironmentDescription",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_environment_plugin_a_p_i_1_1_contract_1_1_t_environment_description.html"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="EnvironmentPluginAPI.Custom\lNetworkMessages.NetworkMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_environment_plugin_a_p_i_1_1_custom_network_messages_1_1_network_message.html"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="NetworkAdapter.Messages.\lClientAckMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_messages_1_1_client_ack_message.html"];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="NetworkAdapter.Messages.\lClientJoinMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_messages_1_1_client_join_message.html"];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="NetworkAdapter.Messages.\lConnectionEndMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_messages_1_1_connection_end_message.html"];
+  Node9 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="NetworkAdapter.Messages.\lCycleEndsMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_messages_1_1_cycle_ends_message.html"];
+  Node9 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="NetworkAdapter.Messages.\lCycleStartsMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_messages_1_1_cycle_starts_message.html"];
+  Node9 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="NetworkAdapter.Messages.\lNACKMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_messages_1_1_n_a_c_k_message.html"];
+  Node9 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="NetworkAdapter.Messages.\lSessionEndsMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_messages_1_1_session_ends_message.html"];
+  Node9 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="NetworkAdapter.Messages.\lSessionStartsMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_messages_1_1_session_starts_message.html"];
+  Node7 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="TransportTypes.TCycleReplay\lDescription",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_transport_types_1_1_t_cycle_replay_description.html"];
+}

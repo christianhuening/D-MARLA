@@ -1,0 +1,15 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/MARLA-Client/AgentSystemManagement/src/AgentSystemManagement" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_5bcb22561bb076c9942ffb84511e3514 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_5bcb22561bb076c9942ffb84511e3514.html"]
+  subgraph clusterdir_a017c0b5de1b388216ab11cd7407ab8b {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_a017c0b5de1b388216ab11cd7407ab8b.html"];
+    dir_a017c0b5de1b388216ab11cd7407ab8b [shape=plaintext label="AgentSystemManagement"];
+    dir_a5079ca806c51b5f00526a81d4fb1040 [shape=box label="Implementation" color="black" fillcolor="white" style="filled" URL="dir_a5079ca806c51b5f00526a81d4fb1040.html"];
+    dir_9767fe093e3fa9059e4e48ef0fe4b659 [shape=box label="Interface" color="black" fillcolor="white" style="filled" URL="dir_9767fe093e3fa9059e4e48ef0fe4b659.html"];
+    dir_6058fc5d3c452e64d13dda8e2cca096d [shape=box label="Plugins" color="black" fillcolor="white" style="filled" URL="dir_6058fc5d3c452e64d13dda8e2cca096d.html"];
+  }
+  }
+}

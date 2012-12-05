@@ -1,8 +1,8 @@
 package NetworkAdapter.Implementation;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
-import Exceptions.ErrorMessages;
+import ZeroTypes.Exceptions.ErrorMessages;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.Exceptions.NotConnectedException;
 import NetworkAdapter.Interface.IServerNetworkAdapter;
@@ -12,9 +12,9 @@ import NetworkAdapter.Messages.ClientAckMessage;
 import NetworkAdapter.Messages.ClientJoinMessage;
 import NetworkAdapter.Messages.ConnectionEndMessage;
 import NetworkAdapter.Messages.NACKMessage;
-import Settings.AppSettings;
-import Settings.SettingException;
-import TransportTypes.TNetworkClient;
+import ZeroTypes.Settings.AppSettings;
+import ZeroTypes.Settings.SettingException;
+import ZeroTypes.TransportTypes.TNetworkClient;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -47,8 +47,8 @@ class ServerNetworkAdapterUseCase
     /**
      * Sets up a tcp host, listening on the ports specified in the settings.properties.
      *
-     * @throws Settings.SettingException, if a problem with the application's settings file occurs
-     * @throws EnvironmentPluginAPI.Contract.Exception.TechnicalException,
+     * @throws ZeroTypes.Settings.SettingException, if a problem with the application's settings file occurs
+     * @throws EnvironmentPluginAPI.Exceptions.TechnicalException,
      *                                    if a problem with the connection occurs
      */
     public ServerNetworkAdapterUseCase() throws SettingException, TechnicalException {

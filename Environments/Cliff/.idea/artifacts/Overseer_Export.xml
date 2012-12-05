@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Overseer Export">
+    <output-path>$PROJECT_DIR$/../../Implementation/MARLA-Overseer/EnvironmentPlugins</output-path>
+    <root id="archive" name="Cliff.jar">
+      <element id="module-output" name="CliffEnvironment" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Deployment/PluginAPI/AgentSystemPluginAPI.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

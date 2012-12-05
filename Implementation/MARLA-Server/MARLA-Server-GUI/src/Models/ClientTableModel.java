@@ -1,12 +1,12 @@
 package Models;
 
-import TransportTypes.TNetworkClient;
-import org.joda.time.DateTime;
+import ZeroTypes.TransportTypes.TNetworkClient;
 
 import javax.swing.table.DefaultTableModel;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -58,7 +58,7 @@ public class ClientTableModel extends DefaultTableModel {
 
         InetAddress inetAddress = InetAddress.getByName(this.getValueAtAsString(rowNr, 2));
 
-        DateTime connectedSince = DateTime.parse(this.getValueAtAsString(rowNr,3));
+        Date connectedSince = new Date();
 
         TNetworkClient client = new TNetworkClient(id.intValue(), this.getValueAtAsString(rowNr,1), inetAddress, connectedSince);
 

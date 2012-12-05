@@ -2,18 +2,19 @@ package AIRunner.Implementation;
 
 import AIRunner.Interface.IAIRunnerEventHandler;
 import AgentSystemManagement.Interface.IAgentSystemManagement;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import AgentSystemPluginAPI.Contract.IAgentSystem;
+import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
 import EnvironmentPluginAPI.Contract.IEnvironmentState;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
 import NetworkAdapter.Interface.Exceptions.ConnectionLostException;
 import NetworkAdapter.Interface.Exceptions.HostUnreachableException;
 import NetworkAdapter.Interface.Exceptions.NotConnectedException;
 import NetworkAdapter.Interface.IClientNetworkAdapter;
 import NetworkAdapter.Interface.MessageChannel;
-import AgentSystemPluginAPI.Contract.IAgentSystem;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IAgentSystemPluginLoader;
-import Settings.SettingException;
-import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import ZeroTypes.Settings.SettingException;
 
 /**
  * This class implements the logic of the periodic receiving and sending of game related messages and feeding the
@@ -129,7 +130,7 @@ public class PluginContainer extends Thread {
         }
     }
 
-    public void start(Object environmentInitInfo) {
+    public void start(IEnvironmentConfiguration environmentInitInfo) {
         try {
             plugin.start(environmentInitInfo);
         } catch (TechnicalException e) {

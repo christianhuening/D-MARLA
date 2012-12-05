@@ -1,0 +1,9 @@
+digraph "D:/Work/Programmieren/Java/D-MARLA/Implementation/PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Services" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_eb1255ce178d434b21ef0312c81adf76 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="AgentSystemPluginAPI" fontname="Helvetica", fontsize="10", URL="dir_eb1255ce178d434b21ef0312c81adf76.html"]
+  dir_8ba452d3eb7044c6e298d0e930ed900a [shape=box, label="Services", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_8ba452d3eb7044c6e298d0e930ed900a.html"];
+  }
+}

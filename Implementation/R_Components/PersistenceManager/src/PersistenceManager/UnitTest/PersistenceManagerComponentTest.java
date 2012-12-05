@@ -1,4 +1,4 @@
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import PersistenceManager.Implementation.Entities.TestEntity;
 import PersistenceManager.Interface.AbstractDao;
 import junit.framework.Assert;

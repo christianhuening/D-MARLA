@@ -1,0 +1,31 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Exception",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="AgentProvider.Implementation.\lKeyNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_agent_provider_1_1_implementation_1_1_key_not_found_exception.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="AIRunner.Interface.Session\lRunningException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_runner_1_1_interface_1_1_session_running_exception.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="EnvironmentPluginAPI.Exceptions.\lCorruptMapFileException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_environment_plugin_a_p_i_1_1_exceptions_1_1_corrupt_map_file_exception.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="EnvironmentPluginAPI.Exceptions.\lIllegalNumberOfClientsException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_environment_plugin_a_p_i_1_1_exceptions_1_1_illegal_number_of_clients_exception.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="EnvironmentPluginAPI.Exceptions.\lTechnicalException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_environment_plugin_a_p_i_1_1_exceptions_1_1_technical_exception.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Exceptions.GameReplayDescription\lNotContainedInDatabaseException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_exceptions_1_1_game_replay_description_not_contained_in_database_exception.html"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Exceptions.GameReplayNot\lContainedInDatabaseException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_exceptions_1_1_game_replay_not_contained_in_database_exception.html"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="NetworkAdapter.Interface.\lExceptions.ConnectionLostException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_interface_1_1_exceptions_1_1_connection_lost_exception.html"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="NetworkAdapter.Interface.\lExceptions.HostUnreachableException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_interface_1_1_exceptions_1_1_host_unreachable_exception.html"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="NetworkAdapter.Interface.\lExceptions.NotConnectedException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_network_adapter_1_1_interface_1_1_exceptions_1_1_not_connected_exception.html"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="PluginLoader.Interface.Exceptions.\lPluginNotReadableException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_plugin_loader_1_1_interface_1_1_exceptions_1_1_plugin_not_readable_exception.html"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Settings.SettingException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_settings_1_1_setting_exception.html"];
+}

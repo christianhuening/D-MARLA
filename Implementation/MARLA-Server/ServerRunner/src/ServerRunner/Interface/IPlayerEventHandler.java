@@ -8,7 +8,7 @@ package ServerRunner.Interface;
  * To change this template use File | Settings | File Templates.
  */
 
-import TransportTypes.TClientEvent;
+import ZeroTypes.TransportTypes.TClientEvent;
 
 /**
  * Event handler interface for player events.

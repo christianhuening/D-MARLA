@@ -1,13 +1,11 @@
 package AgentProvider.Implementation.Database;
 
 import AgentProvider.Implementation.Agents.IDictionary;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import Exceptions.ErrorMessages;
 import AgentSystemPluginAPI.Contract.StateAction;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 
-import java.sql.*;
-import java.util.*;
-import java.util.concurrent.locks.ReentrantLock;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 /**
  * This class implements a database table based persistence for agent learning data.

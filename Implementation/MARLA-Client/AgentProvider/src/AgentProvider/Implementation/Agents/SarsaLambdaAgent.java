@@ -1,9 +1,9 @@
 package AgentProvider.Implementation.Agents;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Contract.StateAction;
-import Exceptions.ErrorMessages;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import ZeroTypes.Exceptions.ErrorMessages;
 
 import java.util.LinkedList;
 import java.util.List;
