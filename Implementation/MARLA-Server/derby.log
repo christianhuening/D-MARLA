@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Wed Dec 05 01:55:21 CET 2012:
-Booten von Derby Version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): Instanz a816c00e-013b-688f-50ab-00000b6f0330
-für Datenbankverzeichnis D:\Work\Programmieren\Java\D-MARLA\Implementation\MARLA-Server\target\database\jpa-test-database   mit Klassenladeprogrammn sun.misc.Launcher$AppClassLoader@12360be0
+Fri Dec 07 16:58:13 CET 2012:
+Booten von Derby Version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): Instanz a816c00e-013b-7616-a466-00000821ce28
+für Datenbankverzeichnis D:\Work\Programmieren\Java\D-MARLA\Implementation\MARLA-Server\target\database\jpa-test-database   mit Klassenladeprogrammn sun.misc.Launcher$AppClassLoader@1a45a877
 
 java.vendor=Sun Microsystems Inc.
 java.runtime.version=1.6.0_33-b03

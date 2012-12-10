@@ -41,9 +41,4 @@ public interface IAgentSystem<C extends IEnvironmentConfiguration, E extends IEn
      * */
 	public void end() throws TechnicalException;
 
-    /**
-     * Gets a list of all internal agents of this agent system.
-     * @return A list containing all agents that are used by this AgentSystem.
-     */
-	public List<IAgent> getInternalAgents();
 }

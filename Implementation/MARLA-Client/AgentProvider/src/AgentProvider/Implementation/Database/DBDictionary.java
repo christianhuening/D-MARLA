@@ -36,7 +36,6 @@ class DBDictionary implements IDictionary {
                     if(!connection.isClosed()) {
                         connection.close();
                     }
-                    System.err.println("test");
                 } catch (TechnicalException e) {
                     e.printStackTrace();
                 } catch (SQLException e) {

@@ -1,7 +1,10 @@
 package AgentSystemPluginAPI.Contract;
 
+import AgentSystemPluginAPI.Services.IAgent;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
+
+import java.util.List;
 
 /**
  *  Plugins must implement this interface in order to be recognized by MARLA.
@@ -14,15 +17,24 @@ import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 public interface IAgentSystemPluginDescriptor {
 
     /**
-     * The MARLA system uses this method to obtain the environment plugin's description. May be called repeatedly.
+     *  The MARLA system uses this method to obtain the environment plugin's description. May be called repeatedly.
+     *
      * @return != null
      */
     public TAgentSystemDescription getDescription();
 
     /**
+     *  Gets a list of all internal agents of this agent system.
+     *
+     * @return A list containing all agents that are used by this AgentSystem.
+     */
+    public List<IAgent> getInternalAgents();
+
+    /**
      *  The MARLA system uses this method to obtain the plugin's agent system implementation.<br/>
      *  The returned instance will be used for an environment session. It passes an instance of a plugin service provider, which is never null. The agent system may use it to
      *  load/save agents and settings and to access information.
+     *
      * @see IPluginServiceProvider
      * @param serviceProvider != null
      * @return != null

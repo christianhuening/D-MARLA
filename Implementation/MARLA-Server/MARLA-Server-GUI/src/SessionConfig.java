@@ -8,6 +8,7 @@ import GameServerFacade.Interface.ServerFacadeFactory;
 import Models.ClientTableModel;
 import Models.EnvironmentComboBoxModel;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
+import ZeroTypes.Exceptions.ErrorMessages;
 import ZeroTypes.Settings.SettingException;
 import ZeroTypes.TransportTypes.TNetworkClient;
 import ZeroTypes.TransportTypes.TSession;
@@ -149,7 +150,7 @@ public class SessionConfig extends Observable {
                     sessionConfigPanel.setVisible(false);
 
                 } catch (UnknownHostException e) {
-
+                    e.printStackTrace();
                 } catch (PluginNotReadableException e) {
                     e.printStackTrace();
                 } catch (TechnicalException e) {
@@ -178,16 +179,30 @@ public class SessionConfig extends Observable {
         try {
             configurationList.clearSelection();
             configurationListTableModel.removeAllConfigurations();
-            if(environmentComboBox.getItemCount() > 0){
+            if (environmentComboBox.getItemCount() > 0) {
                 TEnvironmentDescription env = environmentComboBoxModel.getEnvironmentDescription(environmentComboBox.getSelectedIndex());
                 configurationListTableModel.addConfigurations(facade.getAvailableConfigurations(env));
             }
         } catch (CorruptConfigurationFileException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,
+                    e.getMessage(),
+                    "",
+                    JOptionPane.ERROR_MESSAGE);
         } catch (TechnicalException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,
+                    e.getMessage(),
+                    "",
+                    JOptionPane.ERROR_MESSAGE);
         } catch (PluginNotReadableException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,
+                    e.getMessage(),
+                    "",
+                    JOptionPane.ERROR_MESSAGE);
+        } catch (AbstractMethodError e) {
+            JOptionPane.showMessageDialog(null,
+                    ErrorMessages.get("pluginCompiledAgainstIncompatibleVersion", e.getMessage()),
+                    "",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 

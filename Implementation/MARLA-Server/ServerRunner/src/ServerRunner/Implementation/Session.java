@@ -28,10 +28,7 @@ import ZeroTypes.TransportTypes.TClientEvent;
 import ZeroTypes.TransportTypes.TNetworkClient;
 import ZeroTypes.TransportTypes.TSession;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * This class manages a session of n clients that are contained in an own environment.
@@ -90,11 +87,32 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
 // --------------------------- CONSTRUCTORS ---------------------------
 
-    public Session(TSession session, IServerNetworkAdapter serverNetworkAdapterInstance, IEnvironmentPluginLoader environmentPluginLoader, ICycleStatisticsSaver saveGameStatistics) throws TechnicalException, PluginNotReadableException {
-        this(session.getName(), session.getNumberOfGames(), session.getConfiguration(), session.getClientsInThisSession(), serverNetworkAdapterInstance, environmentPluginLoader, session.getEnvironmentDescription(), saveGameStatistics);
+    public Session(TSession session,
+                   IServerNetworkAdapter serverNetworkAdapterInstance,
+                   IEnvironmentPluginLoader environmentPluginLoader,
+                   ICycleStatisticsSaver saveGameStatistics)
+            throws TechnicalException, PluginNotReadableException {
+
+        this(session.getName(),
+                session.getNumberOfGames(),
+                session.getEnvironmentDescription(),
+                session.getConfiguration(),
+                session.getClientsInThisSession(),
+                serverNetworkAdapterInstance,
+                environmentPluginLoader,
+                saveGameStatistics);
     }
 
-    public Session(String name, int numberOfIterations, IEnvironmentConfiguration configuration, List<TNetworkClient> clientsInThisSession, IServerNetworkAdapter serverNetworkAdapter, IEnvironmentPluginLoader environmentPluginLoader, TEnvironmentDescription environmentDescription, ICycleStatisticsSaver gameStatistics) throws TechnicalException, PluginNotReadableException {
+    public Session(String name,
+                   int numberOfIterations,
+                   TEnvironmentDescription environmentDescription,
+                   IEnvironmentConfiguration configuration,
+                   List<TNetworkClient> clientsInThisSession,
+                   IServerNetworkAdapter serverNetworkAdapter,
+                   IEnvironmentPluginLoader environmentPluginLoader,
+                   ICycleStatisticsSaver gameStatistics)
+            throws TechnicalException, PluginNotReadableException {
+
         super("Session");
         this.name = name;
         this.configuration = configuration;
@@ -126,73 +144,43 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
         this.status = SessionStatus.RUNNING;
 
+        for (TNetworkClient networkClient : clientsInThisSession) {
+            clientsForPlayers.put(new TMARLAClientInstance(networkClient.getName(), networkClient.getId()), networkClient);
+        }
+
         try {
             environment = environmentPluginLoader.createEnvironmentInstance(gameStatistics);
-        } catch (TechnicalException e) {
-            //TODO: Better exception handling, session should fail
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
+            environment.start(new ArrayList<TMARLAClientInstance>(clientsForPlayers.keySet()), configuration);
+            Thread.currentThread().setContextClassLoader(environmentPluginLoader.getUsedClassLoader());
 
-        sendPlayerEventMessage(new TClientEvent(ClientEventType.SessionStarted, getTransportType()));
+            currentEnvironmentState = environment.getCurrentEnvironmentState();
 
-        for (TNetworkClient networkClient : clientsInThisSession) {
-            try {
+
+            for (TNetworkClient networkClient : clientsInThisSession) {
                 serverNetworkAdapter.sendNetworkMessage(new SessionStartsMessage(networkClient.getId(), numberOfGames), MessageChannel.DATA);
-            } catch (NotConnectedException e) {
-                status = SessionStatus.FAILED;
-                e.printStackTrace();
-                return;
-            } catch (ConnectionLostException e) {
-                status = SessionStatus.FAILED;
-                e.printStackTrace();
-                return;
             }
-        }
 
-        while (numberOfPlayedGames < numberOfGames) {
-            try {
-                executeGame();
-            } catch (NotConnectedException e) {
-                e.printStackTrace();
-                status = SessionStatus.FAILED;
-                break;
-            } catch (ConnectionLostException e) {
-                e.printStackTrace();
-                status = SessionStatus.FAILED;
-                break;
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-                status = SessionStatus.FAILED;
-                break;
-            } catch (TechnicalException e) {
-                e.printStackTrace();
-                status = SessionStatus.FAILED;
-                break;
-            } catch (Exception e) {
-                e.printStackTrace();
-                status = SessionStatus.FAILED;
-                break;
+            while (numberOfPlayedGames < numberOfGames) {
+                doOneCycle();
+                numberOfPlayedGames += 1;
             }
-            numberOfPlayedGames += 1;
-        }
 
-        for (TNetworkClient networkClient : clientsInThisSession) {
-            try {
+            for (TNetworkClient networkClient : clientsInThisSession) {
                 serverNetworkAdapter.sendNetworkMessage(new SessionEndsMessage(networkClient.getId()), MessageChannel.DATA);
-            } catch (NotConnectedException e) {
-                e.printStackTrace();
-                status = SessionStatus.FAILED;
-            } catch (ConnectionLostException e) {
-                e.printStackTrace();
-                status = SessionStatus.FAILED;
             }
-        }
 
-        if (!status.equals(SessionStatus.FAILED)) {
-            this.status = SessionStatus.FINISHED;
-            sendPlayerEventMessage(new TClientEvent(ClientEventType.SessionEnded, this.getTransportType()));
-        } else {
-            sendPlayerEventMessage(new TClientEvent(ClientEventType.SessionFailedWithError, this.getTransportType()));
+            if (!status.equals(SessionStatus.FAILED)) {
+                this.status = SessionStatus.FINISHED;
+                sendPlayerEventMessage(new TClientEvent(ClientEventType.SessionEnded, this.getTransportType()));
+            } else {
+                sendPlayerEventMessage(new TClientEvent(ClientEventType.SessionFailedWithError, this.getTransportType()));
+            }
+
+            sendPlayerEventMessage(new TClientEvent(ClientEventType.SessionStarted, getTransportType()));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            status = SessionStatus.FAILED;
         }
     }
 
@@ -213,7 +201,7 @@ class Session extends Thread implements IHasTransportType<TSession> {
 
 // -------------------------- PRIVATE METHODS --------------------------
 
-    private void executeGame() throws NotConnectedException, ConnectionLostException, InterruptedException, TechnicalException {
+    private void doOneCycle() throws NotConnectedException, ConnectionLostException, InterruptedException, TechnicalException {
         try {
             currentEnvironmentState = environment.start(new ArrayList<TMARLAClientInstance>(clientsForPlayers.keySet()), configuration);
         } catch (IllegalNumberOfClientsException e) {
@@ -252,14 +240,14 @@ class Session extends Thread implements IHasTransportType<TSession> {
                     sendCurrentEnvironmentStateToClient(clientsForPlayers.get(environment.getActiveInstance()));
                     this.wait();
                 } else {
-                    endGame();
+                    endCycle();
                     break;
                 }
             }
         }
     }
 
-    private void endGame() throws NotConnectedException, ConnectionLostException, InterruptedException, TechnicalException {
+    private void endCycle() throws NotConnectedException, ConnectionLostException, InterruptedException, TechnicalException {
         environment.end();
 
         for (TMARLAClientInstance player : clientsForPlayers.keySet()) {

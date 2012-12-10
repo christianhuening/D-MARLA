@@ -1,16 +1,16 @@
 package OverseerGUI;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
-import EnvironmentPluginAPI.Contract.IVisualizeReplay;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Service.ICycleReplay;
-import Exceptions.GameReplayNotContainedInDatabaseException;
+import EnvironmentPluginAPI.Service.IVisualizeReplay;
 import PluginLoader.Implementation.EnvironmentPluginLoaderComponent;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IEnvironmentPluginLoader;
-import RemoteInterface.ICycleStatistics;
-import Settings.SettingException;
-import TransportTypes.TCycleReplayDescription;
+import ZeroTypes.Exceptions.GameReplayNotContainedInDatabaseException;
+import ZeroTypes.RemoteInterface.ICycleStatistics;
+import ZeroTypes.Settings.SettingException;
+import ZeroTypes.TransportTypes.TCycleReplayDescription;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -70,7 +70,7 @@ public class OverseerMain {
 
         // Load available EnvironmentPlugins
         try {
-            pluginLoader = new EnvironmentPluginLoaderComponent();
+            pluginLoader = new EnvironmentPluginLoaderComponent(null);
         } catch (TechnicalException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         } catch (SettingException e) {

@@ -1,6 +1,7 @@
 package PluginLoader.Implementation;
 
 import EnvironmentPluginAPI.Contract.*;
+import EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.CustomNetworkMessages.IEnvironmentStateMessage;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
@@ -8,8 +9,10 @@ import EnvironmentPluginAPI.Service.AbstractVisualizeReplayPanel;
 import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
 import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
 import EnvironmentPluginAPI.Service.IVisualizeReplay;
+import NetworkAdapter.Interface.IServerNetworkAdapter;
 import NetworkAdapter.Messages.DefaultEnvironmentStateMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
+import PluginLoader.Interface.IEnvironmentPluginLoader;
 import ZeroTypes.Settings.AppSettings;
 import ZeroTypes.Settings.SettingException;
 
@@ -24,17 +27,20 @@ import java.util.Map;
 /**
  * This class implements all logic affiliated with the loading of environment plugins.
  */
-public class EnvironmentPluginLoaderUseCase {
+public class EnvironmentPluginLoaderUseCase implements IEnvironmentPluginLoader {
 
+    private final IServerNetworkAdapter serverNetworkAdapter;
     private PluginHelper pluginHelper;
     private Map<TEnvironmentDescription, File> environmentPluginPaths;
     private Constructor customEnvironmentStateMessage;
     private Class customAbstractVisualization;
     private Class customInterfaceVisualization;
     private IEnvironmentPluginDescriptor loadedEnvironmentDescriptor = null;
+    private ClassLoader usedClassLoader;
 
 
-    public EnvironmentPluginLoaderUseCase() throws TechnicalException, SettingException, PluginNotReadableException {
+    public EnvironmentPluginLoaderUseCase(IServerNetworkAdapter serverNetworkAdapter) throws TechnicalException, SettingException, PluginNotReadableException {
+        this.serverNetworkAdapter = serverNetworkAdapter;
         pluginHelper = new PluginHelper();
         listAvailableEnvironments();
     }
@@ -73,7 +79,7 @@ public class EnvironmentPluginLoaderUseCase {
         return result;
     }
 
-    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
+    public void loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
 
         customEnvironmentStateMessage = null;
         customAbstractVisualization = null;
@@ -81,11 +87,11 @@ public class EnvironmentPluginLoaderUseCase {
 
         try {
             // Load all classes from the jar where this plugin is located
-            List<Class> classesInJar = pluginHelper.loadJar(environmentPluginPaths.get(environment).getPath());
+            Plugin plugin = pluginHelper.loadJar(environmentPluginPaths.get(environment).getPath());
 
 
             //search for the first class that abides the contract that is not the interface itself
-            for (Class c : classesInJar) {
+            for (Class c : plugin) {
                 if (!IEnvironmentPluginDescriptor.class.equals(c)
                         && IEnvironmentPluginDescriptor.class.isAssignableFrom(c)) {
 
@@ -118,17 +124,36 @@ public class EnvironmentPluginLoaderUseCase {
                 }
             }
 
+
+            if (loadedEnvironmentDescriptor != null) {
+                usedClassLoader = plugin.getClassLoader();
+                if(serverNetworkAdapter != null) {
+                    serverNetworkAdapter.setContextClassLoader(plugin.getClassLoader());
+                }
+            } else {
+                throw new PluginNotReadableException("plugin didn't provide a descriptor.", environmentPluginPaths.get(environment).getPath());
+            }
+
         } catch (InstantiationException e) {
             throw new TechnicalException("Unable to load Class from '" + environmentPluginPaths.get(environment) + "' Reason: \n\n" + e);
         } catch (IllegalAccessException e) {
             throw new TechnicalException("Unable to load Class from '" + environmentPluginPaths.get(environment) + "' Reason: \n\n" + e);
         }
+    }
 
-        if (loadedEnvironmentDescriptor != null) {
-            return loadedEnvironmentDescriptor;
-        } else {
-            throw new PluginNotReadableException("plugin didn't provide a descriptor.", environmentPluginPaths.get(environment).getPath());
-        }
+    @Override
+    public ClassLoader getUsedClassLoader() {
+        return usedClassLoader;
+    }
+
+    @Override
+    public List<IEnvironmentConfiguration> getAvailableConfigurations() throws CorruptConfigurationFileException, TechnicalException {
+        return loadedEnvironmentDescriptor.getAvailableConfigurations();
+    }
+
+    @Override
+    public void saveConfiguration(IEnvironmentConfiguration environmentConfiguration) throws TechnicalException {
+        loadedEnvironmentDescriptor.saveConfiguration(environmentConfiguration);
     }
 
     /**
@@ -158,10 +183,15 @@ public class EnvironmentPluginLoaderUseCase {
      * @return not null
      */
     public NetworkMessage createEnvironmentStateMessage(IEnvironmentState environmentState, int targetClientId) {
-        NetworkMessage message;
+
         if (customEnvironmentStateMessage != null) {
+
             try { //TODO: needs better exception handling
+
+                NetworkMessage message;
                 message = (NetworkMessage) customEnvironmentStateMessage.newInstance(targetClientId, environmentState);
+                return message;
+
             } catch (InstantiationException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
@@ -171,9 +201,7 @@ public class EnvironmentPluginLoaderUseCase {
             }
         }
 
-        message = new DefaultEnvironmentStateMessage(targetClientId, environmentState);
-        System.err.println("environment state class loader: " + environmentState.getClass().getClassLoader());
-        return message;
+        return new DefaultEnvironmentStateMessage(targetClientId, environmentState);
     }
 
     public IVisualizeReplay getReplayVisualization() {
@@ -211,5 +239,10 @@ public class EnvironmentPluginLoaderUseCase {
         }
 
         return loadedEnvironmentDescriptor.getInstance(saveGameStatistics);
+    }
+
+    @Override
+    public NetworkMessage createEnvironmentStateMessage(int clientId, IEnvironmentState environmentState) {
+        return null;
     }
 }

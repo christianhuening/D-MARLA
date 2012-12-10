@@ -108,7 +108,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="localhost"/>
+        </properties>
       </component>
       <component id="a9ef5" class="javax.swing.JLabel" binding="connectionLabel">
         <constraints>

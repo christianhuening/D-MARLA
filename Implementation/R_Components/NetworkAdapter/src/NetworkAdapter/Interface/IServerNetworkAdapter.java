@@ -47,4 +47,11 @@ public interface IServerNetworkAdapter {
      * stops all listening for new connections and closes all current connections
      */
     public void stopHosting();
+
+    /**
+     *  Sets the context class loader for all threads in the network adapter component to the provided one. This has to
+     *  be done to prevent ClassCastExceptions caused by classes being loaded by different class loaders.
+     * @param classLoader != null
+     */
+    void setContextClassLoader(ClassLoader classLoader);
 }

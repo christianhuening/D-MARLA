@@ -1,12 +1,14 @@
 package PluginLoader.Implementation;
 
 import EnvironmentPluginAPI.Contract.*;
+import EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import EnvironmentPluginAPI.Service.AbstractVisualizeReplayPanel;
 import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
 import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
 import EnvironmentPluginAPI.Service.IVisualizeReplay;
+import NetworkAdapter.Interface.IServerNetworkAdapter;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IEnvironmentPluginLoader;
 import ZeroTypes.Settings.SettingException;
@@ -21,8 +23,8 @@ public class EnvironmentPluginLoaderComponent implements IEnvironmentPluginLoade
 
     private EnvironmentPluginLoaderUseCase environmentPluginLoaderUseCase;
 
-    public EnvironmentPluginLoaderComponent() throws TechnicalException, SettingException, PluginNotReadableException {
-        environmentPluginLoaderUseCase = new EnvironmentPluginLoaderUseCase();
+    public EnvironmentPluginLoaderComponent(IServerNetworkAdapter serverNetworkAdapter) throws TechnicalException, SettingException, PluginNotReadableException {
+        environmentPluginLoaderUseCase = new EnvironmentPluginLoaderUseCase(serverNetworkAdapter);
     }
 
     @Override
@@ -31,20 +33,25 @@ public class EnvironmentPluginLoaderComponent implements IEnvironmentPluginLoade
     }
 
     @Override
-    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
-        return environmentPluginLoaderUseCase.loadEnvironmentPlugin(environment);
+    public void loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
+         environmentPluginLoaderUseCase.loadEnvironmentPlugin(environment);
     }
 
-    /**
-     * Returns the file handle for the directory, where the plugin jar is located at.
-     *
-     * @param environmentDescription a description of an existing environment != null
-     * @return null, if environment was not found
-     * @throws EnvironmentPluginAPI.Exceptions.TechnicalException
-     *          if technical errors prevent the component from loading the plugin specified
-     * @throws PluginLoader.Interface.Exceptions.PluginNotReadableException
-     *          if the plugin is not readable, for example if no TEnvironmentDescription is provided
-     */
+    @Override
+    public ClassLoader getUsedClassLoader() {
+        return environmentPluginLoaderUseCase.getUsedClassLoader();
+    }
+
+    @Override
+    public List<IEnvironmentConfiguration> getAvailableConfigurations() throws CorruptConfigurationFileException, TechnicalException {
+        return environmentPluginLoaderUseCase.getAvailableConfigurations();
+    }
+
+    @Override
+    public void saveConfiguration(IEnvironmentConfiguration environmentConfiguration) throws TechnicalException {
+        environmentPluginLoaderUseCase.saveConfiguration(environmentConfiguration);
+    }
+
     @Override
     public File getEnvironmentPluginPath(TEnvironmentDescription environmentDescription) throws TechnicalException, PluginNotReadableException {
         return environmentPluginLoaderUseCase.getEnvironmentPluginPath(environmentDescription);

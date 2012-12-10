@@ -37,7 +37,8 @@ public class ServerFacade implements IServerFacade {
     private ICycleStatisticsSaver saveGameStatistics;
     private IServerRunner serverRunner;
     private IServerNetworkAdapter serverNetworkAdapter;
-    private IEnvironmentPluginLoader environmentPluginLoader;
+    private IEnvironmentPluginDescriptor environmentPluginDescriptor;
+    private final IEnvironmentPluginLoader environmentPluginLoader;
 
     public ServerFacade(ICycleStatistics cycleStatistics, ICycleStatisticsSaver saveGameStatistics,
                         IServerRunner serverRunner, IServerNetworkAdapter networkAdapter, IEnvironmentPluginLoader environmentPluginLoader) {
@@ -150,8 +151,8 @@ public class ServerFacade implements IServerFacade {
     }
 
     @Override
-    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
-        return environmentPluginLoader.loadEnvironmentPlugin(environment);
+    public void loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
+        environmentPluginLoader.loadEnvironmentPlugin(environment);
     }
 
     @Override
@@ -161,12 +162,12 @@ public class ServerFacade implements IServerFacade {
 
     @Override
     public void saveConfiguration(IEnvironmentConfiguration configuration, TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException {
-        environmentPluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).saveConfiguration(configuration);
+        environmentPluginLoader.saveConfiguration(configuration);
     }
 
     @Override
     public List<IEnvironmentConfiguration> getAvailableConfigurations(TEnvironmentDescription environment) throws CorruptConfigurationFileException, TechnicalException, PluginNotReadableException {
-        return  environmentPluginLoader.loadEnvironmentPlugin(environment).getInstance(saveGameStatistics).getAvailableConfigurations();
+        return  environmentPluginLoader.getAvailableConfigurations();
     }
 
     @Override

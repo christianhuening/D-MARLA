@@ -1,11 +1,14 @@
 package PluginLoader.Implementation;
 
+import AgentSystemPluginAPI.Contract.IAgentSystem;
 import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.IActionDescription;
 import EnvironmentPluginAPI.CustomNetworkMessages.IActionDescriptionMessage;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
+import NetworkAdapter.Interface.IClientNetworkAdapter;
 import NetworkAdapter.Messages.DefaultActionDescriptionMessage;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IAgentSystemPluginLoader;
@@ -25,12 +28,16 @@ import java.util.Map;
  */
 public class AgentSystemPluginLoaderUseCase implements IAgentSystemPluginLoader {
 
+    private final IClientNetworkAdapter clientNetworkAdapter;
     private Map<TAgentSystemDescription, File> aiPluginPaths;
     private PluginHelper pluginHelper;
     private Constructor customActionDescriptionMessage;
+    private IAgentSystemPluginDescriptor loadedPlugin;
+    private ClassLoader usedClassLoader;
 
 
-    public AgentSystemPluginLoaderUseCase() throws TechnicalException, SettingException, PluginNotReadableException {
+    public AgentSystemPluginLoaderUseCase(IClientNetworkAdapter clientNetworkAdapter) throws TechnicalException, SettingException, PluginNotReadableException {
+        this.clientNetworkAdapter = clientNetworkAdapter;
         pluginHelper = new PluginHelper();
         listAvailableAgentSystemPlugins();
     }
@@ -43,6 +50,7 @@ public class AgentSystemPluginLoaderUseCase implements IAgentSystemPluginLoader 
 
         // Load all plugins recursively from the directory specified in the config file.
         try {
+
             List<String> allJars = pluginHelper.findJarsRecursively(AppSettings.getString("agentSystemPluginDirectory"));
 
             for (String jarPath : allJars) {
@@ -65,31 +73,27 @@ public class AgentSystemPluginLoaderUseCase implements IAgentSystemPluginLoader 
             throw new TechnicalException("Unable to load Class from plugin. Reason: \n\n" + e);
         } catch (IllegalAccessException e) {
             throw new TechnicalException("Unable to load Class from plugin. Reason: \n\n" + e);
-        } catch (SettingException se) {
-            // we assume, that we are in the server and thus can't have this setting
-            //TODO: This must be fixed, Server- and Client Pluginloader should be separated completely
         }
 
         return result;
     }
 
-    public IAgentSystemPluginDescriptor loadAgentSystemPlugin(TAgentSystemDescription agentSystem) throws TechnicalException, PluginNotReadableException {
-        IAgentSystemPluginDescriptor loadedAgentSystemDescriptor = null;
+    public void loadAgentSystemPlugin(TAgentSystemDescription agentSystem) throws TechnicalException, PluginNotReadableException {
 
         customActionDescriptionMessage = null;
 
         try {
             // Load all classes from the jar where this plugin is located
-            List<Class> classesInJar = pluginHelper.loadJar(aiPluginPaths.get(agentSystem).getPath());
+            Plugin plugin = pluginHelper.loadJar(aiPluginPaths.get(agentSystem).getPath());
 
 
             //search for the first class that abides the contract that is not the interface itself
-            for (Class c : classesInJar) {
+            for (Class c : plugin) {
                 if (!IAgentSystemPluginDescriptor.class.equals(c)
                         && IAgentSystemPluginDescriptor.class.isAssignableFrom(c)) {
 
                     //save available AgentSystemDescriptor description and it's directory
-                    loadedAgentSystemDescriptor = (IAgentSystemPluginDescriptor) c.newInstance();
+                    loadedPlugin = (IAgentSystemPluginDescriptor) c.newInstance();
                     continue;
                 }
 
@@ -100,9 +104,18 @@ public class AgentSystemPluginLoaderUseCase implements IAgentSystemPluginLoader 
                     customActionDescriptionMessage = pluginHelper.findSuitableConstructor(c, int.class, IActionDescription.class);
 
                     if (customActionDescriptionMessage == null) {
-                        throw new PluginNotReadableException("A custom action description message was found, but didn't provide the needed constructor => (int clientId, A extends IActionDescription state).", aiPluginPaths.get(agentSystem).getPath());
+                        throw new PluginNotReadableException("A custom action description message was found, but didn't provide the needed constructor => (int clientId, A extends IActionDescription state).",
+                                aiPluginPaths.get(agentSystem).getPath());
                     }
                 }
+            }
+
+
+            if (loadedPlugin != null) {
+                clientNetworkAdapter.setContextClassLoader(plugin.getClassLoader());
+                usedClassLoader = plugin.getClassLoader();
+            } else {
+                throw new PluginNotReadableException("Plugin didn't provide a descriptor: ", aiPluginPaths.get(agentSystem).getPath());
             }
 
         } catch (InstantiationException e) {
@@ -111,23 +124,18 @@ public class AgentSystemPluginLoaderUseCase implements IAgentSystemPluginLoader 
             throw new TechnicalException("Unable to load Class from '" + aiPluginPaths.get(agentSystem) + "' Reason: \n\n" + e);
         }
 
-        if (loadedAgentSystemDescriptor != null) {
-            return loadedAgentSystemDescriptor;
-        } else {
-            throw new PluginNotReadableException("Plugin didn't provide a descriptor: ", aiPluginPaths.get(agentSystem).getPath());
-        }
     }
 
-    /**
-     * Returns the file handle for the directory, where the plugin jar is located at.
-     *
-     * @param agentSystemDescription a description of an existing agent system plugin != null
-     * @return null, if agent system plugin was not found
-     * @throws EnvironmentPluginAPI.Exceptions.TechnicalException
-     *          if technical errors prevent the component from loading the plugin specified
-     * @throws PluginLoader.Interface.Exceptions.PluginNotReadableException
-     *          if the plugin is not readable, for example if no TAgentSystemDescription is provided
-     */
+    @Override
+    public ClassLoader getUsedClassLoader() {
+        return  usedClassLoader;
+    }
+
+    @Override
+    public IAgentSystem createAgentSystemInstance(IPluginServiceProvider serviceProvider) throws TechnicalException {
+        return loadedPlugin.getInstance(serviceProvider);
+    }
+
     public File getAgentSystemPluginPath(TAgentSystemDescription agentSystemDescription) throws TechnicalException, PluginNotReadableException {
         if (aiPluginPaths == null) {
             throw new UnsupportedOperationException("protocol violated: listAvailableAgentSystems must be called before this method.");
@@ -136,14 +144,6 @@ public class AgentSystemPluginLoaderUseCase implements IAgentSystemPluginLoader 
         return aiPluginPaths.get(agentSystemDescription).getParentFile();
     }
 
-    /**
-     * Creates an action description message. If the environment provides a custom implementation, it will be used.
-     * Otherwise a default message is used. The message will be targeted to the server automatically
-     *
-     * @param actionDescription the action description to send
-     * @param clientId          client's network id
-     * @return not null
-     */
     public NetworkMessage createActionDescriptionMessage(int clientId, IActionDescription actionDescription) {
         if (customActionDescriptionMessage != null) {
 

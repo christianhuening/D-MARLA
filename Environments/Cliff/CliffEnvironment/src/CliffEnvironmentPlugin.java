@@ -3,17 +3,14 @@ import Actions.EnvironmentState;
 import EnvironmentPluginAPI.Contract.IEnvironment;
 import EnvironmentPluginAPI.Contract.IEnvironmentState;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
-import EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException;
 import EnvironmentPluginAPI.Exceptions.IllegalNumberOfClientsException;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
 import Logic.GridWorldConfiguration;
-import Logic.GridWorldStyle;
 import Logic.Session;
 import Statistics.CliffReplay;
 
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -29,19 +26,6 @@ public class CliffEnvironmentPlugin implements IEnvironment<GridWorldConfigurati
 
     public CliffEnvironmentPlugin(ICycleStatisticsSaver cycleStatisticsSaver) {
         this.cycleStatisticsSaver = cycleStatisticsSaver;
-    }
-
-    @Override
-    public List<GridWorldConfiguration> getAvailableConfigurations() throws CorruptConfigurationFileException, TechnicalException {
-        LinkedList<GridWorldConfiguration> configurations = new LinkedList<GridWorldConfiguration>();
-        configurations.add(new GridWorldConfiguration(20, 8, GridWorldStyle.Cliff));
-        configurations.add(new GridWorldConfiguration(20, 8, GridWorldStyle.Random));
-        return configurations;
-    }
-
-    @Override
-    public void saveConfiguration(GridWorldConfiguration configuration) throws TechnicalException {
-        // not yet..
     }
 
     @Override

@@ -51,4 +51,9 @@ public class ClientNetworkAdapterComponent implements IClientNetworkAdapter {
     public void disconnect() {
         clientNetworkAdapterUseCase.disconnect();
     }
+
+    @Override
+    public void setContextClassLoader(ClassLoader classLoader) {
+        clientNetworkAdapterUseCase.setContextClassLoader(classLoader);
+    }
 }

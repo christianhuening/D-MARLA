@@ -89,8 +89,6 @@ abstract class EpsilonGreedyAgent implements IAgent {
             result = getBestAction(state);
         }
 
-        System.err.println("epsilonInflucenced stateAction: " + result);
-
         return  result;
     }
 

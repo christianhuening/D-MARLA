@@ -19,6 +19,7 @@ public class Session {
     private GridWorldConfiguration configuration;
 
     public Session(GridWorldConfiguration configuration) {
+        System.err.println(configuration != null);
         this.configuration = configuration;
 
         grid = new GridType[configuration.getWidth()][configuration.getHeight()];

@@ -1,8 +1,8 @@
 package OverseerGUI;
 
-import EnvironmentPluginAPI.Contract.AbstractVisualizeReplayPanel;
-import EnvironmentPluginAPI.Contract.IVisualizeReplay;
+import EnvironmentPluginAPI.Service.AbstractVisualizeReplayPanel;
 import EnvironmentPluginAPI.Service.ICycleReplay;
+import EnvironmentPluginAPI.Service.IVisualizeReplay;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;

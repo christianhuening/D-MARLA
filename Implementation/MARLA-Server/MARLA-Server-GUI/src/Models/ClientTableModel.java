@@ -7,6 +7,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -14,15 +15,20 @@ import java.util.List;
  */
 public class ClientTableModel extends DefaultTableModel {
 
+    private List<TNetworkClient> clients;
+
     public ClientTableModel(){
         this.addColumn("ID");
         this.addColumn("Name");
         this.addColumn("Address");
         this.addColumn("Connected Since");
+
+        clients = new LinkedList<TNetworkClient>();
     }
 
 
     public void addClient(TNetworkClient client){
+        clients.add(client);
         this.addRow(new String[] {((Integer)client.getId()).toString(), client.getName(), client.getAddress().getHostAddress(), client.getConnectedSince().toString()});
     }
 
@@ -33,9 +39,8 @@ public class ClientTableModel extends DefaultTableModel {
     }
 
     public TNetworkClient removeClientAt(int rowNr) throws UnknownHostException {
-        TNetworkClient client = createTClientFromRow(rowNr);
         this.removeRow(rowNr);
-        return client;
+        return clients.remove(rowNr);
     }
 
     public void removeAllClients(){
@@ -45,29 +50,6 @@ public class ClientTableModel extends DefaultTableModel {
     }
 
     public List<TNetworkClient> getAllClients() throws UnknownHostException {
-        List<TNetworkClient> clients = new ArrayList<TNetworkClient>();
-        for(int i=0; i < this.getRowCount(); i++){
-            clients.add(createTClientFromRow(i));
-        }
-        this.removeAllClients();
         return clients;
     }
-
-    private TNetworkClient createTClientFromRow(int rowNr) throws UnknownHostException {
-        Integer id = Integer.parseInt(this.getValueAtAsString(rowNr,0));
-
-        InetAddress inetAddress = InetAddress.getByName(this.getValueAtAsString(rowNr, 2));
-
-        Date connectedSince = new Date();
-
-        TNetworkClient client = new TNetworkClient(id.intValue(), this.getValueAtAsString(rowNr,1), inetAddress, connectedSince);
-
-        return client;
-    }
-
-    private String getValueAtAsString(int row, int column){
-        return String.valueOf(this.getValueAt(row,column));
-    }
-
-
 }

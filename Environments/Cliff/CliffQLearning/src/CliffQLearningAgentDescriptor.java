@@ -1,11 +1,14 @@
 import AgentSystemPluginAPI.Contract.IAgentSystem;
 import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import AgentSystemPluginAPI.Services.IAgent;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -21,6 +24,12 @@ public class CliffQLearningAgentDescriptor implements IAgentSystemPluginDescript
         Set<TEnvironmentDescription> compatibleEnvironments = new HashSet<TEnvironmentDescription>();
         compatibleEnvironments.add(new TEnvironmentDescription("The Cliff", "v0.01", ""));
         return new TAgentSystemDescription("Cliff QLearning Agent", "v0.01", "The QLearning implementation of a simple agent that moves within a gridworld.", compatibleEnvironments);
+    }
+
+    @Override
+    public List<IAgent> getInternalAgents() {
+        List<IAgent> result = new ArrayList<IAgent>();
+        return result;
     }
 
     @Override

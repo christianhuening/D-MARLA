@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="CliffEnvironment" />
+    <orderEntry type="module" module-name="CliffEnvironment" exported="" />
     <orderEntry type="library" name="AgentSystemPluginAPI" level="project" />
     <orderEntry type="library" name="EnvironmentPluginAPI" level="project" />
   </component>

@@ -28,7 +28,7 @@ public class AIClientApplicationCoreFactory {
         container.as(CACHE).addComponent(IClientNetworkAdapter.class, ClientNetworkAdapterComponent.class);
         container.as(CACHE).addComponent(IAIRunner.class, AIRunnerComponent.class);
         container.as(CACHE).addComponent(IAIClientFacade.class, AIClientFacade.class);
-        container.addComponent(IAgentSystemPluginLoader.class, AgentSystemPluginLoaderComponent.class);
+        container.as(CACHE).addComponent(IAgentSystemPluginLoader.class, AgentSystemPluginLoaderComponent.class);
 
         IAIClientFacade facade = container.getComponent(IAIClientFacade.class);
         return facade;

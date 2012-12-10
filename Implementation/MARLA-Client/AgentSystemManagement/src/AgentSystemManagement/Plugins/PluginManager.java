@@ -23,6 +23,7 @@ public class PluginManager {
     }
 
     public IAgentSystem getAgentSystemInstance(TAgentSystemDescription system, IPluginServiceProvider provider) throws TechnicalException, PluginNotReadableException, SettingException {
-        return agentSystemPluginLoader.loadAgentSystemPlugin(system).getInstance(provider);
+        agentSystemPluginLoader.loadAgentSystemPlugin(system);
+        return agentSystemPluginLoader.createAgentSystemInstance(provider);
     }
 }

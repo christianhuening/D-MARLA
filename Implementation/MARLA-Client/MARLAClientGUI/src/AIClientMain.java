@@ -61,11 +61,10 @@ public class AIClientMain {
                     public void run() {
                         if(eventType == AIRunnerEventType.CycleEnded){
                             progressBar1.setValue(progressBar1.getValue()+1);
-                            System.err.println("müsste balken setzen");
                         }
 
                         if(eventType == AIRunnerEventType.SessionEnded){
-                            progressBar1.setValue(0);
+
                         }
 
                         if(eventType == AIRunnerEventType.Connected){

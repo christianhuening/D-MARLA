@@ -26,6 +26,8 @@ class ClientNetworkAdapterUseCase
     private NetworkChannel controlChannel;
     private NetworkChannel dataChannel;
 
+    private ClassLoader currentClassLoader;
+
     private boolean connected;
     private int clientId;
 
@@ -60,6 +62,9 @@ class ClientNetworkAdapterUseCase
 
                 clientId = message.getClientId();
                 controlChannel = new NetworkChannel<NetworkMessage>(protocol, this);
+                if (currentClassLoader != null) {
+                    controlChannel.setContextClassLoader(currentClassLoader);
+                }
                 controlChannel.start();
 
                 socket = new Socket(address, port + 1);
@@ -72,6 +77,9 @@ class ClientNetworkAdapterUseCase
                 //if that worked, too, we can establish the data connection and are done
                 if (message instanceof ClientAckMessage) {
                     dataChannel = new NetworkChannel<NetworkMessage>(protocol, this);
+                    if (currentClassLoader != null) {
+                        dataChannel.setContextClassLoader(currentClassLoader);
+                    }
                     dataChannel.start();
                 } else { // abort (we were so close..) :(
                     throw new HostUnreachableException();
@@ -119,6 +127,17 @@ class ClientNetworkAdapterUseCase
             dataChannel.sendNetworkMessage(bye);
         } catch (ConnectionLostException e) {
         } //closing anyway
+    }
+
+    @Override
+    public void setContextClassLoader(ClassLoader classLoader) {
+        currentClassLoader = classLoader;
+        if (controlChannel != null) {
+            controlChannel.setContextClassLoader(classLoader);
+        }
+        if (dataChannel != null) {
+            dataChannel.setContextClassLoader(classLoader);
+        }
     }
 
     @Override

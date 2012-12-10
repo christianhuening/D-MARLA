@@ -31,22 +31,6 @@ import java.util.List;
 public interface IEnvironment<C extends IEnvironmentConfiguration, I extends IEnvironmentState, A extends IActionDescription> {
 
     /**
-     * Returns a list of all saved maps.
-     *
-     * @return empty, if no maps found
-     * @throws EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException if a map file, that was being tried to read, was somehow corrupted
-     * @throws TechnicalException if any technical error's occurred, that couldn't be handled
-     */
-    public List<C> getAvailableConfigurations() throws CorruptConfigurationFileException, TechnicalException;
-
-    /**
-     * Saves a configuration. If it already exists, it will be overwritten. Doesn't necessarily have to be implemented.
-     *
-     * @param environmentConfiguration the configuration to save != null
-     */
-    public void saveConfiguration(C environmentConfiguration) throws TechnicalException;
-
-    /**
      * Starts the environment with the given parameters.
      *
      * @param marlaClients a list of all marla networkClients that will take part in the environment session

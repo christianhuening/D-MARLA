@@ -52,4 +52,9 @@ public class ServerNetworkAdapterComponent implements IServerNetworkAdapter {
     public void stopHosting() {
         serverNetworkAdapterUseCase.stopHosting();
     }
+
+    @Override
+    public void setContextClassLoader(ClassLoader classLoader) {
+        serverNetworkAdapterUseCase.setContextClassLoader(classLoader);
+    }
 }

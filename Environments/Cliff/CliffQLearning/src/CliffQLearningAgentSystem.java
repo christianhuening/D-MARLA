@@ -38,7 +38,7 @@ public class CliffQLearningAgentSystem implements IAgentSystem<GridWorldConfigur
         gridWidth = configuration.getWidth();
         gridHeight = configuration.getHeight();
 
-        if (sarsaLambdaAgent != null) {
+        if (sarsaLambdaAgent == null) {
             sarsaLambdaAgent = pluginServiceProvider.getTableAgent("qlearning", LearningAlgorithm.SARSALambda, new IStateActionGenerator() {
                 @Override
                 public Set<StateAction> getAllPossibleActions(StateAction stateAction) {
@@ -86,10 +86,5 @@ public class CliffQLearningAgentSystem implements IAgentSystem<GridWorldConfigur
         System.err.println("beendet");
     }
 
-    @Override
-    public List<IAgent> getInternalAgents() {
-        List<IAgent> result = new ArrayList<IAgent>();
-        result.add(sarsaLambdaAgent);
-        return result;
-    }
+
 }

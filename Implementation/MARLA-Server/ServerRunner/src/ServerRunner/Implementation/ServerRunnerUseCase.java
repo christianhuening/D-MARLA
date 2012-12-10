@@ -50,13 +50,12 @@ public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceiv
         networkClients = new ArrayList<TNetworkClient>();
         sessions = new ArrayList<Session>();
 
-        getServerNetworkAdapterInstance().subscribeForNetworkMessageReceivedEvent(this, IActionDescriptionMessage.class);
-        getServerNetworkAdapterInstance().subscribeForNetworkMessageReceivedEvent(this, ClientJoinMessage.class);
+        networkAdapter.subscribeForNetworkMessageReceivedEvent(this, IActionDescriptionMessage.class);
+        networkAdapter.subscribeForNetworkMessageReceivedEvent(this, ClientJoinMessage.class);
     }
 
     @Override
     public void onMessageReceived(NetworkMessage message) {
-
 
         if (message instanceof IActionDescriptionMessage) {
             for (Session s : sessions) {
@@ -89,18 +88,18 @@ public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceiv
 
     @Override
     public void startHosting() throws TechnicalException, ConnectionLostException {
-        getServerNetworkAdapterInstance().startHosting();
+        networkAdapter.startHosting();
     }
 
     @Override
     public void stopHosting() {
-        getServerNetworkAdapterInstance().stopHosting();
+        networkAdapter.stopHosting();
     }
 
     @Override
     public UUID createSession(TSession session) throws TechnicalException, PluginNotReadableException {
 
-        Session newSession = new Session(session, getServerNetworkAdapterInstance(), environmentPluginLoader, saveGameStatistics);
+        Session newSession = new Session(session, networkAdapter, environmentPluginLoader, saveGameStatistics);
 
         sessions.add(newSession);
 
@@ -143,6 +142,7 @@ public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceiv
     public void startAllReadySessions() {
         for (Session s : sessions) {
             if (s.getStatus().equals(SessionStatus.READY)) {
+
                 s.start();
             }
         }
@@ -150,7 +150,7 @@ public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceiv
 
     @Override
     public List<TNetworkClient> getFreeClients() {
-        List<TNetworkClient> freeNetworkClients = new ArrayList<TNetworkClient>(getServerNetworkAdapterInstance().getConnectedClients());
+        List<TNetworkClient> freeNetworkClients = new ArrayList<TNetworkClient>(networkAdapter.getConnectedClients());
 
         for (Session s : sessions) {
             for (TNetworkClient networkClient : s.getClientsInThisSession()) {
@@ -177,9 +177,5 @@ public class ServerRunnerUseCase implements IServerRunner, INetworkMessageReceiv
         }
 
         return players;
-    }
-
-    private IServerNetworkAdapter getServerNetworkAdapterInstance() {
-        return networkAdapter;
     }
 }

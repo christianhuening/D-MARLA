@@ -1,10 +1,13 @@
 package PluginLoader.Implementation;
 
+import AgentSystemPluginAPI.Contract.IAgentSystem;
 import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Contract.IActionDescription;
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
+import NetworkAdapter.Interface.IClientNetworkAdapter;
 import PluginLoader.Interface.Exceptions.PluginNotReadableException;
 import PluginLoader.Interface.IAgentSystemPluginLoader;
 import ZeroTypes.Settings.SettingException;
@@ -16,10 +19,10 @@ import java.util.List;
  * This class represents the agent system plugin loader implementation.
  */
 public class AgentSystemPluginLoaderComponent implements IAgentSystemPluginLoader {
-    AgentSystemPluginLoaderUseCase agentSystemPluginLoaderUseCase;
+    private AgentSystemPluginLoaderUseCase agentSystemPluginLoaderUseCase;
 
-    public AgentSystemPluginLoaderComponent() throws TechnicalException, SettingException, PluginNotReadableException {
-        agentSystemPluginLoaderUseCase = new AgentSystemPluginLoaderUseCase();
+    public AgentSystemPluginLoaderComponent(IClientNetworkAdapter clientNetworkAdapter) throws TechnicalException, SettingException, PluginNotReadableException {
+        agentSystemPluginLoaderUseCase = new AgentSystemPluginLoaderUseCase(clientNetworkAdapter);
     }
 
     @Override
@@ -28,8 +31,18 @@ public class AgentSystemPluginLoaderComponent implements IAgentSystemPluginLoade
     }
 
     @Override
-    public IAgentSystemPluginDescriptor loadAgentSystemPlugin(TAgentSystemDescription agentSystem) throws TechnicalException, PluginNotReadableException {
-        return agentSystemPluginLoaderUseCase.loadAgentSystemPlugin(agentSystem);
+    public void loadAgentSystemPlugin(TAgentSystemDescription agentSystem) throws TechnicalException, PluginNotReadableException {
+        agentSystemPluginLoaderUseCase.loadAgentSystemPlugin(agentSystem);
+    }
+
+    @Override
+    public ClassLoader getUsedClassLoader() {
+        return agentSystemPluginLoaderUseCase.getUsedClassLoader();
+    }
+
+    @Override
+    public IAgentSystem createAgentSystemInstance(IPluginServiceProvider serviceProvider) throws TechnicalException {
+        return agentSystemPluginLoaderUseCase.createAgentSystemInstance(serviceProvider);
     }
 
     @Override

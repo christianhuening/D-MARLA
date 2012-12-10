@@ -27,36 +27,41 @@ public interface IServerFacade extends
         ICycleStatisticsSaver,
         IServerRunner {
 
+
     /**
-     * Loads the specified environment plugin an returns an instance of it.
+     *  Searches recursively for environment plugins in the given directory.
+     *
+     * @return empty if no environment plugins were found
+     * @throws TechnicalException if technical errors prevent the component from loading the plugin described
+     * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
+     * @throws ZeroTypes.Settings.SettingException @throws SettingException if the environmentPluginsfolder is not correctly set in the app settings.
+     */
+    public List<TEnvironmentDescription> listAvailableEnvironments() throws TechnicalException, PluginNotReadableException, SettingException;
+
+    /**
+     *  Loads the specified environment plugin.
      * @pre listAvailableEnvironments must have been used before
      * @param environment the environment plugin to load
      * @return != null
      * @throws TechnicalException if technical errors prevent the component from loading the plugin specified
      * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
      */
-    public IEnvironmentPluginDescriptor loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException;
+    public void loadEnvironmentPlugin(TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException;
 
     /**
-     * Searches recursively for environment plugins in the given directory.
+     *  Saves the given map to a file in the maps directory.
+     *  if a map with that name already exists, it will be overwritten.
      *
-     * @return empty if no environment plugins were found
-     * @throws TechnicalException if technical errors prevent the component from loading the plugin described
-     * @throws PluginNotReadableException if the plugin is not readable, for example if no TEnvironmentDescription is provided
-     * @throws ZeroTypes.Settings.SettingException @throws SettingException if the environmentPluginsfolder is not correctly set int he app's settings.
-     */
-    public List<TEnvironmentDescription> listAvailableEnvironments() throws TechnicalException, PluginNotReadableException, SettingException;
-
-    /**
-     * Saves the given map to a file in the maps directory.
-     * if a map with that name already exists, it will be overwritten.
+     * @pre loadEnvironmentPlugin must have been called previously
      * @param configuration the configuration to save
      * @throws EnvironmentPluginAPI.Exceptions.TechnicalException
      */
     public void saveConfiguration(IEnvironmentConfiguration configuration, TEnvironmentDescription environment) throws TechnicalException, PluginNotReadableException;
 
     /**
-     * Gets all available maps from the maps directory.
+     *  Gets all available maps from the maps directory.
+     *
+     * @pre loadEnvironmentPlugin must have been called previously
      * @return empty, if no maps found.
      */
     public List<IEnvironmentConfiguration> getAvailableConfigurations(TEnvironmentDescription environment) throws CorruptConfigurationFileException, TechnicalException, PluginNotReadableException;

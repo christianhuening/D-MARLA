@@ -59,7 +59,7 @@ class PluginHelper {
      *                                  if the jar is not readable
      * @throws IllegalArgumentException if no path is found under the given path
      */
-    public List<Class> loadJar(String pathToJar) throws TechnicalException, PluginNotReadableException {
+    public Plugin loadJar(String pathToJar) throws TechnicalException, PluginNotReadableException {
 
         List<Class> classes = listClassesFromJar(pathToJar);
         //then make all classes of the plugin known to the class loader
@@ -71,11 +71,8 @@ class PluginHelper {
             }
         }
 
-        System.err.println("Classloader im PluginHelper: " + classLoader);
-        System.err.println("loading plugin into: " + Thread.currentThread());
-        System.err.println("setting context classloader in " + Thread.currentThread());
         Thread.currentThread().setContextClassLoader(classLoader);
-        return classes;
+        return new Plugin(classLoader, classes);
     }
 
 
@@ -95,6 +92,7 @@ class PluginHelper {
 
         try {
             classLoader = new URLClassLoader(new URL[]{new File(pathToJar).toURI().toURL()}, Launcher.getLauncher().getClassLoader());
+
             JarFile jarFile = new JarFile(pathToJar);
             Enumeration<JarEntry> e = jarFile.entries();
 

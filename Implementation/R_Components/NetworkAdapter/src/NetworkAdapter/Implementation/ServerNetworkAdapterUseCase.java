@@ -44,12 +44,15 @@ class ServerNetworkAdapterUseCase
     private ServerSocket dataSocket; //socket for data transfer
     private DataChannelCreator dataChannelCreator; // extra thread for waiting on client data channel connections
 
+    private ClassLoader currentClassLoader;
+
     /**
      * Sets up a tcp host, listening on the ports specified in the settings.properties.
      *
-     * @throws ZeroTypes.Settings.SettingException, if a problem with the application's settings file occurs
+     * @throws ZeroTypes.Settings.SettingException,
+     *          if a problem with the application's settings file occurs
      * @throws EnvironmentPluginAPI.Exceptions.TechnicalException,
-     *                                    if a problem with the connection occurs
+     *          if a problem with the connection occurs
      */
     public ServerNetworkAdapterUseCase() throws SettingException, TechnicalException {
 
@@ -111,6 +114,18 @@ class ServerNetworkAdapterUseCase
                 c.close(new ConnectionEndMessage(c.getClientId(), "serverShuttingDown"));
             } catch (ConnectionLostException e) {
             } // server is shutting down anyway
+        }
+    }
+
+    @Override
+    public void setContextClassLoader(ClassLoader classLoader) {
+        currentClassLoader = classLoader;
+
+        for (ClientSession client : clients) {
+            client.controlChannel.setContextClassLoader(classLoader);
+            if (client.dataChannel != null) {
+                client.dataChannel.setContextClassLoader(classLoader);
+            }
         }
     }
 
@@ -226,6 +241,9 @@ class ServerNetworkAdapterUseCase
 
         //start listening on the control connection
         session.controlChannel = new NetworkChannel<NetworkMessage>(networkAccessProtocol, this);
+        if (currentClassLoader != null) {
+            session.controlChannel.setContextClassLoader(currentClassLoader);
+        }
         session.controlChannel.start();
 
         return id;
@@ -240,6 +258,9 @@ class ServerNetworkAdapterUseCase
         if (isValidClientId(clientId)) {
             ClientSession clientSession = clients.get(clientId);
             clientSession.dataChannel = new NetworkChannel<NetworkMessage>(networkAccessProtocol, this);
+            if(currentClassLoader != null) {
+                clientSession.dataChannel.setContextClassLoader(currentClassLoader);
+            }
             clientSession.dataChannel.start();
             result = true;
         }
@@ -254,10 +275,14 @@ class ServerNetworkAdapterUseCase
      */
     private class SessionCreator extends Thread {
 
+        private SessionCreator() {
+            super("SessionCreator");
+        }
+
         @Override
         public void run() {
             try {
-                while (!isInterrupted()) {
+                while (!isInterrupted() && !controlSocket.isClosed()) {
                     /*
                      * Read first message from the socket. If it is a protocol-conform ClientJoin Message, create client
                      * session and send an ack. If not, notice about protocol violation and close socket.
@@ -293,10 +318,14 @@ class ServerNetworkAdapterUseCase
      */
     private class DataChannelCreator extends Thread {
 
+        private DataChannelCreator() {
+            super("DataChannelCreator");
+        }
+
         @Override
         public void run() {
             try {
-                while (!isInterrupted()) {
+                while (!isInterrupted() && !dataSocket.isClosed()) {
                     /*
                     * Read first message from the socket. If it is a protocol-conform ClientJoin Message, and the
                     * clientId has a running connection, attach the data connection to the session and confirm via ack.

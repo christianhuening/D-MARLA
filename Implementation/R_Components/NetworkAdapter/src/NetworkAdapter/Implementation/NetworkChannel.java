@@ -46,8 +46,10 @@ class NetworkChannel<M extends NetworkMessage> extends Thread {
                 if (!isInterrupted()) {
                     deliverException(e);
                 }
+                interrupt();
             } catch (NotConnectedException e) {
                 deliverException(e);
+                interrupt();
             }
         }
     }

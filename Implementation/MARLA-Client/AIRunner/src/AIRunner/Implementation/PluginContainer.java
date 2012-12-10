@@ -47,6 +47,7 @@ public class PluginContainer extends Thread {
         this.agentSystemPluginLoader = agentSystemPluginLoader;
         this.hostname = hostname;
         this.port = port;
+        environmentState = null;
     }
 
 // ------------------------ INTERFACE METHODS ------------------------
@@ -56,10 +57,11 @@ public class PluginContainer extends Thread {
 
     @Override
     public void run() {
-        //try to load plugin, if not possible exit
+        //try to connect to the server, if not possible exit
         try {
             plugin = agentSystemManagement.getAgentSystem(agentSystemDescription);
             clientNetworkAdapter.connectToServer(hostname, port, agentSystemDescription.toString());
+            Thread.currentThread().setContextClassLoader(agentSystemPluginLoader.getUsedClassLoader());
         } catch (TechnicalException e) {
             handleException(e);
             return;
@@ -74,17 +76,22 @@ public class PluginContainer extends Thread {
             return;
         }
 
+        /*
+         *  Wait for environment states to be received.
+         *  When it is received, get according action from agent system plugin, send it to the server
+         */
         while (!isInterrupted()) {
             try {
-                if (!isInterrupted()) {
-                    synchronized (this) {
-                        wait();
-                    }
-
-                    clientNetworkAdapter.sendNetworkMessage(
-                            agentSystemPluginLoader.createActionDescriptionMessage(clientNetworkAdapter.getClientId(),
-                                    plugin.getActionsForEnvironmentStatus(environmentState))
+                synchronized (this) { // make sure that the value of environmentState doesn't change during this section
+                    if (!isInterrupted() && environmentState != null) {
+                        clientNetworkAdapter.sendNetworkMessage(
+                                agentSystemPluginLoader.createActionDescriptionMessage(clientNetworkAdapter.getClientId(),
+                                        plugin.getActionsForEnvironmentStatus(environmentState))
                                 , MessageChannel.DATA);
+                        environmentState = null;
+                    } else {
+                        wait(150); // after a
+                    }
                 }
             } catch (InterruptedException e) {
                 handleException(e);
@@ -130,9 +137,9 @@ public class PluginContainer extends Thread {
         }
     }
 
-    public void start(IEnvironmentConfiguration environmentInitInfo) {
+    public void start(IEnvironmentConfiguration environmentConfiguration) {
         try {
-            plugin.start(environmentInitInfo);
+            plugin.start(environmentConfiguration);
         } catch (TechnicalException e) {
             handleException(e);
         }
