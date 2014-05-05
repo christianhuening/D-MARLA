@@ -1,7 +1,8 @@
 package Factory.GameLogic;
 
-import EnvironmentPluginAPI.Contract.Exception.CorruptMapFileException;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+
+import EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
 import Factory.Exceptions.ErrorMessages;
 
@@ -47,11 +48,11 @@ class MapScanner {
         }
     }
 
-    public List<TMapMetaData> searchMaps() throws CorruptMapFileException, TechnicalException {
+    public List<TMapMetaData> searchMaps() throws CorruptConfigurationFileException, TechnicalException {
         return searchMapsRecursively(new File(pathToMapDirectory));
     }
 
-    public List<TMapMetaData> searchMapsRecursively(File file) throws TechnicalException, CorruptMapFileException {
+    public List<TMapMetaData> searchMapsRecursively(File file) throws TechnicalException, CorruptConfigurationFileException {
         try {
             List<TMapMetaData> result = new LinkedList<TMapMetaData>();
             File[] files = file.listFiles();
@@ -81,11 +82,11 @@ class MapScanner {
         }
     }
 
-    private int readInt(String key) throws CorruptMapFileException {
+    private int readInt(String key) throws CorruptConfigurationFileException {
         try {
             return Integer.parseInt(mapData.getProperty(key));
         } catch (NumberFormatException e) {
-            throw new CorruptMapFileException(ErrorMessages.get("corruptMapFile"), currentFile.getAbsolutePath());
+            throw new CorruptConfigurationFileException(ErrorMessages.get("corruptMapFile"), currentFile.getAbsolutePath());
         }
     }
 }

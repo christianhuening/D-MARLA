@@ -1,6 +1,6 @@
 package Factory.GameLogic.GameActors;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
 import Factory.GameLogic.Enums.Faction;
 import Factory.GameLogic.TransportTypes.TPlayer;

@@ -11,6 +11,7 @@
     <orderEntry type="library" name="EnvironmentPluginAPI" level="project" />
     <orderEntry type="library" name="joda-time-2.3" level="project" />
     <orderEntry type="library" name="junit-4.10" level="project" />
+    <orderEntry type="library" name="AgentSystemPluginAPI" level="project" />
   </component>
 </module>
 

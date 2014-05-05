@@ -1,8 +1,9 @@
 package Factory.GameLogic;
 
-import EnvironmentPluginAPI.Contract.Exception.IllegalActionException;
-import EnvironmentPluginAPI.Contract.Exception.IllegalNumberOfClientsException;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+
+import EnvironmentPluginAPI.Exceptions.IllegalActionException;
+import EnvironmentPluginAPI.Exceptions.IllegalNumberOfClientsException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
 import Factory.GameLogic.Enums.Direction;
 import Factory.GameLogic.Exceptions.NoUnitFoundException;

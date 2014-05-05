@@ -26,42 +26,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="570b48bc-9cf0-4458-9fa9-639946a69324" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/artifacts/AgentSystemPluginAPI_jar.xml" />
-      <change type="DELETED" beforePath="E:\SoftwareProjekte\D-MARLA\Implementation\MARLA-Server\.idea\artifacts\copy_environment_plugins.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/PluginAPI/AgentSystemPluginAPI/AgentSystemPluginAPI.iml" afterPath="$PROJECT_DIR$/../../Implementation/PluginAPI/AgentSystemPluginAPI/AgentSystemPluginAPI.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/AgentSystemPluginAPI.xml" afterPath="$PROJECT_DIR$/.idea/libraries/AgentSystemPluginAPI.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/CycleStatistics/CycleStatistics.iml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/CycleStatistics/CycleStatistics.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" afterPath="$PROJECT_DIR$/../../Implementation/PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/EnvironmentPluginAPI.xml" afterPath="$PROJECT_DIR$/.idea/libraries/EnvironmentPluginAPI.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/CustomMessages/ActionListMessage.java" afterPath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/CustomMessages/ActionListMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Enums/Direction.java" afterPath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Enums/Direction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactoryEnvironment/FactoryEnvironment.iml" afterPath="$PROJECT_DIR$/FactoryEnvironment/FactoryEnvironment.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java" afterPath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/GUI.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/GUI.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/GameLogicComponentTest.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/GameLogicComponentTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/GameServerFacadeFactoryIntegrationTest.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/GameServerFacadeFactoryIntegrationTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/GameStatisticsComponentTest.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/GameStatisticsComponentTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/Interfaces/IHasTransportType.java" afterPath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/Interfaces/IHasTransportType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/MARLA-Server-GUI/MARLA-Server-GUI.iml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/MARLA-Server-GUI/MARLA-Server-GUI.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/R_Components/NetworkAdapter/NetworkAdapter.iml" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/NetworkAdapter/NetworkAdapter.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/R_Components/PersistenceManager/PersistenceManager.iml" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/PersistenceManager/PersistenceManager.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/PersistenceManagerComponentTest.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/PersistenceManagerComponentTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/PluginLoader.iml" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/PluginLoader.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RandomAgentV1/RandomAgentV1.iml" afterPath="$PROJECT_DIR$/RandomAgentV1/RandomAgentV1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/RunAllTestsInProject.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/RunAllTestsInProject.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/ServerFacade/ServerFacade.iml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/ServerFacade/ServerFacade.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/ServerRunner/ServerRunner.iml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/ServerRunner/ServerRunner.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/TestNetworkAdapter.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/TestNetworkAdapter.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/TestNetworkMessageEncodeDecode.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/runConfigurations/TestNetworkMessageEncodeDecode.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/ZeroTypes/ZeroTypes.iml" afterPath="$PROJECT_DIR$/../../Implementation/ZeroTypes/ZeroTypes.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/ant.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Game.java" afterPath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameLogicComponent.java" afterPath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameLogicComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameLogicUseCase.java" afterPath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameLogicUseCase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/IEnvironment.java" afterPath="$PROJECT_DIR$/../../Implementation/PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/IEnvironment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/MapScanner.java" afterPath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/MapScanner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/Player.java" afterPath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameReplay.java" afterPath="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameReplay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/TransportTypes/TMapMetaData.java" afterPath="$PROJECT_DIR$/../../Implementation/PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/TransportTypes/TMapMetaData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Cliff/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Cliff/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\SoftwareProjekte\D-MARLA\Environments\Factory\.idea\libraries\joda_time_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/joda_time_2_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Client/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Overseer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Overseer/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/workspace.xml" />
     </list>
     <ignored path="Factory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,8 +94,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -122,24 +103,125 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FactoryPluginDescriptor.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java">
+      <file leaf-file-name="Factory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/Factory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29032257" vertical-offset="0" max-vertical-offset="682">
-              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1247" max-vertical-offset="2250">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NormalField.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/NormalField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfluenceField.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/InfluenceField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1224">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Unit.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/Unit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="1170">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
+              <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1207#1208#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IHasTransportType.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/Interfaces/IHasTransportType.java">
+      <file leaf-file-name="GameLogicComponent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameLogicComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="1530">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1536#1537#0" expanded="true" />
+                <element signature="e#1585#1586#0" expanded="true" />
+                <element signature="e#2121#2122#0" expanded="true" />
+                <element signature="e#2171#2172#0" expanded="true" />
+                <element signature="e#2272#2273#0" expanded="true" />
+                <element signature="e#2331#2332#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapScanner.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/MapScanner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1746">
+              <caret line="47" column="58" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1917#1918#0" expanded="true" />
+                <element signature="e#1991#1992#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TGameReplay.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameReplay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.94736844" vertical-offset="0" max-vertical-offset="2160">
+              <caret line="61" column="42" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+              <folding>
+                <element signature="e#688#689#0" expanded="true" />
+                <element signature="e#719#720#0" expanded="true" />
+                <element signature="e#779#780#0" expanded="true" />
+                <element signature="e#806#807#0" expanded="true" />
+                <element signature="e#885#886#0" expanded="true" />
+                <element signature="e#918#919#0" expanded="true" />
+                <element signature="e#1012#1013#0" expanded="true" />
+                <element signature="e#1042#1043#0" expanded="true" />
+                <element signature="e#1145#1146#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1264#1265#0" expanded="true" />
+                <element signature="e#1300#1301#0" expanded="true" />
+                <element signature="e#1417#1418#0" expanded="true" />
+                <element signature="e#1450#1451#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameLogicUseCase.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameLogicUseCase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2160">
+              <caret line="32" column="79" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+              <folding>
+                <element signature="e#2364#2365#0" expanded="true" />
+                <element signature="e#2410#2411#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,8 +245,16 @@
         <option value="$PROJECT_DIR$/src/Factory/FactoryPluginDescriptor.java" />
         <option value="$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/UnitTest/StateActionGeneratorTest.java" />
         <option value="$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/UnitTest/SimpleFactoryPlayerSystemTest.java" />
-        <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java" />
         <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/Interfaces/IHasTransportType.java" />
+        <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java" />
+        <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Game.java" />
+        <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Enums/Direction.java" />
+        <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/Player.java" />
+        <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/CustomMessages/ActionListMessage.java" />
+        <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameLogicUseCase.java" />
+        <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameLogicComponent.java" />
+        <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/MapScanner.java" />
+        <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameReplay.java" />
       </list>
     </option>
   </component>
@@ -186,7 +276,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectStructureProblems">
     <ignored-problems>
@@ -215,6 +305,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Factory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -277,14 +377,126 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FactoryEnvironment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FactoryEnvironment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameActors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FactoryEnvironment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exceptions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FactoryEnvironment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Enums" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FactoryEnvironment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CustomMessages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -298,7 +510,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cliff" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -307,6 +519,8 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
@@ -480,11 +694,12 @@
       <updated>1340369387289</updated>
       <workItem from="1399296910109" duration="50000" />
       <workItem from="1399296961620" duration="732000" />
+      <workItem from="1399299797920" duration="2655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="782000" />
+    <option name="totallyTimeSpent" value="3437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1186" extended-state="6" />
@@ -502,13 +717,13 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32637572" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32637572" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22867803" sideWeight="0.3529412" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14392324" sideWeight="0.6732673" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22867803" sideWeight="0.64705884" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -542,6 +757,26 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="522">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/Interfaces/IHasTransportType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="378">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/StateActionGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -589,9 +824,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38505095" vertical-offset="0" max-vertical-offset="0">
           <caret line="20" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Deployment/PluginAPI/EnvironmentPluginAPI.jar!/EnvironmentPluginAPI/TransportTypes/TMARLAClientInstance.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57542455" vertical-offset="0" max-vertical-offset="1001">
+          <caret line="35" column="49" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Deployment/PluginAPI/EnvironmentPluginAPI.jar!/EnvironmentPluginAPI/Service/IEnvironmentConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16183816" vertical-offset="0" max-vertical-offset="1001">
+          <caret line="9" column="80" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40868706" vertical-offset="0" max-vertical-offset="1013">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Deployment/PluginAPI/EnvironmentPluginAPI.jar!/EnvironmentPluginAPI/Contract/IEnvironment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37762237" vertical-offset="0" max-vertical-offset="1001">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/MapGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4446">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/Interfaces/IHasConsistencyCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -603,12 +887,183 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java">
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/AbstractField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29032257" vertical-offset="0" max-vertical-offset="682">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1247" max-vertical-offset="2250">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/NormalField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/InfluenceField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1224">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/Unit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="1170">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameActors/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
+          <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/CustomMessages/ActionListMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1929824" vertical-offset="1674" max-vertical-offset="2700">
+          <caret line="25" column="57" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/CustomMessages/GameStateMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12280702" vertical-offset="0" max-vertical-offset="4824">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/RuleBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50877196" vertical-offset="0" max-vertical-offset="2016">
+          <caret line="34" column="52" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Enums/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14035088" vertical-offset="0" max-vertical-offset="1026">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Deployment/PluginAPI/EnvironmentPluginAPI.jar!/EnvironmentPluginAPI/TransportTypes/TMapMetaData.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14385614" vertical-offset="0" max-vertical-offset="1001">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7017544" vertical-offset="900" max-vertical-offset="5274">
+          <caret line="104" column="49" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameLogicUseCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2160">
+          <caret line="32" column="79" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+          <folding>
+            <element signature="e#2364#2365#0" expanded="true" />
+            <element signature="e#2410#2411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/MapScanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1746">
+          <caret line="47" column="58" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Deployment/PluginAPI/EnvironmentPluginAPI.jar!/EnvironmentPluginAPI/Service/ICycleReplay.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10958904" vertical-offset="0" max-vertical-offset="657">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/GameLogicComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="1530">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1536#1537#0" expanded="true" />
+            <element signature="e#1585#1586#0" expanded="true" />
+            <element signature="e#2121#2122#0" expanded="true" />
+            <element signature="e#2171#2172#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="e#2331#2332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18834081" vertical-offset="0" max-vertical-offset="2520">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameReplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94736844" vertical-offset="0" max-vertical-offset="2160">
+          <caret line="61" column="42" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1450#1451#0" expanded="true" />
           </folding>
         </state>
       </provider>

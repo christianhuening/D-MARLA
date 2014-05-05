@@ -1,8 +1,6 @@
 package Factory.CustomMessages;
 
-import EnvironmentPluginAPI.CustomNetworkMessages.CustomMessage;
-import EnvironmentPluginAPI.CustomNetworkMessages.IActionDescriptionMessage;
-import EnvironmentPluginAPI.CustomNetworkMessages.MessageType;
+
 import EnvironmentPluginAPI.CustomNetworkMessages.NetworkMessage;
 import Factory.GameLogic.Enums.Direction;
 import Factory.GameLogic.Enums.Faction;

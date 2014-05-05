@@ -1,18 +1,16 @@
 package Factory.GameLogic;
 
-import EnvironmentPluginAPI.Contract.Exception.CorruptMapFileException;
-import EnvironmentPluginAPI.Contract.Exception.IllegalNumberOfClientsException;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import EnvironmentPluginAPI.Contract.IActionDescription;
 import EnvironmentPluginAPI.Contract.IEnvironment;
 import EnvironmentPluginAPI.Contract.IEnvironmentState;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
+import EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException;
+import EnvironmentPluginAPI.Exceptions.IllegalNumberOfClientsException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
 import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
 import Factory.GameLogic.Enums.Direction;
-import Factory.GameLogic.TransportTypes.TActionsInTurn;
 import Factory.GameLogic.TransportTypes.TUnit;
-
 import java.util.List;
 
 /**
@@ -22,14 +20,14 @@ import java.util.List;
  * Time: 19:32
  * To change this template use File | Settings | File Templates.
  */
-public class GameLogicComponent implements IEnvironment {
+public class GameLogicComponent implements IEnvironment<TMapMetaData, IEnvironmentState, IActionDescription> {
 // ------------------------------ FIELDS ------------------------------
 
     private GameLogicUseCase useCase;
 
 // --------------------------- CONSTRUCTORS ---------------------------
 
-    public GameLogicComponent(ISaveGameStatistics saveGameStatistics) {
+    public GameLogicComponent(ICycleStatisticsSaver saveGameStatistics) {
         this.useCase = new GameLogicUseCase(saveGameStatistics);
     }
 
@@ -38,19 +36,20 @@ public class GameLogicComponent implements IEnvironment {
 
 // --------------------- Interface IGameLogic ---------------------
 
-    @Override
-    public List<TMapMetaData> getAvailableMaps() throws CorruptMapFileException, TechnicalException {
+    public List<TMapMetaData> getAvailableMaps() throws CorruptConfigurationFileException, TechnicalException {
         return useCase.getAvailableMaps();
     }
 
-    @Override
+
     public void saveMap(TMapMetaData map) throws TechnicalException {
         useCase.saveMap(map);
     }
 
+
+
     @Override
-    public IEnvironmentState start(List<TMARLAClientInstance> players, TMapMetaData metaData) throws TechnicalException, IllegalNumberOfClientsException {
-        return useCase.start(players, metaData);
+    public IEnvironmentState start(List<TMARLAClientInstance> players, TMapMetaData iEnvironmentConfiguration) throws TechnicalException, IllegalNumberOfClientsException {
+        return useCase.start(players, iEnvironmentConfiguration);
     }
 
     @Override
@@ -64,8 +63,8 @@ public class GameLogicComponent implements IEnvironment {
     }
 
     @Override
-    public IEnvironmentState getCurrentGameState() throws TechnicalException {
-        return useCase.getCurrentGameState();
+    public IEnvironmentState getCurrentEnvironmentState() throws TechnicalException {
+        return useCase.getCurrentEnvironmentState();
     }
 
     @Override
@@ -73,7 +72,7 @@ public class GameLogicComponent implements IEnvironment {
         return useCase.executeAction(actionsInTurn);
     }
 
-    @Override
+
     public void endTurn() throws TechnicalException {
         useCase.endTurn();
     }

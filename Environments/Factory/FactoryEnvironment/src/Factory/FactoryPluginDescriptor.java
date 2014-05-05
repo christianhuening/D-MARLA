@@ -4,9 +4,13 @@ package Factory;
 import EnvironmentPluginAPI.Contract.IEnvironment;
 import EnvironmentPluginAPI.Contract.IEnvironmentPluginDescriptor;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
+import EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
 import Factory.GameLogic.GameLogicComponent;
 
+import java.util.List;
 
 
 public class FactoryPluginDescriptor implements IEnvironmentPluginDescriptor {
@@ -17,7 +21,18 @@ public class FactoryPluginDescriptor implements IEnvironmentPluginDescriptor {
     }
 
     @Override
-    public IEnvironment getInstance(ISaveGameStatistics gameStatisticSaver) throws TechnicalException {
-        return new GameLogicComponent(gameStatisticSaver);
+    public List getAvailableConfigurations() throws CorruptConfigurationFileException, TechnicalException {
+        return null;
     }
+
+    @Override
+    public void saveConfiguration(IEnvironmentConfiguration iEnvironmentConfiguration) throws TechnicalException {
+
+    }
+
+    @Override
+    public IEnvironment getInstance(ICycleStatisticsSaver iCycleStatisticsSaver) throws TechnicalException {
+        return new GameLogicComponent(iCycleStatisticsSaver);
+    }
+
 }

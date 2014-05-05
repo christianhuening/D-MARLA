@@ -8,9 +8,6 @@ package Factory.GameLogic.Enums;
  * To change this template use File | Settings | File Templates.
  */
 
-
-import java.io.Serializable;
-
 /**
  * A direction a unit may move on the game map.
  */

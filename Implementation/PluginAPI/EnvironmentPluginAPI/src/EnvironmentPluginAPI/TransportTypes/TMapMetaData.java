@@ -1,5 +1,7 @@
 package EnvironmentPluginAPI.TransportTypes;
 
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
+
 /**
  * Created with IntelliJ IDEA.
  * User: TwiG
@@ -7,7 +9,7 @@ package EnvironmentPluginAPI.TransportTypes;
  * Time: 21:41
  * To change this template use File | Settings | File Templates.
  */
-public class TMapMetaData implements java.io.Serializable {
+public class TMapMetaData implements java.io.Serializable, IEnvironmentConfiguration {
 
     public TMapMetaData(String name, int symmetry, int seed, int edgelength, int factoryNumberFactor, int factorySizeFactor, int maximumFactorySize) {
         this.name = name;

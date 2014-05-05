@@ -26,7 +26,7 @@ import java.util.List;
     The type parameters eliminate the need to cast in the plugin implementation, if used.
  * @param <A> The class that is used in the environment to describe an agent system's action.
  * @param <I> The class that is used in the environment to describe the current status of the environment.
- * @param <C> The class that is used int the environment to describe an environment configuration.
+ * @param <C> The class that is used in the environment to describe an environment configuration.
  */
 public interface IEnvironment<C extends IEnvironmentConfiguration, I extends IEnvironmentState, A extends IActionDescription> {
 

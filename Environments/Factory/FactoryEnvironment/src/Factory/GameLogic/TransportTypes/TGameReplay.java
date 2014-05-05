@@ -1,9 +1,12 @@
 package Factory.GameLogic.TransportTypes;
 
 
+import EnvironmentPluginAPI.Contract.IEnvironmentState;
 import EnvironmentPluginAPI.Service.ICycleReplay;
+import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
 import org.joda.time.DateTime;
 
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,7 +17,8 @@ import java.util.UUID;
  * Time: 14:15
  * To change this template use File | Settings | File Templates.
  */
-public class TGameReplay implements ICycleReplay<TGameState> {
+public class TGameReplay implements ICycleReplay<TGameState, TMapMetaData> {
+
 // ------------------------------ FIELDS ------------------------------
 
     private UUID replayId;
@@ -24,24 +28,29 @@ public class TGameReplay implements ICycleReplay<TGameState> {
         return replayId;
     }
 
-    private DateTime replayDate;
+    @Override
+    public TMapMetaData getConfiguration() {
+        return null;
+    }
+
+    private Date replayDate;
 
     @Override
-    public DateTime getReplayDate() {
+    public Date getReplayDate() {
         return replayDate;
     }
 
     private List<String> players;
 
     @Override
-    public List<String> getPlayers() {
+    public List<String> getAgentSystems() {
         return players;
     }
 
     private String winningPlayer;
 
     @Override
-    public String getWinningPlayer() {
+    public String getAgentSystemsWithGoalReached() {
         return winningPlayer;
     }
 
@@ -61,7 +70,7 @@ public class TGameReplay implements ICycleReplay<TGameState> {
 
 // --------------------------- CONSTRUCTORS ---------------------------
 
-    public TGameReplay(UUID replayId, DateTime replayDate, List<String> players, String winningPlayer, int numberOfTurns) {
+    public TGameReplay(UUID replayId, Date replayDate, List<String> players, String winningPlayer, int numberOfTurns) {
         this.replayId = replayId;
         this.replayDate = replayDate;
         this.players = players;
@@ -69,7 +78,7 @@ public class TGameReplay implements ICycleReplay<TGameState> {
         this.numberOfTurns = numberOfTurns;
     }
 
-    public TGameReplay(UUID replayId, DateTime replayDate, List<String> players, String winningPlayer, int numberOfTurns, List<TGameState> gameStates) {
+    public TGameReplay(UUID replayId, Date replayDate, List<String> players, String winningPlayer, int numberOfTurns, List<TGameState> gameStates) {
         this.replayId = replayId;
         this.replayDate = replayDate;
         this.players = players;

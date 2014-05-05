@@ -50,58 +50,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="5feed42b-5a8e-4682-9bca-c25963724f3d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/artifacts/AgentSystemPluginAPI_jar.xml" />
-      <change type="DELETED" beforePath="E:\SoftwareProjekte\D-MARLA\Implementation\MARLA-Server\.idea\artifacts\copy_environment_plugins.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/.idea/runConfigurations/AIClientGUI.xml" afterPath="$PROJECT_DIR$/../MARLA-Client/.idea/runConfigurations/AIClientGUI.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/AgentSystemPluginAPI.iml" afterPath="$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/AgentSystemPluginAPI.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/AgentSystemPluginAPI.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/AgentSystemPluginAPI.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/CliffEnvironment.iml" afterPath="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/CliffEnvironment.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/CycleStatistics.iml" afterPath="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/CycleStatistics.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" afterPath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/EnvironmentPluginAPI.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/EnvironmentPluginAPI.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/Enums/Direction.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/Enums/Direction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/FactoryEnvironment.iml" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/FactoryEnvironment.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GUI.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GUI.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameLogicComponentTest.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameLogicComponentTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameServerFacadeFactoryIntegrationTest.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameServerFacadeFactoryIntegrationTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameStatisticsComponentTest.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameStatisticsComponentTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/Interfaces/IHasTransportType.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/Interfaces/IHasTransportType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/MARLA-Server-GUI.iml" afterPath="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/MARLA-Server-GUI.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../R_Components/NetworkAdapter/NetworkAdapter.iml" afterPath="$PROJECT_DIR$/../R_Components/NetworkAdapter/NetworkAdapter.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OverseerGUI/OverseerGUI.iml" afterPath="$PROJECT_DIR$/OverseerGUI/OverseerGUI.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/OverseerGUI.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/OverseerGUI.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../R_Components/PersistenceManager/PersistenceManager.iml" afterPath="$PROJECT_DIR$/../R_Components/PersistenceManager/PersistenceManager.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/PersistenceManagerComponentTest.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/PersistenceManagerComponentTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../R_Components/PluginLoader/PluginLoader.iml" afterPath="$PROJECT_DIR$/../R_Components/PluginLoader/PluginLoader.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/RandomAgentV1/RandomAgentV1.iml" afterPath="$PROJECT_DIR$/../../Environments/Factory/RandomAgentV1/RandomAgentV1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/RunAllTestsInProject.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/RunAllTestsInProject.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/ServerFacade/ServerFacade.iml" afterPath="$PROJECT_DIR$/../MARLA-Server/ServerFacade/ServerFacade.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/ServerRunner/ServerRunner.iml" afterPath="$PROJECT_DIR$/../MARLA-Server/ServerRunner/ServerRunner.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/.idea/runConfigurations/TestAgentProvider.xml" afterPath="$PROJECT_DIR$/../MARLA-Client/.idea/runConfigurations/TestAgentProvider.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/TestNetworkAdapter.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/TestNetworkAdapter.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/TestNetworkMessageEncodeDecode.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/TestNetworkMessageEncodeDecode.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ZeroTypes/ZeroTypes.iml" afterPath="$PROJECT_DIR$/../ZeroTypes/ZeroTypes.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Cliff/.idea/ant.xml" afterPath="$PROJECT_DIR$/../../Environments/Cliff/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/ant.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/ant.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Cliff/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../Environments/Cliff/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/.idea/misc.xml" afterPath="$PROJECT_DIR$/../MARLA-Client/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/misc.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Cliff/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../../Environments/Cliff/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../MARLA-Client/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/Game.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameLogicComponent.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameLogicComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameLogicUseCase.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameLogicUseCase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/IEnvironment.java" afterPath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/IEnvironment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/MapScanner.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/MapScanner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameActors/Player.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameActors/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameReplay.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameReplay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/TransportTypes/TMapMetaData.java" afterPath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/TransportTypes/TMapMetaData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Cliff/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Environments/Cliff/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MARLA-Client/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\SoftwareProjekte\D-MARLA\Environments\Factory\.idea\libraries\joda_time_2_1.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/joda_time_2_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/workspace.xml" />
     </list>
     <ignored path="Overseer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -161,45 +125,7 @@
     <favorites_list name="Overseer" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CycleDescriptionTableModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/CycleDescriptionTableModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="882">
-              <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OverseerMain.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="5328">
-              <caret line="295" column="34" selection-start-line="295" selection-start-column="34" selection-end-line="295" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OverseerMain.form" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnvironmentPluginLoaderUseCase.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="4122">
-              <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -227,10 +153,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1186" />
+    <option name="x" value="538" />
+    <option name="y" value="212" />
+    <option name="width" value="1110" />
+    <option name="height" value="639" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -341,7 +267,7 @@
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="reference.projectsettings.compiler.annotationProcessors" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Environments/Factory" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -531,12 +457,12 @@
       <created>1340471263625</created>
       <updated>1340471263625</updated>
       <workItem from="1399297754881" duration="23000" />
-      <workItem from="1399297778319" duration="1467000" />
+      <workItem from="1399297778319" duration="2334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1490000" />
+    <option name="totallyTimeSpent" value="2357000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -559,12 +485,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1186" extended-state="6" />
-    <editor active="true" />
+    <frame x="538" y="212" width="1110" height="639" extended-state="1" />
+    <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20415778" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20415778" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20042644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20042644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -774,25 +700,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="4122">
-          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="5328">
+        <state vertical-scroll-proportion="4.3557506" vertical-offset="13" max-vertical-offset="5328">
           <caret line="295" column="34" selection-start-line="295" selection-start-column="34" selection-end-line="295" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
+    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26653504" vertical-offset="504" max-vertical-offset="4122">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
