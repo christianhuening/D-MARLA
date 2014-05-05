@@ -1,145 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="" />
+    <option name="SERVER_URL" value="http://buildserver" />
+    <option name="PASSWORD" />
+    <option name="REMEMBER_ME" value="true" />
+    <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
+    <option name="INSPECTIONS_BUILD_TYPE_IDS" />
+    <option name="DUPLICATES_BUILD_TYPE_IDS" />
+    <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
+    <option name="ARTIFACTS_BUILD_TYPE_IDS" />
+    <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
+    <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
+    <option name="REQUEST_CONFIRMATON" value="false" />
+    <option name="PRE_TESTED_COMMIT" value="true" />
+    <option name="PROJECT_STATUS_DIALOG_SPLITTER_DIVIDER_LOCATION" value="500" />
+    <option name="CHANGES_STATUS_DIALOG_SPLITTER_DIVIDER_LOCATION" value="500" />
+    <option name="FILTER_BY_STATUS" value="false" />
+    <option name="FILTER_MARKED_AS_FIXED" value="false" />
+    <option name="SHOW_CLOSE_PROMPT" value="true" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
+    <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b5420615-5bc2-4b07-9f60-eed09ee87b59" name="Default" comment="" />
     <ignored path="Cliff.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="$PROJECT_DIR$/../../Implementation/PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Services/IPluginServiceProvider.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354554825406" ignored="false" />
-    <file path="/IPluginServiceProvider.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354554568817" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentSystemManagement/src/AgentSystemManagement/Implementation/AgentSystemServiceProvider.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682919909" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentSystemManagement/src/AgentSystemManagement/Plugins/PluginManager.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354765103824" ignored="false" />
-    <file path="/PluginManager.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354765101725" ignored="false" />
-    <file path="/AgentSystemServiceProvider.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354555666907" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentSystemManagement/src/AgentSystemManagement/Implementation/AgentSystemManagementUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354765824716" ignored="false" />
-    <file path="/AgentSystemManagementUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354765815645" ignored="false" />
-    <file path="/CliffQLearningAgentSystem.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354686710902" ignored="false" />
-    <file path="/CliffEnvironmentState.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354557191068" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Database/DBDictionary.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682656850" ignored="false" />
-    <file path="/DBDictionary.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354570911251" ignored="false" />
-    <file path="/a.dummy" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354765685677" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Agents/EpsilonGreedyAgent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682733440" ignored="false" />
-    <file path="/EpsilonGreedyAgent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354596993083" ignored="false" />
-    <file path="$USER_HOME$/Desktop/src/Main.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354566101896" ignored="false" />
-    <file path="/Main.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354566328918" ignored="false" />
-    <file path="/fragment.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354755308230" ignored="false" />
-    <file path="$USER_HOME$/Desktop/untitled/src/Main.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354566330084" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Database/DatabaseAccessor.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682503927" ignored="false" />
-    <file path="/DatabaseAccessor.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354570032819" ignored="false" />
-    <file path="/Dummy.txt" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354813000629" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/UnitTest/TestAgentProvider.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682816597" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Agents/IDictionary.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682519844" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/NeuronalNet.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682752524" ignored="false" />
-    <file path="/TestAgentProvider.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354571980223" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AIRunner/src/AIRunner/Implementation/PluginContainer.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354812862256" ignored="false" />
-    <file path="/PluginContainer.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354812847662" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AIRunner/src/AIRunner/Implementation/AIRunnerUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682297595" ignored="false" />
-    <file path="/CliffEnvironmentPlugin.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354685956867" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Agents/SarsaLambdaAgent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682698871" ignored="false" />
-    <file path="/SarsaLambdaAgent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354597566540" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Agents/SarsaAgent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682646486" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Agents/QLearningAgent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682619350" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/ZeroTypes/src/Exceptions/ErrorMessages.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354598053564" ignored="false" />
-    <file path="/ErrorMessages.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354598048327" ignored="false" />
-    <file path="/SarsaAgent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354598099610" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/MARLAClientGUI/src/AIClientMain.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354683057118" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AIRunner/src/AIRunner/Interface/AIRunnerEventType.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354600516546" ignored="false" />
-    <file path="/AIClientMain.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354600854875" ignored="false" />
-    <file path="/AIRunnerUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682285106" ignored="false" />
-    <file path="/CliffReplay.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354684445237" ignored="false" />
-    <file path="/ClientTableModel.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354760275547" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Server/MARLA-Server-GUI/src/Models/ClientTableModel.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354760934253" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/IEnvironment.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354752600693" ignored="false" />
-    <file path="/IEnvironment.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354680452979" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Server/ServerFacade/src/GameServerFacade/Implementation/ServerFacade.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354753290874" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Server/MARLA-Server-GUI/src/SessionConfig.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354758097574" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Server/ServerFacade/src/GameServerFacade/Interface/IServerFacade.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354752396978" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Exceptions/CorruptConfigurationFileException.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354677583714" ignored="false" />
-    <file path="/ServerFacade.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354753253056" ignored="false" />
-    <file path="/IServerFacade.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354752385512" ignored="false" />
-    <file path="/Configuration.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354678601600" ignored="false" />
-    <file path="/CliffEnvironmentPluginDescriptor.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354757467691" ignored="false" />
-    <file path="/IEnvironmentConfiguration.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354679607232" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Service/IEnvironmentConfiguration.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354679607232" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Service/ICycleReplay.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354679999818" ignored="false" />
-    <file path="/ICycleReplay.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354679973910" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Server/CycleStatistics/src/GameStatistics/UnitTest/TestReplay.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354680094338" ignored="false" />
-    <file path="/GridWorldConfiguration.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354687037250" ignored="false" />
-    <file path="/SessionConfig.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354757298527" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Server/MARLA-Server-GUI/src/Models/ConfigurationListTableModel.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354681324791" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Server/MARLA-Server-GUI/src/SessionConfig.form" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354681320548" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/ZeroTypes/src/ZeroTypes/TransportTypes/TSession.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354681127850" ignored="false" />
-    <file path="/TSession.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354681088407" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Server/ServerRunner/src/ServerRunner/Implementation/Session.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354811980646" ignored="false" />
-    <file path="/Session.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354811979957" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderComponent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354754221434" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/src/PluginLoader/Interface/IEnvironmentPluginLoader.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354753983394" ignored="false" />
-    <file path="/EnvironmentPluginLoaderComponent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354754220825" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354813279161" ignored="false" />
-    <file path="/IEnvironmentPluginLoader.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354753977441" ignored="false" />
-    <file path="/EnvironmentPluginLoaderUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354813272305" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/IEnvironmentPluginDescriptor.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354752822438" ignored="false" />
-    <file path="/IEnvironmentPluginDescriptor.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682093313" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/NetworkAdapter/src/NetworkAdapter/Messages/CycleStartsMessage.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354686418738" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/AgentProviderComponent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682366886" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Interface/IAgentProvider.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682397134" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/AgentProviderUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682420442" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Database/PersistenceFactory.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682460073" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Database/AgentSettingsAccessor.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682482458" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Database/MemoryCache.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682539321" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Database/ICache.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682561418" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/UnitTest/TestReinforcementAlgorithms.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682775326" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Database/DatabaseCache.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682795360" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentSystemManagement/src/AgentSystemManagement/Interface/IAgentSystemManagement.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682841077" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AgentSystemManagement/src/AgentSystemManagement/Implementation/AgentSystemManagementComponent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682891990" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AIRunner/src/AIRunner/Interface/IAIRunner.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682940201" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AIRunner/src/AIRunner/Implementation/AIRunnerComponent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354682975196" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AIClientFacade/src/AIClientFacade/Implementation/AIClientFacade.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354683027500" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AIClientFacade/src/AIClientFacade/Interface/IAIClientFacade.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354683008919" ignored="false" />
-    <file path="/GridWorldStyle.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354683345876" ignored="false" />
-    <file path="/Cycle.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354684295318" ignored="false" />
-    <file path="/IAgentSystem.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354686247718" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Contract/IAgentSystem.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354764801575" ignored="false" />
-    <file path="/CycleStartsMessage.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354686418738" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/src/PluginLoader/Implementation/PluginHelper.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354749593844" ignored="false" />
-    <file path="/PluginHelper.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354749401065" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/src/PluginLoader/Implementation/AgentSystemPluginLoaderComponent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354764874436" ignored="false" />
-    <file path="/AgentSystemPluginLoaderComponent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354764873805" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/src/PluginLoader/Implementation/AgentSystemPluginLoaderUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354766264488" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/src/PluginLoader/Interface/Plugin.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354745807285" ignored="false" />
-    <file path="/Plugin.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354745803083" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/src/PluginLoader/Implementation/Plugin.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354746457610" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/src/PluginLoader/Implementation/Jar.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354746176363" ignored="false" />
-    <file path="/AgentSystemPluginLoaderUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354766234061" ignored="false" />
-    <file path="/IClientNetworkAdapter.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354746554359" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/NetworkAdapter/src/NetworkAdapter/Interface/IClientNetworkAdapter.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354746554359" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/NetworkAdapter/src/NetworkAdapter/Interface/IServerNetworkAdapter.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354746593274" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ClientNetworkAdapterComponent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354746633976" ignored="false" />
-    <file path="/ClientNetworkAdapterComponent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354746633335" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ClientNetworkAdapterUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354749305861" ignored="false" />
-    <file path="/ClientNetworkAdapterUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354749263965" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ServerNetworkAdapterComponent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354749014831" ignored="false" />
-    <file path="/ServerNetworkAdapterComponent.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354748934507" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ServerNetworkAdapterUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354759842281" ignored="false" />
-    <file path="/ServerNetworkAdapterUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354759841277" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Server/ServerRunner/src/ServerRunner/Implementation/ServerRunnerUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354810712667" ignored="false" />
-    <file path="/ServerRunnerUseCase.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354810679378" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Server/MARLA-Server-GUI/src/EnvironmentSelectionDialog.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354758782790" ignored="false" />
-    <file path="/EnvironmentSelectionDialog.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354758780631" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Server/MARLA-Server-GUI/src/ServerAdministration.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354758768076" ignored="false" />
-    <file path="/ServerAdministration.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354758736903" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkAccessProtocol.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354759127419" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkChannel.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354760033383" ignored="false" />
-    <file path="/NetworkChannel.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354760032776" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/MARLAClientGUI/src/AIClientMain.form" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354762363780" ignored="false" />
-    <file path="/IAgentSystemPluginLoader.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354764433349" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/R_Components/PluginLoader/src/PluginLoader/Interface/IAgentSystemPluginLoader.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354764534725" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Contract/IAgentSystemPluginDescriptor.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354764838896" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Client/AIClientFacade/src/AIClientFacade/Interface/AIClientApplicationCoreFactory.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354766063142" ignored="false" />
-    <file path="/AIClientApplicationCoreFactory.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354766063142" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Overseer/OverseerGUI/src/OverseerGUI/CycleDescriptionTableModel.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354813043776" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Overseer/OverseerGUI/src/OverseerGUI/OverseerMain.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354813227704" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Implementation/MARLA-Overseer/OverseerGUI/src/OverseerGUI/GameReplayForm.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354813098138" ignored="false" />
-    <file path="/OverseerMain.java" changelist="b5420615-5bc2-4b07-9f60-eed09ee87b59" time="1354813226951" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,8 +42,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -189,9 +76,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_rules />
-    <ui_properties />
+    <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -202,7 +88,8 @@
       <file leaf-file-name="CliffEnvironmentPlugin.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/CliffEnvironmentPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="13" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1458">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -211,7 +98,8 @@
       <file leaf-file-name="CliffQLearningAgentSystem.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CliffQLearning/src/CliffQLearningAgentSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="30" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.37842464">
+            <state vertical-scroll-proportion="0.2916053" vertical-offset="0" max-vertical-offset="1296">
+              <caret line="29" column="78" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -220,10 +108,9 @@
       <file leaf-file-name="CliffQLearningAgentDescriptor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CliffQLearning/src/CliffQLearningAgentDescriptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="22" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1299#1307#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="810">
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -231,7 +118,8 @@
       <file leaf-file-name="Session.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/Session.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="48" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2574">
+              <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -264,11 +152,12 @@
       </list>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="height" value="1186" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -281,10 +170,10 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -296,6 +185,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -408,22 +299,21 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Deployment/PluginAPI/EnvironmentPluginAPI.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -441,6 +331,7 @@
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -481,6 +372,7 @@
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -495,6 +387,7 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -521,91 +414,69 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b5420615-5bc2-4b07-9f60-eed09ee87b59" name="Default" comment="" />
       <created>1354552129281</created>
       <updated>1354552129281</updated>
+      <workItem from="1399297676804" duration="20000" />
+      <workItem from="1399297697827" duration="1193000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1213000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
+    <frame x="1912" y="-8" width="1936" height="1186" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32922202" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.516129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13607258" sideWeight="0.6710671" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13539445" sideWeight="0.6710671" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <value>
-        <are-packages-shown value="false" />
-        <are-modules-shown value="false" />
-        <flatten-packages value="false" />
-        <is-autoscroll-to-source value="false" />
-      </value>
+      <TodoPanelSettings />
     </option>
-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
-    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
-    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
-    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
-    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
-    <option name="LIMIT_HISTORY" value="true" />
-    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
-    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
-    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ACTIVE_VCS_NAME" />
-    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
-    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -615,121 +486,187 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CliffQLearning/src/CliffQLearningAgentSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="35" selection-start="3261" selection-end="3261" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="28" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/CliffEnvironmentPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="82" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1458">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CliffQLearning/src/CliffQLearningAgentSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="35" selection-start="3261" selection-end="3261" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="28" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Actions/ActionDescription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="244" selection-end="244" vertical-scroll-proportion="0.15402038">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/IllegalMoveException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="116" selection-end="116" vertical-scroll-proportion="0.14554794">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/GridWorldStyle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="125" selection-end="125" vertical-scroll-proportion="0.23287672">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Statistics/CliffReplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="477" selection-end="477" vertical-scroll-proportion="-0.2446206">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Actions/EnvironmentState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/GridWorldConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="21" selection-start="592" selection-end="592" vertical-scroll-proportion="0.38505095">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/CliffEnvironmentPluginDescriptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="108" selection-start="748" selection-end="748" vertical-scroll-proportion="0.29109588">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1283#1307#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="48" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/CliffEnvironmentPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="269" max-vertical-offset="1296">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CliffQLearning/src/CliffQLearningAgentDescriptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="22" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1299#1307#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="810">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2574">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/CliffEnvironmentPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1458">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CliffQLearning/src/CliffQLearningAgentSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="30" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.37842464">
+        <state vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1296">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffQLearning/src/CliffQLearningAgentDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="810">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2574">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffQLearning/src/CliffQLearningAgentSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="72" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="21" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/CliffEnvironmentPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="64" column="82" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffQLearning/src/CliffQLearningAgentSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="72" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="21" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Actions/ActionDescription.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15402038" vertical-offset="0" max-vertical-offset="0">
+          <caret line="10" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/IllegalMoveException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14554794" vertical-offset="0" max-vertical-offset="0">
+          <caret line="5" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/GridWorldStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23287672" vertical-offset="0" max-vertical-offset="0">
+          <caret line="8" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Statistics/CliffReplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2446206" vertical-offset="0" max-vertical-offset="0">
+          <caret line="18" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Actions/EnvironmentState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="26" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/GridWorldConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38505095" vertical-offset="0" max-vertical-offset="0">
+          <caret line="20" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/CliffEnvironmentPluginDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29109588" vertical-offset="0" max-vertical-offset="0">
+          <caret line="16" column="108" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/Logic/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2574">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffEnvironment/src/CliffEnvironmentPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1458">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffQLearning/src/CliffQLearningAgentDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="810">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CliffQLearning/src/CliffQLearningAgentSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2916053" vertical-offset="0" max-vertical-offset="1296">
+          <caret line="29" column="78" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -740,7 +677,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>CliffQLearning:jar</last-edited>
+          <last-edited>Server Export</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -765,6 +702,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>chunky_png (v1.2.9, ruby-1.9.3-p484) [gem]</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -776,7 +714,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -788,7 +726,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>CliffQLearning</last-edited>
+          <last-edited>CliffEnvironment</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

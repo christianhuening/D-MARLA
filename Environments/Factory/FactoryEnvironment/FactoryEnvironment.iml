@@ -6,10 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Factory/UnitTest" isTestSource="true" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="EnvironmentPluginAPI" level="project" />
-    <orderEntry type="library" name="joda-time-2.1" level="project" />
+    <orderEntry type="library" name="joda-time-2.3" level="project" />
     <orderEntry type="library" name="junit-4.10" level="project" />
   </component>
 </module>

@@ -6,10 +6,11 @@
     <option name="PASSWORD" value="df89df9ddf93dfe8dfd2df9bdf93df92df9c" />
     <option name="REMEMBER_ME" value="true" />
     <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
-    <option name="TEST_STATUS_BUILD_TYPE_IDS" />
     <option name="INSPECTIONS_BUILD_TYPE_IDS" />
     <option name="DUPLICATES_BUILD_TYPE_IDS" />
     <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
     <option name="ARTIFACTS_BUILD_TYPE_IDS" />
     <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
     <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
@@ -49,61 +50,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="5feed42b-5a8e-4682-9bca-c25963724f3d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/artifacts/MARLA_Server_jar.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/artifacts/MARLA_Server_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/artifacts/AgentSystemPluginAPI_jar.xml" />
+      <change type="DELETED" beforePath="E:\SoftwareProjekte\D-MARLA\Implementation\MARLA-Server\.idea\artifacts\copy_environment_plugins.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/.idea/runConfigurations/AIClientGUI.xml" afterPath="$PROJECT_DIR$/../MARLA-Client/.idea/runConfigurations/AIClientGUI.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/AgentSystemPluginAPI.iml" afterPath="$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/AgentSystemPluginAPI.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/AgentSystemPluginAPI.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/AgentSystemPluginAPI.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/CliffEnvironment.iml" afterPath="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/CliffEnvironment.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/CycleStatistics.iml" afterPath="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/CycleStatistics.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" afterPath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/EnvironmentPluginAPI.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/EnvironmentPluginAPI.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/FactoryEnvironment.iml" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/FactoryEnvironment.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GUI.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GUI.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameLogicComponentTest.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameLogicComponentTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameServerFacadeFactoryIntegrationTest.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameServerFacadeFactoryIntegrationTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameStatisticsComponentTest.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/GameStatisticsComponentTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/Interfaces/IHasTransportType.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/Interfaces/IHasTransportType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/MARLA-Server-GUI.iml" afterPath="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/MARLA-Server-GUI.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../R_Components/NetworkAdapter/NetworkAdapter.iml" afterPath="$PROJECT_DIR$/../R_Components/NetworkAdapter/NetworkAdapter.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OverseerGUI/OverseerGUI.iml" afterPath="$PROJECT_DIR$/OverseerGUI/OverseerGUI.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/OverseerGUI.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/OverseerGUI.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../R_Components/PersistenceManager/PersistenceManager.iml" afterPath="$PROJECT_DIR$/../R_Components/PersistenceManager/PersistenceManager.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/PersistenceManagerComponentTest.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/PersistenceManagerComponentTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../R_Components/PluginLoader/PluginLoader.iml" afterPath="$PROJECT_DIR$/../R_Components/PluginLoader/PluginLoader.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/RandomAgentV1/RandomAgentV1.iml" afterPath="$PROJECT_DIR$/../../Environments/Factory/RandomAgentV1/RandomAgentV1.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/RunAllTestsInProject.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/RunAllTestsInProject.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/ServerFacade/ServerFacade.iml" afterPath="$PROJECT_DIR$/../MARLA-Server/ServerFacade/ServerFacade.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/ServerRunner/ServerRunner.iml" afterPath="$PROJECT_DIR$/../MARLA-Server/ServerRunner/ServerRunner.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/.idea/runConfigurations/TestAgentProvider.xml" afterPath="$PROJECT_DIR$/../MARLA-Client/.idea/runConfigurations/TestAgentProvider.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/TestNetworkAdapter.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/TestNetworkAdapter.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/TestNetworkMessageEncodeDecode.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/runConfigurations/TestNetworkMessageEncodeDecode.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ZeroTypes/ZeroTypes.iml" afterPath="$PROJECT_DIR$/../ZeroTypes/ZeroTypes.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Cliff/.idea/ant.xml" afterPath="$PROJECT_DIR$/../../Environments/Cliff/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/ant.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/ant.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Cliff/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../Environments/Cliff/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/.idea/misc.xml" afterPath="$PROJECT_DIR$/../MARLA-Client/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/misc.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Cliff/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../../Environments/Cliff/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../MARLA-Client/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Cliff/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Environments/Cliff/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MARLA-Client/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\SoftwareProjekte\D-MARLA\Environments\Factory\.idea\libraries\joda_time_2_1.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/joda_time_2_3.xml" />
     </list>
     <ignored path="Overseer.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1355158614429" ignored="false" />
-    <file path="/EnvironmentPluginLoaderUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354813272305" ignored="false" />
-    <file path="/OverseerMain.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354813226657" ignored="false" />
-    <file path="/GameReplayForm.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354635122539" ignored="false" />
-    <file path="/a.dummy" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354895673162" ignored="false" />
-    <file path="/persistence.xml" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354656486975" ignored="false" />
-    <file path="$PROJECT_DIR$/../R_Components/PersistenceManager/src/META-INF/persistence.xml" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667877156" ignored="false" />
-    <file path="/fragment.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668676048" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/ServerAdministration.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354895515542" ignored="false" />
-    <file path="/ServerAdministration.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354638963320" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/Entities/CycleReplayDescription.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667907179" ignored="false" />
-    <file path="/CycleReplayDescription.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354664368115" ignored="false" />
-    <file path="$PROJECT_DIR$/../ZeroTypes/src/TransportTypes/TCycleReplayDescription.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668005535" ignored="false" />
-    <file path="/TCycleReplayDescription.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354664420929" ignored="false" />
-    <file path="/ICycleReplay.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354664482090" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/UnitTest/GameStatisticsComponentTest.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668673014" ignored="false" />
-    <file path="/GameStatisticsComponentTest.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667812979" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/UnitTest/TestReplay.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668116920" ignored="false" />
-    <file path="/TestReplay.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354666460850" ignored="false" />
-    <file path="/CycleStatisticsComponent.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354666790384" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/CycleStatisticsComponent.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668111451" ignored="false" />
-    <file path="$PROJECT_DIR$/../ZeroTypes/src/RemoteInterface/ICycleStatistics.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667995938" ignored="false" />
-    <file path="/CycleStatisticsUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667496209" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/CycleStatisticsUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668092705" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/CycleStatistics/src/GameStatistics/Implementation/CycleReplayDescriptionDao.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668101884" ignored="false" />
-    <file path="/CycleReplayDescriptionDao.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667380430" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/ServerFacade/src/GameServerFacade/Implementation/ServerFacade.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668163021" ignored="false" />
-    <file path="/ServerFacade.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667576958" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/RMIServiceConnector.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668255986" ignored="false" />
-    <file path="/RMIServiceConnector.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354667606094" ignored="false" />
-    <file path="/TNetworkClient.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668029934" ignored="false" />
-    <file path="$PROJECT_DIR$/../ZeroTypes/src/TransportTypes/TNetworkClient.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668036727" ignored="false" />
-    <file path="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ClientSession.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668078051" ignored="false" />
-    <file path="/ClientSession.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668077699" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/ServerRunner/src/ServerRunner/Implementation/ServerRunnerUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668149163" ignored="false" />
-    <file path="/ServerRunnerUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668145794" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/Models/ClientTableModel.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668237520" ignored="false" />
-    <file path="/ClientTableModel.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354668230590" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffQLearning/src/CliffQLearningAgentSystem.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354669439919" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Environments/Cliff/CliffEnvironment/src/Statistics/CliffReplay.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354670079443" ignored="false" />
-    <file path="/CliffReplay.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354670005920" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Server/ServerRunner/src/ServerRunner/Implementation/Session.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354895627395" ignored="false" />
-    <file path="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ClientNetworkAdapterUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354895563624" ignored="false" />
-    <file path="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/NetworkAccessProtocol.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354895571970" ignored="false" />
-    <file path="$PROJECT_DIR$/../R_Components/NetworkAdapter/src/NetworkAdapter/Implementation/ServerNetworkAdapterUseCase.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354895594893" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Agents/EpsilonGreedyAgent.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354895679294" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Database/DBDictionary.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354895688907" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Client/AIRunner/src/AIRunner/Implementation/PluginContainer.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354895704268" ignored="false" />
-    <file path="$PROJECT_DIR$/../MARLA-Client/MARLAClientGUI/src/AIClientMain.java" changelist="5feed42b-5a8e-4682-9bca-c25963724f3d" time="1354895844818" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,8 +119,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -153,9 +153,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_rules />
-    <ui_properties />
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -166,7 +165,8 @@
       <file leaf-file-name="CycleDescriptionTableModel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/CycleDescriptionTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="57" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="882">
+              <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -175,16 +175,25 @@
       <file leaf-file-name="OverseerMain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="68" selection-start="2587" selection-end="2587" vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="5328">
+              <caret line="295" column="34" selection-start-line="295" selection-start-column="34" selection-end-line="295" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnvironmentPluginLoaderUseCase.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="OverseerMain.form" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EnvironmentPluginLoaderUseCase.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.029010238">
+            <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="4122">
+              <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -216,11 +225,12 @@
       </list>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="height" value="1186" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -233,10 +243,10 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -308,6 +318,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files" />
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -318,20 +331,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files" />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="reference.projectsettings.compiler.annotationProcessors" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Deployment/MARLA-Server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -341,12 +351,44 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Application.OverseerGUI">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application">
+      <module name="" />
+      <option name="erlFlags" value="" />
+      <option name="moduleAndFunction" value="" />
+      <option name="name" value="Erlang" />
+      <option name="params" value="" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RebarEunitRunConfigurationType" factoryName="Erlang Rebar Eunit">
+      <module name="" />
+      <option name="command" value="eunit" />
+      <option name="name" value="Erlang Rebar Eunit" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="skipDependencies" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -355,6 +397,12 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -371,6 +419,7 @@
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -397,21 +446,14 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -431,6 +473,40 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="ErlangUnitRunConfigurationType" factoryName="Erlang Eunit">
+      <module name="" />
+      <option name="name" value="Erlang" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="functionNames">
+        <set />
+      </option>
+      <option name="kind" value="MODULE" />
+      <option name="moduleNames">
+        <set />
+      </option>
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.OverseerGUI" />
     </list>
@@ -445,24 +521,8 @@
       <AnalysisUIOptions />
     </option>
   </component>
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="DETECT_NESTED_COPIES" value="true" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
+  <component name="SvnConfiguration" myUseAcceleration="nothing" cleanupOnStartRun="true">
     <configuration useDefault="false">C:\Users\Jason\AppData\Roaming\Subversion</configuration>
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
@@ -470,8 +530,13 @@
       <changelist id="5feed42b-5a8e-4682-9bca-c25963724f3d" name="Default" comment="" />
       <created>1340471263625</created>
       <updated>1340471263625</updated>
+      <workItem from="1399297754881" duration="23000" />
+      <workItem from="1399297778319" duration="1467000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1490000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -494,84 +559,54 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1186" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20415778" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20042644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32673267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32542694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15795091" sideWeight="0.6732673" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32655245" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15778251" sideWeight="0.6732673" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58633775" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <value>
-        <are-packages-shown value="false" />
-        <are-modules-shown value="false" />
-        <flatten-packages value="false" />
-        <is-autoscroll-to-source value="false" />
-      </value>
+      <TodoPanelSettings />
     </option>
-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
-    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
-    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
-    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
-    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
-    <option name="LIMIT_HISTORY" value="true" />
-    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
-    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
-    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ACTIVE_VCS_NAME" />
-    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
-    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -602,102 +637,162 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/CycleDescriptionTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="57" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="68" selection-start="2587" selection-end="2587" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1296" max-vertical-offset="6156">
+          <caret line="72" column="68" selection-start-line="72" selection-start-column="68" selection-end-line="72" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="4122">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/CycleDescriptionTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="57" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="882">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="68" selection-start="2587" selection-end="2587" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1296" max-vertical-offset="6156">
+          <caret line="72" column="68" selection-start-line="72" selection-start-column="68" selection-end-line="72" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="4122">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/CycleDescriptionTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="17" column="57" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="72" column="68" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="50" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/CycleDescriptionTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="17" column="57" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="72" column="68" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="50" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Interface/IAgentSystemPluginLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="17" selection-start="745" selection-end="745" vertical-scroll-proportion="0.21778585" />
+        <state vertical-scroll-proportion="0.21778585" vertical-offset="0" max-vertical-offset="0">
+          <caret line="17" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Interface/IEnvironmentPluginLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="41" selection-start="1420" selection-end="1420" vertical-scroll-proportion="0.017985612" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_33/jre/lib/rt.jar!/sun/rmi/transport/StreamRemoteCall.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="110" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.82474226" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_33/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="661" column="0" selection-start="24792" selection-end="24792" vertical-scroll-proportion="0.33333334" />
+        <state vertical-scroll-proportion="0.017985612" vertical-offset="0" max-vertical-offset="0">
+          <caret line="29" column="41" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/TEnvironmentDescription.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.14604811">
-          <folding />
+        <state vertical-scroll-proportion="0.14604811" vertical-offset="0" max-vertical-offset="0">
+          <caret line="7" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Service/ICycleReplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="3" selection-start="343" selection-end="343" vertical-scroll-proportion="0.18088737" />
+        <state vertical-scroll-proportion="0.18088737" vertical-offset="0" max-vertical-offset="0">
+          <caret line="14" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/CycleDescriptionTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="57" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="882">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/GameReplayForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="50" selection-start="2699" selection-end="2699" vertical-scroll-proportion="0.20307167" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="68" selection-start="2587" selection-end="2587" vertical-scroll-proportion="0.0">
-          <folding />
+        <state vertical-scroll-proportion="0.20307167" vertical-offset="0" max-vertical-offset="0">
+          <caret line="85" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.029010238">
+        <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="4122">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="5328">
+          <caret line="295" column="34" selection-start-line="295" selection-start-column="34" selection-end-line="295" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
   </component>
@@ -731,6 +826,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>chunky_png (v1.2.9, ruby-1.9.3-p484) [gem]</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -742,7 +838,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -754,7 +850,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>AgentSystemPluginAPI</last-edited>
+          <last-edited>ZeroTypes</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

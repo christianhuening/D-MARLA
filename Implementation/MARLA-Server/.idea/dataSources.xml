@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2937449654">
+    <data-source source="LOCAL" name="Derby" uuid="90c8fffa-f1bc-4f5f-92dc-90e204707803">
+      <driver-ref>derby.embedded</driver-ref>
+      <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>
+      <jdbc-url>jdbc:derby:target/database/jpa-test-database;create=true</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://E:\SoftwareProjekte\D-MARLA\Implementation\T_Components\db-derby-10.8.2.2-bin\lib\derby.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="UnitTestDerby" uuid="5647743f-c009-476f-abac-9cfea40ba828">
+      <driver-ref>derby.embedded</driver-ref>
+      <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>
+      <jdbc-url>jdbc:derby:target/database/jpa-test-database;create=true</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://E:\SoftwareProjekte\D-MARLA\Implementation\T_Components\db-derby-10.8.2.2-bin\lib\derby.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+

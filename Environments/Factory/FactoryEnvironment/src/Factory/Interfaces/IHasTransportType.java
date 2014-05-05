@@ -1,6 +1,7 @@
 package Factory.Interfaces;
 
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 
 /**
  * Created with IntelliJ IDEA.
