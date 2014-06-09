@@ -5,8 +5,9 @@ import Factory.GameLogic.TransportTypes.TGameReplay;
 import Factory.GameLogic.TransportTypes.TGameState;
 import Factory.Interfaces.IHasTransportType;
 
-import org.joda.time.DateTime;
 
+
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,9 +28,9 @@ public class GameReplay implements IHasTransportType<ICycleReplay>, java.io.Seri
     }
 
     //public AbstractReplay(DateTime replayDate, List<String> players, String winningPlayer, int numberOfTurns) {
-    private final DateTime replayDate;
+    private final Date replayDate;
 
-    public DateTime getReplayDate() {
+    public Date getReplayDate() {
         return replayDate;
     }
 
@@ -59,7 +60,7 @@ public class GameReplay implements IHasTransportType<ICycleReplay>, java.io.Seri
 
 // --------------------------- CONSTRUCTORS ---------------------------
 
-    public GameReplay(DateTime replayDate, List<String> players, String winningPlayer, int numberOfTurns, List<TGameState> gameStates) {
+    public GameReplay(Date replayDate, List<String> players, String winningPlayer, int numberOfTurns, List<TGameState> gameStates) {
         this.replayID = UUID.randomUUID();
         this.replayDate = replayDate;
         this.players = players;

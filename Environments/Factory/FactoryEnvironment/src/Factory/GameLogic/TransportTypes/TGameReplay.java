@@ -1,14 +1,10 @@
 package Factory.GameLogic.TransportTypes;
 
-
-import EnvironmentPluginAPI.Contract.IEnvironmentState;
 import EnvironmentPluginAPI.Service.ICycleReplay;
 import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
-import org.joda.time.DateTime;
 
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
+import java.util.function.Consumer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -63,7 +59,6 @@ public class TGameReplay implements ICycleReplay<TGameState, TMapMetaData> {
 
     private List<TGameState> gameStates;
 
-    @Override
     public List<TGameState> getEnvironmentStatesPerTurn() {
         return gameStates;
     }
@@ -117,5 +112,22 @@ public class TGameReplay implements ICycleReplay<TGameState, TMapMetaData> {
         result = 31 * result + numberOfTurns;
         result = 31 * result + (gameStates != null ? gameStates.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public Iterator<TGameState> iterator() {
+        return gameStates.iterator();
+    }
+
+    @Override
+    public void forEach(Consumer<? super TGameState> action) {
+        gameStates.forEach(tGameState -> {
+            action.accept(tGameState);
+        });
+    }
+
+    @Override
+    public Spliterator<TGameState> spliterator() {
+        return gameStates.spliterator();
     }
 }

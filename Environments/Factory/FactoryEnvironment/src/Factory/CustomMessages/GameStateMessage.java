@@ -5,10 +5,11 @@ import Factory.GameLogic.Enums.Faction;
 import Factory.GameLogic.Exceptions.ConsistencyFaultException;
 import Factory.GameLogic.TransportTypes.*;
 import Factory.Interfaces.IHasConsistencyCheck;
-import org.joda.time.DateTime;
+
 
 import java.io.*;
 import java.nio.ByteBuffer;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
@@ -57,7 +58,7 @@ public class GameStateMessage extends NetworkMessage implements IHasConsistencyC
         for (int i = 0; i < dateTimeStringLength; i++) {
             dateTimeStringByteArray[i] = buffer.get();
         }
-        DateTime timeStarted = new DateTime(new String(dateTimeStringByteArray));
+        Date timeStarted = new Date(new String(dateTimeStringByteArray));
 
         int factoryArrayLength = buffer.get();
         List<TFactory> factoryList = new LinkedList<TFactory>();

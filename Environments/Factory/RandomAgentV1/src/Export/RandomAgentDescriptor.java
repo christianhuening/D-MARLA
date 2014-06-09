@@ -4,17 +4,22 @@ package Export;
 import AgentSystemPluginAPI.Contract.IAgentSystem;
 import AgentSystemPluginAPI.Contract.IAgentSystemPluginDescriptor;
 import AgentSystemPluginAPI.Contract.TAgentSystemDescription;
+import AgentSystemPluginAPI.Services.IAgent;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
 import Factory.GameLogic.TransportTypes.TGameState;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
  * This class
  */
 public class RandomAgentDescriptor implements IAgentSystemPluginDescriptor {
+
+    private RandomAgentImplementation randomAgentImplementation;
 
     @Override
     public TAgentSystemDescription getDescription() {
@@ -24,7 +29,16 @@ public class RandomAgentDescriptor implements IAgentSystemPluginDescriptor {
     }
 
     @Override
+    public List<IAgent> getInternalAgents() {
+        if(randomAgentImplementation != null) {
+            return randomAgentImplementation.getInternalAgents();
+        }
+        throw new NotImplementedException();
+    }
+
+    @Override
     public IAgentSystem getInstance(IPluginServiceProvider iAgentSystemServiceProvider) {
-        return new RandomAgentImplementation();
+        randomAgentImplementation = new RandomAgentImplementation();
+        return randomAgentImplementation;
     }
 }

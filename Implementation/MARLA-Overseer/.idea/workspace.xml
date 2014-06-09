@@ -49,20 +49,50 @@
     </treeState>
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="5feed42b-5a8e-4682-9bca-c25963724f3d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/Enums/Direction.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/Enums/Direction.java" />
+    <list default="true" id="5feed42b-5a8e-4682-9bca-c25963724f3d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/.idea/FactoryEnvironment.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/jodatime.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/libraries/joda_time_2_3.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/AIClientFacade/AIClientFacade.iml" afterPath="$PROJECT_DIR$/../MARLA-Client/AIClientFacade/AIClientFacade.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/MARLAClientGUI/src/AIClientMain.java" afterPath="$PROJECT_DIR$/../MARLA-Client/MARLAClientGUI/src/AIClientMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/AIRunner/AIRunner.iml" afterPath="$PROJECT_DIR$/../MARLA-Client/AIRunner/AIRunner.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Service/AbstractVisualizeReplayPanel.java" afterPath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Service/AbstractVisualizeReplayPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/AgentSystemManagement/AgentSystemManagement.iml" afterPath="$PROJECT_DIR$/../MARLA-Client/AgentSystemManagement/AgentSystemManagement.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/AgentSystemPluginAPI.iml" afterPath="$PROJECT_DIR$/../PluginAPI/AgentSystemPluginAPI/AgentSystemPluginAPI.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/SimpleFactoryPlayer/src/SimpleFactoryPlayer/UnitTest/DummyAgent.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/SimpleFactoryPlayer/src/SimpleFactoryPlayer/UnitTest/DummyAgent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/SimpleFactoryPlayer/src/SimpleFactoryPlayer/UnitTest/DummyPluginProvider.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/SimpleFactoryPlayer/src/SimpleFactoryPlayer/UnitTest/DummyPluginProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/UnitTest/DummyStatistics.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/UnitTest/DummyStatistics.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" afterPath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/EnvironmentSelectionDialog.java" afterPath="$PROJECT_DIR$/../MARLA-Server/MARLA-Server-GUI/src/EnvironmentSelectionDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Agents/EpsilonGreedyAgent.java" afterPath="$PROJECT_DIR$/../MARLA-Client/AgentProvider/src/AgentProvider/Implementation/Agents/EpsilonGreedyAgent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/Enums/Faction.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/Enums/Faction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/FactoryEnvironment.iml" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/FactoryEnvironment.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/FactoryPluginDescriptor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/Game.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameLogicComponent.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameLogicComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameLogicUseCase.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameLogicUseCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/IEnvironment.java" afterPath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/IEnvironment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/MapScanner.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/MapScanner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameActors/Player.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameActors/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/UnitTest/GameLogicComponentTest.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/UnitTest/GameLogicComponentTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameActors/GameReplay.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/GameActors/GameReplay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/CustomMessages/GameStateMessage.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/CustomMessages/GameStateMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/MARLAClientGUI/MARLAClientGUI.iml" afterPath="$PROJECT_DIR$/../MARLA-Client/MARLAClientGUI/MARLAClientGUI.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../R_Components/NetworkAdapter/NetworkAdapter.iml" afterPath="$PROJECT_DIR$/../R_Components/NetworkAdapter/NetworkAdapter.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java" afterPath="$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../R_Components/PluginLoader/PluginLoader.iml" afterPath="$PROJECT_DIR$/../R_Components/PluginLoader/PluginLoader.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/RandomAgentV1/src/Export/RandomAgentDescriptor.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/RandomAgentV1/src/Export/RandomAgentDescriptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/RandomAgentV1/src/Export/RandomAgentImplementation.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/RandomAgentV1/src/Export/RandomAgentImplementation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/SimpleFactoryPlayer/SimpleFactoryPlayer.iml" afterPath="$PROJECT_DIR$/../../Environments/Factory/SimpleFactoryPlayer/SimpleFactoryPlayer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/SimpleFactoryPlayerDescriptor.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/SimpleFactoryPlayerDescriptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/SimpleFactoryPlayerSystem.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/SimpleFactoryPlayerSystem.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameReplay.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameReplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/TransportTypes/TMapMetaData.java" afterPath="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/TransportTypes/TMapMetaData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Cliff/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Environments/Cliff/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameState.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TGameState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/Visualization/VisualizeReplay.java" afterPath="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment/src/Factory/Visualization/VisualizeReplay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ZeroTypes/ZeroTypes.iml" afterPath="$PROJECT_DIR$/../ZeroTypes/ZeroTypes.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Environments/Factory/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Environments/Factory/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MARLA-Client/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MARLA-Server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MARLA-Server/.idea/workspace.xml" />
@@ -117,15 +147,26 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Overseer" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="OverseerMain.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.6577541" vertical-offset="4690" max-vertical-offset="5652">
+              <caret line="323" column="2" selection-start-line="323" selection-start-column="2" selection-end-line="323" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -146,17 +187,15 @@
         <option value="$PROJECT_DIR$/../PluginAPI/EnvironmentPluginAPI/src/EnvironmentPluginAPI/Contract/TEnvironmentDescription.java" />
         <option value="$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/CycleDescriptionTableModel.java" />
         <option value="$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/GameReplayForm.java" />
-        <option value="$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java" />
         <option value="$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java" />
+        <option value="$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="538" />
-    <option name="y" value="212" />
-    <option name="width" value="1110" />
-    <option name="height" value="639" />
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -169,7 +208,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -192,60 +231,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PluginLoader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PluginLoader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PluginLoader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Overseer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PluginLoader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PluginLoader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implementation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files" />
       </pane>
       <pane id="PackagesPane">
         <subPane>
@@ -257,21 +243,24 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="reference.projectsettings.compiler.annotationProcessors" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Environments/Factory" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Environments/Factory/FactoryEnvironment" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.searchVisible" value="true" />
@@ -280,41 +269,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Application.OverseerGUI">
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="false" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application">
-      <module name="" />
-      <option name="erlFlags" value="" />
-      <option name="moduleAndFunction" value="" />
-      <option name="name" value="Erlang" />
-      <option name="params" value="" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="RebarEunitRunConfigurationType" factoryName="Erlang Rebar Eunit">
-      <module name="" />
-      <option name="command" value="eunit" />
-      <option name="name" value="Erlang Rebar Eunit" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
-      <option name="skipDependencies" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -323,25 +281,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -372,10 +311,32 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -397,40 +358,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="ErlangUnitRunConfigurationType" factoryName="Erlang Eunit">
-      <module name="" />
-      <option name="name" value="Erlang" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
-      <option name="functionNames">
-        <set />
-      </option>
-      <option name="kind" value="MODULE" />
-      <option name="moduleNames">
-        <set />
-      </option>
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <list size="1">
@@ -458,11 +385,12 @@
       <updated>1340471263625</updated>
       <workItem from="1399297754881" duration="23000" />
       <workItem from="1399297778319" duration="2334000" />
+      <workItem from="1402303437207" duration="1665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2357000" />
+    <option name="totallyTimeSpent" value="4022000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -485,36 +413,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="538" y="212" width="1110" height="639" extended-state="1" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20415778" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20042644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32542694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32502493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15778251" sideWeight="0.6732673" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58633775" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25833333" sideWeight="0.6732673" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5862413" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20415778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -565,7 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
           <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -581,7 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="4122">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -589,7 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="882">
           <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -605,7 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="4122">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -613,7 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="17" column="57" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -629,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="50" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -637,7 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="17" column="57" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -653,7 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="50" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,7 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="882">
           <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,18 +624,17 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.3557506" vertical-offset="13" max-vertical-offset="5328">
-          <caret line="295" column="34" selection-start-line="295" selection-start-column="34" selection-end-line="295" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../R_Components/PluginLoader/src/PluginLoader/Implementation/EnvironmentPluginLoaderUseCase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26653504" vertical-offset="504" max-vertical-offset="4122">
           <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OverseerGUI/src/OverseerGUI/OverseerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6577541" vertical-offset="4690" max-vertical-offset="5652">
+          <caret line="323" column="2" selection-start-line="323" selection-start-column="2" selection-end-line="323" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -764,7 +682,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -776,7 +694,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>ZeroTypes</last-edited>
+          <last-edited>PluginLoader</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

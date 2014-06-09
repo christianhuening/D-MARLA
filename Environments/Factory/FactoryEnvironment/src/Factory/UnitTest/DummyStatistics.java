@@ -1,9 +1,7 @@
-package Factory.UnitTest;
-
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
 import EnvironmentPluginAPI.Contract.TEnvironmentDescription;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Service.ICycleReplay;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
 import Factory.GameLogic.GameActors.GameReplay;
 
 import java.util.ArrayList;
@@ -16,7 +14,7 @@ import java.util.List;
  * Time: 17:10
  * To change this template use File | Settings | File Templates.
  */
-public class DummyStatistics implements ISaveGameStatistics {
+public class DummyStatistics implements ICycleStatisticsSaver {
     List<GameReplay> replays = new ArrayList<GameReplay>();
 
     public void SaveReplay(GameReplay replay) {

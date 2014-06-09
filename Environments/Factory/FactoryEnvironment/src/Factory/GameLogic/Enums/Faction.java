@@ -1,6 +1,8 @@
 package Factory.GameLogic.Enums;
 
-import java.io.Serializable;
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
+
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,7 +11,7 @@ import java.io.Serializable;
  * Time: 20:30
  * To change this template use File | Settings | File Templates.
  */
-public enum Faction {
+public enum Faction implements IEnvironmentConfiguration {
     RED {
         @Override
         public String toString() {

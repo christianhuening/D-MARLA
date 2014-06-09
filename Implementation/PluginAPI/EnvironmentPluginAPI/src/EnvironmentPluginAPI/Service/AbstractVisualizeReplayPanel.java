@@ -1,9 +1,6 @@
 package EnvironmentPluginAPI.Service;
 
 
-import EnvironmentPluginAPI.Service.ICycleReplay;
-import EnvironmentPluginAPI.Service.IVisualizeReplay;
-
 import javax.swing.*;
 import java.awt.*;
 

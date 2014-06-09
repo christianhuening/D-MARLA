@@ -1,6 +1,6 @@
 import AgentSystemPluginAPI.Contract.StateAction;
 import AgentSystemPluginAPI.Services.IAgent;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import SimpleFactoryPlayer.Implementation.StateActionGenerator;
 
 import java.util.Random;

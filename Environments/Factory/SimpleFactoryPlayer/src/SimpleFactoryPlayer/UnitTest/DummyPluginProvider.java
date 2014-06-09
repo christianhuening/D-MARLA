@@ -2,7 +2,10 @@ import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Services.IAgent;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 import AgentSystemPluginAPI.Services.LearningAlgorithm;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+
+import java.io.File;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,6 +15,11 @@ import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
  * To change this template use File | Settings | File Templates.
  */
 public class DummyPluginProvider implements IPluginServiceProvider {
+    @Override
+    public File agentDirectory() {
+        return null;
+    }
+
     @Override
     public void saveAgentSystemSetting(String s, String s1) {
         //To change body of implemented methods use File | Settings | File Templates.

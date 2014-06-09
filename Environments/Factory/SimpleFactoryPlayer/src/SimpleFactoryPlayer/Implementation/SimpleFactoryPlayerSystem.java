@@ -5,7 +5,10 @@ import AgentSystemPluginAPI.Contract.StateAction;
 import AgentSystemPluginAPI.Services.IAgent;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 import AgentSystemPluginAPI.Services.LearningAlgorithm;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+import EnvironmentPluginAPI.Contract.IActionDescription;
+import EnvironmentPluginAPI.Contract.IEnvironmentState;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
 import Factory.GameLogic.Enums.Direction;
 import Factory.GameLogic.Enums.Faction;
 import Factory.GameLogic.TransportTypes.*;
@@ -25,7 +28,7 @@ import java.util.List;
  * Time: 11:41
  * To change this template use File | Settings | File Templates.
  */
-public class SimpleFactoryPlayerSystem implements IAgentSystem<TGameState,TActionsInTurn> {
+public class SimpleFactoryPlayerSystem implements IAgentSystem<Faction, TGameState, TActionsInTurn> {
 // ------------------------------ FIELDS ------------------------------
 
     private IPluginServiceProvider provider;
@@ -66,9 +69,10 @@ public class SimpleFactoryPlayerSystem implements IAgentSystem<TGameState,TActio
 
 // --------------------- Interface IAgentSystem ---------------------
 
+
     @Override
-    public void start(Object faction) throws TechnicalException {
-        myFaction = (Faction) faction;
+    public void start(Faction faction) throws TechnicalException {
+        myFaction = faction;
         if (myFaction == Faction.RED) {
             enemyFaction = Faction.BLUE;
         } else {
@@ -76,8 +80,6 @@ public class SimpleFactoryPlayerSystem implements IAgentSystem<TGameState,TActio
         }
         firstturn = true;
     }
-
-
 
     @Override
     public TActionsInTurn getActionsForEnvironmentStatus(TGameState tGameState) throws TechnicalException {
@@ -120,12 +122,15 @@ public class SimpleFactoryPlayerSystem implements IAgentSystem<TGameState,TActio
         return new TActionsInTurn(actionList);
     }
 
+
+
+
     @Override
     public void end() throws TechnicalException {
         agent.endEpisode(new StateAction(""), rewardForLastTurn);
     }
 
-    @Override
+
     public List<IAgent> getInternalAgents() {
         return agentList;
     }

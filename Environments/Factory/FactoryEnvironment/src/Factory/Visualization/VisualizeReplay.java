@@ -1,7 +1,7 @@
 package Factory.Visualization;
 
 
-import EnvironmentPluginAPI.Contract.AbstractVisualizeReplayPanel;
+import EnvironmentPluginAPI.Service.AbstractVisualizeReplayPanel;
 import EnvironmentPluginAPI.Service.ICycleReplay;
 import Factory.GameLogic.Enums.Faction;
 import Factory.GameLogic.TransportTypes.*;
@@ -25,7 +25,6 @@ public class VisualizeReplay extends AbstractVisualizeReplayPanel {
     BufferedImage unitBlue;
     BufferedImage unitRed;
     private ICycleReplay replay;
-    private List<TGameState> gameStates;
     private ListIterator<TGameState> gameStateIterator;
 
     private boolean doStep;
@@ -61,8 +60,7 @@ public class VisualizeReplay extends AbstractVisualizeReplayPanel {
             playTimer.cancel();
         }
         this.replay = replay;
-        gameStates = this.replay.getEnvironmentStatesPerTurn();
-        gameStateIterator = (ListIterator) gameStates.iterator();
+        gameStateIterator = (ListIterator) this.replay.iterator();
     }
 
     public void stepForward() {

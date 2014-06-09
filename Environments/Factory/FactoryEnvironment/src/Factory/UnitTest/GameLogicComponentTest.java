@@ -1,9 +1,10 @@
-package Factory.UnitTest;
 
-import EnvironmentPluginAPI.Contract.Exception.IllegalNumberOfClientsException;
-import EnvironmentPluginAPI.Contract.Exception.TechnicalException;
+
 import EnvironmentPluginAPI.Contract.IEnvironment;
-import EnvironmentPluginAPI.Service.ISaveGameStatistics;
+import EnvironmentPluginAPI.Exceptions.IllegalNumberOfClientsException;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
+import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
+
 import EnvironmentPluginAPI.TransportTypes.TMARLAClientInstance;
 import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
 import Factory.GameLogic.Enums.Direction;
@@ -39,7 +40,7 @@ public class GameLogicComponentTest {
     TMARLAClientInstance TMARLAClientInstance2;
     List<TMARLAClientInstance> TMARLAClientInstanceList = new ArrayList<TMARLAClientInstance>();
     int roundsToSpawn = 5;
-    ISaveGameStatistics statistics = new DummyStatistics();
+    ICycleStatisticsSaver statistics = new DummyStatistics();
 
     @Before
     public void setUp() throws Exception {
@@ -106,11 +107,11 @@ public class GameLogicComponentTest {
         gameLogic6.endTurn();
         print(gameLogic6);
 
-        List<TFactory> factories = ((TGameState)gameLogic6.getCurrentGameState()).getFactories();
+        List<TFactory> factories = ((TGameState)gameLogic6.getCurrentEnvironmentState()).getFactories();
 
-        assert (gameLogic6.getCurrentGameState().hasClientMetGoal() == true);
+        assert (gameLogic6.getCurrentEnvironmentState().hasClientMetGoal() == true);
 
-        assert (((TGameState)gameLogic6.getCurrentGameState()).getActivePlayer().getFaction() == Faction.RED);
+        assert (((TGameState)gameLogic6.getCurrentEnvironmentState()).getActivePlayer().getFaction() == Faction.RED);
     }
 
     @Test
@@ -268,7 +269,7 @@ public class GameLogicComponentTest {
 
         while(before.getActivePlayer().getFaction() != Faction.BLUE) {
             gameLogic20.endTurn();
-            before = (TGameState)gameLogic20.getCurrentGameState();
+            before = (TGameState)gameLogic20.getCurrentEnvironmentState();
             turnsBeforePlayerBlueWasActive++;
         }
 
@@ -287,7 +288,7 @@ public class GameLogicComponentTest {
             }
         }
 
-        System.out.println(((TGameState)gameLogic20.getCurrentGameState()).toString());
+        System.out.println(((TGameState)gameLogic20.getCurrentEnvironmentState()).toString());
 
         gameLogic20.endTurn();
 
@@ -297,7 +298,7 @@ public class GameLogicComponentTest {
             gameLogic20.moveUnit(unit, Direction.LEFT);
         }
 
-        TGameState afterTurn1 = (TGameState)gameLogic20.getCurrentGameState();
+        TGameState afterTurn1 = (TGameState)gameLogic20.getCurrentEnvironmentState();
 
         assert (!afterTurn1.getMapFields()[6][7].isOccupied());
 
@@ -308,7 +309,7 @@ public class GameLogicComponentTest {
         assert (before.getTurn() + 1 == afterTurn1.getTurn());
 
         gameLogic20.endTurn();
-        TGameState afterTurn2 = (TGameState)gameLogic20.getCurrentGameState();
+        TGameState afterTurn2 = (TGameState)gameLogic20.getCurrentEnvironmentState();
 
         assert (before.getRound() + 1 == afterTurn2.getRound());
 
@@ -319,7 +320,7 @@ public class GameLogicComponentTest {
             gameLogic20.endTurn();
         }
 
-        spawn = (TGameState)gameLogic20.getCurrentGameState();
+        spawn = (TGameState)gameLogic20.getCurrentEnvironmentState();
 
         System.out.println("turn: " + spawn.getTurn());
         System.out.println(spawn.toString());
@@ -328,7 +329,7 @@ public class GameLogicComponentTest {
         assert (!board[6][7].isOccupied());
 
         gameLogic20.endTurn();
-        spawn = (TGameState)gameLogic20.getCurrentGameState();
+        spawn = (TGameState)gameLogic20.getCurrentEnvironmentState();
 
         board = spawn.getMapFields();
 
@@ -338,7 +339,7 @@ public class GameLogicComponentTest {
     @Test
     public void testStartGame() throws Exception {
         gameLogic20.start(TMARLAClientInstanceList, mapMetaData20);
-        TGameState start = (TGameState)gameLogic20.getCurrentGameState();
+        TGameState start = (TGameState)gameLogic20.getCurrentEnvironmentState();
         /*
         System.out.println(gameLogic20);
         System.out.println(start.getActivePlayer());

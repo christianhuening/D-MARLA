@@ -12,7 +12,6 @@ import Factory.GameLogic.GameActors.Factory;
 import Factory.GameLogic.GameActors.Player;
 import Factory.GameLogic.GameActors.Unit;
 import Factory.GameLogic.TransportTypes.*;
-import org.joda.time.DateTime;
 
 import java.util.*;
 
@@ -39,7 +38,7 @@ public class Game extends Observable implements java.io.Serializable {
         return winningPlayer;
     }
 
-    private DateTime gameStartedAt;
+    private Date gameStartedAt;
 
     private List<Factory> factories = new ArrayList<Factory>();
 
@@ -95,7 +94,7 @@ public class Game extends Observable implements java.io.Serializable {
         mapGenerator = new MapGenerator(mapMetaData, factories);
         activePlayer = players.get(rand.nextInt(players.size()));
         this.board = mapGenerator.generateMap();
-        gameStartedAt = new DateTime();
+        gameStartedAt = new Date();
 
         this.turns = new LinkedList<TGameState>();
 

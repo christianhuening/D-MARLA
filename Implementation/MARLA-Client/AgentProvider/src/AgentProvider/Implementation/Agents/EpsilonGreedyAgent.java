@@ -131,6 +131,7 @@ abstract class EpsilonGreedyAgent implements IAgent {
 
     public void setGamma(float gamma) {
         this.gamma = gamma;
+
         fireSettingChangedEvent(AgentSettingName.GAMMA);
     }
 

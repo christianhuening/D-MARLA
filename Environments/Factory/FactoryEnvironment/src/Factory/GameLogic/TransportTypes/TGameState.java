@@ -2,8 +2,8 @@ package Factory.GameLogic.TransportTypes;
 
 import EnvironmentPluginAPI.Contract.IEnvironmentState;
 import Factory.Interfaces.IHasConsistencyCheck;
-import org.joda.time.DateTime;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -37,9 +37,9 @@ public class TGameState implements IEnvironmentState, IHasConsistencyCheck, java
         return round;
     }
 
-    private DateTime gameStartedAt;
+    private Date gameStartedAt;
 
-    public DateTime getGameStartedAt() {
+    public Date getGameStartedAt() {
         return gameStartedAt;
     }
 
@@ -63,7 +63,7 @@ public class TGameState implements IEnvironmentState, IHasConsistencyCheck, java
 
 // --------------------------- CONSTRUCTORS ---------------------------
 
-    public TGameState(boolean clientMetGoal, TPlayer activePlayer, int turn, int round, DateTime gameStartedAt, List<TFactory> factories, TAbstractField[][] mapFields) {
+    public TGameState(boolean clientMetGoal, TPlayer activePlayer, int turn, int round, Date gameStartedAt, List<TFactory> factories, TAbstractField[][] mapFields) {
         this.activePlayer = activePlayer;
         this.turn = turn;
         this.round = round;

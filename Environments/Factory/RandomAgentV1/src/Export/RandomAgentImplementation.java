@@ -2,6 +2,7 @@ package Export;
 
 import AgentSystemPluginAPI.Contract.IAgentSystem;
 import AgentSystemPluginAPI.Services.IAgent;
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import Factory.GameLogic.Enums.Direction;
 import Factory.GameLogic.Enums.Faction;
 import Factory.GameLogic.TransportTypes.TAction;
@@ -22,7 +23,7 @@ import java.util.Random;
  * Time: 16:47
  * To change this template use File | Settings | File Templates.
  */
-public class RandomAgentImplementation implements IAgentSystem<TGameState, TActionsInTurn> {
+public class RandomAgentImplementation implements IAgentSystem<Faction, TGameState, TActionsInTurn> {
 
     private Faction ownFaction;
 
@@ -31,9 +32,11 @@ public class RandomAgentImplementation implements IAgentSystem<TGameState, TActi
     }
 
     @Override
-    public void start(Object faction) {
+    public void start(Faction faction) {
         ownFaction = (Faction)faction;
     }
+
+
 
     @Override
     public TActionsInTurn getActionsForEnvironmentStatus(TGameState tGameState) {
@@ -59,7 +62,7 @@ public class RandomAgentImplementation implements IAgentSystem<TGameState, TActi
 
     }
 
-    @Override
+
     public List<IAgent> getInternalAgents() {
         return new LinkedList<IAgent>();
     }
