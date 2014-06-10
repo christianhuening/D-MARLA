@@ -33,10 +33,10 @@ public class AgentSystemServiceProvider implements IPluginServiceProvider {
         this.agentDirectory = agentDirectory;
         this.toLoad = toLoad;
 
-        provider.loadAgentSystem(agentDirectory.getPath() + "/" + toLoad.getName() + ".jar");
+        provider.loadAgentSystem(agentDirectory.getPath() + File.separator + toLoad.getName() + ".jar");
 
         //open agent system's settings. if no settings file is exists, create one. If even that fails, we can't do more :(
-        String settingsPath = agentDirectory.toString() + "/settings.properties";
+        String settingsPath = agentDirectory.toString() + File.separator + "settings.properties";
         agentSystemSettings = new Properties();
         try {
             agentSystemSettings.load(new FileInputStream(settingsPath));

@@ -10,6 +10,7 @@ import AgentSystemPluginAPI.Services.LearningAlgorithm;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import ZeroTypes.Settings.SettingException;
 
+import java.io.File;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,9 @@ class AgentProviderUseCase implements IAgentProvider, IAgentSettingUpdatedListen
     @Override
     public void loadAgentSystem(String pathToAgentSystem) throws TechnicalException, SettingException {
         this.agentSystemPath = pathToAgentSystem;
-        this.persistenceFactory = new PersistenceFactory(pathToAgentSystem);
+        // rip off /<nameOfPlugin>.jar
+        String path = pathToAgentSystem.substring(0,pathToAgentSystem.lastIndexOf(File.separator));
+        this.persistenceFactory = new PersistenceFactory(path);
     }
 
     @Override

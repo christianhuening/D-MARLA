@@ -8,12 +8,14 @@ import EnvironmentPluginAPI.Exceptions.CorruptConfigurationFileException;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Service.ICycleStatisticsSaver;
 import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
+import EnvironmentPluginAPI.TransportTypes.TMapMetaData;
 import Factory.GameLogic.GameLogicComponent;
 
+import java.util.LinkedList;
 import java.util.List;
 
 
-public class FactoryPluginDescriptor implements IEnvironmentPluginDescriptor {
+public class FactoryPluginDescriptor implements IEnvironmentPluginDescriptor<TMapMetaData> {
 
     @Override
     public TEnvironmentDescription getDescription() {
@@ -21,12 +23,14 @@ public class FactoryPluginDescriptor implements IEnvironmentPluginDescriptor {
     }
 
     @Override
-    public List getAvailableConfigurations() throws CorruptConfigurationFileException, TechnicalException {
-        return null;
+    public List<TMapMetaData> getAvailableConfigurations() throws CorruptConfigurationFileException, TechnicalException {
+        LinkedList<TMapMetaData> list = new LinkedList<TMapMetaData>();
+        list.add(new TMapMetaData("StandardMap",1,23452,20,10,2,4));
+        return list;
     }
 
     @Override
-    public void saveConfiguration(IEnvironmentConfiguration iEnvironmentConfiguration) throws TechnicalException {
+    public void saveConfiguration(TMapMetaData tMapMetaData) throws TechnicalException {
 
     }
 
