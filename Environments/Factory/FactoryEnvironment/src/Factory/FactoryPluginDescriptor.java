@@ -25,7 +25,7 @@ public class FactoryPluginDescriptor implements IEnvironmentPluginDescriptor<TMa
     @Override
     public List<TMapMetaData> getAvailableConfigurations() throws CorruptConfigurationFileException, TechnicalException {
         LinkedList<TMapMetaData> list = new LinkedList<TMapMetaData>();
-        list.add(new TMapMetaData("StandardMap",1,23452,20,10,2,4));
+        list.add(new TMapMetaData("StandardMap",0,23452,20,10,2,4));
         return list;
     }
 
