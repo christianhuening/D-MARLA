@@ -38,7 +38,6 @@ public class RandomAgentDescriptor implements IAgentSystemPluginDescriptor {
 
     @Override
     public IAgentSystem getInstance(IPluginServiceProvider iAgentSystemServiceProvider) {
-        randomAgentImplementation = new RandomAgentImplementation();
-        return randomAgentImplementation;
+        return new RandomAgentImplementation();
     }
 }

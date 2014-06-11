@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" filepath="$PROJECT_DIR$/../../PluginAPI/EnvironmentPluginAPI/EnvironmentPluginAPI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Factory.iml" filepath="$PROJECT_DIR$/Factory.iml" />
       <module fileurl="file://$PROJECT_DIR$/FactoryEnvironment/FactoryEnvironment.iml" filepath="$PROJECT_DIR$/FactoryEnvironment/FactoryEnvironment.iml" />
       <module fileurl="file://$PROJECT_DIR$/RandomAgentV1/RandomAgentV1.iml" filepath="$PROJECT_DIR$/RandomAgentV1/RandomAgentV1.iml" />
       <module fileurl="file://$PROJECT_DIR$/SimpleFactoryPlayer/SimpleFactoryPlayer.iml" filepath="$PROJECT_DIR$/SimpleFactoryPlayer/SimpleFactoryPlayer.iml" />

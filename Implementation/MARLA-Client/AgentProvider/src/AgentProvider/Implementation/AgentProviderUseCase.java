@@ -14,6 +14,7 @@ import java.io.File;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 class AgentProviderUseCase implements IAgentProvider, IAgentSettingUpdatedListener {
 
@@ -30,7 +31,8 @@ class AgentProviderUseCase implements IAgentProvider, IAgentSettingUpdatedListen
         this.agentSystemPath = pathToAgentSystem;
         // rip off /<nameOfPlugin>.jar
         String path = pathToAgentSystem.substring(0,pathToAgentSystem.lastIndexOf(File.separator));
-        this.persistenceFactory = new PersistenceFactory(path);
+        UUID randomPathExtension = UUID.randomUUID();
+        this.persistenceFactory = new PersistenceFactory(path + File.separator + randomPathExtension.toString());
     }
 
     @Override
