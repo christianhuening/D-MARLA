@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FactoryEnvironment/FactoryEnvironment.iml" filepath="$PROJECT_DIR$/FactoryEnvironment/FactoryEnvironment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/HierarchicalFactoryPlayer.iml" filepath="$PROJECT_DIR$/HierarchicalFactoryPlayer/HierarchicalFactoryPlayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/RandomAgentV1/RandomAgentV1.iml" filepath="$PROJECT_DIR$/RandomAgentV1/RandomAgentV1.iml" />
       <module fileurl="file://$PROJECT_DIR$/SimpleFactoryPlayer/SimpleFactoryPlayer.iml" filepath="$PROJECT_DIR$/SimpleFactoryPlayer/SimpleFactoryPlayer.iml" />
     </modules>

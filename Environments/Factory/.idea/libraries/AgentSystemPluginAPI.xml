@@ -4,6 +4,8 @@
       <root url="jar://$PROJECT_DIR$/../../Deployment/PluginAPI/AgentSystemPluginAPI.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../Implementation/PluginAPI/AgentSystemPluginAPI/src" />
+    </SOURCES>
   </library>
 </component>
