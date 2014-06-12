@@ -5,8 +5,6 @@ import AgentSystemPluginAPI.Contract.StateAction;
 import AgentSystemPluginAPI.Services.IAgent;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 import AgentSystemPluginAPI.Services.LearningAlgorithm;
-import EnvironmentPluginAPI.Contract.IActionDescription;
-import EnvironmentPluginAPI.Contract.IEnvironmentState;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
 import Factory.GameLogic.Enums.Direction;
@@ -28,7 +26,7 @@ import java.util.List;
  * Time: 11:41
  * To change this template use File | Settings | File Templates.
  */
-public class SimpleFactoryPlayerSystem implements IAgentSystem<Faction, TGameState, TActionsInTurn> {
+public class SimpleFactoryPlayerSystem implements IAgentSystem<IEnvironmentConfiguration, TGameState, TActionsInTurn> {
 // ------------------------------ FIELDS ------------------------------
 
     private IPluginServiceProvider provider;
@@ -71,8 +69,8 @@ public class SimpleFactoryPlayerSystem implements IAgentSystem<Faction, TGameSta
 
 
     @Override
-    public void start(Faction faction) throws TechnicalException {
-        myFaction = faction;
+    public void start(IEnvironmentConfiguration metaData) throws TechnicalException {
+        myFaction = Faction.valueOf(metaData.toString());
         if (myFaction == Faction.RED) {
             enemyFaction = Faction.BLUE;
         } else {

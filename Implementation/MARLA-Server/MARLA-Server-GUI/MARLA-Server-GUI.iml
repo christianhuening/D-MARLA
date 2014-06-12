@@ -12,6 +12,16 @@
     <orderEntry type="module" module-name="ServerFacade" />
     <orderEntry type="module" module-name="PluginLoader" />
     <orderEntry type="library" name="seaglasslookandfeel-0.2" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../EnvironmentPlugins" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../EnvironmentPlugins" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

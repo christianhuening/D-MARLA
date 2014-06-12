@@ -21,7 +21,6 @@ public class TMapMetaData implements java.io.Serializable, IEnvironmentConfigura
         this.maximumFactorySize = maximumFactorySize;
     }
 
-
     // the map's name
     private final String name;
 

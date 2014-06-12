@@ -1,6 +1,7 @@
 package ServerRunner.Implementation;
 
 import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
+import EnvironmentPluginAPI.TransportTypes.TFactionChooser;
 import ZeroTypes.Enumerations.ClientEventType;
 import ZeroTypes.Enumerations.SessionStatus;
 import EnvironmentPluginAPI.Exceptions.IllegalNumberOfClientsException;
@@ -212,7 +213,15 @@ class Session extends Thread implements IHasTransportType<TSession> {
         for (TNetworkClient networkClient : clientsInThisSession) {
             clientsForPlayers.put(new TMARLAClientInstance(networkClient.getName(), networkClient.getId()), networkClient);
 
-            serverNetworkAdapter.sendNetworkMessage(new CycleStartsMessage(networkClient.getId(), configuration), MessageChannel.DATA);
+            IEnvironmentConfiguration conf;
+            if(clientsInThisSession.indexOf(networkClient) == 0){
+                conf = new TFactionChooser("RED");
+            } else {
+                conf = new TFactionChooser("BLUE");
+            }
+
+
+            serverNetworkAdapter.sendNetworkMessage(new CycleStartsMessage(networkClient.getId(), conf), MessageChannel.DATA);
         }
 
         sendCurrentEnvironmentStateToClient(clientsForPlayers.get(environment.getActiveInstance()));

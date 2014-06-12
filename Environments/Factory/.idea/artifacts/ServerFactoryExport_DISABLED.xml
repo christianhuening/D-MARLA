@@ -1,11 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="ServerFactoryExport">
+  <artifact type="jar" name="ServerFactoryExport_DISABLED">
     <output-path>$PROJECT_DIR$/../../Implementation/MARLA-Server/EnvironmentPlugins</output-path>
     <root id="archive" name="Factory.jar">
       <element id="module-output" name="FactoryEnvironment" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../Implementation/T_Components/junit4.10/junit-4.10.jar" path-in-jar="/" />
-      <element id="library" level="project" name="jodatime" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../Deployment/PluginAPI/AgentSystemPluginAPI.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../Deployment/PluginAPI/EnvironmentPluginAPI.jar" path-in-jar="/" />
     </root>
   </artifact>

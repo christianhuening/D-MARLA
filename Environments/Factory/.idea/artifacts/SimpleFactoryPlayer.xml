@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/../../Implementation/MARLA-Client/agentPlugins/SimpleFactoryPlayer</output-path>
     <root id="archive" name="SimpleFactoryPlayer.jar">
       <element id="module-output" name="SimpleFactoryPlayer" />
+      <element id="module-output" name="FactoryEnvironment" />
     </root>
   </artifact>
 </component>
