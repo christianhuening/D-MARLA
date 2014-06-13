@@ -1,16 +1,17 @@
 package HierarchicalFactoryPlayer;
 
 import AgentSystemPluginAPI.Contract.IAgentSystem;
+import AgentSystemPluginAPI.Contract.StateAction;
 import AgentSystemPluginAPI.Services.IAgent;
 import AgentSystemPluginAPI.Services.IPluginServiceProvider;
 import AgentSystemPluginAPI.Services.LearningAlgorithm;
 import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
-import Factory.GameLogic.TransportTypes.TActionsInTurn;
-import Factory.GameLogic.TransportTypes.TGameState;
+import Factory.GameLogic.Enums.Faction;
+import Factory.GameLogic.TransportTypes.*;
+import Factory.GameLogic.Utility.GameInfos;
 import HierarchicalFactoryPlayer.StateActionGenerators.EvaluatorStateActionGenerator;
 import HierarchicalFactoryPlayer.StateActionGenerators.MoverStateActionGenerator;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +22,10 @@ public class HierarchicalFactoryPlayerSystem implements IAgentSystem<IEnvironmen
     private final IAgent evaluator;
     private final IAgent mover;
     private List<IAgent> agentlist;
+    private Faction myFaction;
+    private Faction enemyFaction;
+    private boolean firstturn;
+    private float rewardForLastTurn;
 
     public HierarchicalFactoryPlayerSystem(IPluginServiceProvider provider) throws TechnicalException {
         agentlist = new ArrayList<>();
@@ -33,13 +38,51 @@ public class HierarchicalFactoryPlayerSystem implements IAgentSystem<IEnvironmen
     }
 
     @Override
-    public void start(IEnvironmentConfiguration environmentConfiguration) throws TechnicalException {
-
+    public void start(IEnvironmentConfiguration metaData) throws TechnicalException {
+        myFaction = Faction.valueOf(metaData.toString());
+        if (myFaction == Faction.RED) {
+            enemyFaction = Faction.BLUE;
+        } else {
+            enemyFaction = Faction.RED;
+        }
+        firstturn = true;
     }
 
     @Override
-    public TActionsInTurn getActionsForEnvironmentStatus(TGameState current) throws TechnicalException {
-        return null;
+    public TActionsInTurn getActionsForEnvironmentStatus(TGameState tGameState) throws TechnicalException {
+        TGameState currentGameState = tGameState;
+        List<TUnit> myUnits = GameInfos.getUnitsForFaction(currentGameState, myFaction);
+
+        // the action list holding all actions for the next step
+        List<TAction> actionList = new ArrayList<TAction>();
+
+        // First evaluate the current game state
+        //tGameState.
+
+        // Now use this evaluated game state
+
+        for (TUnit unit : myUnits) {
+
+
+            TPosition unitPosition = GameInfos.getPositionForUnit(currentGameState, unit);
+            TAbstractField field = GameInfos.getFieldForPosition(currentGameState, unitPosition);
+
+            StateAction action = null;
+
+            if (firstturn) {
+                action = mover.startEpisode(new StateAction(""));
+                firstturn = false;
+            } else {
+                action = mover.step(rewardForLastTurn, new StateAction(""));
+            }
+
+        }
+        //rewardForLastTurn = calculateReward(currentGameState, moveOrder, unitPosition, field);
+
+
+        // currentGameState = refreshGameState(currentGameState, moveOrder, unitPosition);
+
+        return new TActionsInTurn(actionList);
     }
 
     @Override
@@ -48,7 +91,13 @@ public class HierarchicalFactoryPlayerSystem implements IAgentSystem<IEnvironmen
     }
 
 
-    public List<IAgent> getInternalAgents(){
+    public List<IAgent> getInternalAgents() {
         return this.agentlist;
     }
+
+
+    private float calculateReward(TGameState currentGameState, TAction moveOrder, TPosition unitPosition, TAbstractField field) {
+        return 0;
+    }
+
 }
