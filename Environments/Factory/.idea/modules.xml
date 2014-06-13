@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/HierarchicalFactoryPlayer.iml" filepath="$PROJECT_DIR$/HierarchicalFactoryPlayer/HierarchicalFactoryPlayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/RandomAgentV1/RandomAgentV1.iml" filepath="$PROJECT_DIR$/RandomAgentV1/RandomAgentV1.iml" />
       <module fileurl="file://$PROJECT_DIR$/SimpleFactoryPlayer/SimpleFactoryPlayer.iml" filepath="$PROJECT_DIR$/SimpleFactoryPlayer/SimpleFactoryPlayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleFactoryPlayerVolume2/SimpleFactoryPlayerVolume2.iml" filepath="$PROJECT_DIR$/SimpleFactoryPlayerVolume2/SimpleFactoryPlayerVolume2.iml" />
     </modules>
   </component>
 </project>
