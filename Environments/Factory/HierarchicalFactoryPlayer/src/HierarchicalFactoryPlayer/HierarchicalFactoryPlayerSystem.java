@@ -10,6 +10,7 @@ import EnvironmentPluginAPI.Service.IEnvironmentConfiguration;
 import Factory.GameLogic.Enums.Faction;
 import Factory.GameLogic.TransportTypes.*;
 import Factory.GameLogic.Utility.GameInfos;
+import HierarchicalFactoryPlayer.Entities.EvaluatorGameState;
 import HierarchicalFactoryPlayer.StateActionGenerators.EvaluatorStateActionGenerator;
 import HierarchicalFactoryPlayer.StateActionGenerators.MoverStateActionGenerator;
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ import java.util.List;
 public class HierarchicalFactoryPlayerSystem implements IAgentSystem<IEnvironmentConfiguration, TGameState, TActionsInTurn> {
     private final IAgent evaluator;
     private final IAgent mover;
+    private final EvaluatorGameState evaluatorGameState;
     private List<IAgent> agentlist;
     private Faction myFaction;
     private Faction enemyFaction;
@@ -29,11 +31,13 @@ public class HierarchicalFactoryPlayerSystem implements IAgentSystem<IEnvironmen
 
     public HierarchicalFactoryPlayerSystem(IPluginServiceProvider provider) throws TechnicalException {
         agentlist = new ArrayList<>();
+
         evaluator = provider.getTableAgent("Evaluator", LearningAlgorithm.SARSALambda, new EvaluatorStateActionGenerator());
         agentlist.add(evaluator);
         mover = provider.getTableAgent("Mover", LearningAlgorithm.SARSALambda, new MoverStateActionGenerator());
         agentlist.add(mover);
 
+        evaluatorGameState = new EvaluatorGameState(evaluator);
 
     }
 
@@ -49,15 +53,15 @@ public class HierarchicalFactoryPlayerSystem implements IAgentSystem<IEnvironmen
     }
 
     @Override
-    public TActionsInTurn getActionsForEnvironmentStatus(TGameState tGameState) throws TechnicalException {
-        TGameState currentGameState = tGameState;
+    public TActionsInTurn getActionsForEnvironmentStatus(TGameState currentGameState) throws TechnicalException {
         List<TUnit> myUnits = GameInfos.getUnitsForFaction(currentGameState, myFaction);
 
         // the action list holding all actions for the next step
         List<TAction> actionList = new ArrayList<TAction>();
 
         // First evaluate the current game state
-        //tGameState.
+        // tGameState.
+        evaluatorGameState.evaluateNewGameState(currentGameState);
 
         // Now use this evaluated game state
 
