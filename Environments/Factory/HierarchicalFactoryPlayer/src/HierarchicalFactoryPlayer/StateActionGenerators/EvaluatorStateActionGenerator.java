@@ -3,14 +3,23 @@ package HierarchicalFactoryPlayer.StateActionGenerators;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Contract.StateAction;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by Chris on 13.06.2014.
+ * Generates the possible actions for the evaluator from a given state
  */
 public class EvaluatorStateActionGenerator implements IStateActionGenerator {
+
     @Override
     public Set<StateAction> getAllPossibleActions(StateAction state) {
-        return null;
+        // does state even matter here?
+
+        Set<StateAction> possibleActions = new HashSet<>();
+        possibleActions.add(new StateAction())
+
+
+
+        return possibleActions;
     }
 }

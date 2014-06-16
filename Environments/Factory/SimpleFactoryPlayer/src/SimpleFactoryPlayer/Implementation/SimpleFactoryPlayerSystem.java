@@ -44,7 +44,6 @@ public class SimpleFactoryPlayerSystem implements IAgentSystem<IEnvironmentConfi
     private int MoveToAnotherFieldReward;
     private int GainInfluenceReward;
 
-// --------------------------- CONSTRUCTORS ---------------------------
 
     public SimpleFactoryPlayerSystem(IPluginServiceProvider provider) throws TechnicalException {
         this.provider = provider;
@@ -61,9 +60,6 @@ public class SimpleFactoryPlayerSystem implements IAgentSystem<IEnvironmentConfi
         agent.setGamma(Float.parseFloat(provider.getAgentSystemSetting("Gamma")));
         agent.setLambda(Float.parseFloat(provider.getAgentSystemSetting("Lambda")));
     }
-
-// ------------------------ INTERFACE METHODS ------------------------
-
 
 // --------------------- Interface IAgentSystem ---------------------
 
