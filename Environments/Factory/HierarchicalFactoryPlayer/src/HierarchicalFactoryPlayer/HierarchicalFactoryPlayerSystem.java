@@ -16,6 +16,7 @@ import HierarchicalFactoryPlayer.Entities.RawField;
 import HierarchicalFactoryPlayer.Entities.RawState;
 import HierarchicalFactoryPlayer.Enums.FieldType;
 import HierarchicalFactoryPlayer.Enums.FriendFoe;
+import HierarchicalFactoryPlayer.Exceptions.MapIsNoSquareException;
 import HierarchicalFactoryPlayer.StateActionGenerators.EvaluatorStateActionGenerator;
 import HierarchicalFactoryPlayer.StateActionGenerators.MoverStateActionGenerator;
 import java.util.ArrayList;
@@ -88,11 +89,17 @@ public class HierarchicalFactoryPlayerSystem implements IAgentSystem<IEnvironmen
             TPosition unitPosition = GameInfos.getPositionForUnit(currentGameState, unit);
             TAbstractField field = GameInfos.getFieldForPosition(currentGameState, unitPosition);
 
-            // generate a raw state for the current unit from the current game state
+
             // First evaluate the current game state
-            evaluatorGameState.evaluateNewGameState(currentGameState);
+            try {
+                evaluatorGameState.evaluateNewGameState(currentGameState);
+            } catch (MapIsNoSquareException e) {
+                e.printStackTrace();
+                throw new TechnicalException(e.getMessage());
+            }
+
             // get evaluation by field and unit
-            RawState rawState = evaluatorGameState.getEvaluation(field, unitPosition);
+            RawState rawState = evaluatorGameState.getEvaluation(unit);
 
             StateAction action;
 
