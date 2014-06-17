@@ -34,9 +34,9 @@ public interface IAgent {
     /**
      * Tells the agent that an episode has ended.
      * How the agent handles this information is up to the specific implementation of the agent.
-     * @pre startEpisode() without a corresponding endEpisode() must have been called before.
+     * @pre startEpisode() must have been called before.
      * @param reward The last reward, the agent earns, when the episode ends.
-     * @param stateAction the last state that the agent is in. !0 null
+     * @param stateAction the last state that the agent is in. != null
      */
 	public void endEpisode(StateAction stateAction, float reward) throws TechnicalException;
 

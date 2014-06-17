@@ -92,14 +92,14 @@ public class HierarchicalFactoryPlayerSystem implements IAgentSystem<IEnvironmen
 
             // First evaluate the current game state
             try {
-                evaluatorGameState.evaluateNewGameState(currentGameState);
+                evaluatorGameState.evaluateNewGameState(currentGameState, myFaction, rewardForLastTurn);
             } catch (MapIsNoSquareException e) {
                 e.printStackTrace();
                 throw new TechnicalException(e.getMessage());
             }
 
             // get evaluation by field and unit
-            RawState rawState = evaluatorGameState.getEvaluation(unit);
+            RawState rawState = evaluatorGameState.getEvaluation(currentGameState, unit);
 
             StateAction action;
 

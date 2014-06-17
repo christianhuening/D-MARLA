@@ -9,6 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="AgentSystemPluginAPI" level="project" />
     <orderEntry type="module" module-name="FactoryEnvironment" />
+    <orderEntry type="module" module-name="Quadtree" />
   </component>
 </module>
 
