@@ -16,6 +16,7 @@ public class RawField {
     private FriendFoe FieldController;
     private FieldType fieldType;
     private int remainingTimeToSpawn;
+    private String evaluation;
 
 
     public FriendFoe getFieldController() {
@@ -58,5 +59,13 @@ public class RawField {
                 ", fieldType=" + fieldType +
                 ", remainingTimeToSpawn=" + remainingTimeToSpawn +
                 '}';
+    }
+
+    public void setEvaluation(String evaluation) {
+        this.evaluation = evaluation;
+    }
+
+    public String getEvaluation() {
+        return evaluation;
     }
 }

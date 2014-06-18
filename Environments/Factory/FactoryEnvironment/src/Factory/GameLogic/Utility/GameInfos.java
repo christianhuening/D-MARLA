@@ -162,6 +162,13 @@ public abstract class GameInfos {
         return board[position.getY()][position.getX()];
     }
 
+    /**
+     * Returns a neighbouring field for position in direction
+     * @param gameState
+     * @param position
+     * @param direction
+     * @return
+     */
     public static TAbstractField getNeighborFieldForPosition(TGameState gameState, TPosition position, Direction direction) {
         TAbstractField[][] board = gameState.getMapFields();
         int x = position.getX();
