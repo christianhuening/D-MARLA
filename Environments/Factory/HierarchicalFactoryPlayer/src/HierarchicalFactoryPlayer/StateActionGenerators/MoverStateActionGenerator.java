@@ -19,6 +19,7 @@ import java.util.Set;
  * Created by Chris on 13.06.2014.
  */
 public class MoverStateActionGenerator implements IStateActionGenerator {
+
     @Override
     public Set<StateAction> getAllPossibleActions(StateAction stateAction) {
         String encryptedState = stateAction.getStateDescription();
@@ -64,8 +65,6 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
 
         return stateActionSet;
     }
-
-// -------------------------- PUBLIC METHODS --------------------------
 
     public RawState decryptState(String encryptedState) {
         byte[] bytes;
@@ -165,7 +164,7 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
 
         // String mit Byte array füttern
 
-        byte[] encryptedState = new byte[10];
+        byte[] encryptedState = new byte[11];
 
         List<RawField> fieldList = rawState.getFieldListRepresentation();
 
@@ -185,13 +184,6 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
             encryptedState[9] = 7;
         }
 
-        /*
-        for(int i=0; i<fieldList.size();i++){
-            System.out.print(String.format("[" + i + "]%h", encryptedState[i]));
-
-        }
-        */
-        //System.out.println(String.format("String as string %h", encryptedState));
 
         return new String(encryptedState);
     }
@@ -199,6 +191,7 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
     public Byte getEncryptedByte(RawField field) {
         byte encryption = 0;
 
+        field.getEvaluation()
         int a12 = field.getFieldController().ordinal();
         int a34 = field.getFieldType().ordinal();
         int a56 = field.getUnit().ordinal();

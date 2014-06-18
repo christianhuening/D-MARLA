@@ -34,7 +34,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="570b48bc-9cf0-4458-9fa9-639946a69324" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java" afterPath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java" afterPath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Factory.iws" />
@@ -95,27 +95,28 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="ForkEvaluator.java" pinned="false" current="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/ForkEvaluator.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="422" max-vertical-offset="1728">
-                    <caret line="36" column="86" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="SimpleFactoryPlayerSystem.java" pinned="false" current="false" current-in-tab="true">
+            <file leaf-file-name="SimpleFactoryPlayerSystem.java" pinned="false" current="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/SimpleFactoryPlayerSystem.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.33301708" vertical-offset="1737" max-vertical-offset="5598">
-                    <caret line="168" column="75" selection-start-line="168" selection-start-column="75" selection-end-line="168" selection-end-column="75" />
+                  <state vertical-scroll-proportion="0.0" vertical-offset="2277" max-vertical-offset="3708">
+                    <caret line="202" column="79" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
                     <folding>
                       <element signature="method#calculateReward#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
                       <element signature="method#getFactoryForID#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
                       <element signature="method#generateRawField#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
+                      <element signature="method#findNextTarget#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
                       <element signature="method#refreshGameState#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
                     </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="RawState.java" pinned="false" current="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawState.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.49525616" vertical-offset="0" max-vertical-offset="2160">
+                    <caret line="32" column="156" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -131,16 +132,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EvaluatorGameState.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="EvaluatorGameState.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47368422" vertical-offset="0" max-vertical-offset="1152">
-              <caret line="65" column="31" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2430" max-vertical-offset="3456">
+              <caret line="233" column="29" selection-start-line="233" selection-start-column="16" selection-end-line="233" selection-end-column="16" />
               <folding>
                 <element signature="method#evaluateNewGameState#0;class#EvaluatorGameState#0" expanded="false" />
                 <element signature="method#calculateIntervalEvaluations#0;class#EvaluatorGameState#0" expanded="false" />
                 <element signature="method#applyAgentActions#0;class#EvaluatorGameState#0" expanded="false" />
-                <element signature="method#getEvaluation#0;class#EvaluatorGameState#0" expanded="false" />
                 <element signature="method#generateRawField#0;class#EvaluatorGameState#0" expanded="false" />
                 <element signature="method#getFactoryForID#0;class#EvaluatorGameState#0" expanded="false" />
                 <element signature="method#findNextTarget#0;class#EvaluatorGameState#0" expanded="false" />
@@ -149,22 +149,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameInfos.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Utility/GameInfos.java">
+      <file leaf-file-name="MoverStateActionGenerator.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2700" max-vertical-offset="4194">
-              <caret line="171" column="52" selection-start-line="171" selection-start-column="52" selection-end-line="171" selection-end-column="52" />
-              <folding />
+            <state vertical-scroll-proportion="0.57894737" vertical-offset="630" max-vertical-offset="1872">
+              <caret line="194" column="105" selection-start-line="194" selection-start-column="55" selection-end-line="194" selection-end-column="55" />
+              <folding>
+                <element signature="method#getAllPossibleActions#0;class#MoverStateActionGenerator#0" expanded="false" />
+                <element signature="method#decryptDirection#0;class#MoverStateActionGenerator#0" expanded="false" />
+                <element signature="method#encryptState#0;class#MoverStateActionGenerator#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EvaluatorStateActionGenerator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/EvaluatorStateActionGenerator.java">
+      <file leaf-file-name="HierarchicalFactoryPlayerSystem.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/HierarchicalFactoryPlayerSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
-              <caret line="31" column="53" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1206" max-vertical-offset="2988">
+              <caret line="112" column="101" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
+              <folding>
+                <element signature="method#calculateReward#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+                <element signature="method#getFactoryByID#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+                <element signature="method#generateRawState#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+                <element signature="method#generateRawField#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+                <element signature="method#findNextTarget#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+                <element signature="method#refreshGameState#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -220,7 +231,6 @@
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Enums/FieldType.java" />
         <option value="$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/SimpleFactoryPlayerSystem.java" />
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/EvaluatorStateActionGenerator.java" />
-        <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java" />
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Exceptions/MapIsNoSquareException.java" />
         <option value="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/test/java/QuadTreeTest.java" />
         <option value="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/main/java/QuadTree.java" />
@@ -233,6 +243,7 @@
         <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Utility/GameInfos.java" />
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawField.java" />
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java" />
+        <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java" />
       </list>
     </option>
   </component>
@@ -352,6 +363,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Implementation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleFactoryPlayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleFactoryPlayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implementation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -776,17 +813,21 @@
       <workItem from="1402988862695" duration="5052000" />
       <workItem from="1403002037366" duration="3012000" />
       <workItem from="1403006421694" duration="11632000" />
-      <workItem from="1403080095664" duration="5127000" />
+      <workItem from="1403080095664" duration="8354000" />
     </task>
     <task id="LOCAL-00001" summary="- weider">
       <created>1403083071074</created>
       <updated>1403083071074</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- weider">
+      <created>1403099182357</created>
+      <updated>1403099182357</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79906000" />
+    <option name="totallyTimeSpent" value="83133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1186" extended-state="6" />
@@ -795,7 +836,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270142" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32637572" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39981273" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -841,7 +882,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -916,13 +957,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.84210527" vertical-offset="36" max-vertical-offset="1062">
           <caret line="53" column="95" selection-start-line="53" selection-start-column="95" selection-end-line="53" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/HierarchicalFactoryPlayerDescription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57894737" vertical-offset="0" max-vertical-offset="1026">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1017,13 +1051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50877196" vertical-offset="0" max-vertical-offset="1854">
-          <caret line="42" column="93" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Exceptions/MapIsNoSquareException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1754386" vertical-offset="0" max-vertical-offset="1026">
@@ -1035,21 +1062,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="2556">
           <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/StateActionGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="4212">
-          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/Entities/RawState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="2160">
-          <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1161,14 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/HierarchicalFactoryPlayerSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35009488" vertical-offset="4059" max-vertical-offset="8478">
-          <caret line="268" column="30" selection-start-line="268" selection-start-column="30" selection-end-line="269" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/EvaluatorStateActionGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
@@ -1181,14 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1764">
           <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29032257" vertical-offset="0" max-vertical-offset="2160">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1209,27 +1205,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/HierarchicalFactoryPlayerDescription.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8412853" vertical-offset="0" max-vertical-offset="1080">
-          <caret line="65" column="81" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-          <folding>
-            <element signature="e#1565#1566#0" expanded="true" />
-            <element signature="e#1609#1610#0" expanded="true" />
-            <element signature="e#1646#1647#0" expanded="true" />
-            <element signature="e#1679#1680#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.19298245" vertical-offset="0" max-vertical-offset="1026">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/Entities/RawState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56356734" vertical-offset="0" max-vertical-offset="2160">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/SimpleFactoryPlayerSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33301708" vertical-offset="1737" max-vertical-offset="5598">
-          <caret line="168" column="75" selection-start-line="168" selection-start-column="75" selection-end-line="168" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2277" max-vertical-offset="3708">
+          <caret line="202" column="79" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
           <folding>
             <element signature="method#calculateReward#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
             <element signature="method#getFactoryForID#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
             <element signature="method#generateRawField#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
+            <element signature="method#findNextTarget#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
             <element signature="method#refreshGameState#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
           </folding>
         </state>
@@ -1237,16 +1245,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47368422" vertical-offset="0" max-vertical-offset="1152">
-          <caret line="65" column="31" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2430" max-vertical-offset="3456">
+          <caret line="233" column="29" selection-start-line="233" selection-start-column="16" selection-end-line="233" selection-end-column="16" />
           <folding>
             <element signature="method#evaluateNewGameState#0;class#EvaluatorGameState#0" expanded="false" />
             <element signature="method#calculateIntervalEvaluations#0;class#EvaluatorGameState#0" expanded="false" />
             <element signature="method#applyAgentActions#0;class#EvaluatorGameState#0" expanded="false" />
-            <element signature="method#getEvaluation#0;class#EvaluatorGameState#0" expanded="false" />
             <element signature="method#generateRawField#0;class#EvaluatorGameState#0" expanded="false" />
             <element signature="method#getFactoryForID#0;class#EvaluatorGameState#0" expanded="false" />
             <element signature="method#findNextTarget#0;class#EvaluatorGameState#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/StateActionGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4317739" vertical-offset="43" max-vertical-offset="4212">
+          <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/HierarchicalFactoryPlayerSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1206" max-vertical-offset="2988">
+          <caret line="112" column="101" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
+          <folding>
+            <element signature="method#calculateReward#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+            <element signature="method#getFactoryByID#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+            <element signature="method#generateRawState#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+            <element signature="method#generateRawField#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+            <element signature="method#findNextTarget#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+            <element signature="method#refreshGameState#0;class#HierarchicalFactoryPlayerSystem#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49525616" vertical-offset="0" max-vertical-offset="2160">
+          <caret line="32" column="156" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57894737" vertical-offset="630" max-vertical-offset="1872">
+          <caret line="194" column="105" selection-start-line="194" selection-start-column="55" selection-end-line="194" selection-end-column="55" />
+          <folding>
+            <element signature="method#getAllPossibleActions#0;class#MoverStateActionGenerator#0" expanded="false" />
+            <element signature="method#decryptDirection#0;class#MoverStateActionGenerator#0" expanded="false" />
+            <element signature="method#encryptState#0;class#MoverStateActionGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
