@@ -25,6 +25,7 @@ public class EvaluatorGameState {
     private QuadTree quadTree;
     private boolean firstrun;
     private Faction myFaction;
+    private Faction enemyFaction;
 
     public EvaluatorGameState(IAgent evaluator){
         this.evaluator = evaluator;
@@ -37,6 +38,12 @@ public class EvaluatorGameState {
      */
     public void evaluateNewGameState(TGameState gameState, Faction myFaction, float reward) throws MapIsNoSquareException, TechnicalException {
         this.myFaction = myFaction;
+        if (myFaction == Faction.RED) {
+            enemyFaction = Faction.BLUE;
+        } else {
+            enemyFaction = Faction.RED;
+        }
+
         TAbstractField[][] mapFields = gameState.getMapFields();
         int length = mapFields.length;
         if(length % 2 != 0 || mapFields[0].length % 2 != 0){
@@ -156,8 +163,97 @@ public class EvaluatorGameState {
             rawState.setLeft(wallField);
         }
 
+        // Right
+        if(pos.getX() < border){
+            rawfield = generateRawField(
+                    tGamestate,
+                    GameInfos.getNeighborFieldForPosition(tGamestate, new TPosition(pos.getX(), pos.getY()), Direction.RIGHT),
+                    (String) quadTree.get(pos.getX() + 1, pos.getY(), null)
+            );
+            rawState.setRight(rawfield);
+        } else {
+            rawState.setRight(wallField);
+        }
 
+        // Down
+        if(pos.getY() < border){
+            rawfield = generateRawField(
+                    tGamestate,
+                    GameInfos.getNeighborFieldForPosition(tGamestate, new TPosition(pos.getX(), pos.getY()), Direction.DOWN),
+                    (String) quadTree.get(pos.getX(), pos.getY() + 1, null)
+            );
+            rawState.setDown(rawfield);
+        } else {
+            rawState.setDown(wallField);
+        }
 
+        // Down Left
+        if (pos.getY() < border && pos.getX() > 0){
+            rawfield = generateRawField(
+                    tGamestate,
+                    GameInfos.getNeighborFieldForPosition(tGamestate, new TPosition(pos.getX(), pos.getY()), Direction.DOWN_LEFT),
+                    (String) quadTree.get(pos.getX() - 1, pos.getY() + 1, null)
+            );
+            rawState.setLeftDown(rawfield);
+        } else {
+            rawState.setLeftDown(wallField);
+        }
+
+        // Down Right
+        if (pos.getY() < border && pos.getX() < border){
+            rawfield = generateRawField(
+                    tGamestate,
+                    GameInfos.getNeighborFieldForPosition(tGamestate, new TPosition(pos.getX(), pos.getY()), Direction.DOWN_RIGHT),
+                    (String) quadTree.get(pos.getX() + 1, pos.getY() + 1, null)
+            );
+            rawState.setRightDown(rawfield);
+        } else {
+            rawState.setRightDown(wallField);
+        }
+
+        // Up Left
+        if (pos.getY() > 0 && pos.getX() > 0){
+            rawfield = generateRawField(
+                    tGamestate,
+                    GameInfos.getNeighborFieldForPosition(tGamestate, new TPosition(pos.getX(), pos.getY()), Direction.UP_LEFT),
+                    (String) quadTree.get(pos.getX() - 1, pos.getY() - 1, null)
+            );
+            rawState.setLeftTop(rawfield);
+        } else {
+            rawState.setLeftTop(wallField);
+        }
+
+        // Up Right
+        if (pos.getY() > 0 && pos.getX() < border){
+            rawfield = generateRawField(
+                    tGamestate,
+                    GameInfos.getNeighborFieldForPosition(tGamestate, new TPosition(pos.getX(), pos.getY()), Direction.UP_RIGHT),
+                    (String) quadTree.get(pos.getX() + 1, pos.getY() - 1, null)
+            );
+            rawState.setRightTop(rawfield);
+        } else {
+            rawState.setRightTop(wallField);
+        }
+
+        // Up
+        if (pos.getY() > 0){
+            rawfield = generateRawField(
+                    tGamestate,
+                    GameInfos.getNeighborFieldForPosition(tGamestate, new TPosition(pos.getX(), pos.getY()), Direction.UP),
+                    (String) quadTree.get(pos.getX(), pos.getY() - 1, null)
+            );
+            rawState.setTop(rawfield);
+        } else {
+            rawState.setTop(wallField);
+        }
+
+        TPosition posOfField = new TPosition(pos.getX(),pos.getY());
+        TAbstractField field = GameInfos.getFieldForPosition(tGamestate, posOfField);
+
+        // set next target as signal
+        rawState.setSignal(findNextTarget(tGamestate, field, posOfField));
+
+        return rawState;
     }
 
     private RawField generateRawField(TGameState gameState, TAbstractField field, String evaluation) {
@@ -210,6 +306,113 @@ public class EvaluatorGameState {
             }
         }
         return null;
+    }
+
+    private Direction findNextTarget(TGameState gameState, TAbstractField field, TPosition positionOfField) {
+        int minimumDistance = Integer.MAX_VALUE;
+        int currentDistance;
+        Direction direction = null;
+        TAbstractField[][] board = gameState.getMapFields();
+        int topBorder = 0;
+        int leftBorder = 0;
+        int rightBorder = board.length - 1;
+        int bottomBorder = board.length - 1;
+
+
+        int x = positionOfField.getX();
+        int y = positionOfField.getY();
+
+
+        currentDistance = 0;
+        //Looking Right ========================================================================
+        for (int i = x; i <= rightBorder; i++) {
+            currentDistance++;
+            for (int j = 0; j <= bottomBorder; j++) {
+                if (board[j][i].isOccupied()) {
+                    if (board[j][i].getOccupant().getControllingFaction() == enemyFaction) {
+                        if (currentDistance < minimumDistance) {
+                            minimumDistance = currentDistance;
+                            direction = Direction.RIGHT;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        if (minimumDistance == 1) {
+            return direction;
+        }
+
+
+        currentDistance = 0;
+        //Looking Left ========================================================================
+        for (int i = x; i >= leftBorder; i--) {
+            currentDistance++;
+            for (int j = 0; j <= bottomBorder; j++) {
+                //check auf Aktives influence feld eifügen
+
+                if (board[j][i].isOccupied()) {
+                    if (board[j][i].getOccupant().getControllingFaction() == enemyFaction) {
+                        if (currentDistance < minimumDistance) {
+                            minimumDistance = currentDistance;
+                            direction = Direction.RIGHT;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        if (minimumDistance == 1) {
+            return direction;
+        }
+
+
+        currentDistance = 0;
+        //Looking Down  ========================================================================
+        for (int i = y; i <= bottomBorder; i++) {
+            currentDistance++;
+            for (int j = 0; j <= rightBorder; j++) {
+                //check auf Aktives influence feld eifügen
+
+                if (board[i][j].isOccupied()) {
+                    if (board[i][j].getOccupant().getControllingFaction() == enemyFaction) {
+                        if (currentDistance < minimumDistance) {
+                            minimumDistance = currentDistance;
+                            direction = Direction.RIGHT;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        if (minimumDistance == 1) {
+            return direction;
+        }
+
+
+        currentDistance = 0;
+        //Looking UP  ========================================================================
+        for (int i = y; i >= topBorder; i--) {
+            currentDistance++;
+            for (int j = 0; j <= rightBorder; j++) {
+                //check auf Aktives influence feld eifügen
+
+                if (board[i][j].isOccupied()) {
+                    if (board[i][j].getOccupant().getControllingFaction() == enemyFaction) {
+                        if (currentDistance < minimumDistance) {
+                            minimumDistance = currentDistance;
+                            direction = Direction.RIGHT;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        return direction;
     }
 
 }

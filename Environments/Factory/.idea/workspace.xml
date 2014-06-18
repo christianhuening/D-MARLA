@@ -34,27 +34,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="570b48bc-9cf0-4458-9fa9-639946a69324" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/main/java/Varunpat/QuadTree/Func.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/main/java/Varunpat/QuadTree/Node.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/main/java/Varunpat/QuadTree/NodeType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/main/java/Varunpat/QuadTree/Point.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/main/java/Varunpat/QuadTree/QuadTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/main/java/Varunpat/QuadTree/QuadTreeException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/test/java/QuadTreeTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/QuadTreeTuple.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/Quadtree.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/test/java/SpatialTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/test/resources/points.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java" afterPath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/ForkEvaluator.java" afterPath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/ForkEvaluator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HierarchicalFactoryPlayer/HierarchicalFactoryPlayer.iml" afterPath="$PROJECT_DIR$/HierarchicalFactoryPlayer/HierarchicalFactoryPlayer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/HierarchicalFactoryPlayerSystem.java" afterPath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/HierarchicalFactoryPlayerSystem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Services/IAgent.java" afterPath="$PROJECT_DIR$/../../Implementation/PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Services/IAgent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Factory.iws" />
@@ -107,42 +87,35 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="DockManager">
     <window id="1">
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="HierarchicalFactoryPlayerSystem.java" pinned="false" current="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/HierarchicalFactoryPlayerSystem.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="979" max-vertical-offset="8478">
-                    <caret line="116" column="43" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="RawState.java" pinned="false" current="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawState.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.24786325" vertical-offset="873" max-vertical-offset="1926">
-                    <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-                    <folding>
-                      <element signature="method#toString#0;class#RawState#0" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
             <file leaf-file-name="ForkEvaluator.java" pinned="false" current="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/ForkEvaluator.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1728">
-                    <caret line="83" column="89" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.0" vertical-offset="422" max-vertical-offset="1728">
+                    <caret line="36" column="86" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
                     <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="SimpleFactoryPlayerSystem.java" pinned="false" current="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/SimpleFactoryPlayerSystem.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.33301708" vertical-offset="1737" max-vertical-offset="5598">
+                    <caret line="168" column="75" selection-start-line="168" selection-start-column="75" selection-end-line="168" selection-end-column="75" />
+                    <folding>
+                      <element signature="method#calculateReward#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
+                      <element signature="method#getFactoryForID#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
+                      <element signature="method#generateRawField#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
+                      <element signature="method#refreshGameState#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -161,20 +134,26 @@
       <file leaf-file-name="EvaluatorGameState.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5964912" vertical-offset="252" max-vertical-offset="1278">
-              <caret line="93" column="71" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.47368422" vertical-offset="0" max-vertical-offset="1152">
+              <caret line="65" column="31" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding>
+                <element signature="method#evaluateNewGameState#0;class#EvaluatorGameState#0" expanded="false" />
+                <element signature="method#calculateIntervalEvaluations#0;class#EvaluatorGameState#0" expanded="false" />
                 <element signature="method#applyAgentActions#0;class#EvaluatorGameState#0" expanded="false" />
+                <element signature="method#getEvaluation#0;class#EvaluatorGameState#0" expanded="false" />
+                <element signature="method#generateRawField#0;class#EvaluatorGameState#0" expanded="false" />
+                <element signature="method#getFactoryForID#0;class#EvaluatorGameState#0" expanded="false" />
+                <element signature="method#findNextTarget#0;class#EvaluatorGameState#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IAgent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../Implementation/PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Services/IAgent.java">
+      <file leaf-file-name="GameInfos.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Utility/GameInfos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1764">
-              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2700" max-vertical-offset="4194">
+              <caret line="171" column="52" selection-start-line="171" selection-start-column="52" selection-end-line="171" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -203,7 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Factory/GameLogic/GameLogicUseCase.java" />
         <option value="$PROJECT_DIR$/src/Factory/FactoryPluginDescriptor.java" />
         <option value="$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/UnitTest/StateActionGeneratorTest.java" />
         <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/Interfaces/IHasTransportType.java" />
@@ -240,7 +218,6 @@
         <option value="$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/Entities/EvaluatorGameState.java" />
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawState.java" />
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Enums/FieldType.java" />
-        <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawField.java" />
         <option value="$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/SimpleFactoryPlayerSystem.java" />
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/EvaluatorStateActionGenerator.java" />
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java" />
@@ -253,6 +230,8 @@
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/HierarchicalFactoryPlayerSystem.java" />
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/ForkEvaluator.java" />
         <option value="$PROJECT_DIR$/../../Implementation/PluginAPI/AgentSystemPluginAPI/src/AgentSystemPluginAPI/Services/IAgent.java" />
+        <option value="$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Utility/GameInfos.java" />
+        <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawField.java" />
         <option value="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java" />
       </list>
     </option>
@@ -298,6 +277,26 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -502,26 +501,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Factory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -611,6 +590,12 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
       <setting name="vmparams" value="" />
@@ -619,12 +604,6 @@
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <setting name="launchBrowser" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
     <configuration default="true" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application">
@@ -656,9 +635,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="ErlangUnitRunConfigurationType" factoryName="Erlang Eunit">
       <module name="" />
       <option name="name" value="Erlang" />
@@ -674,7 +650,20 @@
       </option>
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -705,17 +694,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -797,11 +776,17 @@
       <workItem from="1402988862695" duration="5052000" />
       <workItem from="1403002037366" duration="3012000" />
       <workItem from="1403006421694" duration="11632000" />
+      <workItem from="1403080095664" duration="5127000" />
     </task>
+    <task id="LOCAL-00001" summary="- weider">
+      <created>1403083071074</created>
+      <updated>1403083071074</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74779000" />
+    <option name="totallyTimeSpent" value="79906000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1186" extended-state="6" />
@@ -822,11 +807,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2834123" sideWeight="0.49786553" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19402985" sideWeight="0.46774194" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18550107" sideWeight="0.46774194" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19402985" sideWeight="0.5313093" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18550107" sideWeight="0.5313093" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922202" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IntelliTail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -851,10 +836,12 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="- weider" />
+    <option name="LAST_COMMIT_MESSAGE" value="- weider" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1066,13 +1053,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Utility/GameInfos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33300877" vertical-offset="2448" max-vertical-offset="4068">
-          <caret line="159" column="33" selection-start-line="159" selection-start-column="33" selection-end-line="159" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/TransportTypes/TUnit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29795521" vertical-offset="108" max-vertical-offset="1512">
@@ -1081,20 +1061,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/test/resources/points.txt">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="15300">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/test/java/SpatialTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41678938" vertical-offset="473" max-vertical-offset="1152">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1106,24 +1085,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8217968" vertical-offset="0" max-vertical-offset="990">
-          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-          <folding>
-            <element signature="e#831#832#0" expanded="false" />
-            <element signature="e#863#864#0" expanded="false" />
-            <element signature="e#916#917#0" expanded="false" />
-            <element signature="e#958#959#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/src/main/java/Varunpat/QuadTree/QuadTreeException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="252">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,7 +1096,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="2322">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,7 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="306">
           <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,14 +1110,13 @@
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.558" vertical-offset="0" max-vertical-offset="1000">
           <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../Implementation/R_Components/Quadtree-master/pom.xml">
@@ -1169,7 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="3546">
           <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,7 +1138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.087633885" vertical-offset="0" max-vertical-offset="1027">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1198,14 +1158,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28070176" vertical-offset="0" max-vertical-offset="1026">
           <caret line="20" column="27" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/SimpleFactoryPlayerSystem.java">
+    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/HierarchicalFactoryPlayerSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45614034" vertical-offset="1080" max-vertical-offset="7830">
-          <caret line="103" column="55" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.35009488" vertical-offset="4059" max-vertical-offset="8478">
+          <caret line="268" column="30" selection-start-line="268" selection-start-column="30" selection-end-line="269" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1214,22 +1173,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
           <caret line="31" column="53" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/ForkEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1728">
-          <caret line="83" column="89" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/HierarchicalFactoryPlayerSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="979" max-vertical-offset="8478">
-          <caret line="116" column="43" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1244,20 +1187,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24786325" vertical-offset="873" max-vertical-offset="1926">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.29032257" vertical-offset="0" max-vertical-offset="2160">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/ForkEvaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="422" max-vertical-offset="1728">
+          <caret line="36" column="86" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FactoryEnvironment/src/Factory/GameLogic/Utility/GameInfos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2700" max-vertical-offset="4194">
+          <caret line="171" column="52" selection-start-line="171" selection-start-column="52" selection-end-line="171" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/RawField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8412853" vertical-offset="0" max-vertical-offset="1080">
+          <caret line="65" column="81" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
           <folding>
-            <element signature="method#toString#0;class#RawState#0" expanded="false" />
+            <element signature="e#1565#1566#0" expanded="true" />
+            <element signature="e#1609#1610#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
+            <element signature="e#1679#1680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleFactoryPlayer/src/SimpleFactoryPlayer/Implementation/SimpleFactoryPlayerSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33301708" vertical-offset="1737" max-vertical-offset="5598">
+          <caret line="168" column="75" selection-start-line="168" selection-start-column="75" selection-end-line="168" selection-end-column="75" />
+          <folding>
+            <element signature="method#calculateReward#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
+            <element signature="method#getFactoryForID#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
+            <element signature="method#generateRawField#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
+            <element signature="method#refreshGameState#0;class#SimpleFactoryPlayerSystem#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5964912" vertical-offset="252" max-vertical-offset="1278">
-          <caret line="93" column="71" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.47368422" vertical-offset="0" max-vertical-offset="1152">
+          <caret line="65" column="31" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
+            <element signature="method#evaluateNewGameState#0;class#EvaluatorGameState#0" expanded="false" />
+            <element signature="method#calculateIntervalEvaluations#0;class#EvaluatorGameState#0" expanded="false" />
             <element signature="method#applyAgentActions#0;class#EvaluatorGameState#0" expanded="false" />
+            <element signature="method#getEvaluation#0;class#EvaluatorGameState#0" expanded="false" />
+            <element signature="method#generateRawField#0;class#EvaluatorGameState#0" expanded="false" />
+            <element signature="method#getFactoryForID#0;class#EvaluatorGameState#0" expanded="false" />
+            <element signature="method#findNextTarget#0;class#EvaluatorGameState#0" expanded="false" />
           </folding>
         </state>
       </provider>
