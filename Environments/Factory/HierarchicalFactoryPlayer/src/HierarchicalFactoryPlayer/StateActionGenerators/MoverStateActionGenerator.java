@@ -20,6 +20,8 @@ import java.util.Set;
  */
 public class MoverStateActionGenerator implements IStateActionGenerator {
 
+    private int encryptedStateSize;
+
     @Override
     public Set<StateAction> getAllPossibleActions(StateAction stateAction) {
         String encryptedState = stateAction.getStateDescription();
@@ -73,13 +75,15 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
 
         //System.out.println(String.format("String after getBytes: %h",bytes));
         RawState rawState = new RawState();
-        rawState.setSignal(decryptDirection(Byte.toString(bytes[9])));
+        rawState.setSignal(decryptDirection(Byte.toString(bytes[encryptedStateSize])));
         List<RawField> rawFieldList = new ArrayList<RawField>();
 
         //9 times
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 9*2; i+=2) {
             //System.out.println(String.format(i+" %h",bytes[i]));
-            rawFieldList.add(decryptField(bytes[i]));
+            RawField rawField = decryptField(bytes[i]);
+            rawField.setEvaluation(new String(new byte[]{bytes[i+1]}));
+            rawFieldList.add(rawField);
         }
 
         //System.out.println(rawFieldList);
@@ -128,23 +132,14 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
         RawField rawField = new RawField();
         int encrypted = encryptedField;
 
-        //System.out.println(String.format(" %h",encrypted));
-        //encrypted = encryptedField ^ 0xFFFFFFFF;
-        //encrypted++;
-        //System.out.println(String.format(" %h",encrypted));
-
-
         int a12 = encryptedField & 0x00000003;
         int a34 = (encryptedField >>> 2) & 0x00000003;
         int a56 = (encryptedField >>> 4) & 0x00000003;
         int a78 = (encryptedField >>> 6) & 0x00000003;
-        //Remaining Time to Spawn will not be decrypted
-
 
         rawField.setFieldController(FriendFoe.get(a12));
         rawField.setFieldType(FieldType.get(a34));
         rawField.setUnit(FriendFoe.get(a56));
-
 
         return rawField;
     }
@@ -164,34 +159,61 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
 
         // String mit Byte array füttern
 
-        byte[] encryptedState = new byte[11];
+
 
         List<RawField> fieldList = rawState.getFieldListRepresentation();
 
-        for (int i = 0; i < fieldList.size(); i++) {
+        encryptedStateSize = fieldList.size() * 2 + 1;
+
+        byte[] encryptedState = new byte[encryptedStateSize];
+
+        for (int i = 0; i < fieldList.size() * 2; i+=2) {
             encryptedState[i] = getEncryptedByte(fieldList.get(i));
+            encryptedState[i+1] = fieldList.get(i).getEvaluation().getBytes()[0];
         }
+
         Direction direction = rawState.getSignal();
         if (direction == null) {
-            encryptedState[9] = 0;
+            encryptedState[encryptedStateSize] = 0;
         } else if (direction == Direction.UP) {
-            encryptedState[9] = 1;
+            encryptedState[encryptedStateSize] = 1;
         } else if (direction == Direction.RIGHT) {
-            encryptedState[9] = 3;
+            encryptedState[encryptedStateSize] = 3;
         } else if (direction == Direction.DOWN) {
-            encryptedState[9] = 5;
+            encryptedState[encryptedStateSize] = 5;
         } else if (direction == Direction.LEFT) {
-            encryptedState[9] = 7;
+            encryptedState[encryptedStateSize] = 7;
         }
 
 
         return new String(encryptedState);
     }
 
+    public static void main(String[] args){
+        int x = 1;
+        int a = 1;
+        int b = 2;
+        int c = 0;
+        a = a << 2;
+        b = b << 4;
+        c = c << 6;
+
+        String t = "+---";
+        System.out.println("string t: " + t.getBytes().length);
+
+        int beforeEncrypt = x | a | b | c;
+        System.out.println(beforeEncrypt);
+        byte encrypt = (byte) beforeEncrypt;
+        System.out.println(encrypt);
+        System.out.println(encrypt & 0x00000003);
+        System.out.println(encrypt >> 2);
+    }
+
+
     public Byte getEncryptedByte(RawField field) {
         byte encryption = 0;
 
-        field.getEvaluation()
+        //field.getEvaluation()
         int a12 = field.getFieldController().ordinal();
         int a34 = field.getFieldType().ordinal();
         int a56 = field.getUnit().ordinal();
@@ -200,24 +222,13 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
         if (tts < 2) {
             a78 = SpawnInterval.VERY_SHORT.ordinal();
         }
-        /*
-        else if(tts <3){
-            a78 = SpawnInterval.SHORT.ordinal();
-        }
-        else if(tts <4){
-            a78 = SpawnInterval.MIDDLE.ordinal();
-        }
-        */
+
         a34 = a34 << 2;
         a56 = a56 << 4;
         a78 = a78 << 6;
         int beforeEncrypt = a12 | a34 | a56 | a78;
         encryption = (byte) beforeEncrypt;
 
-        //b |= (1 << bitIndex); // set a bit to 1
-        //b &= ~(1 << bitIndex); // set a bit to 0
-
-        //System.out.println(String.format("String Single byte: %h",encryption));
 
         return encryption;
     }
