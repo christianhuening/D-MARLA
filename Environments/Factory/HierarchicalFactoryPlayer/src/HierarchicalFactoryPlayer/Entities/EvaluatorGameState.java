@@ -153,28 +153,33 @@ public class EvaluatorGameState {
             StateAction action;
 
             // ratios are stored in the QuadTree for all field of the lowest level in each corresponding parent level, so just get any of them
-            System.err.println("Trying to read from: ("+minX+"/"+minY+")");
-            int unitRatio = ((QuadTreeTuple)quadTree.get(minX, minY, null)).getUnitRatio();
-            int fieldRatio = ((QuadTreeTuple)quadTree.get(minX, minY, null)).getFieldRatio();
+            try {
+                int unitRatio = ((QuadTreeTuple) quadTree.get(minX, minY, null)).getUnitRatio();
+                int fieldRatio = ((QuadTreeTuple) quadTree.get(minX, minY, null)).getFieldRatio();
 
-            if(firstrun){
-                action = evaluator.startEpisode(new StateAction(Integer.toString(unitRatio) + Integer.toString(fieldRatio)));
-                firstrun = false;
-            } else {
-                action = evaluator.step(0, new StateAction(Integer.toString(unitRatio) + Integer.toString(fieldRatio)));
-            }
-
-
-            int strPos = 0;
-            for (int x = minX; x <= maxX; x++) {
-                for (int y = minY; y <= maxY; y++) {
-                    // writes '+', '-' or '=' into the quadtree on the lowest level
-                    System.out.println("Writing to ("+x+"/"+y+")");
-                    quadTree.set(x,y, action.getActionDescription().substring(strPos,strPos+1));
+                if(firstrun){
+                    action = evaluator.startEpisode(new StateAction(Integer.toString(unitRatio) + Integer.toString(fieldRatio)));
+                    firstrun = false;
+                } else {
+                    action = evaluator.step(0, new StateAction(Integer.toString(unitRatio) + Integer.toString(fieldRatio)));
                 }
-            }
 
-            return;
+
+                int strPos = 0;
+                for (int x = minX; x <= maxX; x++) {
+                    for (int y = minY; y <= maxY; y++) {
+                        // writes '+', '-' or '=' into the quadtree on the lowest level
+                        quadTree.set(x,y, action.getActionDescription().substring(strPos,strPos+1));
+                    }
+                }
+
+                return;
+            } catch (ClassCastException ex){
+                // some indices get called twice, because they are the boundaries between two low-level
+                // this results in a class cast exception, to eat it.
+                // Yeah, yeah I know... not nice, but hey, it's used only once, so...
+                return;
+            }
         }
 
         // make recursive calls
@@ -189,8 +194,6 @@ public class EvaluatorGameState {
     }
 
 
-
-
     /**
      * Retrieves the evaluation for a specific field and unitPosition
      * @param unit The unit for which to look up the state
@@ -202,12 +205,7 @@ public class EvaluatorGameState {
         // calc border indes
         int border = tGamestate.getMapFields().length-1;
 
-        // create wall field for encountered walls
-        RawField wallField = new RawField();
-        wallField.setFieldController(FriendFoe.FRIEND);
-        wallField.setFieldType(FieldType.FACTORY);
-        wallField.setRemainingTimeToSpawn(100);
-        wallField.setUnit(FriendFoe.NONE);
+
 
         // create new rawState to fill
         RawState rawState = new RawState();
@@ -230,7 +228,7 @@ public class EvaluatorGameState {
             );
             rawState.setLeft(rawfield);
         } else {
-            rawState.setLeft(wallField);
+            rawState.setLeft(getWallField((String) quadTree.get(pos.getX() - 1, pos.getY(), null)));
         }
 
         // Right
@@ -242,7 +240,7 @@ public class EvaluatorGameState {
             );
             rawState.setRight(rawfield);
         } else {
-            rawState.setRight(wallField);
+            rawState.setRight(getWallField((String) quadTree.get(pos.getX() + 1, pos.getY(), null)));
         }
 
         // Down
@@ -254,7 +252,7 @@ public class EvaluatorGameState {
             );
             rawState.setDown(rawfield);
         } else {
-            rawState.setDown(wallField);
+            rawState.setDown(getWallField((String) quadTree.get(pos.getX(), pos.getY() + 1, null)));
         }
 
         // Down Left
@@ -266,7 +264,7 @@ public class EvaluatorGameState {
             );
             rawState.setLeftDown(rawfield);
         } else {
-            rawState.setLeftDown(wallField);
+            rawState.setLeftDown(getWallField((String) quadTree.get(pos.getX() - 1, pos.getY() + 1, null)));
         }
 
         // Down Right
@@ -278,7 +276,7 @@ public class EvaluatorGameState {
             );
             rawState.setRightDown(rawfield);
         } else {
-            rawState.setRightDown(wallField);
+            rawState.setRightDown(getWallField((String) quadTree.get(pos.getX() + 1, pos.getY() + 1, null)));
         }
 
         // Up Left
@@ -290,7 +288,7 @@ public class EvaluatorGameState {
             );
             rawState.setLeftTop(rawfield);
         } else {
-            rawState.setLeftTop(wallField);
+            rawState.setLeftTop(getWallField((String) quadTree.get(pos.getX() - 1, pos.getY() - 1, null)));
         }
 
         // Up Right
@@ -302,7 +300,7 @@ public class EvaluatorGameState {
             );
             rawState.setRightTop(rawfield);
         } else {
-            rawState.setRightTop(wallField);
+            rawState.setRightTop(getWallField((String) quadTree.get(pos.getX() + 1, pos.getY() - 1, null)));
         }
 
         // Up
@@ -314,7 +312,7 @@ public class EvaluatorGameState {
             );
             rawState.setTop(rawfield);
         } else {
-            rawState.setTop(wallField);
+            rawState.setTop(getWallField((String) quadTree.get(pos.getX(), pos.getY() - 1, null)));
         }
 
         TPosition posOfField = new TPosition(pos.getX(),pos.getY());
@@ -324,6 +322,19 @@ public class EvaluatorGameState {
         rawState.setSignal(findNextTarget(tGamestate, field, posOfField));
 
         return rawState;
+    }
+
+
+
+    private RawField getWallField(String eval){
+        // create wall field for encountered walls
+        RawField wallField = new RawField();
+        wallField.setFieldController(FriendFoe.FRIEND);
+        wallField.setFieldType(FieldType.FACTORY);
+        wallField.setRemainingTimeToSpawn(100);
+        wallField.setUnit(FriendFoe.NONE);
+        wallField.setEvaluation(eval);
+        return wallField;
     }
 
     private RawField generateRawField(TGameState gameState, TAbstractField field, String evaluation) {

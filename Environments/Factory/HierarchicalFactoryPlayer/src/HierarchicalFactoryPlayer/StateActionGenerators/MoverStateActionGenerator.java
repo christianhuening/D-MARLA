@@ -167,22 +167,27 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
 
         byte[] encryptedState = new byte[encryptedStateSize];
 
-        for (int i = 0; i < fieldList.size() * 2; i+=2) {
-            encryptedState[i] = getEncryptedByte(fieldList.get(i));
-            encryptedState[i+1] = fieldList.get(i).getEvaluation().getBytes()[0];
+        int i = 0;
+        for(RawField field : fieldList){
+            encryptedState[i] = getEncryptedByte(field);
+            i++;
+            System.out.println("Evaluation of " + field.toString() + " is: " + field.getEvaluation());
+            encryptedState[i] = field.getEvaluation().getBytes()[0];
+            i++;
         }
+
 
         Direction direction = rawState.getSignal();
         if (direction == null) {
-            encryptedState[encryptedStateSize] = 0;
+            encryptedState[encryptedStateSize-1] = 0;
         } else if (direction == Direction.UP) {
-            encryptedState[encryptedStateSize] = 1;
+            encryptedState[encryptedStateSize-1] = 1;
         } else if (direction == Direction.RIGHT) {
-            encryptedState[encryptedStateSize] = 3;
+            encryptedState[encryptedStateSize-1] = 3;
         } else if (direction == Direction.DOWN) {
-            encryptedState[encryptedStateSize] = 5;
+            encryptedState[encryptedStateSize-1] = 5;
         } else if (direction == Direction.LEFT) {
-            encryptedState[encryptedStateSize] = 7;
+            encryptedState[encryptedStateSize-1] = 7;
         }
 
 
