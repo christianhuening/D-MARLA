@@ -50,10 +50,10 @@ public class EvaluatorGameState {
             throw new MapIsNoSquareException("Map needs to be a square for this to work. Sorry...");
         }
 
-        quadTree = new QuadTree(0,0,length,length);
+        quadTree = new QuadTree(0,0,length-1,length-1);
 
         // first calculate interval evaluations
-        calculateIntervalEvaluations(mapFields, myFaction, gameState, quadTree);
+        calculateIntervalEvaluations(length, myFaction, gameState, quadTree);
 
 
         // now let the agent to his magic
@@ -64,30 +64,30 @@ public class EvaluatorGameState {
         firstrun = true;
     }
 
-    private void calculateIntervalEvaluations(TAbstractField[][] mapFields, Faction myFaction, TGameState gameState, QuadTree quadTree) {
-        int length = mapFields.length;
+    private void calculateIntervalEvaluations(int length, Faction myFaction, TGameState gameState, QuadTree quadTree) {
         ForkEvaluator fe = new ForkEvaluator(gameState, myFaction, quadTree, length, 0, 0, length-1, length-1);
         ForkJoinPool pool = new ForkJoinPool();
         pool.invoke(fe);
+
     }
 
     /**
      * Executes an agent step for each low level field in the quadTree
      * @param mapLength
-     * @param startX
-     * @param startY
-     * @param stopX
-     * @param stopY
+     * @param minX
+     * @param minY
+     * @param maxX
+     * @param maxY
      * @throws TechnicalException
      */
-    private void applyAgentActions(int mapLength, int startX, int startY, int stopX, int stopY) throws TechnicalException {
+    private void applyAgentActions(int mapLength, int minX, int minY, int maxX, int maxY) throws TechnicalException {
         if(mapLength == 2){
 
             StateAction action;
 
             // ratios are stored in the QuadTree for all field of the lowest level in each corresponding parent level, so just get any of them
-            int unitRatio = ((QuadTreeTuple)quadTree.get(startX, startY, null)).getUnitRatio();
-            int fieldRatio = ((QuadTreeTuple)quadTree.get(startX, startY, null)).getFieldRatio();
+            int unitRatio = ((QuadTreeTuple)quadTree.get(minX, minY, null)).getUnitRatio();
+            int fieldRatio = ((QuadTreeTuple)quadTree.get(minX, minY, null)).getFieldRatio();
 
             if(firstrun){
                 action = evaluator.startEpisode(new StateAction(Integer.toString(unitRatio) + Integer.toString(fieldRatio)));
@@ -98,8 +98,8 @@ public class EvaluatorGameState {
 
 
             int strPos = 0;
-            for (int x = startX; x <= stopX; x++) {
-                for (int y = startY; y <= stopY; y++) {
+            for (int x = minX; x <= maxX; x++) {
+                for (int y = minY; y <= maxY; y++) {
                     // writes '+', '-' or '=' into the quadtree on the lowest level
                     quadTree.set(x,y, action.getActionDescription().substring(strPos,strPos+1));
                 }
@@ -108,14 +108,16 @@ public class EvaluatorGameState {
             return;
         }
 
-        // split quad-wise otherwise, split value is always an index in the right hand part of the array
-        int split = mapLength / 2;
-
         // make recursive calls
-        applyAgentActions(mapLength / 2, 0, 0, split-1, split-1);                 // left top
-        applyAgentActions(mapLength / 2, split, 0, mapLength-1, split-1);         // right top
-        applyAgentActions(mapLength / 2, split, split, mapLength-1, mapLength-1); // right bottom
-        applyAgentActions(mapLength / 2, 0, split, split-1, mapLength-1);         // left bottom
+        applyAgentActions(mapLength / 2, minX, minY, maxX / 2, maxY / 2);                 // left top , correct :)
+        applyAgentActions(mapLength / 2, maxX / 2 + 1, minY, maxX, maxY / 2);         // right top,
+        applyAgentActions(mapLength / 2, maxX / 2 + 1, maxY / 2 + 1, maxX, maxY); // right bottom
+        applyAgentActions(mapLength / 2, minX, maxY / 2 + 1, maxX / 2, maxY);         // left bottom
+
+        /*
+        Fehler hier! Die rekursiven Aufrufe bearbeiten nur den oberen linken Quadranten. Liegt
+        an mapLength-1 im 3. und 4. Aufruf, die kommen nicht mehr über 16 hinaus.
+         */
     }
 
 

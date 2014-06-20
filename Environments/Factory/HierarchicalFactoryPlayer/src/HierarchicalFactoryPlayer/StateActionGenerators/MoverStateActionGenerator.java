@@ -190,6 +190,14 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
     }
 
     public static void main(String[] args){
+        int zahl = 32;
+        System.out.println(31/2+1);
+        while(zahl > 0){
+            zahl = zahl / 2;
+            System.out.println("zahl: " + zahl);
+        }
+
+
         int x = 1;
         int a = 1;
         int b = 2;

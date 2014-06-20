@@ -1,5 +1,6 @@
 package HierarchicalFactoryPlayer.Entities;
 
+import EnvironmentPluginAPI.Exceptions.TechnicalException;
 import Factory.GameLogic.Enums.Faction;
 import Factory.GameLogic.TransportTypes.TAbstractField;
 import Factory.GameLogic.TransportTypes.TGameState;
@@ -17,20 +18,20 @@ public class ForkEvaluator extends RecursiveAction {
     private final TGameState gameState;
     private final Faction myFaction;
     private final QuadTree quadTree;
-    private final int startX;
-    private final int startY;
-    private final int stopX;
-    private final int stopY;
+    private final int minX;
+    private final int minY;
+    private final int maxX;
+    private final int maxY;
 
 
-    public ForkEvaluator(TGameState gameState, Faction myFaction, QuadTree quadTree, int mapLength, int startX, int startY, int stopX, int stopY){
+    public ForkEvaluator(TGameState gameState, Faction myFaction, QuadTree quadTree, int mapLength, int minX, int minY, int maxX, int maxY){
         this.gameState = gameState;
         this.myFaction = myFaction;
         this.quadTree = quadTree;
-        this.startX = startX;
-        this.startY = startY;
-        this.stopX = stopX;
-        this.stopY = stopY;
+        this.minX = minX;
+        this.minY = minY;
+        this.maxX = maxX;
+        this.maxY = maxY;
         this.mapLength = mapLength;
     }
 
@@ -40,17 +41,18 @@ public class ForkEvaluator extends RecursiveAction {
         int influenceFields = 0;
         int normalFields = 0;
 
-        for (int x = startX; x <= stopX; x++) {
-            for (int y = startY; y <= stopY; y++) {
+        for (int x = minX; x <= maxX; x++) {
+            for (int y = minY; y <= maxY; y++) {
 
                 TAbstractField field = GameInfos.getFieldForPosition(gameState, new TPosition(x,y));
-
-                if(field.getOccupant().getControllingFaction().equals(myFaction)){
-                    myUnits++;
-                } else if(field.getOccupant().getControllingFaction().equals(Faction.NEUTRAL)){
-                    // do nothing
-                } else {
-                    enemyUnits++;
+                if(field.isOccupied()) {
+                    if (field.getOccupant().getControllingFaction().equals(myFaction)) {
+                        myUnits++;
+                    } else if (field.getOccupant().getControllingFaction().equals(Faction.NEUTRAL)) {
+                        // do nothing
+                    } else {
+                        enemyUnits++;
+                    }
                 }
 
                 if(field instanceof TInfluenceField){
@@ -66,10 +68,15 @@ public class ForkEvaluator extends RecursiveAction {
         int unitRatio = 5 - enemyUnits;
         int fieldRatio = 5 - normalFields;
 
-        for (int x = startX; x <= stopX; x++) {
-            for (int y = startY; y <= stopY; y++) {
+        for (int x = minX; x <= maxX; x++) {
+            for (int y = minY; y <= maxY; y++) {
                 // now store information
-                quadTree.set(x, y, new QuadTreeTuple(unitRatio, fieldRatio));
+                try {
+                    quadTree.set(x, y, new QuadTreeTuple(unitRatio, fieldRatio));
+                } catch ( Exception ex){
+                    System.err.println("Error for x=" + x + " and y=" + y + ". Stacktrace was: " + ex.getCause().getMessage());
+                    throw ex;
+                }
             }
         }
     }
@@ -77,20 +84,29 @@ public class ForkEvaluator extends RecursiveAction {
     @Override
     protected void compute() {
         // if map is only a 4by4 square, compute
+        if(mapLength < 4){
+            try {
+                throw new TechnicalException("Map is not a quadTreeStructure. Use other edgelength.");
+            } catch (TechnicalException e) {
+                e.printStackTrace();
+            }
+        }
         if(mapLength == 4){
             computeDirectly();
             return;
         }
 
-        // split quad-wise otherwise, split value is always and index in the right hand part of the array
-        int split = mapLength / 2;
-
         invokeAll(
-                new ForkEvaluator(gameState, myFaction, quadTree, mapLength / 2, 0, 0, split-1, split-1),                 // left top
-                new ForkEvaluator(gameState, myFaction, quadTree, mapLength / 2, split, 0, mapLength-1, split-1),         // right top
-                new ForkEvaluator(gameState, myFaction, quadTree, mapLength / 2, split, split, mapLength-1, mapLength-1), // right bottom
-                new ForkEvaluator(gameState, myFaction, quadTree, mapLength / 2, 0, split, split-1, mapLength-1)          // left bottom
+                new ForkEvaluator(gameState, myFaction, quadTree, mapLength / 2, minX, minY, maxX / 2, maxY / 2),                 // left top
+                new ForkEvaluator(gameState, myFaction, quadTree, mapLength / 2, maxX / 2 + 1, minY, maxX, maxY / 2),         // right top
+                new ForkEvaluator(gameState, myFaction, quadTree, mapLength / 2,  maxX / 2 + 1, maxY / 2 + 1, maxX, maxY), // right bottom
+                new ForkEvaluator(gameState, myFaction, quadTree, mapLength / 2, minX, maxY / 2 + 1, maxX / 2, maxY)          // left bottom
         );
+
+        /*
+        Fehler hier! Die rekursiven Aufrufe bearbeiten nur den oberen linken Quadranten. Liegt
+        an mapLength-1 im 3. und 4. Aufruf, die kommen nicht mehr über 16 hinaus.
+         */
 
     }
 
