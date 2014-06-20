@@ -34,9 +34,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="570b48bc-9cf0-4458-9fa9-639946a69324" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java" afterPath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java" afterPath="$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Client/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Implementation/MARLA-Server/.idea/workspace.xml" />
     </list>
     <ignored path="Factory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,11 +97,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EvaluatorGameState.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="EvaluatorGameState.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4302" max-vertical-offset="8874">
-              <caret line="278" column="23" selection-start-line="278" selection-start-column="23" selection-end-line="278" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0877193" vertical-offset="4626" max-vertical-offset="8874">
+              <caret line="274" column="133" selection-start-line="274" selection-start-column="79" selection-end-line="274" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -117,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoverStateActionGenerator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MoverStateActionGenerator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12413793" vertical-offset="2394" max-vertical-offset="4338">
-              <caret line="151" column="92" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2394" max-vertical-offset="4338">
+              <caret line="176" column="76" selection-start-line="176" selection-start-column="9" selection-end-line="176" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -677,7 +677,7 @@
       <workItem from="1403184828435" duration="5531000" />
       <workItem from="1403243751904" duration="54000" />
       <workItem from="1403244210150" duration="8554000" />
-      <workItem from="1403259367382" duration="2167000" />
+      <workItem from="1403259367382" duration="4576000" />
     </task>
     <task id="LOCAL-00001" summary="- weider">
       <created>1403083071074</created>
@@ -691,11 +691,15 @@
       <created>1403188807242</created>
       <updated>1403188807242</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- weider">
+      <created>1403261541120</created>
+      <updated>1403261541120</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100985000" />
+    <option name="totallyTimeSpent" value="103394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1186" extended-state="6" />
@@ -713,7 +717,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28557876" sideWeight="0.49786553" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28557876" sideWeight="0.49786553" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29446065" sideWeight="0.4691358" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1065,7 +1069,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1008" max-vertical-offset="8478">
           <caret line="101" column="51" selection-start-line="101" selection-start-column="51" selection-end-line="101" selection-end-column="51" />
           <folding>
-            <element signature="e#4164#4173#0" expanded="true" />
+            <element signature="e#4164#4173#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1107,6 +1111,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2394" max-vertical-offset="4338">
+          <caret line="176" column="76" selection-start-line="176" selection-start-column="9" selection-end-line="176" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/EvaluatorStateActionGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
@@ -1117,16 +1129,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/Entities/EvaluatorGameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4302" max-vertical-offset="8874">
-          <caret line="278" column="23" selection-start-line="278" selection-start-column="23" selection-end-line="278" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HierarchicalFactoryPlayer/src/HierarchicalFactoryPlayer/StateActionGenerators/MoverStateActionGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12413793" vertical-offset="2394" max-vertical-offset="4338">
-          <caret line="151" column="92" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0877193" vertical-offset="4626" max-vertical-offset="8874">
+          <caret line="274" column="133" selection-start-line="274" selection-start-column="79" selection-end-line="274" selection-end-column="79" />
           <folding />
         </state>
       </provider>
