@@ -81,7 +81,7 @@ public class SimpleFactoryPlayerSystem implements IAgentSystem<IEnvironmentConfi
         List<TUnit> myUnits = GameInfos.getUnitsForFaction(currentGameState, myFaction);
         List<TAction> actionList = new ArrayList<TAction>();
 
-
+        int unitCount = myUnits.size();
         for (TUnit unit : myUnits) {
             RawState rawState;
             // Randomizen wäre besser
@@ -109,6 +109,8 @@ public class SimpleFactoryPlayerSystem implements IAgentSystem<IEnvironmentConfi
 
             rewardForLastTurn = calculateReward(currentGameState, moveOrder, unitPosition, field);
 
+            //System.out.println("Unit " + unit.getUnitId() + " was processed. "+ --unitCount + " units left. Last reward was: " + rewardForLastTurn + ".  Refreshing Gamestate. ");
+            //System.out.println("Map is of size: " + currentGameState.getMapFields().length + " by " + currentGameState.getMapFields()[0].length);
 
             currentGameState = refreshGameState(currentGameState, moveOrder, unitPosition);
         }

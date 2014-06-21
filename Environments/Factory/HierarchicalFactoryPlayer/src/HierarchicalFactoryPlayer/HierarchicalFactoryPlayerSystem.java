@@ -83,6 +83,7 @@ public class HierarchicalFactoryPlayerSystem implements IAgentSystem<IEnvironmen
         // the action list holding all actions for the next step
         List<TAction> actionList = new ArrayList<TAction>();
 
+        int unitCount = myUnits.size();
         // Now use this evaluated game state
         for (TUnit unit : myUnits) {
 
@@ -123,6 +124,10 @@ public class HierarchicalFactoryPlayerSystem implements IAgentSystem<IEnvironmen
             }
 
             rewardForLastTurn = calculateReward(currentGameState, moveOrder, unitPosition, field);
+
+            //System.out.println("Unit " + unit.getUnitId() + " was processed. "+ --unitCount + " units left. Last reward was: " + rewardForLastTurn + ".  Refreshing Gamestate. ");
+            //System.out.println("Map is of size: " + currentGameState.getMapFields().length + " by " + currentGameState.getMapFields()[0].length);
+
 
             currentGameState = refreshGameState(currentGameState, moveOrder, unitPosition);
         }
