@@ -228,7 +228,7 @@ public class EvaluatorGameState {
             );
             rawState.setLeft(rawfield);
         } else {
-            rawState.setLeft(getWallField((String) quadTree.get(pos.getX() - 1, pos.getY(), null)));
+            rawState.setLeft(getWallField((String) quadTree.get(pos.getX() - 1, pos.getY(), "=")));
         }
 
         // Right
@@ -240,7 +240,7 @@ public class EvaluatorGameState {
             );
             rawState.setRight(rawfield);
         } else {
-            rawState.setRight(getWallField((String) quadTree.get(pos.getX() + 1, pos.getY(), null)));
+            rawState.setRight(getWallField((String) quadTree.get(pos.getX() + 1, pos.getY(), "=")));
         }
 
         // Down
@@ -252,7 +252,7 @@ public class EvaluatorGameState {
             );
             rawState.setDown(rawfield);
         } else {
-            rawState.setDown(getWallField((String) quadTree.get(pos.getX(), pos.getY() + 1, null)));
+            rawState.setDown(getWallField((String) quadTree.get(pos.getX(), pos.getY() + 1, "=")));
         }
 
         // Down Left
@@ -264,7 +264,7 @@ public class EvaluatorGameState {
             );
             rawState.setLeftDown(rawfield);
         } else {
-            rawState.setLeftDown(getWallField((String) quadTree.get(pos.getX() - 1, pos.getY() + 1, null)));
+            rawState.setLeftDown(getWallField((String) quadTree.get(pos.getX() - 1, pos.getY() + 1, "=")));
         }
 
         // Down Right
@@ -276,7 +276,7 @@ public class EvaluatorGameState {
             );
             rawState.setRightDown(rawfield);
         } else {
-            rawState.setRightDown(getWallField((String) quadTree.get(pos.getX() + 1, pos.getY() + 1, null)));
+            rawState.setRightDown(getWallField((String) quadTree.get(pos.getX() + 1, pos.getY() + 1, "=")));
         }
 
         // Up Left
@@ -288,7 +288,7 @@ public class EvaluatorGameState {
             );
             rawState.setLeftTop(rawfield);
         } else {
-            rawState.setLeftTop(getWallField((String) quadTree.get(pos.getX() - 1, pos.getY() - 1, null)));
+            rawState.setLeftTop(getWallField((String) quadTree.get(pos.getX() - 1, pos.getY() - 1, "=")));
         }
 
         // Up Right
@@ -300,7 +300,7 @@ public class EvaluatorGameState {
             );
             rawState.setRightTop(rawfield);
         } else {
-            rawState.setRightTop(getWallField((String) quadTree.get(pos.getX() + 1, pos.getY() - 1, null)));
+            rawState.setRightTop(getWallField((String) quadTree.get(pos.getX() + 1, pos.getY() - 1, "=")));
         }
 
         // Up
@@ -312,7 +312,7 @@ public class EvaluatorGameState {
             );
             rawState.setTop(rawfield);
         } else {
-            rawState.setTop(getWallField((String) quadTree.get(pos.getX(), pos.getY() - 1, null)));
+            rawState.setTop(getWallField((String) quadTree.get(pos.getX(), pos.getY() - 1, "=")));
         }
 
         TPosition posOfField = new TPosition(pos.getX(),pos.getY());

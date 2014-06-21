@@ -3,6 +3,8 @@ package HierarchicalFactoryPlayer.StateActionGenerators;
 import AgentSystemPluginAPI.Contract.IStateActionGenerator;
 import AgentSystemPluginAPI.Contract.StateAction;
 import Factory.GameLogic.Enums.Direction;
+import Factory.GameLogic.TransportTypes.TGameState;
+import Factory.GameLogic.Utility.GameInfos;
 import HierarchicalFactoryPlayer.Entities.RawField;
 import HierarchicalFactoryPlayer.Entities.RawState;
 import HierarchicalFactoryPlayer.Enums.FieldType;
@@ -145,22 +147,6 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
     }
 
     public String encryptState(RawState rawState) {
-        // 1 Slot[4] = ( von high nach least)  FeldTyp[1] UnitTyp[3]
-        // 9 slots[36] + Direction[2]
-        // --> 5 Byte
-        // Aber noch probleme beim decrypten! Da nicht genügend infos zum Legale richtung finden da sind!
-
-        //Verschwenderische version 1 Byte pro feld + direction 10 Byte
-        //
-        // Unit[2](None,friend,enemy,exhaustedFriend)
-        // FieldType[2](normal,InfluenceActive,InfluencePassive,Factory)    //aktive felder ansatz vorerst verworfen
-        // FieldController[2](Neutral,red,blue) 1/2 bit über
-        // RemainingTimetoSpawn[2] -> 4 intervalle
-
-        // String mit Byte array füttern
-
-
-
         List<RawField> fieldList = rawState.getFieldListRepresentation();
 
         encryptedStateSize = fieldList.size() * 2 + 1;
@@ -171,8 +157,12 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
         for(RawField field : fieldList){
             encryptedState[i] = getEncryptedByte(field);
             i++;
-            System.out.println("Evaluation of " + field.toString() + " is: " + field.getEvaluation());
-            encryptedState[i] = field.getEvaluation().getBytes()[0];
+            try {
+                encryptedState[i] = field.getEvaluation().getBytes()[0];
+            } catch (Exception ex){
+                System.out.println("Size of FieldList: " + fieldList.size());
+                System.out.println("Evaluation of " + field.toString() + " is: " + field.getEvaluation());
+            }
             i++;
         }
 
@@ -195,31 +185,7 @@ public class MoverStateActionGenerator implements IStateActionGenerator {
     }
 
     public static void main(String[] args){
-        int zahl = 32;
-        System.out.println(31/2+1);
-        while(zahl > 0){
-            zahl = zahl / 2;
-            System.out.println("zahl: " + zahl);
-        }
 
-
-        int x = 1;
-        int a = 1;
-        int b = 2;
-        int c = 0;
-        a = a << 2;
-        b = b << 4;
-        c = c << 6;
-
-        String t = "+---";
-        System.out.println("string t: " + t.getBytes().length);
-
-        int beforeEncrypt = x | a | b | c;
-        System.out.println(beforeEncrypt);
-        byte encrypt = (byte) beforeEncrypt;
-        System.out.println(encrypt);
-        System.out.println(encrypt & 0x00000003);
-        System.out.println(encrypt >> 2);
     }
 
 
