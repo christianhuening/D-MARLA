@@ -23,7 +23,7 @@ public class HierarchicalFactoryPlayerDescription implements IAgentSystemPluginD
         enviros.add(new TEnvironmentDescription("Factory","v0.1",""));
         enviros.add(new TEnvironmentDescription("Factory","v0.2",""));
         enviros.add(new TEnvironmentDescription("Factory","v0.3",""));
-        return new TAgentSystemDescription("HierarchicalFactoryPlayer","v0.0.1","Hierarchical Evaluator/Mover agent", enviros);
+        return new TAgentSystemDescription("HierarchicalFactoryPlayerQLearning","v0.0.1","Hierarchical Evaluator/Mover agent", enviros);
     }
 
     @Override

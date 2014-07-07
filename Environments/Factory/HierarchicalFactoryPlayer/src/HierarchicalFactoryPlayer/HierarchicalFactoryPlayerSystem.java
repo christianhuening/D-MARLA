@@ -42,14 +42,14 @@ public class HierarchicalFactoryPlayerSystem implements IAgentSystem<IEnvironmen
     public HierarchicalFactoryPlayerSystem(IPluginServiceProvider provider) throws TechnicalException {
         agentlist = new ArrayList<>();
 
-        evaluator = provider.getTableAgent("Evaluator", LearningAlgorithm.SARSALambda, new EvaluatorStateActionGenerator());
+        evaluator = provider.getTableAgent("Evaluator", LearningAlgorithm.QLearning, new EvaluatorStateActionGenerator());
         evaluator.setAlpha(Float.parseFloat(provider.getAgentSystemSetting("Alpha")));
         evaluator.setEpsilon(Float.parseFloat(provider.getAgentSystemSetting("Epsilon")));
         evaluator.setGamma(Float.parseFloat(provider.getAgentSystemSetting("Gamma")));
         evaluator.setLambda(Float.parseFloat(provider.getAgentSystemSetting("Lambda")));
         agentlist.add(evaluator);
 
-        mover = provider.getTableAgent("Mover", LearningAlgorithm.SARSALambda, new MoverStateActionGenerator());
+        mover = provider.getTableAgent("Mover", LearningAlgorithm.QLearning, new MoverStateActionGenerator());
         mover.setAlpha(Float.parseFloat(provider.getAgentSystemSetting("Alpha")));
         mover.setEpsilon(Float.parseFloat(provider.getAgentSystemSetting("Epsilon")));
         mover.setGamma(Float.parseFloat(provider.getAgentSystemSetting("Gamma")));
