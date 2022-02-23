@@ -33,7 +33,7 @@
     <developer>
       <id>scolebourne</id>
       <name>Stephen Colebourne</name>
-      <email></email>
+      <email/>
       <roles>
         <role>Project Lead</role>
       </roles>
@@ -43,7 +43,7 @@
     <developer>
       <id>broneill</id>
       <name>Brian S O'Neill</name>
-      <email></email>
+      <email/>
       <roles>
         <role>Senior Developer</role>
       </roles>
@@ -497,7 +497,7 @@
         						</goals>
         					</pluginExecutionFilter>
         					<action>
-        						<ignore></ignore>
+        						<ignore/>
         					</action>
         				</pluginExecution>
         			</pluginExecutions>
@@ -516,7 +516,7 @@
     <dependency>
       <groupId>org.joda</groupId>
       <artifactId>joda-convert</artifactId>
-      <version>1.2</version>
+      <version>1.9.2</version>
       <scope>compile</scope>
       <optional>true</optional><!-- mandatory in Scala -->
     </dependency>
